@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧠 Brainstorm: Vertical SaaS Vietnam — 28/08/2026</title>
+<style>
+  :root {
+    --bg: #0f0f14; --surface: #1a1a24; --surface2: #22223a;
+    --accent: #7c5cff; --accent2: #ff6b9d; --accent3: #00d4aa;
+    --text: #e8e8f0; --muted: #8888aa; --gold: #ffd700;
+    --border: #2a2a44;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  .container { max-width:960px; margin:0 auto; padding:2rem 1.5rem; }
+  
+  /* Header */
+  .header { text-align:center; padding:3rem 0 2rem; position:relative; }
+  .header::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:200px; height:200px; background:radial-gradient(circle, rgba(124,92,255,0.15) 0%, transparent 70%); border-radius:50%; }
+  .header h1 { font-size:2.2rem; font-weight:800; background:linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:0.5rem; }
+  .header .subtitle { color:var(--muted); font-size:1rem; }
+  .header .date { display:inline-block; background:var(--surface2); padding:0.3rem 1rem; border-radius:20px; font-size:0.85rem; color:var(--accent); margin-top:0.8rem; }
+  
+  /* Stats */
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin:2rem 0; }
+  .stat { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1.2rem; text-align:center; }
+  .stat .num { font-size:2rem; font-weight:800; color:var(--accent); }
+  .stat .label { font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-top:0.3rem; }
+  
+  /* Section */
+  .section { margin:2.5rem 0; }
+  .section-title { font-size:1.3rem; font-weight:700; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:2px solid var(--border); display:flex; align-items:center; gap:0.5rem; }
+  
+  /* Idea cards */
+  .idea-grid { display:grid; grid-template-columns:1fr; gap:0.8rem; }
+  .idea { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:1rem 1.2rem; display:flex; gap:1rem; align-items:flex-start; transition:border-color 0.2s; }
+  .idea:hover { border-color:var(--accent); }
+  .idea .num { font-size:1.5rem; font-weight:800; color:var(--accent); min-width:2.2rem; text-align:center; flex-shrink:0; }
+  .idea .content { flex:1; }
+  .idea .title { font-weight:700; font-size:1rem; margin-bottom:0.2rem; }
+  .idea .desc { font-size:0.85rem; color:var(--muted); }
+  .idea .tags { margin-top:0.4rem; display:flex; gap:0.4rem; flex-wrap:wrap; }
+  .tag { font-size:0.7rem; padding:0.15rem 0.6rem; border-radius:12px; background:var(--surface2); color:var(--accent); border:1px solid var(--border); }
+  .tag.hot { background:rgba(255,107,157,0.15); color:var(--accent2); border-color:rgba(255,107,157,0.3); }
+  
+  /* Winner */
+  .winner { background:linear-gradient(135deg, rgba(124,92,255,0.1), rgba(0,212,170,0.1)); border:2px solid var(--accent); border-radius:16px; padding:2rem; margin:2rem 0; position:relative; overflow:hidden; }
+  .winner::before { content:'🏆'; position:absolute; top:1rem; right:1.5rem; font-size:3rem; opacity:0.3; }
+  .winner h2 { font-size:1.5rem; color:var(--accent3); margin-bottom:0.3rem; }
+  .winner .tagline { font-size:1.1rem; color:var(--text); margin-bottom:1rem; font-weight:600; }
+  .winner .reason { font-size:0.9rem; color:var(--muted); line-height:1.7; }
+  .winner .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.5rem; }
+  .winner .metric { text-align:center; background:rgba(0,0,0,0.2); padding:1rem; border-radius:10px; }
+  .winner .metric .val { font-size:1.8rem; font-weight:800; color:var(--gold); }
+  .winner .metric .lbl { font-size:0.75rem; color:var(--muted); text-transform:uppercase; }
+  
+  /* Score table */
+  table { width:100%; border-collapse:collapse; font-size:0.85rem; }
+  th, td { padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border); }
+  th { font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; color:var(--muted); background:var(--surface); position:sticky; top:0; }
+  td:first-child { text-align:left; font-weight:600; }
+  .score-high { color:var(--accent3); font-weight:700; }
+  .score-mid { color:var(--gold); }
+  .score-low { color:var(--accent2); }
+  tr.highlight { background:rgba(124,92,255,0.08); }
+  
+  /* Technique badge */
+  .technique { display:inline-flex; align-items:center; gap:0.4rem; background:var(--surface2); padding:0.5rem 1rem; border-radius:8px; margin:1.5rem 0 0.5rem; font-size:0.8rem; color:var(--accent); border-left:3px solid var(--accent); }
+  
+  /* Runners up */
+  .runners { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:1rem; }
+  .runner { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1.2rem; }
+  .runner h3 { font-size:1rem; margin-bottom:0.3rem; display:flex; align-items:center; gap:0.5rem; }
+  .runner .why { font-size:0.85rem; color:var(--muted); }
+  .runner .badge { font-size:0.7rem; background:var(--surface2); padding:0.2rem 0.6rem; border-radius:8px; color:var(--accent); }
+  
+  /* Footer */
+  .footer { text-align:center; padding:2rem 0; color:var(--muted); font-size:0.8rem; border-top:1px solid var(--border); margin-top:3rem; }
+  
+  @media (max-width:640px) {
+    .stats { grid-template-columns:repeat(2,1fr); }
+    .runners { grid-template-columns:1fr; }
+    .winner .metrics { grid-template-columns:1fr; }
+    .header h1 { font-size:1.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>Vertical SaaS cho Việt Nam</h1>
+  <div class="subtitle">Brainstorm Session — Tìm niche SaaS có thể kiếm tiền tại thị trường VN</div>
+  <div class="date">📅 28/08/2026 · Autonomous Mode · BMad Brainstorming</div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="num">23</div><div class="label">Ý tưởng</div></div>
+  <div class="stat"><div class="num">4</div><div class="label">Kỹ thuật</div></div>
+  <div class="stat"><div class="num">5</div><div class="label">Top Shortlist</div></div>
+  <div class="stat"><div class="num">1</div><div class="label">Winner</div></div>
+</div>
+
+<!-- ============ WINNER ============ -->
+<div class="winner">
+  <h2>🏆 #1 Recommendation</h2>
+  <div class="tagline">Nhà Trọ OS — Phần mềm Quản lý Phòng trọ & Căn hộ cho thuê</div>
+  <div class="reason">
+    Việt Nam có <strong>hàng triệu chủ nhà trọ</strong> (phòng trọ, nhà nguyên căn, mini apartment) — từ sinh viên đến công nhân — nhưng <strong>gần 100% quản lý bằng sổ tay hoặc Excel</strong>. Không có đối thủ SaaS nào chiếm lĩnh thị trường này.
+    <br><br>
+    <strong>Tại sao đây là winner:</strong><br>
+    ✅ <strong>Thị trường khổng lồ</strong> — ~15 triệu người thuê trọ, hàng triệu chủ nhà<br>
+    ✅ <strong>Zero competition</strong> — không có SaaS nào làm tốt cho segment "nhà trọ" VN<br>
+    ✅ <strong>MVP cực đơn giản</strong> — quản lý phòng, tenant, thu tiền, nhắc hạn, hóa đơn<br>
+    ✅ <strong>Revenue recurring</strong> — subscription hàng tháng từ chủ nhà (99K-299K/tháng)<br>
+    ✅ <strong>Moat mạnh</strong> — data tenant + lịch sử thanh toán = switching cost cao<br>
+    ✅ <strong>Mở rộng dễ</strong> — thêm fintech (thu tiền tự động), marketplace (đăng phòng), tenant super-app
+  </div>
+  <div class="metrics">
+    <div class="metric"><div class="val">15M+</div><div class="lbl">Người thuê trọ VN</div></div>
+    <div class="metric"><div class="val">~0</div><div class="lbl">Đối thủ SaaS mạnh</div></div>
+    <div class="metric"><div class="val">2-4 tuần</div><div class="lbl">MVP khả thi</div></div>
+  </div>
+</div>
+
+<!-- ============ SCORING MATRIX ============ -->
+<div class="section">
+  <div class="section-title">📊 Bảng chấm điểm Top 5</div>
+  <p style="color:var(--muted);font-size:0.85rem;margin-bottom:1rem;">Thang điểm 1-5. Tiêu chí: Quy mô thị trường · Yếu đối thủ · MVP khả thi (team nhỏ) · Doanh thu tiềm năng · Moat/Stickiness</p>
+  <div style="overflow-x:auto;">
+  <table>
+    <tr><th style="text-align:left">Ý tưởng</th><th>Thị trường</th><th>Ít cạnh tranh</th><th>MVP dễ</th><th>Revenue</th><th>Moat</th><th>Tổng</th></tr>
+    <tr class="highlight">
+      <td>🏆 Nhà Trọ OS</td>
+      <td class="score-high">5</td><td class="score-high">5</td><td class="score-high">5</td><td class="score-mid">4</td><td class="score-high">5</td><td class="score-high"><strong>24</strong></td>
+    </tr>
+    <tr>
+      <td>🥈 Pharmacy Management</td>
+      <td class="score-high">5</td><td class="score-mid">4</td><td class="score-mid">3</td><td class="score-high">5</td><td class="score-high">5</td><td class="score-mid"><strong>22</strong></td>
+    </tr>
+    <tr>
+      <td>🥉 Tutoring Center SaaS</td>
+      <td class="score-high">5</td><td class="score-mid">4</td><td class="score-mid">4</td><td class="score-mid">4</td><td class="score-mid">4</td><td class="score-mid"><strong>21</strong></td>
+    </tr>
+    <tr>
+      <td>4. Condo Management</td>
+      <td class="score-mid">4</td><td class="score-mid">3</td><td class="score-mid">4</td><td class="score-high">5</td><td class="score-high">5</td><td class="score-mid"><strong>21</strong></td>
+    </tr>
+    <tr>
+      <td>5. Gym/Fitness Studio OS</td>
+      <td class="score-mid">4</td><td class="score-mid">4</td><td class="score-high">5</td><td class="score-mid">3</td><td class="score-mid">4</td><td class="score-mid"><strong>20</strong></td>
+    </tr>
+  </table>
+  </div>
+</div>
+
+<!-- ============ RUNNERS UP ============ -->
+<div class="section">
+  <div class="section-title">🥈 Top 4 Runner-ups</div>
+  <div class="runners">
+    <div class="runner">
+      <h3>💊 Pharmacy Management <span class="badge">60K+ nhà thuốc</span></h3>
+      <div class="why">Quản lý tồn kho thuốc (hạn sử dụng!), đơn thuốc, compliance quy định dược, đặt hàng NCC. Moat cực mạnh vì data thuốc + quy định phức tạp. Khó hơn MVP vì cần hiểu domain dược sâu.</div>
+    </div>
+    <div class="runner">
+      <h3>📚 Tutoring Center SaaS <span class="badge">750+ EdTech VN</span></h3>
+      <div class="why">Enrollment, lịch dạy, thu học phí, portal phụ huynh, tracking tiến độ. Thị trường lớn (VN chi 20-25% thu nhập cho giáo dục) nhưng cạnh tranh nhiều hơn. Lợi thế: segment "trung tâm ngoại ngữ" chưa có tool tốt.</div>
+    </div>
+    <div class="runner">
+      <h3>🏢 Condo/Apartment Mgmt <span class="badge">4M+ căn hộ</span></h3>
+      <div class="why">Thu phí quản lý, bảo trì, thông báo cư dân, theo dõi tiện ích. Revenue cao (BQL sẵn sàng trả). Nhưng có vài đối thủ đã vào (tuy chưa dominant). Cơ hội: focus vào chung cư cũ/mini chưa có app.</div>
+    </div>
+    <div class="runner">
+      <h3>🏋️ Gym/Fitness Studio OS <span class="badge">Booming market</span></h3>
+      <div class="why">Membership, booking lớp, PT scheduling, thanh toán, body tracking. MVP đơn giản nhất trong Top 5. Thị trường nhỏ hơn nhưng willingness-to-pay cao. Global tools (Mindbody) quá đắt và không localize.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ALL IDEAS ============ -->
+<div class="section">
+  <div class="section-title">💡 Toàn bộ 23 ý tưởng</div>
+  
+  <div class="technique">🔬 Morphological Analysis — Mapping VN market dimensions</div>
+  <div class="idea-grid">
+    <div class="idea"><div class="num">1</div><div class="content"><div class="title">Clinic/Dental/Spa OS</div><div class="desc">Hẹn lịch, hồ sơ bệnh nhân, thanh toán, nhắc Zalo, tuân thủ bảo hiểm VN. 97% SME vẫn dùng giấy.</div><div class="tags"><span class="tag hot">Healthcare</span><span class="tag">Multi-vertical</span></div></div></div>
+    <div class="idea"><div class="num">2</div><div class="content"><div class="title">Tutoring Center SaaS</div><div class="desc">Đăng ký, lịch dạy, thu phí, portal phụ huynh, theo dõi chương trình. Hệ sinh thái phân mảnh, chưa có dominant player.</div><div class="tags"><span class="tag hot">EdTech</span><span class="tag">Top 5</span></div></div></div>
+    <div class="idea"><div class="num">3</div><div class="content"><div class="title">Construction Project Tracker</div><div class="desc">BIM-lite, ảnh tiến độ, thanh toán nhà thầu, theo dõi vật liệu. VN đang xây dựng bùng nổ, hầu hết dùng Excel.</div><div class="tags"><span class="tag">ConTech</span><span class="tag">Complex MVP</span></div></div></div>
+    <div class="idea"><div class="num">4</div><div class="content"><div class="title">Condo/Apartment Management</div><div class="desc">Thu phí, yêu cầu bảo trì, bảng tin cộng đồng, tiện ích. 4M+ căn hộ, quản lý bằng... bảo vệ ghi sổ.</div><div class="tags"><span class="tag hot">PropTech</span><span class="tag">Top 5</span></div></div></div>
+    <div class="idea"><div class="num">5</div><div class="content"><div class="title">SME Compliance Autopilot</div><div class="desc">Tự động khai thuế, hóa đơn điện tử, luật lao động, bảo vệ dữ liệu (NĐ 13), BHXH. Việc "ghét" = sản phẩm dính.</div><div class="tags"><span class="tag">RegTech</span><span class="tag">High moat</span></div></div></div>
+    <div class="idea"><div class="num">6</div><div class="content"><div class="title">Omnichannel Order Hub</div><div class="desc">Gom đơn Shopee/Lazada/TikTok Shop/Zalo/FB + tồn kho + vận đơn + đối soát COD. VN e-commerce $31B.</div><div class="tags"><span class="tag">E-commerce</span><span class="tag">Competitive</span></div></div></div>
+    <div class="idea"><div class="num">7</div><div class="content"><div class="title">AgTech Farm-to-Table</div><div class="desc">Kế hoạch canh tác, truy xuất nguồn gốc QR, tuân thủ GAP, chợ sỉ. Nông nghiệp 12% GDP, zero SaaS.</div><div class="tags"><span class="tag">AgTech</span><span class="tag">Long-term</span></div></div></div>
+    <div class="idea"><div class="num">8</div><div class="content"><div class="title">Logistics Reverse/Returns</div><div class="desc">Portal yêu cầu trả hàng, lên lịch lấy, hoàn tiền tự động, analytics. 10-15% đơn TMĐT bị trả, chưa có tool riêng.</div><div class="tags"><span class="tag">Logistics</span><span class="tag">Niche</span></div></div></div>
+    <div class="idea"><div class="num">9</div><div class="content"><div class="title">Micro-franchise OS</div><div class="desc">SOPs, training, kiểm tra chất lượng, tính royalty, dashboard đa chi nhánh. VN franchise bùng nổ (trà sữa, cà phê, phở).</div><div class="tags"><span class="tag">Franchise</span><span class="tag">B2B</span></div></div></div>
+    <div class="idea"><div class="num">10</div><div class="content"><div class="title">HR Payroll cho SME <50 người</div><div class="desc">Chấm công, nghỉ phép, tính lương theo thuế/BHXH VN, phiếu lương qua Zalo. Hầu hết HR là... Excel.</div><div class="tags"><span class="tag">HRTech</span><span class="tag">Competitive</span></div></div></div>
+  </div>
+
+  <div class="technique">🔄 Assumption Reversal — Lật ngược giả định thị trường VN</div>
+  <div class="idea-grid">
+    <div class="idea"><div class="num">11</div><div class="content"><div class="title">AI Invoice Reader</div><div class="desc">Chụp ảnh hóa đơn giấy → trích xuất data → phân loại chi phí → đẩy vào kế toán. Cầu nối giấy↔số.</div><div class="tags"><span class="tag">AI</span><span class="tag">FinTech</span></div></div></div>
+    <div class="idea"><div class="num">12</div><div class="content"><div class="title">Zalo-native CRM</div><div class="desc">Toàn bộ CRM sống trong Zalo Mini App — không cần cài app mới, chạy trên điện thoại rẻ, chat-first sales pipeline.</div><div class="tags"><span class="tag hot">Zalo ecosystem</span><span class="tag">Mobile-first</span></div></div></div>
+    <div class="idea"><div class="num">13</div><div class="content"><div class="title">Nhà Trọ OS — Quản lý phòng trọ</div><div class="desc">Hợp đồng thuê, thu tiền qua chuyển khoản/Momo, ticket bảo trì, chia tiện ích. Hàng triệu nhà trọ, ZERO software.</div><div class="tags"><span class="tag hot">🏆 WINNER</span><span class="tag hot">PropTech</span></div></div></div>
+    <div class="idea"><div class="num">14</div><div class="content"><div class="title">Freelancer Invoice & Tax</div><div class="desc">Tự tạo hóa đơn điện tử, tính thuế TNCN, mẫu hợp đồng, theo dõi thanh toán. Gig economy VN bùng nổ, chưa có tool.</div><div class="tags"><span class="tag">FinTech</span><span class="tag">Niche</span></div></div></div>
+    <div class="idea"><div class="num">15</div><div class="content"><div class="title">Gym/Fitness Studio OS</div><div class="desc">Membership, đặt lớp, lịch PT, thanh toán, body tracking, thông báo Zalo. Fitness bùng nổ, Mindbody quá đắt.</div><div class="tags"><span class="tag hot">Fitness</span><span class="tag">Top 5</span></div></div></div>
+    <div class="idea"><div class="num">16</div><div class="content"><div class="title">Wedding/Event Planner SaaS</div><div class="desc">Quản lý vendor, timeline, budget, danh sách khách, sơ đồ bàn, checklist. Ngành cưới VN $3B+, toàn Excel/giấy.</div><div class="tags"><span class="tag">Events</span><span class="tag">Seasonal</span></div></div></div>
+    <div class="idea"><div class="num">17</div><div class="content"><div class="title">Pharmacy Management</div><div class="desc">Tồn kho thuốc + hạn sử dụng, sổ đơn thuốc, compliance quy định dược, đặt hàng NCC. 60K+ nhà thuốc, toàn giấy.</div><div class="tags"><span class="tag hot">HealthTech</span><span class="tag">Top 5</span></div></div></div>
+    <div class="idea"><div class="num">18</div><div class="content"><div class="title">Auto Repair Shop OS</div><div class="desc">Phiếu sửa chữa, tồn kho phụ tùng, lịch sử xe khách, báo giá, thanh toán. Thị trường lớn, hoàn toàn analog.</div><div class="tags"><span class="tag">AutoTech</span><span class="tag">Blue ocean</span></div></div></div>
+  </div>
+
+  <div class="technique">🎯 Job to Be Done — VN business owner thực sự cần gì?</div>
+  <div class="idea-grid">
+    <div class="idea"><div class="num">19</div><div class="content"><div class="title">AI Receptionist (Zalo Bot)</div><div class="desc">Auto trả lời khách, đặt hẹn, gửi nhắc, thu review. JTBD: không bao giờ bỏ lỡ tin nhắn khách hàng.</div><div class="tags"><span class="tag">AI</span><span class="tag">Cross-vertical</span></div></div></div>
+    <div class="idea"><div class="num">20</div><div class="content"><div class="title">Social Commerce Storefront</div><div class="desc">Một link → catalog sản phẩm + checkout COD + Zalo/FB integration. JTBD: bán online không phải trả hoa hồng Shopee.</div><div class="tags"><span class="tag">E-commerce</span><span class="tag">D2C</span></div></div></div>
+    <div class="idea"><div class="num">21</div><div class="content"><div class="title">Restaurant Waste Tracker</div><div class="desc">AI nhận diện ảnh đồ thừa → phân tích chi phí → gợi ý tối ưu menu. JTBD: ngừng mất 15% doanh thu vào lãng phí.</div><div class="tags"><span class="tag">F&B</span><span class="tag">AI</span></div></div></div>
+    <div class="idea"><div class="num">22</div><div class="content"><div class="title">Multi-branch Dashboard</div><div class="desc">Dashboard real-time doanh thu/tồn kho/nhân sự mọi chi nhánh, cảnh báo bất thường. JTBD: biết chuyện gì đang xảy ra mà không phải gọi từng cửa hàng.</div><div class="tags"><span class="tag">Analytics</span><span class="tag">Cross-vertical</span></div></div></div>
+    <div class="idea"><div class="num">23</div><div class="content"><div class="title">VN-localized Project Management</div><div class="desc">Task management + lịch Âm, Tết planning, ngày lễ VN, tích hợp Zalo. Tool global quá "lạ" cho team VN.</div><div class="tags"><span class="tag">Productivity</span><span class="tag">Horizontal</span></div></div></div>
+  </div>
+</div>
+
+<!-- ============ WHY NHÀ TRỌ OS ============ -->
+<div class="section">
+  <div class="section-title">🎯 Tại sao Nhà Trọ OS là lựa chọn #1</div>
+  <div style="background:var(--surface);border-radius:12px;padding:1.5rem;font-size:0.9rem;">
+    <p><strong>1. Thị trường = massive + invisible.</strong> Hàng triệu người di cư nội địa thuê trọ. Chủ nhà trọ quản lý 5-50 phòng, thu tiền mặt, ghi sổ tay, nhắc qua Zalo bằng tay. Đây là "analog gap" lớn nhất VN mà chưa ai chạm.</p>
+    <br>
+    <p><strong>2. MVP = 2-4 tuần cho 1 developer.</strong> Core features: quản lý phòng/khách, hợp đồng số, nhắc tiền tự động qua Zalo, ghi nhận thanh toán, dashboard doanh thu. Không cần AI, không cần phức tạp.</p>
+    <br>
+    <p><strong>3. Revenue model rõ ràng.</strong> Freemium: miễn phí ≤5 phòng, 99K/tháng cho 6-20 phòng, 299K/tháng cho 21-50 phòng, custom cho >50. Upsell: thu tiền tự động (embedded fintech), hợp đồng điện tử, đăng phòng trống lên marketplace.</p>
+    <br>
+    <p><strong>4. Flywheel effect.</strong> Chủ nhà trọ dùng → tenant data tích lũy → marketplace "tìm phòng trọ" → tenant dùng app → chủ nhà trọ mới vào → network effect.</p>
+    <br>
+    <p><strong>5. Expansion path.</strong> Nhà trọ → Mini apartment → Homestay → Căn hộ dịch vụ → Property management platform. Fintech layer: thu tiền tự động, cho vay sửa phòng, bảo hiểm thuê. Đây là cách ServiceTitan đi từ plumber scheduling → $9.5B IPO.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>🧠 BMad Brainstorming · Autonomous Mode · 4 techniques · 23 ideas generated</p>
+  <p style="margin-top:0.5rem;">Session: <code>brainstorm-saas-vietnam-2026-08-28</code></p>
+  <p style="margin-top:0.3rem;">Memlog: <code>_bmad-output/brainstorming/brainstorm-saas-vietnam-2026-08-28/.memlog.md</code></p>
+</div>
+
+</div>
+</body>
+</html>
