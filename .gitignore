@@ -261,7 +261,3 @@ robots.txt
 *.sql
 !dump.sql
 !docker/db/init.sql
-.agent/
-.agents/
-.claude/
-_bmad/

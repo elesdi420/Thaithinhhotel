@@ -83,5 +83,33 @@ Hệ thống sẽ tự động import cơ sở dữ liệu mẫu (`docker/db/ini
 ├── modules/qlovietqr/              # Module thanh toán VietQR & Webhook tự động
 ├── scripts/                        # Bộ script bảo trì, phân quyền, SEO và chuyển ngôn ngữ
 ├── themes/hotel-reservation-theme/ # Giao diện đặt phòng tùy biến, bản đồ Google Maps & SEO
-└── _bmad-output/                   # Tài liệu đặc tả kỹ thuật và lịch sử triển khai
+├── _bmad-output/                   # Toàn bộ tài liệu PRD, Architecture và Specs
+├── _bmad/                          # Khung cấu hình phương pháp luận BMAD
+└── .agents/ / .claude/ / .agent/   # Kỹ năng và workflows phục vụ AI Co-Dev
 ```
+
+---
+
+## 📚 Tài Liệu Kỹ Thuật Phục Vụ Co-Dev (Documentation & Architecture)
+
+Toàn bộ tài liệu phân tích, kiến trúc và đặc tả chi tiết đều được lưu trữ trực tiếp trong repository để phục vụ làm việc nhóm (co-dev) hoặc bàn giao:
+
+### 1. Kế Hoạch & Kiến Trúc
+- **Yêu cầu sản phẩm (PRD):** [`_bmad-output/planning-artifacts/prds/prd-CMS-2026-08-30/prd.md`](_bmad-output/planning-artifacts/prds/prd-CMS-2026-08-30/prd.md)
+- **Kiến trúc hệ thống (Architecture Spine):** [`_bmad-output/planning-artifacts/architecture/architecture-CMS-2026-09-02/ARCHITECTURE-SPINE.md`](_bmad-output/planning-artifacts/architecture/architecture-CMS-2026-09-02/ARCHITECTURE-SPINE.md)
+- **Phân rã tính năng (Epics Breakdown):** [`_bmad-output/planning-artifacts/epics.md`](_bmad-output/planning-artifacts/epics.md)
+- **Bảng theo dõi tiến độ (Sprint Status):** [`_bmad-output/implementation-artifacts/sprint-status.yaml`](_bmad-output/implementation-artifacts/sprint-status.yaml)
+
+### 2. Chi Tiết Đặc Tả Kỹ Thuật (Story Specs)
+- **Epic 1: Khởi tạo QloApps & Vận hành Đa cơ sở**
+  - [Spec 1.1: Triển khai Docker QloApps](_bmad-output/implementation-artifacts/spec-1-1-trien-khai-ma-nguon-qloapps.md)
+  - [Spec 1.2: Thiết lập Đa chi nhánh & 50 Phòng](_bmad-output/implementation-artifacts/spec-1-2-thiet-lap-da-chi-nhanh-danh-muc-phong.md)
+  - [Spec 1.3: Cấu hình Phân quyền Nhân viên](_bmad-output/implementation-artifacts/spec-1-3-cau-hinh-phan-quyen-nhan-vien.md)
+  - [Spec 1.4: Kích hoạt Booking Engine & Email SMTP](_bmad-output/implementation-artifacts/spec-1-4-kich-hoat-booking-engine-email.md)
+- **Epic 2: Thanh Toán QR Tự Động**
+  - [Spec 2.1: Tích hợp Giao diện Thanh toán VietQR](_bmad-output/implementation-artifacts/spec-2-1-tich-hop-giao-dien-thanh-toan-qr-frontend-addon.md)
+  - [Spec 2.2: Xử lý Webhook Đối soát Tự động](_bmad-output/implementation-artifacts/spec-2-2-xu-ly-webhook-doi-soat-tu-dong-backend-addon.md)
+- **Epic 3: Trải Nghiệm Người Dùng & Tối Ưu**
+  - [Spec 3.1: Nhúng Bản đồ Vị trí 3 Chi nhánh](_bmad-output/implementation-artifacts/spec-3-1-nhung-ban-do-vi-tri-chi-nhanh.md)
+  - [Spec 3.2: Tối ưu SEO & Tải trang Di động (CCC)](_bmad-output/implementation-artifacts/spec-3-2-toi-uu-seo-tai-trang-di-dong.md)
+
