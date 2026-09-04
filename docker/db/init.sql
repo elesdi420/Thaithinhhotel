@@ -125,6 +125,7 @@ INSERT INTO `qlo_access` VALUES
 (1,81,0,0,0,0,0),
 (1,82,0,0,0,0,0),
 (1,83,0,0,0,0,0),
+(1,109,1,0,0,0,0),
 (2,1,0,0,0,0,0),
 (2,2,0,0,0,0,0),
 (2,3,0,0,0,0,0),
@@ -233,6 +234,7 @@ INSERT INTO `qlo_access` VALUES
 (2,106,0,0,0,0,0),
 (2,107,0,0,0,0,0),
 (2,108,0,0,0,0,0),
+(2,109,0,0,0,0,0),
 (3,1,0,0,0,0,0),
 (3,2,0,0,0,0,0),
 (3,3,0,0,0,0,0),
@@ -341,6 +343,7 @@ INSERT INTO `qlo_access` VALUES
 (3,106,0,0,0,0,0),
 (3,107,0,0,0,0,0),
 (3,108,0,0,0,0,0),
+(3,109,0,0,0,0,0),
 (4,1,0,0,0,0,0),
 (4,2,0,0,0,0,0),
 (4,3,0,0,0,0,0),
@@ -449,6 +452,7 @@ INSERT INTO `qlo_access` VALUES
 (4,106,0,0,0,0,0),
 (4,107,0,0,0,0,0),
 (4,108,0,0,0,0,0),
+(4,109,0,0,0,0,0),
 (5,1,1,1,1,1,0),
 (5,2,1,1,1,1,0),
 (5,3,1,1,1,1,0),
@@ -556,7 +560,8 @@ INSERT INTO `qlo_access` VALUES
 (5,105,1,1,1,1,0),
 (5,106,1,1,1,1,0),
 (5,107,1,1,1,1,0),
-(5,108,1,1,1,1,0);
+(5,108,1,1,1,1,0),
+(5,109,1,0,0,0,0);
 /*!40000 ALTER TABLE `qlo_access` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2947,7 +2952,7 @@ CREATE TABLE `qlo_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3016,7 +3021,13 @@ INSERT INTO `qlo_connections` VALUES
 (65,1,1,23,1,2886860801,'2026-09-04 22:41:09',''),
 (66,1,1,63,1,2886860801,'2026-09-04 22:41:51',''),
 (67,1,1,64,1,2886860801,'2026-09-04 22:42:39',''),
-(68,1,1,65,1,2886860801,'2026-09-04 22:56:22','');
+(68,1,1,65,1,2886860801,'2026-09-04 22:56:22',''),
+(69,1,1,19,1,2886860801,'2026-09-05 03:07:58',''),
+(70,1,1,66,1,2886860801,'2026-09-05 03:22:25',''),
+(71,1,1,67,1,2886860801,'2026-09-05 03:22:40',''),
+(72,1,1,68,1,2886860801,'2026-09-05 03:22:49',''),
+(73,1,1,69,1,2886860801,'2026-09-05 03:23:00',''),
+(74,1,1,70,1,2886860801,'2026-09-05 03:23:15','');
 /*!40000 ALTER TABLE `qlo_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5369,7 +5380,7 @@ CREATE TABLE `qlo_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5443,7 +5454,12 @@ INSERT INTO `qlo_guest` VALUES
 (62,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (63,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (64,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(65,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
+(65,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(66,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(67,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(68,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(69,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(70,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0);
 /*!40000 ALTER TABLE `qlo_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -14299,7 +14315,7 @@ CREATE TABLE `qlo_tab` (
   PRIMARY KEY (`id_tab`),
   KEY `class_name` (`class_name`),
   KEY `id_parent` (`id_parent`)
-) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -14416,7 +14432,8 @@ INSERT INTO `qlo_tab` VALUES
 (105,-1,'AdminFooterPaymentBlockSetting','wkfooterpaymentblock',14,1,0),
 (106,-1,'AdminCustomNavigationLinkSetting','blocknavigationmenu',15,1,0),
 (107,-1,'AdminDashgoals','dashgoals',16,1,0),
-(108,0,'AdminQloappsChannelManagerConnector','qlochannelmanagerconnector',6,1,0);
+(108,0,'AdminQloappsChannelManagerConnector','qlochannelmanagerconnector',6,1,0),
+(109,108,'AdminOtaSync','',0,1,0);
 /*!40000 ALTER TABLE `qlo_tab` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -14657,7 +14674,9 @@ INSERT INTO `qlo_tab_lang` VALUES
 (107,1,'Dashgoals'),
 (107,2,'Dashgoals'),
 (108,1,'Channel Manager'),
-(108,2,'Đồng bộ Kênh bán phòng (OTA)');
+(108,2,'Đồng bộ Kênh bán phòng (OTA)'),
+(109,1,'OTA Sync (Agoda/Airbnb)'),
+(109,2,'Đồng bộ OTA (Agoda/Airbnb)');
 /*!40000 ALTER TABLE `qlo_tab_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -15892,4 +15911,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-04 15:58:12
+-- Dump completed on 2026-09-04 20:27:55

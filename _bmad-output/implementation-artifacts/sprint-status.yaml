@@ -114,9 +114,35 @@ action_items:
       -> 422, and with no secret configured a forged callback gets 503 while the order
       stays unpaid. secret123 no longer appears anywhere in the tracked tree.
   - id: AI-4
-    status: open
+    status: done
     title: Logo is still the stock QloApps "Qlo" mark
-    detail: PS_LOGO=logo.jpg is the upstream default. Needs the real brand asset.
+    detail: >
+      Replaced with an original Thaithinh Hotel wordmark drawn for this project - a
+      navy monogram tile with a gold building mark, plus the name - applied to the
+      header, email and invoice logos. Drawn from scratch rather than taken from
+      another hotel, whose logo would be their trademark. If the client has a real
+      brand asset, swapping img/logo.jpg (420x110) is all that is needed.
+  - id: AI-7
+    status: done
+    title: Demo shells for the two v2 features, clearly labelled as shells
+    detail: >
+      Requested for the client demo, explicitly interface-only. Both are static:
+      no API calls, no storage, no business logic.
+      (1) Floating chat widget bottom-right of the front office
+      (themes/hotel-reservation-theme/chat-widget-mockup.tpl, included from
+      footer.tpl) with the Thaithinh logo and the agreed greeting. Sending a message
+      echoes it and returns one fixed reply saying automatic answers are still being
+      built, followed by a "Giao diện demo - chưa đấu nối AI Chatbot" note, so nobody
+      watching the demo concludes the bot understood the question.
+      (2) Admin page "Đồng bộ OTA (Agoda/Airbnb)"
+      (controllers/admin/AdminOtaSyncController.php plus its view template), added as
+      a child of the existing OTA menu rather than a second top-level menu with a
+      near-identical name. API key fields for Agoda, Airbnb, Booking.com and
+      Traveloka, the requested "Tính năng sẵn sàng đấu nối" note, and a second notice
+      stating the page is a demo that stores nothing. Visible to SuperAdmin and the
+      chain manager only, matching how receptionists are already scoped.
+      Both carry mockup warnings in their file headers. Replace the files wholesale
+      when FR-9 and FR-14/15/16 are built for real; neither is wired to anything.
   - id: AI-5
     status: partial
     title: The site advertises facilities nobody has confirmed exist
