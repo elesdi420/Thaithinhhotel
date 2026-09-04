@@ -243,6 +243,8 @@ admin/themes/default/css/screen.css
 /themes/hotel-reservation-theme/lang/*
 !/themes/hotel-reservation-theme/lang/index.php
 !/themes/hotel-reservation-theme/lang/en.php
+# Same reasoning as /mails/vn/: Vietnamese ships with this product.
+!/themes/hotel-reservation-theme/lang/vn.php
 
 /themes/hotel-reservation-theme/modules/*/translations/*.php
 !/themes/hotel-reservation-theme/modules/*/translations/index.php

@@ -117,3 +117,49 @@ action_items:
     status: open
     title: Logo is still the stock QloApps "Qlo" mark
     detail: PS_LOGO=logo.jpg is the upstream default. Needs the real brand asset.
+  - id: AI-5
+    status: partial
+    title: The site advertises facilities nobody has confirmed exist
+    detail: >
+      Branch 1 lists these amenities, straight from the QloApps demo fixture and
+      still in English: Business Center, Amphitheatre, Casino, DiscoTheatre,
+      Welcome Drinks, NewsPaper In Lobby, Transfer Available, Internet Access,
+      Fax Machine, Board room, Mini Theatre. Branches 2 and 3 list none at all.
+      The home page separately promotes "World class chefs", "Restaurants" and
+      "Gym & Spa". None of this appears in the client's requirements document.
+      A casino claim is the sharp end: gambling is tightly licensed in Vietnam, so
+      publishing it on a real hotel's site is not just inaccurate. These were left
+      untranslated on purpose - translating an unverified claim only makes it wrong
+      in two languages, the same reasoning that led to disabling the fake
+      testimonials. Needs the client to say which facilities each branch actually
+      has; until then the honest options are to clear the list or hide the block.
+      Fixed in passing during this review: the "Secure payment" page still carried
+      the demo disclaimer and told guests "we accept major credit cards", which is
+      not how this hotel is paid - rewritten around VietQR in both languages.
+      Also still open: the English versions of Policies, Legal Notice and Terms and
+      Conditions are untouched demo boilerplate, opening with "This page contains
+      demo content for illustrative purposes only". The Vietnamese versions of the
+      same three pages are properly written. Left alone deliberately - drafting a
+      real business's legal terms in another language is the client's call, not
+      something to improvise. Either have them translated properly or turn the
+      English language off until they are.
+  - id: AI-6
+    status: partial
+    title: Vietnamese was switched on without any interface translation files
+    detail: >
+      Same root cause as AI-1, one layer up. The shop runs with Vietnamese as the
+      default language (PS_LANG_DEFAULT=2, iso "vn"), but no translation file
+      existed anywhere: the theme shipped only lang/en.php, and 0 of the front-office
+      modules have a translations/ directory at all. Every interface string therefore
+      fell back to English, which is why the navigation reads "Home / Our Properties /
+      Interior / Amenities / Rooms" on a Vietnamese site that claims full localisation.
+      Done so far: created themes/hotel-reservation-theme/lang/vn.php, generated from
+      en.php so the md5 keys match, with 33 of 1036 strings translated - the rest
+      deliberately keep their English text, which cannot regress anything since that
+      is what rendered before. Confirmed working: the account page title now renders
+      "Đăng nhập". Also removed the "Powered by QloApps" line and its outbound link
+      from the footer, which contradicted the white-label claim in the README.
+      Still open: the home page is built almost entirely from module blocks, so it is
+      untouched by the theme file. Finishing this means translation files for roughly
+      a dozen modules (navigation, cart, newsletter, search widget, footer blocks) plus
+      widening the theme dictionary - a story of its own, not a QA-pass side fix.

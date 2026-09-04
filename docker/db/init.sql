@@ -2181,9 +2181,9 @@ INSERT INTO `qlo_cms_lang` VALUES
 (3,1,1,'Terms and Conditions','Our Terms and Conditions','conditions, terms, use, sell','\n      <h2 class=\"page-heading bottom-indent\">Terms and Conditions</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div>\n      <h3 class=\"page-subheading\"><strong>Cancellation Policy:</strong></h3>\n      <div>\n      <ul>\n      <li><span>Free Cancellation: Up to 48 hours before arrival for standard rates.</span></li>\n      <li><span>Bookings made with a non-refundable rate cannot be canceled or modified.</span></li>\n      <li><span>Cancellations within 24 hours of arrival will incur a fee of one night\'s stay.</span></li>\n      </ul>\n      </div>\n      <br />\n      <h3 class=\"page-subheading\"><strong>Changes to Bookings:</strong></h3>\n      <div>\n      <ul>\n      <li><span>A fee of $25 may apply to change your reservation dates after booking.</span></li>\n      <li><span>Changes to room type or number of guests are subject to availability at the hotel.</span></li>\n      </ul>\n      </div>\n      <br />\n      <h3 class=\"page-subheading\"><strong>Guest Responsibility:</strong></h3>\n      <div>\n      <ul>\n      <li><span>All guests must present a valid government-issued photo ID at check-in.</span></li>\n      <li><span>The maximum occupancy for the room type is 2 adults.</span></li>\n      <li><span>Smoking and alcohol are strictly prohibited in all guest rooms and public areas.</span></li>\n      </ul>\n      </div>\n      </div>\n    ','terms-and-conditions-of-use'),
 (3,2,1,'Điều khoản và Điều kiện','Điều khoản và điều kiện của chúng tôi','điều khoản, điều kiện, sử dụng, bán hàng','\n        <h2 class=\"page-heading bottom-indent\">Điều khoản và Điều kiện</h2>\n        <div>\n        <p style=\"border-left:2px solid #808080;padding-left:5px;\">Trang này chứa nội dung minh họa cho mục đích giảng dạy. Mọi sự tương đồng với sản phẩm, dịch vụ hoặc sự kiện thực tế là hoàn toàn ngẫu nhiên. Cảm ơn sự hiểu biết của bạn.</p>\n        <hr /></div>\n        <div>\n        <h3 class=\"page-subheading\"><strong>Chính sách Hủy đặt phòng:</strong></h3>\n        <div>\n        <ul>\n        <li><span>Miễn phí Hủy đặt phòng: Được thực hiện trong vòng 48 giờ trước khi đến với giá chuẩn.</span></li>\n        <li><span>Các đặt phòng với giá không hoàn lại không thể bị hủy hoặc sửa đổi.</span></li>\n        <li><span>Việc hủy đặt phòng trong vòng 24 giờ trước khi đến sẽ phải chịu phí một đêm.</span></li>\n        </ul>\n        </div>\n        <br />\n        <h3 class=\"page-subheading\"><strong>Thay đổi Đặt phòng:</strong></h3>\n        <div>\n        <ul>\n        <li><span>Có thể áp dụng phí $25 cho việc thay đổi ngày đặt phòng sau khi đặt.</span></li>\n        <li><span>Thay đổi loại phòng hoặc số lượng khách là tùy thuộc vào sự có sẵn tại khách sạn.</span></li>\n        </ul>\n        </div>\n        <br />\n        <h3 class=\"page-subheading\"><strong>Trách nhiệm của Khách:</strong></h3>\n        <div>\n        <ul>\n        <li><span>Tất cả khách hàng phải xuất trình giấy tờ tùy thân có hình ảnh do chính phủ cấp tại quầy nhận phòng.</span></li>\n        <li><span>Sức chứa tối đa cho loại phòng là 2 người lớn.</span></li>\n        <li><span>Hút thuốc và uống rượu là nghiêm cấm tại tất cả các phòng và khu vực công cộng.</span></li>\n        </ul>\n        </div>\n        </div>\n    ','terms-and-conditions'),
 (4,1,1,'About Us','Learn more about us','about us, informations','<h2 class=\"page-heading bottom-indent\">About Us</h2><div class=\"cms-block\"><p>Thaithinh Hotel is a 3-branch hotel chain in Vietnam, offering comfortable rooms and fast online booking with instant VietQR payment.</p><p><strong>Our branches:</strong></p><ul><li>Branch 1 - City Center: Deluxe &amp; Suite rooms</li><li>Branch 2 - Beachfront: Standard &amp; Deluxe rooms</li><li>Branch 3 - Old Quarter: Standard &amp; Suite rooms</li></ul><p>Book online, pay by VietQR, get an instant confirmation email.</p></div>','about-us'),
-(4,2,1,'About Us','Learn more about us','about us, informations','<h2 class=\"page-heading bottom-indent\">Giới Thiệu</h2><div class=\"cms-block\"><p>Thaithinh Hotel là chuỗi khách sạn 3 cơ sở tại Việt Nam, mang đến phòng nghỉ tiện nghi và đặt phòng trực tuyến nhanh chóng với thanh toán VietQR tức thì.</p><p><strong>Các cơ sở của chúng tôi:</strong></p><ul><li>Cơ sở 1 - Trung tâm: Phòng Deluxe &amp; Suite</li><li>Cơ sở 2 - Bờ biển: Phòng Standard &amp; Deluxe</li><li>Cơ sở 3 - Phố cổ: Phòng Standard &amp; Suite</li></ul><p>Đặt phòng trực tuyến, thanh toán qua VietQR, nhận email xác nhận ngay lập tức.</p></div>','about-us'),
-(5,1,1,'Secure payment','Our secure payment method','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Secure payment</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div>We prioritize your security. All transactions made on our website are encrypted using Secure Socket Layer (SSL) technology to ensure your personal information and payment details are protected. We accept major credit cards and provide a secure environment for a seamless booking experience. For any inquiries regarding payment security, feel free to contact our customer support team.</div>\n    ','secure-payment'),
-(5,2,1,'Secure payment','Our secure payment method','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Secure payment</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div>We prioritize your security. All transactions made on our website are encrypted using Secure Socket Layer (SSL) technology to ensure your personal information and payment details are protected. We accept major credit cards and provide a secure environment for a seamless booking experience. For any inquiries regarding payment security, feel free to contact our customer support team.</div>\n    ','secure-payment');
+(4,2,1,'Giới thiệu','Learn more about us','about us, informations','<h2 class=\"page-heading bottom-indent\">Giới Thiệu</h2><div class=\"cms-block\"><p>Thaithinh Hotel là chuỗi khách sạn 3 cơ sở tại Việt Nam, mang đến phòng nghỉ tiện nghi và đặt phòng trực tuyến nhanh chóng với thanh toán VietQR tức thì.</p><p><strong>Các cơ sở của chúng tôi:</strong></p><ul><li>Cơ sở 1 - Trung tâm: Phòng Deluxe &amp; Suite</li><li>Cơ sở 2 - Bờ biển: Phòng Standard &amp; Deluxe</li><li>Cơ sở 3 - Phố cổ: Phòng Standard &amp; Suite</li></ul><p>Đặt phòng trực tuyến, thanh toán qua VietQR, nhận email xác nhận ngay lập tức.</p></div>','about-us'),
+(5,1,1,'Secure payment','Our secure payment method','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Secure payment</h2><div class=\"cms-block\"><p>Thaithinh Hotel accepts payment by <strong>bank transfer via QR code (VietQR)</strong>. When you book, the system generates a QR code for your order with the amount and booking reference already filled in.</p><p><strong>How to pay:</strong></p><ul><li>Open your banking app and choose scan QR</li><li>Scan the code shown at checkout - amount and reference are pre-filled</li><li>Confirm the transfer</li></ul><p>Payment is reconciled automatically and your booking is marked as paid, usually within a few minutes. A confirmation email follows immediately.</p><p>Because the transfer reference already carries your booking code, you do not need to keep the receipt for matching. If your booking is not updated after 15 minutes, please contact our support team.</p></div>','secure-payment'),
+(5,2,1,'Thanh toán an toàn','Our secure payment method','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Thanh toán an toàn</h2><div class=\"cms-block\"><p>Thaithinh Hotel nhận thanh toán bằng <strong>chuyển khoản ngân hàng qua mã QR (VietQR)</strong>. Khi đặt phòng, hệ thống sinh mã QR riêng cho từng đơn, đã điền sẵn số tiền và mã đơn của quý khách.</p><p><strong>Cách thanh toán:</strong></p><ul><li>Mở ứng dụng ngân hàng trên điện thoại, chọn quét mã QR</li><li>Quét mã hiển thị ở bước thanh toán - số tiền và nội dung đã có sẵn, không cần nhập tay</li><li>Xác nhận chuyển khoản</li></ul><p>Hệ thống tự động đối soát giao dịch và cập nhật đơn sang trạng thái đã thanh toán, thường trong vòng vài phút. Email xác nhận được gửi ngay sau đó.</p><p>Vì nội dung chuyển khoản đã chứa sẵn mã đơn, quý khách không cần giữ lại biên lai để đối chiếu. Nếu sau 15 phút đơn chưa được cập nhật, vui lòng liên hệ bộ phận hỗ trợ.</p></div>','secure-payment');
 /*!40000 ALTER TABLE `qlo_cms_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2946,7 +2946,7 @@ CREATE TABLE `qlo_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2970,7 +2970,46 @@ INSERT INTO `qlo_connections` VALUES
 (12,1,1,12,1,3232252161,'2026-09-02 19:08:30',''),
 (13,1,1,13,1,3232252161,'2026-09-02 19:10:48',''),
 (14,1,1,14,1,2890117626,'2026-09-02 19:14:24',''),
-(15,1,1,15,1,3232252161,'2026-09-02 19:18:37','');
+(15,1,1,15,1,3232252161,'2026-09-02 19:18:37',''),
+(24,1,1,24,1,2886860801,'2026-09-04 21:44:45',''),
+(25,1,1,19,1,2886860801,'2026-09-04 21:51:53',''),
+(26,1,1,25,1,2886860801,'2026-09-04 21:54:52',''),
+(27,1,1,26,1,2886860801,'2026-09-04 21:55:41',''),
+(28,1,1,27,1,2886860801,'2026-09-04 21:55:48',''),
+(29,1,1,28,1,2886860801,'2026-09-04 21:55:48',''),
+(30,1,1,29,4,2886860801,'2026-09-04 21:55:54',''),
+(31,1,1,30,1,2886860801,'2026-09-04 21:55:55','http://localhost:8080'),
+(32,1,1,31,4,2886860801,'2026-09-04 21:56:04',''),
+(33,1,1,32,3,2886860801,'2026-09-04 21:56:11',''),
+(34,1,1,33,3,2886860801,'2026-09-04 21:56:18',''),
+(35,1,1,34,5,2886860801,'2026-09-04 21:56:26',''),
+(36,1,1,35,5,2886860801,'2026-09-04 21:56:42',''),
+(37,1,1,36,6,2886860801,'2026-09-04 21:56:49',''),
+(38,1,1,37,6,2886860801,'2026-09-04 21:57:01',''),
+(39,1,1,38,7,2886860801,'2026-09-04 21:57:08',''),
+(40,1,1,39,7,2886860801,'2026-09-04 21:57:18',''),
+(41,1,1,40,7,2886860801,'2026-09-04 21:57:27',''),
+(42,1,1,41,7,2886860801,'2026-09-04 21:57:33',''),
+(43,1,1,42,7,2886860801,'2026-09-04 21:57:41',''),
+(44,1,1,43,7,2886860801,'2026-09-04 21:57:48',''),
+(45,1,1,44,7,2886860801,'2026-09-04 21:57:56',''),
+(46,1,1,45,7,2886860801,'2026-09-04 21:58:03',''),
+(47,1,1,46,7,2886860801,'2026-09-04 21:58:08',''),
+(48,1,1,47,7,2886860801,'2026-09-04 21:58:14',''),
+(49,1,1,48,8,2886860801,'2026-09-04 21:58:24',''),
+(50,1,1,49,8,2886860801,'2026-09-04 21:58:43',''),
+(51,1,1,50,1,2886860801,'2026-09-04 21:58:53',''),
+(52,1,1,51,1,2886860801,'2026-09-04 21:59:03',''),
+(53,1,1,52,1,2886860801,'2026-09-04 22:01:23',''),
+(54,1,1,53,1,2886860801,'2026-09-04 22:05:45',''),
+(55,1,1,54,7,2886860801,'2026-09-04 22:05:57',''),
+(56,1,1,55,1,2886860801,'2026-09-04 22:09:22',''),
+(57,1,1,56,5,2886860801,'2026-09-04 22:13:26',''),
+(58,1,1,57,8,2886860801,'2026-09-04 22:13:38',''),
+(59,1,1,58,1,2886860801,'2026-09-04 22:14:53',''),
+(60,1,1,59,1,2886860801,'2026-09-04 22:15:09',''),
+(61,1,1,60,1,2886860801,'2026-09-04 22:15:18',''),
+(62,1,1,61,1,2886860801,'2026-09-04 22:15:37','');
 /*!40000 ALTER TABLE `qlo_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5323,7 +5362,7 @@ CREATE TABLE `qlo_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5355,7 +5394,45 @@ INSERT INTO `qlo_guest` VALUES
 (20,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
 (21,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
 (22,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(23,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0);
+(23,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
+(24,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(25,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(26,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(27,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(28,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(29,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(30,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(31,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(32,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(33,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(34,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(35,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(36,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(37,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(38,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(39,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(40,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(41,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(42,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(43,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(44,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(45,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(46,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(47,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(48,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(49,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(50,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(51,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(52,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(53,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(54,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(55,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(56,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(57,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(58,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(59,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(60,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(61,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
 /*!40000 ALTER TABLE `qlo_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6739,7 +6816,7 @@ INSERT INTO `qlo_htl_custom_navigation_link` VALUES
 (3,'/#hotelInteriorBlock',1,0,2,1,0,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (4,'/#hotelAmenitiesBlock',1,0,3,1,0,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (5,'/#hotelRoomsBlock',1,0,4,1,0,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
-(6,'/#hotelTestimonialBlock',1,0,5,1,0,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
+(6,'/#hotelTestimonialBlock',1,0,5,1,0,0,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (7,'',0,1,6,0,1,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (8,'',0,2,7,1,1,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (9,'',0,3,8,0,1,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
@@ -8190,7 +8267,7 @@ CREATE TABLE `qlo_mail` (
   `date_add` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id_mail`),
   KEY `recipient` (`recipient`(10))
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -8201,7 +8278,8 @@ LOCK TABLES `qlo_mail` WRITE;
 /*!40000 ALTER TABLE `qlo_mail` DISABLE KEYS */;
 INSERT INTO `qlo_mail` VALUES
 (1,'khachhang@example.com','order_conf','[CMS Hotel] Xác nhận đặt phòng thành công - Mã #BOOK-2026-001',1,'2026-09-02 15:34:13'),
-(2,'guest.webhook@example.com','payment_accepted','[CMS Hotel] Complete payment received',1,'2026-09-02 16:44:22');
+(2,'guest.webhook@example.com','payment_accepted','[CMS Hotel] Complete payment received',1,'2026-09-02 16:44:22'),
+(6,'pub@qloapps.com','payment_accepted','[Thaithinh Hotel] Complete payment received',1,'2026-09-04 21:43:36');
 /*!40000 ALTER TABLE `qlo_mail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9568,7 +9646,7 @@ CREATE TABLE `qlo_order_history` (
   KEY `order_history_order` (`id_order`),
   KEY `id_employee` (`id_employee`),
   KEY `id_order_state` (`id_order_state`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -9579,7 +9657,8 @@ LOCK TABLES `qlo_order_history` WRITE;
 /*!40000 ALTER TABLE `qlo_order_history` DISABLE KEYS */;
 INSERT INTO `qlo_order_history` VALUES
 (1,0,2,13,'2026-09-02 16:44:21'),
-(2,0,2,2,'2026-09-02 16:44:21');
+(2,0,2,2,'2026-09-02 16:44:21'),
+(3,0,1,2,'2026-09-04 21:43:32');
 /*!40000 ALTER TABLE `qlo_order_history` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9614,7 +9693,7 @@ CREATE TABLE `qlo_order_invoice` (
   `date_add` datetime NOT NULL,
   PRIMARY KEY (`id_order_invoice`),
   KEY `id_order` (`id_order`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -9624,7 +9703,8 @@ CREATE TABLE `qlo_order_invoice` (
 LOCK TABLES `qlo_order_invoice` WRITE;
 /*!40000 ALTER TABLE `qlo_order_invoice` DISABLE KEYS */;
 INSERT INTO `qlo_order_invoice` VALUES
-(1,2,1,0,'0000-00-00 00:00:00',0.000000,0.000000,0.000000,0.000000,1600000.000000,1600000.000000,0.000000,0.000000,0,0.000000,0.000000,'CMS Hotel<br />The Hotel Prime, Monticello Dr, Montgomery, 10010<br />0987654321','','','','2026-09-02 16:44:21');
+(1,2,1,0,'0000-00-00 00:00:00',0.000000,0.000000,0.000000,0.000000,1600000.000000,1600000.000000,0.000000,0.000000,0,0.000000,0.000000,'CMS Hotel<br />The Hotel Prime, Monticello Dr, Montgomery, 10010<br />0987654321','','','','2026-09-02 16:44:21'),
+(2,1,2,0,'0000-00-00 00:00:00',0.000000,0.000000,0.000000,0.000000,1600000.000000,1600000.000000,0.000000,0.000000,0,0.000000,0.000000,'Thaithinh Hotel<br />Thaithinh Hotel - Việt Nam<br />0987654321','','','','2026-09-04 21:43:28');
 /*!40000 ALTER TABLE `qlo_order_invoice` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9751,7 +9831,7 @@ CREATE TABLE `qlo_order_payment` (
   `date_add` datetime NOT NULL,
   PRIMARY KEY (`id_order_payment`),
   KEY `order_reference` (`order_reference`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -9761,7 +9841,8 @@ CREATE TABLE `qlo_order_payment` (
 LOCK TABLES `qlo_order_payment` WRITE;
 /*!40000 ALTER TABLE `qlo_order_payment` DISABLE KEYS */;
 INSERT INTO `qlo_order_payment` VALUES
-(1,'HWJDEKWBZ',1,1600000.000000,'VietQR Bank Transfer',0,1.000000,'TXN_1788342261','','','','','2026-09-02 16:44:21');
+(1,'HWJDEKWBZ',1,1600000.000000,'VietQR Bank Transfer',0,1.000000,'TXN_1788342261','','','','','2026-09-02 16:44:21'),
+(2,'NATQFGDRP',1,1600000.000000,'VietQR Bank Transfer',0,1.000000,'TXN_6a9ad91074612','','','','','2026-09-04 21:43:28');
 /*!40000 ALTER TABLE `qlo_order_payment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9780,7 +9861,7 @@ CREATE TABLE `qlo_order_payment_detail` (
   `receipt_number` int(10) NOT NULL,
   `date_add` datetime NOT NULL,
   PRIMARY KEY (`id_order_payment_detail`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -9790,7 +9871,8 @@ CREATE TABLE `qlo_order_payment_detail` (
 LOCK TABLES `qlo_order_payment_detail` WRITE;
 /*!40000 ALTER TABLE `qlo_order_payment_detail` DISABLE KEYS */;
 INSERT INTO `qlo_order_payment_detail` VALUES
-(1,1,2,1600000.000000,1,'2026-09-02 16:44:21');
+(1,1,2,1600000.000000,1,'2026-09-02 16:44:21'),
+(2,2,1,1600000.000000,2,'2026-09-04 21:43:28');
 /*!40000 ALTER TABLE `qlo_order_payment_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10213,7 +10295,7 @@ CREATE TABLE `qlo_orders` (
 LOCK TABLES `qlo_orders` WRITE;
 /*!40000 ALTER TABLE `qlo_orders` DISABLE KEYS */;
 INSERT INTO `qlo_orders` VALUES
-(1,'NATQFGDRP',0,0,0,1,1,1,1,1,1,1,13,'098f6bcd4621d373cade4e832627b4f6','VietQR Bank Transfer',0,1.000000,'qlovietqr',1,0,'',0,'',0.000000,0.000000,0.000000,1600000.000000,0.000000,0.000000,0.000000,1600000.000000,1600000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00','',0,0,0.000000,0,'2026-09-02 16:44:05','2026-09-02 16:44:05'),
+(1,'NATQFGDRP',0,0,0,1,1,1,1,1,1,1,2,'098f6bcd4621d373cade4e832627b4f6','VietQR Bank Transfer',0,1.000000,'qlovietqr',1,0,'',0,'',0.000000,0.000000,0.000000,1600000.000000,0.000000,0.000000,1600000.000000,1600000.000000,1600000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,2,0,'2026-09-04 21:43:28','0000-00-00 00:00:00','',1,0,0.000000,0,'2026-09-02 16:44:05','2026-09-04 21:43:32'),
 (2,'HWJDEKWBZ',0,0,0,1,2,1,1,1,1,1,2,'89aa89f026132a59da541ca968705365','VietQR Bank Transfer',0,1.000000,'qlovietqr',1,0,'',0,'',0.000000,0.000000,0.000000,1600000.000000,0.000000,0.000000,1600000.000000,1600000.000000,1600000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,1,0,'2026-09-02 16:44:21','0000-00-00 00:00:00','',1,0,0.000000,0,'2026-09-02 16:44:21','2026-09-02 16:44:21');
 /*!40000 ALTER TABLE `qlo_orders` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -10258,7 +10340,7 @@ CREATE TABLE `qlo_page` (
   PRIMARY KEY (`id_page`),
   KEY `id_page_type` (`id_page_type`),
   KEY `id_object` (`id_object`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10271,7 +10353,11 @@ INSERT INTO `qlo_page` VALUES
 (1,1,NULL),
 (2,2,NULL),
 (3,3,NULL),
-(4,4,NULL);
+(4,4,NULL),
+(5,5,NULL),
+(6,6,NULL),
+(7,7,NULL),
+(8,8,11);
 /*!40000 ALTER TABLE `qlo_page` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10287,7 +10373,7 @@ CREATE TABLE `qlo_page_type` (
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id_page_type`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10297,10 +10383,14 @@ CREATE TABLE `qlo_page_type` (
 LOCK TABLES `qlo_page_type` WRITE;
 /*!40000 ALTER TABLE `qlo_page_type` DISABLE KEYS */;
 INSERT INTO `qlo_page_type` VALUES
+(5,'authentication'),
+(7,'cms'),
 (3,'contact'),
 (1,'index'),
+(6,'orderopc'),
 (4,'ourproperties'),
-(2,'pagenotfound');
+(2,'pagenotfound'),
+(8,'product');
 /*!40000 ALTER TABLE `qlo_page_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -15781,4 +15871,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-04 14:24:00
+-- Dump completed on 2026-09-04 15:21:05
