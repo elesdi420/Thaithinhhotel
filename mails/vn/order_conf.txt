@@ -1,0 +1,27 @@
+Thư từ {shop_name}
+Xin chào {firstname} {lastname},
+Cảm ơn quý khách đã đặt phòng tại <strong>{hotel_name}</strong>!
+Chi tiết đơn đặt phòng
+Đơn: {order_name} Đặt ngày {date}
+
+{cart_booking_data_text}
+
+{extra_demands_details_text}
+
+{normal_products_data_txt}
+
+{discounts}
+
+{order_total_info_txt}
+
+Quý khách có thể xem lại đơn đặt phòng và tải hóa đơn tại mục
+"Lịch sử đơn hàng" [{history_url}] trong
+tài khoản của mình, bằng cách bấm "Tài khoản của tôi"
+[{my_account_url}] trên website.
+
+Nếu quý khách dùng tài khoản khách vãng lai, có thể theo dõi đơn tại mục
+"Tra cứu đơn hàng"
+[{guest_tracking_url}?id_order={order_name}]
+trên website.
+
+{shop_name} [{shop_url}]

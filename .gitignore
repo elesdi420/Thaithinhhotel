@@ -232,6 +232,9 @@ admin/themes/default/css/screen.css
 !/mails/.htaccess
 !/mails/index.php
 !/mails/en/
+# Vietnamese is a shipped language of this product, not an optional language pack,
+# so its mail templates must be version-controlled like the English ones.
+!/mails/vn/
 
 /themes/hotel-reservation-theme/cache/*
 !/themes/hotel-reservation-theme/cache/
