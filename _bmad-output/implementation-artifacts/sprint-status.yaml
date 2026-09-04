@@ -29,25 +29,78 @@
 # - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
 # - Retrospective appends its action items to action_items; the status view surfaces open ones
 generated: 09-02-2026 14:48
-last_updated: 09-02-2026 14:48
+last_updated: 09-04-2026 21:30
 project: CMS
 project_key: NOKEY
 tracking_system: file-system
-story_location: /Users/hahoang/Desktop/CMS/_bmad-output/implementation-artifacts
+story_location: _bmad-output/implementation-artifacts
 development_status:
   epic-1: done
-  1-1-triển-khai-mã-nguồn-qloapps: review
-  1-2-thiết-lập-đa-chi-nhánh-danh-mục-phòng: review
-  1-3-cấu-hình-phân-quyền-nhân-viên: review
-  1-4-kích-hoạt-booking-engine-email: review
+  1-1-triển-khai-mã-nguồn-qloapps: done
+  1-2-thiết-lập-đa-chi-nhánh-danh-mục-phòng: done
+  1-3-cấu-hình-phân-quyền-nhân-viên: done
+  1-4-kích-hoạt-booking-engine-email: done
   epic-1-retrospective: optional
 
   epic-2: done
-  2-1-tích-hợp-giao-diện-thanh-toán-qr-frontend-addon: review
-  2-2-xử-lý-webhook-đối-soát-tự-động-backend-addon: review
+  2-1-tích-hợp-giao-diện-thanh-toán-qr-frontend-addon: done
+  2-2-xử-lý-webhook-đối-soát-tự-động-backend-addon: done
   epic-2-retrospective: optional
 
   epic-3: done
-  3-1-tích-hợp-bản-đồ-vị-trí-3-cơ-sở: review
-  3-2-cấu-hình-seo-meta-tags-cơ-bản: review
+  3-1-tích-hợp-bản-đồ-vị-trí-3-cơ-sở: done
+  3-2-cấu-hình-seo-meta-tags-cơ-bản: done
   epic-3-retrospective: optional
+
+# Verification run 09-04-2026 — every story exercised against a from-scratch
+# `docker compose down -v && up` rebuild, not just read from the DB.
+verification_evidence:
+  1-1: 302 tables imported from docker/db/init.sql on a clean volume; site serves 200.
+  1-2: 3 branches, 50 rooms; booking engine returns 20/15/15 available for +7d..+9d.
+  1-3: HotelBranchInformation::getProfileAccessedHotels -> [1]/[2]/[3] per receptionist,
+       [1,2,3] for chain manager. Profile::getProfileAccess (the gate AdminController:542
+       uses) -> AdminStats/AdminDashboard view=0 for receptionists, view=1 for manager.
+  1-4: room search + VND pricing correct. DEFECT FOUND AND FIXED - see action item AI-1.
+  2-1: VietQR URL embeds exact amount + "HOTEL <order_reference>" memo;
+       img.vietqr.io returns a real 73KB PNG.
+  2-2: 4 cases pass - wrong token 401, underpayment 422, valid payment flips order
+       13 -> 2 (Đã nhận được thanh toán đầy đủ), replay returns already_paid.
+  3-1: contact page renders 3 Google Maps iframes with real coordinates
+       (10.7725,106.698 / 16.0601,108.2435 / 21.0307,105.8504); no API key needed.
+  3-2: og:type/title/description/url/site_name present, viewport
+       width=device-width initial-scale=1.0, CCC on (CSS+JS cache, HTML compression).
+
+action_items:
+  - id: AI-1
+    status: done
+    title: Vietnamese guests received no email at all
+    detail: >
+      mails/vn/ did not exist (only mails/en/). Mail::send() has no language fallback -
+      it hard-fails when the template is missing, so every transactional email to a
+      Vietnamese customer (id_lang=2) silently returned false. The site defaults to
+      Vietnamese, so this hit real guests, not an edge case. Proven by control test:
+      id_lang=1 -> true, id_lang=2 -> false, while SMTP itself answered 220 OK.
+      Fixed by creating mails/vn/ (115 templates), translating order_conf into
+      Vietnamese, and removing the leftover "powered by Webkul" line from the
+      customer-facing email. Re-verified end to end: a Vietnamese-language order paid
+      via webhook now delivers "Đã nhận được thanh toán đầy đủ" to Mailpit.
+  - id: AI-2
+    status: open
+    title: VietQR is running on placeholder bank details
+    detail: >
+      VIETQR_ACCOUNT_NO=0901234567 and VIETQR_ACCOUNT_NAME="CMS HOTEL PMS" are
+      placeholders. The QR mechanics work, but money would not reach the hotel.
+      Needs the real account number and account-holder name before go-live.
+  - id: AI-3
+    status: open
+    title: Webhook secret is guessable and travels in the URL
+    detail: >
+      VIETQR_WEBHOOK_SECRET defaults to "secret123" (hardcoded at module install,
+      qlovietqr.php:45) and the endpoint accepts it as a query parameter
+      (?token=...), so it lands in access logs and referrers. Anyone who guesses it
+      can POST a forged callback and mark any booking paid. Rotate to a strong secret
+      and accept it via the X-Webhook-Secret header only, before production.
+  - id: AI-4
+    status: open
+    title: Logo is still the stock QloApps "Qlo" mark
+    detail: PS_LOGO=logo.jpg is the upstream default. Needs the real brand asset.
