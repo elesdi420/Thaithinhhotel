@@ -92,14 +92,27 @@ action_items:
       placeholders. The QR mechanics work, but money would not reach the hotel.
       Needs the real account number and account-holder name before go-live.
   - id: AI-3
-    status: open
-    title: Webhook secret is guessable and travels in the URL
+    status: done
+    title: Webhook secret was published in a public repo, and no secret meant no auth
     detail: >
-      VIETQR_WEBHOOK_SECRET defaults to "secret123" (hardcoded at module install,
-      qlovietqr.php:45) and the endpoint accepts it as a query parameter
-      (?token=...), so it lands in access logs and referrers. Anyone who guesses it
-      can POST a forged callback and mark any booking paid. Rotate to a strong secret
-      and accept it via the X-Webhook-Secret header only, before production.
+      Two defects, not one. First, VIETQR_WEBHOOK_SECRET shipped as "secret123",
+      hardcoded at module install and dumped into the committed seed - and this
+      repository is public, so the secret was readable by anyone. Picking a longer
+      string would not have helped: any secret stored in a committed file is not a
+      secret. Second, the guard read `if (!empty($expectedSecret))`, so clearing the
+      config disabled authentication altogether and left an endpoint that marks
+      bookings paid wide open (fail-open).
+      Fixed by moving the secret to the environment - the pattern this project already
+      set for SMTP in story 1.4 - via QloVietQr::getWebhookSecret(), which reads the
+      env var first and falls back to Configuration. The module now installs with an
+      empty secret instead of a shipped one, the guard fails closed with 503 when
+      nothing is configured, and comparison uses hash_equals. Header
+      (X-Webhook-Secret) is preferred but the ?token= parameter stays supported,
+      because several Vietnamese gateways only let you configure a plain callback URL.
+      Verified on a from-scratch rebuild: old "secret123" -> 401, new secret via
+      header -> 200 and the order moves to paid, replay -> already_paid, underpayment
+      -> 422, and with no secret configured a forged callback gets 503 while the order
+      stays unpaid. secret123 no longer appears anywhere in the tracked tree.
   - id: AI-4
     status: open
     title: Logo is still the stock QloApps "Qlo" mark

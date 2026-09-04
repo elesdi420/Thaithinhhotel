@@ -42,7 +42,9 @@ class QloVietQr extends PaymentModule
         Configuration::updateValue('VIETQR_ACCOUNT_NO', '0901234567');
         Configuration::updateValue('VIETQR_ACCOUNT_NAME', 'CMS HOTEL PMS');
         Configuration::updateValue('VIETQR_TEMPLATE', 'compact2');
-        Configuration::updateValue('VIETQR_WEBHOOK_SECRET', 'secret123');
+        // Deliberately left blank: a shipped default would be public in this repo and
+        // therefore useless as a secret. Set VIETQR_WEBHOOK_SECRET in .env instead.
+        Configuration::updateValue('VIETQR_WEBHOOK_SECRET', '');
 
         // Create custom Order States if not existing
         $this->initOrderStates();
@@ -145,6 +147,25 @@ class QloVietQr extends PaymentModule
         return $this->display(__FILE__, 'payment_return.tpl');
     }
 
+    /**
+     * Resolve the webhook secret, environment first.
+     *
+     * The DB seed (docker/db/init.sql) is committed, so a secret stored only in
+     * Configuration ends up published. The environment is read first so deployments
+     * can hold the real value in .env, which is git-ignored.
+     *
+     * @return string Empty string when nothing is configured; callers must fail closed.
+     */
+    public static function getWebhookSecret()
+    {
+        $fromEnv = getenv('VIETQR_WEBHOOK_SECRET');
+        if ($fromEnv !== false && trim($fromEnv) !== '') {
+            return trim($fromEnv);
+        }
+
+        return trim((string) Configuration::get('VIETQR_WEBHOOK_SECRET'));
+    }
+
     public static function getVietQrUrl($bankId, $accountNo, $template, $amount, $memo, $accountName)
     {
         $memoEncoded = urlencode(trim($memo));
@@ -168,7 +189,9 @@ class QloVietQr extends PaymentModule
 
     public function renderForm()
     {
-        $webhookUrl = Tools::getShopDomainSsl(true, true) . __PS_BASE_URI__ . 'index.php?fc=module&module=qlovietqr&controller=webhook&token=' . Configuration::get('VIETQR_WEBHOOK_SECRET');
+        // Show the secret actually in force, which may come from the environment
+        // rather than from the value stored in this form.
+        $webhookUrl = Tools::getShopDomainSsl(true, true) . __PS_BASE_URI__ . 'index.php?fc=module&module=qlovietqr&controller=webhook&token=' . self::getWebhookSecret();
 
         $fields_form = array(
             'form' => array(
@@ -240,7 +263,8 @@ class QloVietQr extends PaymentModule
                 'VIETQR_ACCOUNT_NO' => Configuration::get('VIETQR_ACCOUNT_NO'),
                 'VIETQR_ACCOUNT_NAME' => Configuration::get('VIETQR_ACCOUNT_NAME'),
                 'VIETQR_TEMPLATE' => Configuration::get('VIETQR_TEMPLATE'),
-                'VIETQR_WEBHOOK_SECRET' => Configuration::get('VIETQR_WEBHOOK_SECRET') ? Configuration::get('VIETQR_WEBHOOK_SECRET') : 'secret123',
+                // No fallback value: the form must not re-seed a known secret.
+                'VIETQR_WEBHOOK_SECRET' => Configuration::get('VIETQR_WEBHOOK_SECRET'),
             ),
             'languages' => $this->context->controller->getLanguages(),
             'id_language' => $this->context->language->id

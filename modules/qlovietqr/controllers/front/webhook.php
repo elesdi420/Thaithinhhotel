@@ -15,19 +15,34 @@ class QloVietQrWebhookModuleFrontController extends ModuleFrontController
     {
         header('Content-Type: application/json');
 
-        // 1. Authenticate webhook request
-        $expectedSecret = Configuration::get('VIETQR_WEBHOOK_SECRET');
-        if (!empty($expectedSecret)) {
-            $tokenParam = Tools::getValue('token');
-            $headerSecret = isset($_SERVER['HTTP_X_WEBHOOK_SECRET']) ? $_SERVER['HTTP_X_WEBHOOK_SECRET'] : '';
-            if ($tokenParam !== $expectedSecret && $headerSecret !== $expectedSecret) {
-                header('Content-Type: application/json', true, 401);
-                echo json_encode(array(
-                    'status' => 'error',
-                    'message' => 'Unauthorized: Invalid webhook secret token'
-                ));
-                exit;
-            }
+        // 1. Authenticate webhook request.
+        // The secret comes from the environment first so it never has to live in a
+        // committed file (the DB seed is version-controlled; the .env is not).
+        $expectedSecret = QloVietQr::getWebhookSecret();
+
+        // Fail closed: with no secret configured, refuse rather than wave everyone
+        // through. This endpoint marks bookings as paid.
+        if ($expectedSecret === '') {
+            header('Content-Type: application/json', true, 503);
+            echo json_encode(array(
+                'status' => 'error',
+                'message' => 'Webhook secret is not configured. Set VIETQR_WEBHOOK_SECRET.'
+            ));
+            exit;
+        }
+
+        // Header is preferred (keeps the secret out of access logs and referrers),
+        // but the query parameter stays supported: several Vietnamese payment
+        // gateways only let you configure a plain callback URL.
+        $tokenParam = (string) Tools::getValue('token');
+        $headerSecret = isset($_SERVER['HTTP_X_WEBHOOK_SECRET']) ? (string) $_SERVER['HTTP_X_WEBHOOK_SECRET'] : '';
+        if (!hash_equals($expectedSecret, $headerSecret) && !hash_equals($expectedSecret, $tokenParam)) {
+            header('Content-Type: application/json', true, 401);
+            echo json_encode(array(
+                'status' => 'error',
+                'message' => 'Unauthorized: Invalid webhook secret token'
+            ));
+            exit;
         }
 
         // 2. Read and decode JSON payload
