@@ -95,6 +95,11 @@ img/**
 !/img/os/index.php
 !/img/p/
 !/img/p/index.php
+# Language placeholder images shown when a room type has no photo. Uploaded product
+# images live in nested folders and stay ignored; only these root-level defaults are
+# tracked, because without them every room card collapses and the text overlaps.
+!/img/p/*-default-*.jpg
+!/img/p/vn.jpg
 !/img/prestashop-avatar.png
 !/img/qloapps@2x.png
 !/img/qloapps-login@2x.png

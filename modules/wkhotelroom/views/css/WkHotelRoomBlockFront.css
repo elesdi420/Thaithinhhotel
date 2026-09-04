@@ -34,6 +34,21 @@
 .htlRoomTypeDescExtras {
     display: none;
 }
+/*
+ * A room type with no photo falls back to img/p/<iso>-default-*.jpg. When that
+ * file is missing the <img> collapses to a text-line height, the card collapses
+ * with it, and .hotelRoomDescContainer - which is absolutely positioned against
+ * the card - lands on top of the neighbouring cards, so every room's name, price
+ * and description pile up on each other.
+ * Reserve the space the image would take, so a missing file degrades to an empty
+ * frame instead of unreadable text.
+ */
+#hotelRoomsBlock .home_block_content img {
+    min-height: 200px;
+    background-color: #eeeeee;
+    object-fit: cover;
+}
+
 @media (min-width: 530px) {
     .hotelRoomDescContainer{
         position: absolute;
