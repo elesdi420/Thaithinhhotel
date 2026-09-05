@@ -34,8 +34,15 @@
         </header>
 
         <section>
+            {*
+              Tab mặc định là "Đang lưu trú" chứ không phải "Khách đến".
+              Khách đến trong ngày thường bằng 0 vào phần lớn thời gian, nên mở
+              Bảng điều khiển ra là gặp bảng trống "Chưa có dữ liệu" - dễ hiểu nhầm
+              là hệ thống chưa có gì. Danh sách khách đang ở trong khách sạn luôn có
+              dữ liệu và cũng là thứ lễ tân cần nhìn trước nhất.
+            *}
             <ul class="nav nav-tabs">
-                <li class="active">
+                <li>
                     <a href="#dgc_current_arrivals" data-toggle="tab">
                         <span>{l s='Arrivals' mod='dashguestcycle'}</span>
                         <span class="label label-info" id="dgc_count_upcoming_arrivals">0</span>
@@ -47,7 +54,7 @@
                         <span class="label label-info" id="dgc_count_upcoming_departures">0</span>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="#dgc_current_in_house" data-toggle="tab">
                         <span>{l s='In-house' mod='dashguestcycle'}</span>
                         <span class="label label-info" id="dgc_count_current_in_house">0</span>
@@ -69,7 +76,7 @@
             </ul>
 
             <div class="tab-content panel panel-sm">
-                <div class="tab-pane active" id="dgc_current_arrivals">
+                <div class="tab-pane" id="dgc_current_arrivals">
                     <table class="table table-striped" id="dgc_table_current_arrivals">
                         <thead></thead>
                         <tbody></tbody>
@@ -81,7 +88,7 @@
                         <tbody></tbody>
                     </table>
                 </div>
-                <div class="tab-pane" id="dgc_current_in_house">
+                <div class="tab-pane active" id="dgc_current_in_house">
                     <table class="table table-striped" id="dgc_table_current_in_house">
                         <thead></thead>
                         <tbody></tbody>

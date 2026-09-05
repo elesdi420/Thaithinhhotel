@@ -170,7 +170,7 @@ action_items:
       something to improvise. Either have them translated properly or turn the
       English language off until they are.
   - id: AI-6
-    status: partial
+    status: done
     title: Vietnamese was switched on without any interface translation files
     detail: >
       Same root cause as AI-1, one layer up. The shop runs with Vietnamese as the
@@ -189,3 +189,9 @@ action_items:
       untouched by the theme file. Finishing this means translation files for roughly
       a dozen modules (navigation, cart, newsletter, search widget, footer blocks) plus
       widening the theme dictionary - a story of its own, not a QA-pass side fix.
+      Closed on branch feature/phase2-polish: two generator scripts now build the
+      translation files (19 modules, 178 keys; theme, 221 strings) from a dictionary
+      rather than by hand, and .gitignore was blocking /modules/*/translations/* so the
+      work would not have left this machine - the fourth time that trap appeared.
+      Home page, properties list and contact page carry no English at all; the room
+      page has one label left, "Room - 1" in the occupancy picker.
