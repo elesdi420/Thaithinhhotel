@@ -19,9 +19,13 @@
 
 	<section id="ttChatPanel" class="tt-chat__panel" role="dialog" aria-modal="false" aria-labelledby="ttChatTitle" hidden>
 		<header class="tt-chat__header">
-			<img src="{$img_dir}logo.jpg" alt="Thaithinh Hotel" class="tt-chat__logo"/>
+			{* $logo_url theo đúng cấu hình PS_LOGO, giống header. Không dùng $img_dir:
+			   biến đó trỏ vào thư mục ảnh của theme, không phải /img/ ở gốc. *}
 			<div class="tt-chat__headtext">
-				<p id="ttChatTitle" class="tt-chat__title">Thaithinh Hotel</p>
+				{* Logo đã có sẵn tên khách sạn nên không lặp lại bằng chữ. Tên vẫn nằm
+				   ở alt và aria-label để trình đọc màn hình đọc được. *}
+				<img src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}" class="tt-chat__logo"/>
+				<p id="ttChatTitle" class="sr-only">{$shop_name|escape:'html':'UTF-8'}</p>
 				<p class="tt-chat__status"><span class="tt-chat__online" aria-hidden="true"></span>Tư vấn trực tuyến</p>
 			</div>
 			<button type="button" id="ttChatClose" class="tt-chat__close" aria-label="Đóng khung chat">&times;</button>
@@ -57,12 +61,16 @@
 .tt-chat__panel{position:absolute;right:0;bottom:72px;width:330px;max-width:calc(100vw - 32px);
 	background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,.24);display:flex;flex-direction:column}
 .tt-chat__header{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#1b2a41;color:#fff}
-.tt-chat__logo{width:38px;height:38px;border-radius:6px;object-fit:cover;background:#fff;flex:0 0 auto}
+/* Logo là wordmark ngang (420x110). Nhồi vào ô vuông + cover sẽ cắt mất hình
+   toà nhà và chữ, nên giữ nguyên tỉ lệ bằng contain. */
+/* Wordmark ngang 420x110: khoá chiều cao, chiều rộng tự theo tỉ lệ (~110px), và
+   cho phép co lại trên khung hẹp mà không méo nhờ object-fit. */
+.tt-chat__logo{display:block;height:30px;width:110px;max-width:100%;object-fit:contain;object-position:left center;
+	background:#fff;border-radius:5px;padding:3px 5px}
 .tt-chat__headtext{flex:1 1 auto;min-width:0}
-.tt-chat__title{margin:0;font-size:15px;font-weight:600;line-height:1.2;color:#fff}
-.tt-chat__status{margin:2px 0 0;font-size:12px;color:#c8d2e0;display:flex;align-items:center;gap:5px}
+.tt-chat__status{margin:5px 0 0;font-size:12px;color:#c8d2e0;display:flex;align-items:center;gap:5px}
 .tt-chat__online{width:7px;height:7px;border-radius:50%;background:#5cd68a;display:inline-block}
-.tt-chat__close{background:none;border:0;color:#c8d2e0;font-size:24px;line-height:1;cursor:pointer;padding:0 2px}
+.tt-chat__close{flex:0 0 auto;background:none;border:0;color:#c8d2e0;font-size:24px;line-height:1;cursor:pointer;padding:0 2px}
 .tt-chat__close:hover{color:#fff}
 .tt-chat__log{padding:14px;height:250px;overflow-y:auto;background:#f5f6f8;display:flex;flex-direction:column;gap:9px}
 .tt-chat__msg{max-width:82%;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.45;word-wrap:break-word}
