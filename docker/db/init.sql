@@ -2952,7 +2952,7 @@ CREATE TABLE `qlo_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3027,7 +3027,12 @@ INSERT INTO `qlo_connections` VALUES
 (71,1,1,67,1,2886860801,'2026-09-05 03:22:40',''),
 (72,1,1,68,1,2886860801,'2026-09-05 03:22:49',''),
 (73,1,1,69,1,2886860801,'2026-09-05 03:23:00',''),
-(74,1,1,70,1,2886860801,'2026-09-05 03:23:15','');
+(74,1,1,70,1,2886860801,'2026-09-05 03:23:15',''),
+(75,1,1,71,1,2886860801,'2026-09-05 03:28:51',''),
+(76,1,1,19,1,2886860801,'2026-09-05 11:01:42',''),
+(77,1,1,72,1,2886860801,'2026-09-05 11:03:17',''),
+(78,1,1,73,1,2886860801,'2026-09-05 11:03:54',''),
+(79,1,1,74,1,2886860801,'2026-09-05 11:04:06','');
 /*!40000 ALTER TABLE `qlo_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5380,7 +5385,7 @@ CREATE TABLE `qlo_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5459,7 +5464,11 @@ INSERT INTO `qlo_guest` VALUES
 (67,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (68,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (69,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(70,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0);
+(70,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
+(71,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(72,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(73,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(74,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
 /*!40000 ALTER TABLE `qlo_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8222,7 +8231,7 @@ LOCK TABLES `qlo_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_lang` DISABLE KEYS */;
 INSERT INTO `qlo_lang` VALUES
 (1,'English (English)',1,'en','en-us','m/d/Y','m/d/Y H:i:s',0),
-(2,'tiếng Việt (Vietnamese)',1,'vn','vi-vn','d/m/Y','H:i:s d/m/Y',0);
+(2,'Tiếng Việt (Vietnamese)',1,'vn','vi-vn','d/m/Y','H:i:s d/m/Y',0);
 /*!40000 ALTER TABLE `qlo_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -15911,4 +15920,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-04 20:27:55
+-- Dump completed on 2026-09-05  4:04:22
