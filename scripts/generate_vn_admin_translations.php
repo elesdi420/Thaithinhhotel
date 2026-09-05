@@ -158,6 +158,25 @@ $dict = array(
     'Cancellation date' => 'Ngày huỷ',
     'Cancellation fee' => 'Phí huỷ',
     'Refunded / Cancelled Rooms' => 'Phòng đã hoàn tiền/Đã huỷ',
+
+    // --- Tiêu đề trang & nút của Quản lý Đơn hàng ---
+    'Orders' => 'Đơn hàng',
+    'Create order' => 'Tạo đơn hàng',
+    'Add new order' => 'Thêm đơn hàng mới',
+
+    // --- Chỉ số doanh thu/vận hành trên trang Đơn hàng (renderKpis) ---
+    'Total Sales' => 'Tổng doanh thu',
+    'Total Due Amount' => 'Tổng còn phải thu',
+    'Arrivals' => 'Khách đến',
+    'Departures' => 'Khách đi',
+    'Today' => 'Hôm nay',
+    'Abandoned Carts' => 'Giỏ hàng bị bỏ dở',
+    'Conversion Rate' => 'Tỷ lệ chuyển đổi',
+    'Average Order Value' => 'Giá trị đơn trung bình',
+    'Average Lead Time' => 'Thời gian đặt trước trung bình',
+    'Average Guest Per Booking' => 'Số khách trung bình/đơn',
+    'day' => 'ngày',
+    'days' => 'ngày',
 );
 
 $targetFile = dirname(__DIR__).'/translations/vn/admin.php';
