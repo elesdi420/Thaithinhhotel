@@ -60,6 +60,10 @@
 .tt-chat__dot{position:absolute;top:6px;right:6px;width:11px;height:11px;border-radius:50%;background:#bf9a4f;border:2px solid #1b2a41}
 .tt-chat__panel{position:absolute;right:0;bottom:72px;width:330px;max-width:calc(100vw - 32px);
 	background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,.24);display:flex;flex-direction:column}
+/* display:flex ở trên thắng [hidden]{display:none} của trình duyệt (cùng độ ưu
+   tiên, nhưng CSS của trang đứng sau UA stylesheet). Hậu quả: panel mở sẵn khi
+   tải trang, và bấm × chỉ đặt thuộc tính hidden chứ không ẩn được gì. */
+.tt-chat__panel[hidden]{display:none}
 .tt-chat__header{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#1b2a41;color:#fff}
 /* Logo là wordmark ngang (420x110). Nhồi vào ô vuông + cover sẽ cắt mất hình
    toà nhà và chữ, nên giữ nguyên tỉ lệ bằng contain. */
