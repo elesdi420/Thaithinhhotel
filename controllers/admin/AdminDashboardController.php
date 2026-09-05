@@ -69,12 +69,19 @@ class AdminDashboardControllerCore extends AdminController
 
     public function initPageHeaderToolbar()
     {
-        $this->page_header_toolbar_title = $this->l('Dashboard');
-        $this->page_header_toolbar_btn['switch_demo'] = array(
-            'desc' => $this->l('Demo mode', null, null, false),
-            'icon' => 'process-icon-toggle-'.(Configuration::get('PS_DASHBOARD_SIMULATION') ? 'on' : 'off'),
-            'help' => $this->l('This mode displays sample data so you can try your dashboard without real numbers.', null, null, false)
-        );
+        $this->page_header_toolbar_title = $this->l('Bảng điều khiển');
+
+        /*
+         * Nút "Demo mode" đã được gỡ khỏi thanh công cụ.
+         *
+         * Ở chế độ đó, các khối trên Bảng điều khiển sinh số bằng rand() - ví dụ
+         * dashoccupancy trả về tới 402 phòng có khách trong khi khách sạn chỉ có 50
+         * phòng. Một cú bấm nhầm là chủ khách sạn nhìn vào số liệu giả mà không biết,
+         * nên trên hệ thống vận hành thật cái nút này chỉ có hại.
+         *
+         * Bỏ nút cũng bỏ luôn tooltip tiếng Anh đi kèm. Nếu cần bật lại để thử,
+         * đổi trực tiếp PS_DASHBOARD_SIMULATION trong bảng cấu hình.
+         */
 
         parent::initPageHeaderToolbar();
 
@@ -418,10 +425,17 @@ class AdminDashboardControllerCore extends AdminController
         $this->ajaxDie(json_encode($data));
     }
 
+    /**
+     * Chế độ demo bị khoá tắt trên hệ thống này.
+     *
+     * Nút bật/tắt đã gỡ khỏi thanh công cụ, nhưng endpoint vẫn gọi được trực tiếp
+     * bằng URL nên phải chặn ở đây - nếu không, chỉ cần một request là Bảng điều
+     * khiển quay lại hiển thị số liệu ngẫu nhiên.
+     */
     public function ajaxProcessSetSimulationMode()
     {
-        Configuration::updateValue('PS_DASHBOARD_SIMULATION', (int)Tools::getValue('PS_DASHBOARD_SIMULATION'));
-        die('k'.Configuration::get('PS_DASHBOARD_SIMULATION').'k');
+        Configuration::updateValue('PS_DASHBOARD_SIMULATION', 0);
+        die('k0k');
     }
 
     public function ajaxProcessGetBlogRss()

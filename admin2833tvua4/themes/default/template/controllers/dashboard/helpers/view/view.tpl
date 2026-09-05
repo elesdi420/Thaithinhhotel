@@ -118,8 +118,41 @@
             <div class="row">
                 {$hookDashboardZoneThree}
                 <div class="col-sm-12">
+                    {*
+                      Khối này nằm ở cột col-lg-2 nên rất hẹp. Tiêu đề cũ
+                      "Hướng dẫn Vận hành Khách sạn" rớt dòng và đè lên icon của mục
+                      đầu tiên vì h3 không có style riêng nào. Rút gọn tiêu đề, đồng
+                      thời đặt style ngay tại đây để dù có rớt dòng cũng không đè.
+                    *}
+                    <style>
+                        .dash_links { padding: 12px 14px; }
+                        .dash_links h3 {
+                            margin: 0 0 10px;
+                            font-size: 13px;
+                            line-height: 1.45;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            overflow-wrap: break-word;
+                        }
+                        .dash_links h3 i { margin-right: 4px; }
+                        .dash_links dl { margin: 0 0 12px; }
+                        .dash_links dl:last-child { margin-bottom: 0; }
+                        .dash_links dt {
+                            font-weight: 600;
+                            line-height: 1.4;
+                            margin-bottom: 2px;
+                            overflow-wrap: break-word;
+                        }
+                        .dash_links dd {
+                            margin: 0;
+                            font-size: 12px;
+                            line-height: 1.5;
+                            color: #6c7789;
+                            overflow-wrap: break-word;
+                        }
+                    </style>
                     <section class="dash_links widget panel">
-                        <h3><i class="icon-info-circle"></i> {l s="Hướng dẫn Vận hành Khách sạn"}</h3>
+                        <h3><i class="icon-info-circle"></i> {l s="Hướng dẫn vận hành"}</h3>
                             <dl>
                                 <dt><i class="icon-calendar"></i> {l s="Lịch phòng & Check-in"}</dt>
                                 <dd>{l s="Giờ nhận phòng từ 14:00, trả phòng trước 12:00"}</dd>
