@@ -41,6 +41,7 @@ $_LANGADM['AdminController2faec1f9f8cc7f8f40d521c4dd574f49'] = 'Bật';
 $_LANGADM['AdminControllerbcfaccebf745acfd5e75351095a5394a'] = 'Tắt';
 $_LANGADM['AdminControllerede4759c9afae620fd586628789fa304'] = 'Bật các mục đã chọn';
 $_LANGADM['AdminControllerab7fd6e250b64a46027a996088fdff74'] = 'Tắt các mục đã chọn';
+$_LANGADM['AdminController5259ae4afb5996ff48788b2fa720114c'] = 'Gợi ý';
 $_LANGADM['AdminController63a6a88c066880c5ac42394a22803ca6'] = 'Tải lại';
 $_LANGADM['AdminController7417855cbf7bd5e9e23c3da6a1e87bce'] = 'Chọn chỉ số hiển thị';
 $_LANGADM['AdminControllera57ec0b2b6b31842783c314dcd576b49'] = 'Đổi kiểu xem';

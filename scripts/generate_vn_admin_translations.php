@@ -78,6 +78,7 @@ $dict = array(
     'Disable' => 'Tắt',
     'Enable selection' => 'Bật các mục đã chọn',
     'Disable selection' => 'Tắt các mục đã chọn',
+    'Recommendations' => 'Gợi ý',
 
     // --- Khối KPI (helpers/kpi/row.tpl) ---
     'Refresh' => 'Tải lại',
