@@ -27,7 +27,20 @@
 class AdminDashboardControllerCore extends AdminController
 {
 
-    const RECOMMENDATION_CONTENT_FILE_PATH = '/cache/dashboard_recommendation.html';
+    /*
+     * Để rỗng để tắt hẳn khối "recommendation" trên Dashboard.
+     *
+     * Cơ chế gốc: AdminController::updateRecommendationContent() gọi
+     * Tools::addonsRequest('recommendation') tải nội dung từ máy chủ QloApps mỗi
+     * ngày rồi lưu vào tệp này, sau đó nạp lên Dashboard qua AJAX. Nội dung tải về
+     * là banner quảng cáo Qlo Channel Manager kèm liên kết mua dịch vụ - trái với
+     * yêu cầu white-label của dự án, và khách hàng cuối không nên nhìn thấy.
+     *
+     * Đường dẫn rỗng khiến getRecommendationFilePath() trả về rỗng, nên
+     * ajaxProcessGetRecommendationContent() thoát sớm: không gọi ra ngoài, không
+     * ghi tệp, không hiển thị gì. Không cần sửa template hay CSS.
+     */
+    const RECOMMENDATION_CONTENT_FILE_PATH = '';
 
     public function __construct()
     {
