@@ -163,6 +163,11 @@ img/**
 # modules/*
 /modules/*/config.xml
 /modules/*/translations/*
+# Bản dịch tiếng Việt là một phần của sản phẩm này, không phải gói ngôn ngữ tải thêm.
+# Thiếu ngoại lệ này thì bản vá việt hoá không rời khỏi máy local - cùng kiểu bẫy đã
+# gặp ở /mails/vn/ và themes/*/lang/vn.php.
+!/modules/*/translations/vn.php
+!/modules/*/translations/index.php
 
 /override/*
 !/override/.htaccess
