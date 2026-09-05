@@ -235,6 +235,12 @@ admin/themes/default/css/screen.css
 !/translations/index.php
 !/translations/en.gzip
 
+# Bản dịch tiếng Việt cho khu quản trị lõi. Cùng bẫy như /mails/vn/ và
+# /modules/*/translations/vn.php: thiếu ngoại lệ này thì bản vá việt hoá
+# không rời khỏi máy local.
+!/translations/vn/
+!/translations/vn/admin.php
+
 !/translations/export/
 !/translations/export/index.php
 
