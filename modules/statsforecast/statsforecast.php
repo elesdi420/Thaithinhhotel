@@ -105,7 +105,14 @@ class StatsForecast extends Module
 		$to = date('Y-m-d H:i:s', strtotime('+1 day', strtotime($employee->stats_date_to.' 23:59:59')));
         $to2 = min(date('Y-m-d H:i:s', strtotime('+1 day')), $to);
 		$interval =  HotelHelper::getNumberOfDays($from, $to);
-		$interval2 =  HotelHelper::getNumberOfDays($from, $to2);
+        // $interval2 là mẫu số của $prop30 và của cả ba phép chia tính trung bình
+        // bên dưới. Nó bằng 0 mỗi khi khoảng thống kê thu về rỗng - chẳng hạn khi
+        // khoảng ngày nhân viên đang chọn kết thúc trước ngày tạo shop, vì $from
+        // đã bị max() kéo lên bằng _PS_CREATION_DATE_. PHP 7 chỉ cảnh báo rồi trả
+        // INF nên trang vẫn mở; PHP 8 ném DivisionByZeroError làm cả trang Báo cáo
+        // Thống kê trả HTTP 500. Chặn bằng sàn 1 ngày: không có dữ liệu trong
+        // khoảng thì các con số ra 0, đúng bản chất, thay vì sập trang.
+		$interval2 =  max(1, HotelHelper::getNumberOfDays($from, $to2));
         $prop30 = $interval / $interval2;
 		$to = strtotime($to);
 		$to2 = strtotime($to2);
