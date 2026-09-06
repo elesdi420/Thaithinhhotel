@@ -41,6 +41,22 @@ if (isset($argv[1]) && strpos($argv[1], '--one=') === 0) {
     Cache::store('isLoggedBack'.$employee->id, true);
 
     $ctrlClass = $class.'Controller';
+    // Controller của module không nằm trong đường nạp tự động của lõi, phải
+    // include tay đúng như Dispatcher vẫn làm.
+    if (!class_exists($ctrlClass)) {
+        $mod = Db::getInstance()->getValue(
+            'SELECT `module` FROM `'._DB_PREFIX_.'tab` WHERE `class_name` = "'.pSQL($class).'"'
+        );
+        if ($mod) {
+            $dir = $root.'/modules/'.$mod.'/controllers/admin/';
+            foreach (array($dir.$class.'Controller.php', $dir.$class.'.php') as $f) {
+                if (file_exists($f)) {
+                    require_once $f;
+                    break;
+                }
+            }
+        }
+    }
     if (!class_exists($ctrlClass)) {
         fwrite(STDERR, "RESULT|SKIP|không nạp được lớp|0\n");
         exit;
@@ -110,7 +126,7 @@ echo str_repeat('=', 78)."\n";
 
 /** Lấy mọi tab có class_name thật, theo thứ tự menu. */
 $tabs = Db::getInstance()->executeS(
-    'SELECT t.`class_name`, tl.`name`
+    'SELECT t.`class_name`, t.`module`, tl.`name`
      FROM `'._DB_PREFIX_.'tab` t
      LEFT JOIN `'._DB_PREFIX_.'tab_lang` tl
        ON tl.`id_tab` = t.`id_tab` AND tl.`id_lang` = '.(int) Context::getContext()->language->id.'
@@ -126,15 +142,25 @@ foreach ($tabs as $tab) {
     $class = $tab['class_name'];
     $label = $tab['name'] ? $tab['name'] : $class;
 
-    // Bỏ qua tab gom nhóm (không có controller thật) và tab của module.
-    $file = $root.'/controllers/admin/'.$class.'Controller.php';
-    if (!file_exists($file)) {
-        $skipped[] = $class.' (không có controller lõi)';
-        continue;
+    // Controller nằm ở hai nơi: lõi trong controllers/admin/, còn tab do module
+    // cung cấp thì nằm trong modules/<module>/controllers/admin/. Bỏ sót nhánh
+    // thứ hai là bỏ qua nguyên khu Quản lý Khách sạn - phần lõi của PMS này.
+    $candidates = array($root.'/controllers/admin/'.$class.'Controller.php');
+    if (!empty($tab['module'])) {
+        $modDir = $root.'/modules/'.$tab['module'].'/controllers/admin/';
+        $candidates[] = $modDir.$class.'Controller.php';
+        // Vài controller của module đặt tên tệp thiếu hậu tố Controller.
+        $candidates[] = $modDir.$class.'.php';
     }
-    $ctrlClass = $class.'Controller';
-    if (!class_exists($ctrlClass)) {
-        $skipped[] = $class.' (không nạp được lớp)';
+    $file = null;
+    foreach ($candidates as $cand) {
+        if (file_exists($cand)) {
+            $file = $cand;
+            break;
+        }
+    }
+    if ($file === null) {
+        $skipped[] = $class.' (tab gom nhóm, không có controller)';
         continue;
     }
 
