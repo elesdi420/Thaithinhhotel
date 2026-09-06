@@ -135,6 +135,80 @@ $dict = array(
     'Forgot your password?' => 'Quên mật khẩu?',
     'Authentication' => 'Đăng nhập',
     'Already registered?' => 'Đã có tài khoản?',
+
+    // --- Trang thanh toán (order-opc.tpl) ---
+    // Đây là trang khách trả tiền mà vẫn gần như toàn tiếng Anh, phát hiện khi
+    // chạy thử luồng đặt phòng từ đầu đến cuối.
+    'Rooms & Price Summary' => 'Tóm tắt phòng & giá',
+    'Your booking cart' => 'Giỏ đặt phòng của bạn',
+    'Guest Information' => 'Thông tin khách',
+    'Payment Information' => 'Thông tin thanh toán',
+    'Proceed' => 'Tiếp tục',
+    'Instant checkout' => 'Đặt nhanh',
+    'Booking for someone else?' => 'Đặt hộ người khác?',
+    'Have promocode ?' => 'Có mã giảm giá?',
+    'Apply Coupon' => 'Áp dụng mã',
+    'Available Coupons' => 'Mã giảm giá khả dụng',
+    'Apply' => 'Áp dụng',
+    'Applied' => 'Đã áp dụng',
+    'Update' => 'Cập nhật',
+    'Updated Successfully' => 'Cập nhật thành công',
+    'Edit' => 'Sửa',
+    'Delete' => 'Xoá',
+    'Social title' => 'Danh xưng',
+    'First name' => 'Tên',
+    'Last name' => 'Họ',
+    'Mobile phone' => 'Điện thoại di động',
+    'Phone Number' => 'Số điện thoại',
+    'You have not added any rooms or products to your cart yet.'
+        => 'Bạn chưa thêm phòng hoặc dịch vụ nào vào giỏ.',
+    'The hotel is currently not accepting any bookings.'
+        => 'Khách sạn hiện không nhận đặt phòng.',
+
+    // --- Bảng chi tiết phòng trong giỏ (shopping-cart-detail.tpl) ---
+    'rooms information' => 'thông tin phòng',
+    'Product information' => 'Thông tin dịch vụ',
+    'CHECK IN' => 'NHẬN PHÒNG',
+    'CHECK OUT' => 'TRẢ PHÒNG',
+    'OCCUPANCY' => 'SỐ KHÁCH',
+    'Room price' => 'Giá phòng',
+    'Unit price' => 'Đơn giá',
+    'Total price' => 'Thành tiền',
+    'Total price for' => 'Tổng tiền cho',
+    'Total rooms price' => 'Tổng tiền phòng',
+    'Night(s) stay' => 'đêm',
+    // Template ghép 3 mảnh rời: "Total rooms price" + "(Incl." + "all taxes.)".
+    // Bản gốc tiếng Anh còn ghép lỗi ở dòng 140 shopping-cart-detail.tpl -
+    // "(Incl.)" đã đóng ngoặc rồi vẫn nối thêm "all taxes.)" thành thừa ngoặc.
+    // Dịch "(Incl.)" giống hệt "(Incl." để ghép lại đúng, tiện thể hết lỗi đó.
+    'all taxes.)' => 'thuế.)',
+    '(Incl.' => '(Đã gồm',
+    '(Excl.' => '(Chưa gồm',
+    '(Incl.)' => '(Đã gồm',
+    'Extra Services' => 'Dịch vụ thêm',
+    'Additional charges' => 'Phụ phí',
+    'Adult' => 'Người lớn',
+    'Adults' => 'Người lớn',
+    'Child' => 'Trẻ em',
+    'Children' => 'Trẻ em',
+    'Room' => 'Phòng',
+    'Rooms' => 'Phòng',
+    'Add' => 'Thêm',
+    'Subtract' => 'Bớt',
+    'Remove' => 'Bỏ',
+
+    // --- Khối tổng tiền (cart-total-block.tpl) ---
+    'Total rooms cost' => 'Tổng tiền phòng',
+    'Total products' => 'Tổng tiền dịch vụ',
+    'Total tax' => 'Tiền thuế',
+    'Total Discount' => 'Tổng giảm giá',
+    'Convenience Fees' => 'Phí tiện ích',
+    'Due Amount' => 'Còn phải trả',
+    'Partially Payable Total' => 'Số tiền trả trước',
+    '(tax incl)' => '(đã gồm thuế)',
+    '(tax excl)' => '(chưa gồm thuế)',
+    '(tax incl.)' => '(đã gồm thuế)',
+    '(tax excl.)' => '(chưa gồm thuế)',
 );
 
 // 1) Giữ nguyên khung en.php, dịch những giá trị có trong từ điển.

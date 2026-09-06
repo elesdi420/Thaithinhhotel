@@ -94,11 +94,11 @@
                             <div class="room_duration_block">
                                 <div class="col-sm-3 col-xs-6">
                                     <p class="room_duration_block_head">{l s='CHECK IN'}</p>
-                                    <p class="room_duration_block_value">{$rm_v['data_form']|date_format:"%d %b, %a"}{if $is_full_date} {$rm_v['data_form']|date_format:"%H:%M"}{/if}</p>
+                                    <p class="room_duration_block_value">{$rm_v['data_form']|date_format:"%d/%m/%Y"}{if $is_full_date} {$rm_v['data_form']|date_format:"%H:%M"}{/if}</p>
                                 </div>
                                 <div class="col-sm-3 col-xs-6">
                                     <p class="room_duration_block_head">{l s='CHECK OUT'}</p>
-                                    <p class="room_duration_block_value">{$rm_v['data_to']|date_format:"%d %b, %a"}{if $is_full_date} {$rm_v['data_to']|date_format:"%H:%M"}{/if}</p>
+                                    <p class="room_duration_block_value">{$rm_v['data_to']|date_format:"%d/%m/%Y"}{if $is_full_date} {$rm_v['data_to']|date_format:"%H:%M"}{/if}</p>
                                 </div>
                                 <div class="col-sm-6 col-xs-6">
                                     <p class="room_duration_block_head">{l s='OCCUPANCY'}</p>
