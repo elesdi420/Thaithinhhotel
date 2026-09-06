@@ -162,6 +162,10 @@ img/**
 
 # modules/*
 /modules/*/config.xml
+# PrestaShop tự sinh config_<iso>.xml làm cache metadata mỗi khi nạp module ở
+# một ngôn ngữ. Không phải mã nguồn; chạy smoke test toàn bộ khu quản trị là
+# sinh ra hàng chục tệp này.
+/modules/*/config_*.xml
 /modules/*/translations/*
 # Bản dịch tiếng Việt là một phần của sản phẩm này, không phải gói ngôn ngữ tải thêm.
 # Thiếu ngoại lệ này thì bản vá việt hoá không rời khỏi máy local - cùng kiểu bẫy đã
