@@ -15,3 +15,5 @@ $_MODULE['<{qlohotelreview}prestashop>admin-after-header_34e80a799d144cfe4af4681
 $_MODULE['<{qlohotelreview}prestashop>product-tab_34e80a799d144cfe4af46815e103f017'] = 'Đánh giá';
 $_MODULE['<{qlohotelreview}prestashop>review_b5a7adde1af5c87d7fd797b6245c2a39'] = 'Mô tả';
 $_MODULE['<{qlohotelreview}prestashop>product-tab-content_c787125f11e331e8cf2deb351c3a3532'] = 'Chưa có đánh giá.';
+$_MODULE['<{qlohotelreview}prestashop>room-type-name-after_d844ad9202d0de8442498775ba6ef819'] = 'Đánh giá';
+$_MODULE['<{qlohotelreview}prestashop>room-type-name-after_457dd55184faedb7885afd4009d70163'] = 'Đánh giá';

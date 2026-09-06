@@ -209,6 +209,59 @@ $dict = array(
     '(tax excl)' => '(chưa gồm thuế)',
     '(tax incl.)' => '(đã gồm thuế)',
     '(tax excl.)' => '(chưa gồm thuế)',
+
+    // --- Trang danh sách phòng (category.tpl, _partials/room_type_list.tpl) ---
+    'Sort By:' => 'Sắp xếp:',
+    'Recommended' => 'Đề xuất',
+    'Price : Lowest First' => 'Giá: Thấp đến cao',
+    'Price : Highest first ' => 'Giá: Cao xuống thấp',
+    'View More' => 'Xem chi tiết',
+    'Book Now' => 'Đặt ngay',
+    'Per Night' => 'mỗi đêm',
+    '/Night' => '/đêm',
+    'Max guests:' => 'Tối đa:',
+    'Max guests' => 'Tối đa',
+    'Qty:' => 'SL:',
+    'Hurry!' => 'Nhanh tay!',
+    'rooms left' => 'phòng cuối còn trống',
+    // booking-form.tpl dùng biến thể có dấu chấm than, khác với room_type_list.tpl
+    'rooms left!' => 'phòng cuối còn trống!',
+    'room left!' => 'phòng cuối còn trống!',
+    'Hotel Location' => 'Vị trí khách sạn',
+    'No room available for this hotel!' => 'Cơ sở này hiện không còn phòng trống!',
+
+    // --- Ô chọn số khách (_partials/occupancy_field.tpl) ---
+    'Select Occupancy' => 'Chọn số khách',
+    'Add Room' => 'Thêm phòng',
+    'Click to add more rooms.' => 'Bấm để thêm phòng.',
+    'No more rooms available.' => 'Không còn phòng trống.',
+    'Done' => 'Xong',
+    'Room - 1' => 'Phòng 1',
+    'All Children' => 'Tất cả trẻ em',
+    'years' => 'tuổi',
+    'Under 1' => 'Dưới 1',
+    'Below' => 'Dưới',
+
+    // --- Trang chi tiết phòng (product.tpl) ---
+    'Hotel Amenities' => 'Tiện nghi khách sạn',
+    'Hotel Description' => 'Giới thiệu khách sạn',
+    'Hotel Policies' => 'Chính sách khách sạn',
+    'Hotel Images' => 'Hình ảnh khách sạn',
+    'Additional Facilities' => 'Tiện ích thêm',
+    'Check-in and check-out time' => 'Giờ nhận và trả phòng',
+    'Check-in: ' => 'Nhận phòng: ',
+    'Check-out: ' => 'Trả phòng: ',
+    'Check Out Date should be greater than Check in date.'
+        => 'Ngày trả phòng phải sau ngày nhận phòng.',
+    'View on Map' => 'Xem trên bản đồ',
+    'View larger' => 'Xem ảnh lớn',
+    'Display all pictures' => 'Xem tất cả ảnh',
+    'This product is no longer in stock' => 'Loại phòng này đã hết',
+    'required fields' => 'trường bắt buộc',
+    'Up to' => 'Tối đa',
+    'You Save' => 'Tiết kiệm',
+    'Discount' => 'Giảm giá',
+    'Contact:' => 'Liên hệ:',
 );
 
 // 1) Giữ nguyên khung en.php, dịch những giá trị có trong từ điển.

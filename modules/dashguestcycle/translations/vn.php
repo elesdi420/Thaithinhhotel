@@ -31,6 +31,8 @@ $_MODULE['<{dashguestcycle}prestashop>dashguestcycle_168cd661c523acecfe5261e6a6b
 $_MODULE['<{dashguestcycle}prestashop>dashguestcycle_26e28738b51eebd25cf4d734b33b539f'] = 'Cơ sở';
 $_MODULE['<{dashguestcycle}prestashop>dashguestcycle_4229e0630f34b4f8085774240b1e39ff'] = 'Khách';
 $_MODULE['<{dashguestcycle}prestashop>dashguestcycle_d79cf3f429596f77db95c65074663a54'] = 'Mã đơn';
+$_MODULE['<{dashguestcycle}prestashop>dashguestcycle_e10758a0bbe2e5a1bd948a8fe1a4a3dc'] = 'Đêm';
+$_MODULE['<{dashguestcycle}prestashop>dashguestcycle_0edc9b073397681dc9f2c479686ea0d9'] = 'Đêm';
 $_MODULE['<{dashguestcycle}prestashop>dashguestcycle_ec86d6e09689fe97bb7d1a233d5e5e13'] = 'Nhận phòng';
 $_MODULE['<{dashguestcycle}prestashop>dashguestcycle_edfd56b38f555c58ca8f6902c39dbd04'] = 'Trả phòng';
 $_MODULE['<{dashguestcycle}prestashop>dashboard-zone-two_b898f0a62dcfd02184ed0570136bb61f'] = 'Hoạt động hôm nay';

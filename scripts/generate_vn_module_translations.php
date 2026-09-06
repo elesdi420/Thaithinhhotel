@@ -111,6 +111,20 @@ $dict = array(
     'View Details' => 'Xem chi tiết',
     'View details' => 'Xem chi tiết',
     'Amenities' => 'Tiện nghi',
+    // Bộ lọc phòng ở cột trái trang danh sách (wkhotelfilterblock).
+    'Clear Filter' => 'Xoá lọc',
+    'View More' => 'Xem thêm',
+    'Book Now' => 'Đặt ngay',
+    // Thanh tóm tắt tìm kiếm trên trang phòng (wkroomsearchblock).
+    'Searched results for' => 'Kết quả tìm kiếm cho',
+    'Modify Search' => 'Sửa tìm kiếm',
+    'Days' => 'Ngày',
+    'Nights' => 'Đêm',
+    'Night' => 'Đêm',
+    // Đánh giá phòng (qlohotelreview).
+    'Review' => 'Đánh giá',
+    'Review(s)' => 'Đánh giá',
+    'Reviews' => 'Đánh giá',
     'Description' => 'Mô tả',
     'Price' => 'Giá',
     'Available' => 'Còn trống',

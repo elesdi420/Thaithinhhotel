@@ -1373,7 +1373,7 @@ CREATE TABLE `qlo_cart` (
   KEY `id_shop_group` (`id_shop_group`),
   KEY `id_shop_2` (`id_shop`,`date_upd`),
   KEY `id_shop` (`id_shop`,`date_add`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1419,7 +1419,8 @@ INSERT INTO `qlo_cart` VALUES
 (52,1,1,0,'',2,1,1,1,5,1,'e7412d6b5142d3030727605792ab02e0',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
 (53,1,1,0,'',2,1,1,1,6,1,'d66d3fb3c862197bedf8ca3a00bdf140',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
 (54,1,1,0,'',2,1,1,1,7,1,'6251aee8c640363f03d98f0c9a1dc064',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(55,1,1,0,'',2,1,1,1,8,1,'cdc3b59655dd90415ff3e8cc7b24506c',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11');
+(55,1,1,0,'',2,1,1,1,8,1,'cdc3b59655dd90415ff3e8cc7b24506c',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
+(56,1,1,0,'',2,0,0,1,0,118,'',0,0,'',0,0,0,'2026-09-06 17:27:23','2026-09-06 17:35:36');
 /*!40000 ALTER TABLE `qlo_cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1497,6 +1498,8 @@ CREATE TABLE `qlo_cart_product` (
 
 LOCK TABLES `qlo_cart_product` WRITE;
 /*!40000 ALTER TABLE `qlo_cart_product` DISABLE KEYS */;
+INSERT INTO `qlo_cart_product` VALUES
+(56,11,0,1,0,2,'2026-09-06 17:27:23');
 /*!40000 ALTER TABLE `qlo_cart_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2830,7 +2833,7 @@ CREATE TABLE `qlo_configuration_kpi` (
   KEY `name` (`name`),
   KEY `id_shop` (`id_shop`),
   KEY `id_shop_group` (`id_shop_group`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2875,7 +2878,9 @@ INSERT INTO `qlo_configuration_kpi` VALUES
 (33,NULL,NULL,'DASHGOALS_AVG_CART_VALUE_11_2026','80','2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (34,NULL,NULL,'DASHGOALS_TRAFFIC_12_2026','600','2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (35,NULL,NULL,'DASHGOALS_CONVERSION_12_2026','2','2026-09-02 15:12:43','2026-09-02 15:12:43'),
-(36,NULL,NULL,'DASHGOALS_AVG_CART_VALUE_12_2026','80','2026-09-02 15:12:43','2026-09-02 15:12:43');
+(36,NULL,NULL,'DASHGOALS_AVG_CART_VALUE_12_2026','80','2026-09-02 15:12:43','2026-09-02 15:12:43'),
+(37,NULL,NULL,'DISABLED_ROOM_TYPES','0','2026-09-05 16:22:03','2026-09-05 16:22:03'),
+(38,NULL,NULL,'DISABLED_ROOM_TYPES_EXPIRE','1788613608','2026-09-05 16:22:03','2026-09-05 18:06:48');
 /*!40000 ALTER TABLE `qlo_configuration_kpi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2988,7 +2993,7 @@ CREATE TABLE `qlo_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3112,7 +3117,32 @@ INSERT INTO `qlo_connections` VALUES
 (120,1,1,114,7,2886860801,'2026-09-05 13:09:07',''),
 (121,1,1,115,7,2886860801,'2026-09-05 13:09:17',''),
 (122,1,1,116,7,2886860801,'2026-09-05 13:09:27',''),
-(123,1,1,117,1,2886860801,'2026-09-05 13:10:37','');
+(123,1,1,117,1,2886860801,'2026-09-05 13:10:37',''),
+(124,1,1,19,1,2886860801,'2026-09-05 14:24:10',''),
+(125,1,1,77,1,2886860801,'2026-09-05 14:29:01',''),
+(126,1,1,19,1,2886860801,'2026-09-05 16:18:50',''),
+(127,1,1,19,1,2886860801,'2026-09-06 11:56:55',''),
+(128,1,1,19,1,2886860801,'2026-09-06 14:30:00',''),
+(129,1,1,118,1,2886860801,'2026-09-06 17:23:12',''),
+(130,1,1,119,1,2886860801,'2026-09-06 17:23:36',''),
+(131,1,1,120,4,2886860801,'2026-09-06 17:23:44',''),
+(132,1,1,121,3,2886860801,'2026-09-06 17:23:53',''),
+(133,1,1,122,6,2886860801,'2026-09-06 17:24:05',''),
+(134,1,1,123,9,2886860801,'2026-09-06 17:24:19',''),
+(135,1,1,124,5,2886860801,'2026-09-06 17:24:46',''),
+(136,1,1,125,7,2886860801,'2026-09-06 17:25:01',''),
+(137,1,1,126,7,2886860801,'2026-09-06 17:25:10',''),
+(138,1,1,127,7,2886860801,'2026-09-06 17:25:19',''),
+(139,1,1,128,7,2886860801,'2026-09-06 17:25:28',''),
+(140,1,1,129,7,2886860801,'2026-09-06 17:25:35',''),
+(141,1,1,130,1,2886860801,'2026-09-06 17:25:45',''),
+(142,1,1,131,1,2886860801,'2026-09-06 17:36:02',''),
+(143,1,1,132,4,2886860801,'2026-09-06 17:36:16',''),
+(144,1,1,133,3,2886860801,'2026-09-06 17:36:28',''),
+(145,1,1,134,5,2886860801,'2026-09-06 17:36:39',''),
+(146,1,1,135,9,2886860801,'2026-09-06 17:36:55',''),
+(147,1,1,136,8,2886860801,'2026-09-06 17:37:09',''),
+(148,1,1,137,10,2886860801,'2026-09-06 17:37:32','');
 /*!40000 ALTER TABLE `qlo_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5477,7 +5507,7 @@ CREATE TABLE `qlo_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=138 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5603,7 +5633,27 @@ INSERT INTO `qlo_guest` VALUES
 (114,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (115,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (116,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(117,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
+(117,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(118,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
+(119,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(120,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(121,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(122,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(123,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(124,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(125,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(126,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(127,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(128,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(129,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(130,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(131,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(132,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(133,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(134,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(135,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(136,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(137,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
 /*!40000 ALTER TABLE `qlo_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6893,11 +6943,11 @@ LOCK TABLES `qlo_htl_branch_info_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_branch_info_lang` DISABLE KEYS */;
 INSERT INTO `qlo_htl_branch_info_lang` VALUES
 (1,1,'Cơ sở 1 - Trung tâm','Cơ sở 1 - Trung tâm - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 1 - Trung tâm mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
-(1,2,'Cơ sở 1 - Trung tâm','Cơ sở 1 - Trung tâm - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 1 - Trung tâm mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
+(1,2,'Cơ sở 1 - Trung tâm','Cơ sở 1 - Trung tâm - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 1 - Trung tâm mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Nhận phòng: 14:00 | Trả phòng: 12:00</p>'),
 (2,1,'Cơ sở 2 - Bờ biển','Cơ sở 2 - Bờ biển - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 2 - Bờ biển mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
-(2,2,'Cơ sở 2 - Bờ biển','Cơ sở 2 - Bờ biển - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 2 - Bờ biển mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
+(2,2,'Cơ sở 2 - Bờ biển','Cơ sở 2 - Bờ biển - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 2 - Bờ biển mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Nhận phòng: 14:00 | Trả phòng: 12:00</p>'),
 (3,1,'Cơ sở 3 - Phố cổ','Cơ sở 3 - Phố cổ - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 3 - Phố cổ mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
-(3,2,'Cơ sở 3 - Phố cổ','Cơ sở 3 - Phố cổ - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 3 - Phố cổ mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>');
+(3,2,'Cơ sở 3 - Phố cổ','Cơ sở 3 - Phố cổ - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 3 - Phố cổ mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Nhận phòng: 14:00 | Trả phòng: 12:00</p>');
 /*!40000 ALTER TABLE `qlo_htl_branch_info_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6959,7 +7009,7 @@ CREATE TABLE `qlo_htl_cart_booking_data` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6968,6 +7018,8 @@ CREATE TABLE `qlo_htl_cart_booking_data` (
 
 LOCK TABLES `qlo_htl_cart_booking_data` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_cart_booking_data` DISABLE KEYS */;
+INSERT INTO `qlo_htl_cart_booking_data` VALUES
+(1,56,118,0,0,1,11,21,1,2,1,'',0,'[]','2026-09-10 00:00:00','2026-09-12 00:00:00',2,0,'[]',0,'2026-09-06 17:27:23','2026-09-06 17:27:23');
 /*!40000 ALTER TABLE `qlo_htl_cart_booking_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8452,7 +8504,7 @@ CREATE TABLE `qlo_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -8466,7 +8518,10 @@ INSERT INTO `qlo_log` VALUES
 (2,1,0,'Back Office connection from 172.67.177.250','',0,1,'2026-09-02 19:13:23','2026-09-02 19:13:23'),
 (3,1,0,'Back Office connection from 172.67.177.250','',0,2,'2026-09-02 19:15:07','2026-09-02 19:15:07'),
 (4,1,0,'Error - The following e-mail template is missing: /var/www/html/mails/vn/test.txt','',0,0,'2026-09-04 20:53:34','2026-09-04 20:53:34'),
-(5,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 11:43:21','2026-09-05 11:43:21');
+(5,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 11:43:21','2026-09-05 11:43:21'),
+(6,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 16:21:33','2026-09-05 16:21:33'),
+(7,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 17:35:00','2026-09-05 17:35:00'),
+(8,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 18:06:00','2026-09-05 18:06:00');
 /*!40000 ALTER TABLE `qlo_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10702,7 +10757,7 @@ CREATE TABLE `qlo_page` (
   PRIMARY KEY (`id_page`),
   KEY `id_page_type` (`id_page_type`),
   KEY `id_object` (`id_object`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10719,7 +10774,9 @@ INSERT INTO `qlo_page` VALUES
 (5,5,NULL),
 (6,6,NULL),
 (7,7,NULL),
-(8,8,11);
+(8,8,11),
+(9,9,NULL),
+(10,10,7);
 /*!40000 ALTER TABLE `qlo_page` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10735,7 +10792,7 @@ CREATE TABLE `qlo_page_type` (
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id_page_type`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10746,13 +10803,15 @@ LOCK TABLES `qlo_page_type` WRITE;
 /*!40000 ALTER TABLE `qlo_page_type` DISABLE KEYS */;
 INSERT INTO `qlo_page_type` VALUES
 (5,'authentication'),
+(10,'category'),
 (7,'cms'),
 (3,'contact'),
 (1,'index'),
 (6,'orderopc'),
 (4,'ourproperties'),
 (2,'pagenotfound'),
-(8,'product');
+(8,'product'),
+(9,'stores');
 /*!40000 ALTER TABLE `qlo_page_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -16226,6 +16285,10 @@ INSERT INTO `qlo_zone_shop` VALUES
 (8,1);
 /*!40000 ALTER TABLE `qlo_zone_shop` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'qloapps'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -16236,4 +16299,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-05  6:41:01
+-- Dump completed on 2026-09-06 10:45:49
