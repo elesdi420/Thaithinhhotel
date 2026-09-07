@@ -14,7 +14,18 @@
  * khi chuyển hướng, chạy chung một tiến trình thì trang đầu tiên làm vậy là
  * dừng cả vòng lặp. Tiến trình con báo kết quả về qua một dòng có tiền tố.
  *
- * Chạy: docker compose exec web php /var/www/html/scripts/smoke_test_admin.php [id_employee]
+ * PHẢI chạy bằng www-data, không phải root:
+ *
+ *   docker compose exec -u www-data web php /var/www/html/scripts/smoke_test_admin.php
+ *
+ * Script này dựng template nên sinh ra cache biên dịch. Chạy bằng root thì
+ * cache/smarty/compile/<xx>/<yy>/ thuộc sở hữu root với quyền 755, mà Apache
+ * chạy bằng www-data - lần sau Smarty cần tạo thư mục con trong đó sẽ bị
+ * "Permission denied" và ném SmartyException, làm TOÀN BỘ khu quản trị trả
+ * HTTP 500. Đã dính đúng lỗi này một lần: 401 thư mục thuộc root trong cache.
+ * Nếu lỡ chạy bằng root, sửa bằng:
+ *
+ *   docker compose exec web chown -R www-data:www-data /var/www/html/cache
  */
 
 $root = dirname(__DIR__);
