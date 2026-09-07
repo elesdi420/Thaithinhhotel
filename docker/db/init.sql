@@ -1,5 +1,5 @@
 /*M!999999\- enable the sandbox mode */ 
--- MariaDB dump 10.19  Distrib 10.11.19-MariaDB, for debian-linux-gnu (x86_64)
+-- MariaDB dump 10.19  Distrib 10.11.19-MariaDB, for debian-linux-gnu (aarch64)
 --
 -- Host: localhost    Database: qloapps
 -- ------------------------------------------------------
@@ -125,7 +125,6 @@ INSERT INTO `qlo_access` VALUES
 (1,81,0,0,0,0,0),
 (1,82,0,0,0,0,0),
 (1,83,0,0,0,0,0),
-(1,109,1,0,0,0,0),
 (2,1,0,0,0,0,0),
 (2,2,0,0,0,0,0),
 (2,3,0,0,0,0,0),
@@ -234,7 +233,6 @@ INSERT INTO `qlo_access` VALUES
 (2,106,0,0,0,0,0),
 (2,107,0,0,0,0,0),
 (2,108,0,0,0,0,0),
-(2,109,0,0,0,0,0),
 (3,1,0,0,0,0,0),
 (3,2,0,0,0,0,0),
 (3,3,0,0,0,0,0),
@@ -343,7 +341,6 @@ INSERT INTO `qlo_access` VALUES
 (3,106,0,0,0,0,0),
 (3,107,0,0,0,0,0),
 (3,108,0,0,0,0,0),
-(3,109,0,0,0,0,0),
 (4,1,0,0,0,0,0),
 (4,2,0,0,0,0,0),
 (4,3,0,0,0,0,0),
@@ -452,7 +449,6 @@ INSERT INTO `qlo_access` VALUES
 (4,106,0,0,0,0,0),
 (4,107,0,0,0,0,0),
 (4,108,0,0,0,0,0),
-(4,109,0,0,0,0,0),
 (5,1,1,1,1,1,0),
 (5,2,1,1,1,1,0),
 (5,3,1,1,1,1,0),
@@ -560,8 +556,7 @@ INSERT INTO `qlo_access` VALUES
 (5,105,1,1,1,1,0),
 (5,106,1,1,1,1,0),
 (5,107,1,1,1,1,0),
-(5,108,1,1,1,1,0),
-(5,109,1,0,0,0,0);
+(5,108,1,1,1,1,0);
 /*!40000 ALTER TABLE `qlo_access` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1373,7 +1368,7 @@ CREATE TABLE `qlo_cart` (
   KEY `id_shop_group` (`id_shop_group`),
   KEY `id_shop_2` (`id_shop`,`date_upd`),
   KEY `id_shop` (`id_shop`,`date_add`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1383,44 +1378,7 @@ CREATE TABLE `qlo_cart` (
 LOCK TABLES `qlo_cart` WRITE;
 /*!40000 ALTER TABLE `qlo_cart` DISABLE KEYS */;
 INSERT INTO `qlo_cart` VALUES
-(1,0,1,0,'',1,0,0,1,2,0,'89aa89f026132a59da541ca968705365',0,0,'',0,0,0,'2026-09-02 16:24:19','2026-09-02 16:24:19'),
-(20,1,1,0,'',2,1,1,1,3,1,'f26d958c7f5c8a4a3058ae97b12c1d4d',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(21,1,1,0,'',2,1,1,1,4,1,'de20991441a06dd5ad8256c94c616eea',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(22,1,1,0,'',2,1,1,1,5,1,'7cd2cd916a4a3d7c6fb75670b4bee8e1',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(23,1,1,0,'',2,1,1,1,6,1,'b58b85e69fbe9b4080b890121dd6e02f',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(24,1,1,0,'',2,1,1,1,7,1,'e0a858bb223467f619f76bb6c1108146',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(25,1,1,0,'',2,1,1,1,8,1,'12ab8b041b136847794528281b8a0cff',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(26,1,1,0,'',2,1,1,1,3,1,'5a1221d063819a983fc47d8679ec957b',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(27,1,1,0,'',2,1,1,1,4,1,'41929d291b8016eae235fb5aa0da9add',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(28,1,1,0,'',2,1,1,1,5,1,'cce844a4ba4813e4001fa50cee940dae',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(29,1,1,0,'',2,1,1,1,6,1,'57b61b267ce7bef554bb7b333d8ba5ab',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(30,1,1,0,'',2,1,1,1,7,1,'2f611c05cea87001f17a530d91bfc69e',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(31,1,1,0,'',2,1,1,1,8,1,'26ba79bd357382c8c4b0b9d62cc62007',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(32,1,1,0,'',2,1,1,1,3,1,'d0b26631ce4d59176428e57fbcf96cbc',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(33,1,1,0,'',2,1,1,1,4,1,'98dcb005d5c7adc8ccfda546610c5fc9',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(34,1,1,0,'',2,1,1,1,5,1,'b0c8a0f5d640d6d1bb7c813806469f49',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(35,1,1,0,'',2,1,1,1,6,1,'b2daffd3d551a8f69e9fc642a9fdfedc',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(36,1,1,0,'',2,1,1,1,7,1,'d4c5251b66c732196617a502752506f1',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(37,1,1,0,'',2,1,1,1,8,1,'d57e679c33d78e5326d1004f4ea1e6b4',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(38,1,1,0,'',2,1,1,1,3,1,'d63230354be861d97a5b1b7daa580341',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(39,1,1,0,'',2,1,1,1,4,1,'bd96909e0f07f5ed3ac0a12911e90f06',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(40,1,1,0,'',2,1,1,1,5,1,'7f0a142c6510de879497b8eddb24bc63',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(41,1,1,0,'',2,1,1,1,6,1,'45efce1142d9c905a861507f0e658eee',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(42,1,1,0,'',2,1,1,1,7,1,'7d2d258c898d3c107fc8eafcdc962593',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(43,1,1,0,'',2,1,1,1,8,1,'70b471b775456e17c00d5f108c7d6f79',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(44,1,1,0,'',2,1,1,1,3,1,'cda74a22ddd50285d6c332eda2f5acfa',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(45,1,1,0,'',2,1,1,1,4,1,'7bedefec645b3760a00f3dca4827bbb7',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(46,1,1,0,'',2,1,1,1,5,1,'688f1ded775c9f1933307867c733af8a',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(47,1,1,0,'',2,1,1,1,6,1,'78ee437f8a92c009953aef0b8198020c',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(48,1,1,0,'',2,1,1,1,7,1,'bfec2aacae39f47dd7f6739bcab99f1f',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(49,1,1,0,'',2,1,1,1,8,1,'e23c74c84579579f6a71b14c44e95f61',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(50,1,1,0,'',2,1,1,1,3,1,'019c2489e77b9a6ef43959d24754bcb7',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(51,1,1,0,'',2,1,1,1,4,1,'0f3864967ac9af5bad6e779d427cc2f6',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(52,1,1,0,'',2,1,1,1,5,1,'e7412d6b5142d3030727605792ab02e0',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(53,1,1,0,'',2,1,1,1,6,1,'d66d3fb3c862197bedf8ca3a00bdf140',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(54,1,1,0,'',2,1,1,1,7,1,'6251aee8c640363f03d98f0c9a1dc064',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(55,1,1,0,'',2,1,1,1,8,1,'cdc3b59655dd90415ff3e8cc7b24506c',1,0,'',0,0,0,'2026-09-05 04:29:11','2026-09-05 04:29:11'),
-(56,1,1,0,'',2,0,0,1,0,118,'',0,0,'',0,0,0,'2026-09-06 17:27:23','2026-09-06 17:35:36');
+(1,0,1,0,'',1,0,0,1,2,0,'89aa89f026132a59da541ca968705365',0,0,'',0,0,0,'2026-09-02 16:24:19','2026-09-02 16:24:19');
 /*!40000 ALTER TABLE `qlo_cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1498,8 +1456,6 @@ CREATE TABLE `qlo_cart_product` (
 
 LOCK TABLES `qlo_cart_product` WRITE;
 /*!40000 ALTER TABLE `qlo_cart_product` DISABLE KEYS */;
-INSERT INTO `qlo_cart_product` VALUES
-(56,11,0,1,0,2,'2026-09-06 17:27:23');
 /*!40000 ALTER TABLE `qlo_cart_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2218,16 +2174,16 @@ CREATE TABLE `qlo_cms_lang` (
 LOCK TABLES `qlo_cms_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_cms_lang` DISABLE KEYS */;
 INSERT INTO `qlo_cms_lang` VALUES
-(1,1,1,'Policies','Our policies of hotel bookings','conditions, policy, guidelines, protocol, rule','<h2 class=\"page-heading bottom-indent\">Policies</h2><div class=\"cms-block\"><h4>Check-in and check-out</h4><ul><li>Check-in: from <strong>14:00</strong></li><li>Check-out: before <strong>12:00</strong></li><li>Early check-in and late check-out depend on availability at the time. Please contact reception to arrange.</li></ul><h4>Booking and payment</h4><ul><li>A booking is confirmed once payment has been received.</li><li>Payment is by <strong>bank transfer via QR code (VietQR)</strong>. The QR shown at checkout already carries the amount and your booking reference.</li><li>Payment is reconciled automatically and a confirmation email follows, usually within a few minutes.</li><li>Rates are per night and include tax.</li></ul><h4>Changes and cancellation</h4><ul><li>Free cancellation up to <strong>24 hours</strong> before the check-in time.</li><li>Cancellation within 24 hours of check-in, or failure to arrive: the first night is charged.</li><li>Date changes depend on availability. Please contact reception in advance.</li></ul><h4>Children and extra beds</h4><ul><li>Children under 6 sharing the existing bed stay free.</li><li>Extra beds depend on room type and availability and may carry a surcharge.</li></ul><h4>House rules</h4><ul><li>Please present photo identification at check-in.</li><li>Smoking is not permitted in the rooms. Each property has a designated smoking area.</li><li>Quiet hours are from 22:00 to 07:00.</li><li>Guests are responsible for any damage to property caused during their stay.</li></ul></div>','policies'),
-(1,2,1,'Chính sách','Chính sách của chúng tôi về đặt phòng khách sạn','điều kiện, chính sách, hướng dẫn, quy định, qui định','<h2 class=\"page-heading bottom-indent\">Chính sách</h2><div class=\"cms-block\"><h4>Giờ nhận và trả phòng</h4><ul><li>Nhận phòng: từ <strong>14:00</strong></li><li>Trả phòng: trước <strong>12:00</strong></li><li>Nhận phòng sớm hoặc trả phòng muộn tuỳ tình trạng phòng trống tại thời điểm đó, vui lòng liên hệ lễ tân để được sắp xếp.</li></ul><h4>Đặt phòng và thanh toán</h4><ul><li>Đơn đặt phòng được xác nhận sau khi hệ thống ghi nhận thanh toán thành công.</li><li>Thanh toán bằng <strong>chuyển khoản ngân hàng qua mã QR (VietQR)</strong>. Mã QR hiển thị ở bước thanh toán đã điền sẵn số tiền và mã đơn.</li><li>Hệ thống đối soát tự động và gửi email xác nhận, thường trong vòng vài phút.</li><li>Giá phòng niêm yết theo đêm, đã bao gồm thuế.</li></ul><h4>Thay đổi và huỷ đặt phòng</h4><ul><li>Huỷ miễn phí trước <strong>24 giờ</strong> so với giờ nhận phòng.</li><li>Huỷ trong vòng 24 giờ trước giờ nhận phòng hoặc không đến nhận phòng: thu phí tương đương một đêm đầu tiên.</li><li>Thay đổi ngày lưu trú tuỳ tình trạng phòng trống, vui lòng liên hệ lễ tân trước.</li></ul><h4>Trẻ em và giường phụ</h4><ul><li>Trẻ em dưới 6 tuổi ngủ chung giường với bố mẹ: miễn phí.</li><li>Yêu cầu giường phụ tuỳ theo hạng phòng và tình trạng phòng, có thể phát sinh phụ phí.</li></ul><h4>Quy định chung</h4><ul><li>Vui lòng xuất trình giấy tờ tuỳ thân có ảnh khi nhận phòng.</li><li>Không hút thuốc trong phòng. Khu vực hút thuốc được bố trí riêng tại mỗi cơ sở.</li><li>Giữ yên tĩnh từ 22:00 đến 07:00.</li><li>Khách chịu trách nhiệm với hư hỏng tài sản do mình gây ra trong thời gian lưu trú.</li></ul></div>','policies'),
-(2,1,1,'Legal Notice','Legal notice','notice, legal, credits','<h2 class=\"page-heading bottom-indent\">Legal Notice</h2><div class=\"cms-block\"><h4>Operator</h4><p>This website is managed and operated by Thaithinh Hotel for the purpose of presenting and taking online bookings for our three properties in Ho Chi Minh City, Da Nang and Hanoi.</p><h4>Website content</h4><p>All content, including text, images, layout and brand identity, belongs to Thaithinh Hotel unless another source is credited. Reproduction or commercial reuse requires written permission.</p><h4>Rates and availability</h4><p>Rates and availability are updated in real time. We take care to keep this information accurate, but technical errors cannot be entirely excluded. Where a rate is clearly incorrect, we will contact you before confirming the booking.</p><h4>Third-party links</h4><p>This website may link to third-party sites, for example maps or payment services. We are not responsible for their content or policies.</p><h4>Personal data</h4><p>Information you provide when booking is used only to process your booking, confirm it with you, and meet the record-keeping obligations that apply to accommodation. We do not sell or share your data with third parties for marketing.</p><h4>Contact</h4><p>For any question about this website, please reach us through the Contact page.</p></div>','legal-notice'),
-(2,2,1,'Thông báo pháp lý','Thông báo pháp lý của chúng tôi','thông báo, pháp lý, tín dụng','<h2 class=\"page-heading bottom-indent\">Thông báo pháp lý</h2><div class=\"cms-block\"><h4>Đơn vị vận hành</h4><p>Website này thuộc quyền quản lý và vận hành của Thaithinh Hotel, phục vụ việc giới thiệu và nhận đặt phòng trực tuyến cho ba cơ sở tại Thành phố Hồ Chí Minh, Đà Nẵng và Hà Nội.</p><h4>Nội dung trên website</h4><p>Toàn bộ nội dung gồm văn bản, hình ảnh, bố cục và nhận diện thương hiệu thuộc quyền sở hữu của Thaithinh Hotel, trừ những phần được ghi rõ nguồn khác. Việc sao chép hoặc sử dụng lại cho mục đích thương mại cần có sự đồng ý bằng văn bản.</p><h4>Thông tin giá và tình trạng phòng</h4><p>Giá phòng và tình trạng phòng trống được cập nhật theo thời gian thực. Chúng tôi cố gắng bảo đảm thông tin chính xác, song không loại trừ khả năng có sai sót kỹ thuật. Trường hợp có sai lệch rõ ràng về giá, chúng tôi sẽ liên hệ với quý khách trước khi xác nhận đơn.</p><h4>Liên kết tới bên thứ ba</h4><p>Website có thể chứa liên kết tới trang của bên thứ ba, ví dụ bản đồ hoặc cổng thanh toán. Chúng tôi không chịu trách nhiệm về nội dung và chính sách của các trang đó.</p><h4>Dữ liệu cá nhân</h4><p>Thông tin quý khách cung cấp khi đặt phòng chỉ được dùng để xử lý đơn, liên hệ xác nhận và thực hiện nghĩa vụ lưu trú theo quy định. Chúng tôi không bán hoặc chia sẻ dữ liệu cho bên thứ ba vì mục đích tiếp thị.</p><h4>Liên hệ</h4><p>Mọi thắc mắc liên quan đến nội dung website, vui lòng liên hệ bộ phận hỗ trợ qua trang Liên hệ.</p></div>','legal-notice'),
-(3,1,1,'Terms and Conditions','Our Terms and Conditions','conditions, terms, use, sell','<h2 class=\"page-heading bottom-indent\">Terms and Conditions</h2><div class=\"cms-block\"><p>By completing a booking on this website you agree to the terms below.</p><h4>1. Bookings</h4><ul><li>You must be 18 or older to make a booking in your name.</li><li>The details you provide must be accurate. A mismatch between the booking name and your identification may prevent check-in.</li><li>A booking takes effect once payment is recorded and a confirmation email has been sent.</li></ul><h4>2. Rates and payment</h4><ul><li>Rates are shown per room per night and include tax.</li><li>Payment is by bank transfer using a QR code (VietQR). The transfer reference already carries your booking code, so nothing needs to be added.</li><li>Extras arranged at the hotel, such as an additional bed, are settled at check-out.</li></ul><h4>3. Cancellation and refunds</h4><ul><li>Free cancellation up to 24 hours before the check-in time; the amount is returned to the account used.</li><li>Later cancellation or non-arrival: the first night is charged and the balance refunded.</li><li>Refund timing depends on your bank, typically 3 to 7 working days.</li></ul><h4>4. During your stay</h4><ul><li>The number of guests may not exceed the capacity of the room type booked.</li><li>The hotel may decline service where house rules are broken or other guests are affected.</li><li>Please look after your belongings. Valuables can be left at reception.</li></ul><h4>5. Events beyond our control</h4><p>The hotel is not liable where service cannot be provided due to natural disaster, epidemic, infrastructure failure or a requirement of the authorities. In these cases you may choose a refund or a change of dates.</p><h4>6. Changes to these terms</h4><p>These terms may be updated. Your booking is governed by the terms in force at the time it was made.</p></div>','terms-and-conditions-of-use'),
-(3,2,1,'Điều khoản và Điều kiện','Điều khoản và điều kiện của chúng tôi','điều khoản, điều kiện, sử dụng, bán hàng','<h2 class=\"page-heading bottom-indent\">Điều khoản và Điều kiện</h2><div class=\"cms-block\"><p>Khi hoàn tất đặt phòng trên website này, quý khách đồng ý với các điều khoản dưới đây.</p><h4>1. Đặt phòng</h4><ul><li>Quý khách cần đủ 18 tuổi trở lên để đứng tên đơn đặt phòng.</li><li>Thông tin cung cấp phải chính xác. Sai lệch về họ tên hoặc giấy tờ có thể dẫn tới việc không nhận được phòng.</li><li>Đơn chỉ có hiệu lực sau khi hệ thống ghi nhận thanh toán và gửi email xác nhận.</li></ul><h4>2. Giá và thanh toán</h4><ul><li>Giá hiển thị tính theo đêm cho mỗi phòng, đã bao gồm thuế.</li><li>Thanh toán qua chuyển khoản ngân hàng bằng mã QR (VietQR). Nội dung chuyển khoản đã chứa sẵn mã đơn nên quý khách không cần ghi thêm.</li><li>Các chi phí phát sinh tại khách sạn (giường phụ, dịch vụ thêm) được thanh toán trực tiếp khi trả phòng.</li></ul><h4>3. Huỷ và hoàn tiền</h4><ul><li>Huỷ miễn phí trước 24 giờ so với giờ nhận phòng, tiền được hoàn về tài khoản đã chuyển.</li><li>Huỷ muộn hơn hoặc không đến nhận phòng: thu phí tương đương một đêm đầu tiên, phần còn lại được hoàn.</li><li>Thời gian hoàn tiền phụ thuộc vào ngân hàng, thường từ 3 đến 7 ngày làm việc.</li></ul><h4>4. Lưu trú</h4><ul><li>Số khách thực tế không được vượt quá sức chứa của hạng phòng đã đặt.</li><li>Khách sạn có quyền từ chối phục vụ trong trường hợp khách vi phạm quy định chung hoặc gây ảnh hưởng tới khách khác.</li><li>Quý khách tự bảo quản tư trang. Vật phẩm có giá trị nên gửi tại quầy lễ tân.</li></ul><h4>5. Trường hợp bất khả kháng</h4><p>Khách sạn không chịu trách nhiệm với việc không thể phục vụ do thiên tai, dịch bệnh, sự cố hạ tầng hoặc yêu cầu của cơ quan chức năng. Trong các trường hợp này, quý khách được hoàn tiền hoặc chuyển ngày lưu trú.</p><h4>6. Thay đổi điều khoản</h4><p>Điều khoản có thể được cập nhật. Đơn đặt phòng áp dụng theo điều khoản có hiệu lực tại thời điểm đặt.</p></div>','terms-and-conditions'),
-(4,1,1,'About Us','Learn more about us','about us, informations','<h2 class=\"page-heading bottom-indent\">About Us</h2><div class=\"cms-block\"><p>Thaithinh Hotel is a 3-branch hotel chain in Vietnam, offering comfortable rooms and fast online booking with instant VietQR payment.</p><p><strong>Our branches:</strong></p><ul><li>Branch 1 - City Center: Deluxe &amp; Suite rooms</li><li>Branch 2 - Beachfront: Standard &amp; Deluxe rooms</li><li>Branch 3 - Old Quarter: Standard &amp; Suite rooms</li></ul><p>Book online, pay by VietQR, get an instant confirmation email.</p></div>','about-us'),
-(4,2,1,'Giới thiệu','Learn more about us','about us, informations','<h2 class=\"page-heading bottom-indent\">Giới Thiệu</h2><div class=\"cms-block\"><p>Thaithinh Hotel là chuỗi khách sạn 3 cơ sở tại Việt Nam, mang đến phòng nghỉ tiện nghi và đặt phòng trực tuyến nhanh chóng với thanh toán VietQR tức thì.</p><p><strong>Các cơ sở của chúng tôi:</strong></p><ul><li>Cơ sở 1 - Trung tâm: Phòng Deluxe &amp; Suite</li><li>Cơ sở 2 - Bờ biển: Phòng Standard &amp; Deluxe</li><li>Cơ sở 3 - Phố cổ: Phòng Standard &amp; Suite</li></ul><p>Đặt phòng trực tuyến, thanh toán qua VietQR, nhận email xác nhận ngay lập tức.</p></div>','about-us'),
-(5,1,1,'Secure payment','Our secure payment method','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Secure payment</h2><div class=\"cms-block\"><p>Thaithinh Hotel accepts payment by <strong>bank transfer via QR code (VietQR)</strong>. When you book, the system generates a QR code for your order with the amount and booking reference already filled in.</p><p><strong>How to pay:</strong></p><ul><li>Open your banking app and choose scan QR</li><li>Scan the code shown at checkout - amount and reference are pre-filled</li><li>Confirm the transfer</li></ul><p>Payment is reconciled automatically and your booking is marked as paid, usually within a few minutes. A confirmation email follows immediately.</p><p>Because the transfer reference already carries your booking code, you do not need to keep the receipt for matching. If your booking is not updated after 15 minutes, please contact our support team.</p></div>','secure-payment'),
-(5,2,1,'Thanh toán an toàn','Our secure payment method','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Thanh toán an toàn</h2><div class=\"cms-block\"><p>Thaithinh Hotel nhận thanh toán bằng <strong>chuyển khoản ngân hàng qua mã QR (VietQR)</strong>. Khi đặt phòng, hệ thống sinh mã QR riêng cho từng đơn, đã điền sẵn số tiền và mã đơn của quý khách.</p><p><strong>Cách thanh toán:</strong></p><ul><li>Mở ứng dụng ngân hàng trên điện thoại, chọn quét mã QR</li><li>Quét mã hiển thị ở bước thanh toán - số tiền và nội dung đã có sẵn, không cần nhập tay</li><li>Xác nhận chuyển khoản</li></ul><p>Hệ thống tự động đối soát giao dịch và cập nhật đơn sang trạng thái đã thanh toán, thường trong vòng vài phút. Email xác nhận được gửi ngay sau đó.</p><p>Vì nội dung chuyển khoản đã chứa sẵn mã đơn, quý khách không cần giữ lại biên lai để đối chiếu. Nếu sau 15 phút đơn chưa được cập nhật, vui lòng liên hệ bộ phận hỗ trợ.</p></div>','secure-payment');
+(1,1,1,'Policies','Our policies of hotel bookings','conditions, policy, guidelines, protocol, rule','<h2 class=\"page-heading bottom-indent\">Policies</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div>\n      <p class=\"page-subheading\">Reservation Policy:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Guests must provide valid credit card details to secure a reservation.</li>\n      <li class=\"margin-btm-10\">Cancellation policies vary based on room type and rate plan.</li>\n      <li class=\"margin-btm-10\">Changes to reservations may be subject to availability and additional charges.</li>\n      </ul>\n      <p class=\"page-subheading\">Check-in and Check-out Times:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Check-in time: 11:00 AM</li>\n      <li class=\"margin-btm-10\">Check-out time: 10:30 AM</li>\n      <li class=\"margin-btm-10\">Early check-in and late check-out requests are subject to availability and may incur additional charges.</li>\n      </ul>\n      <p class=\"page-subheading\">Payment Policy:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Payment for the entire stay is due upon check-in.</li>\n      <li class=\"margin-btm-10\">Acceptable forms of payment: credit cards, cash, etc.</li>\n      <li class=\"margin-btm-10\">A security deposit may be required upon arrival.</li>\n      </ul>\n      <p class=\"page-subheading\">Cancellation and No-show Policy:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Cancellations made 7 days prior to arrival are eligible for a full refund.</li>\n      <li class=\"margin-btm-10\">No-shows will be charged the full amount of the reservation.</li>\n      </ul>\n      <p class=\"page-subheading\">Pet Policy:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Pets are welcome with prior arrangement.</li>\n      <li class=\"margin-btm-10\">Additional charges may apply for pet-friendly accommodations.</li>\n      <li class=\"margin-btm-10\">Guests are responsible for any damages caused by their pets.</li>\n      </ul>\n      <p class=\"page-subheading\">Smoking Policy:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Our hotel is smoke-free. Smoking is strictly prohibited indoors.</li>\n      <li class=\"margin-btm-10\">Designated smoking areas are available outside the premises.</li>\n      </ul>\n      <p class=\"page-subheading\">Privacy Policy:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">We are committed to protecting your privacy and personal information.</li>\n      <li class=\"margin-btm-10\">Information collected during booking and stay is used solely for operational purposes.</li>\n      </ul>\n      <p class=\"page-subheading\">Accessibility Policy:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Our hotel is committed to providing accessible accommodations and facilities for guests with disabilities.</li>\n      <li class=\"margin-btm-10\">Please contact us directly for specific accessibility requests.</li>\n      </ul>\n      <p class=\"page-subheading\">Additional Policies:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Use of hotel facilities such as the gym, spa, pool, etc.</li>\n      <li class=\"margin-btm-10\">Conduct and behavior expectations while on hotel premises.</li>\n      </ul>\n      </div>\n    ','policies'),
+(1,2,1,'Chính sách','Chính sách của chúng tôi về đặt phòng khách sạn','điều kiện, chính sách, hướng dẫn, quy định, qui định','<h2 class=\"page-heading bottom-indent\">Chính sách</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">Trang này chứa nội dung minh họa cho mục đích giải thích. Mọi sự giống nhau với các sản phẩm, dịch vụ hoặc sự kiện thực tế là hoàn toàn ngẫu nhiên. Cảm ơn bạn đã hiểu.</p>\n      <hr /></div>\n      <div>\n      <p class=\"page-subheading\">Chính sách đặt phòng:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Khách hàng phải cung cấp thông tin thẻ tín dụng hợp lệ để đảm bảo việc đặt chỗ.</li>\n      <li class=\"margin-btm-10\">Chính sách hủy đặt phòng thay đổi tùy theo loại phòng và kế hoạch giá cả.</li>\n      <li class=\"margin-btm-10\">Thay đổi đặt phòng có thể phụ thuộc vào sự có sẵn và có thể có phí bổ sung.</li>\n      </ul>\n      <p class=\"page-subheading\">Thời gian nhận phòng và trả phòng:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Thời gian nhận phòng: 11:00 AM</li>\n      <li class=\"margin-btm-10\">Thời gian trả phòng: 10:30 AM</li>\n      <li class=\"margin-btm-10\">Yêu cầu nhận phòng sớm và trả phòng muộn có thể phụ thuộc vào sự có sẵn và có thể có phí bổ sung.</li>\n      </ul>\n      <p class=\"page-subheading\">Chính sách thanh toán:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Thanh toán cho toàn bộ thời gian lưu trú được thu khi nhận phòng.</li>\n      <li class=\"margin-btm-10\">Hình thức thanh toán chấp nhận: thẻ tín dụng, tiền mặt, v.v...</li>\n      <li class=\"margin-btm-10\">Có thể yêu cầu đặt cọc khi nhận phòng.</li>\n      </ul>\n      <p class=\"page-subheading\">Chính sách hủy và không có mặt:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Hủy đặt phòng trước 7 ngày trước khi đến sẽ được hoàn trả toàn bộ tiền.</li>\n      <li class=\"margin-btm-10\">Khách không có mặt sẽ bị tính toàn bộ số tiền đặt phòng.</li>\n      </ul>\n      <p class=\"page-subheading\">Chính sách về thú nuôi:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Thú nuôi được chào đón với sự sắp xếp trước.</li>\n      <li class=\"margin-btm-10\">Có thể áp dụng phí bổ sung cho các phòng cho thú cưng.</li>\n      <li class=\"margin-btm-10\">Khách hàng chịu trách nhiệm về bất kỳ thiệt hại nào do thú cưng gây ra.</li>\n      </ul>\n      <p class=\"page-subheading\">Chính sách không hút thuốc:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Khách sạn của chúng tôi là không hút thuốc. Cấm hút thuốc tuyệt đối trong nhà.</li>\n      <li class=\"margin-btm-10\">Có các khu vực hút thuốc được chỉ định bên ngoài khuôn viên.</li>\n      </ul>\n      <p class=\"page-subheading\">Chính sách bảo mật:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Chúng tôi cam kết bảo vệ quyền riêng tư và thông tin cá nhân của bạn.</li>\n      <li class=\"margin-btm-10\">Thông tin được thu thập trong quá trình đặt phòng và lưu trú chỉ được sử dụng cho mục đích vận hành.</li>\n      </ul>\n      <p class=\"page-subheading\">Chính sách về tiếp cận dễ dàng:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Khách sạn của chúng tôi cam kết cung cấp các phòng nghỉ và cơ sở vật chất dễ dàng tiếp cận cho khách có khuyết tật.</li>\n      <li class=\"margin-btm-10\">Vui lòng liên hệ trực tiếp với chúng tôi để yêu cầu cụ thể về tiếp cận dễ dàng.</li>\n      </ul>\n      <p class=\"page-subheading\">Các chính sách bổ sung:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-10\">Sử dụng các tiện nghi của khách sạn như phòng tập gym, spa, hồ bơi, v.v...</li>\n      <li class=\"margin-btm-10\">Kỳ vọng hành vi và hành vi khi ở trong khuôn viên khách sạn.</li>\n      </ul>\n      </div>\n    ','policies'),
+(2,1,1,'Legal Notice','Legal notice','notice, legal, credits','\n      <h2 class=\"page-heading bottom-indent\"><strong>Legal Notice</strong></h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <p class=\"margin-btm-30 page-subheading\">Website Terms of Use:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-20\">The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>\n      <li class=\"margin-btm-20\">Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness, or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors, and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>\n      <li class=\"margin-btm-20\">Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services, or information available through this website meet your specific requirements.</li>\n      </ul>\n      <p class=\"page-subheading\">Intellectual Property:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-20\">This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance, and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>\n      <li class=\"margin-btm-20\">All trademarks reproduced in this website, which are not the property of, or licensed to the operator, are acknowledged on the website.</li>\n      </ul>\n      <p class=\"page-subheading\">Privacy Policy:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-20\">Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and disclose information about you.</li>\n      </ul>\n      <p class=\"page-subheading\">Limitation of Liability:</p>\n      <ul class=\"margin-btm-30\">\n      <li class=\"margin-btm-20\">Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness, or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors, and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>\n      <li class=\"margin-btm-20\">Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services, or information available through this website meet your specific requirements.</li>\n      </ul>\n    ','legal-notice'),
+(2,2,1,'Thông báo pháp lý','Thông báo pháp lý của chúng tôi','thông báo, pháp lý, tín dụng','\n        <h2 class=\"page-heading bottom-indent\"><strong>Thông báo pháp lý</strong></h2>\n        <div>\n        <p style=\"border-left:2px solid #808080;padding-left:5px;\">Trang này chứa nội dung minh họa cho mục đích giảng dạy. Mọi sự tương đồng với sản phẩm, dịch vụ hoặc sự kiện thực tế là hoàn toàn ngẫu nhiên. Cảm ơn sự hiểu biết của bạn.</p>\n        <hr /></div>\n        <p class=\"margin-btm-30 page-subheading\">Điều khoản sử dụng Website:</p>\n        <ul class=\"margin-btm-30\">\n        <li class=\"margin-btm-20\">Nội dung của các trang web này chỉ dành cho mục đích thông tin và sử dụng chung của bạn. Nó có thể thay đổi mà không cần thông báo trước.</li>\n        <li class=\"margin-btm-20\">Chúng tôi cũng như bên thứ ba không đảm bảo hoặc cam kết bất kỳ bảo hành nào về độ chính xác, tính kịp thời, hiệu suất, đầy đủ hoặc phù hợp của thông tin và tài liệu được tìm thấy hoặc cung cấp trên trang web này cho bất kỳ mục đích cụ thể nào. Bạn công nhận rằng thông tin và tài liệu này có thể chứa sai sót hoặc lỗi, và chúng tôi tuyên bố loại trừ trách nhiệm về bất kỳ sai sót hoặc lỗi này theo pháp luật cho phép.</li>\n        <li class=\"margin-btm-20\">Việc sử dụng bất kỳ thông tin hoặc tài liệu nào trên trang web này hoàn toàn thuộc trách nhiệm của bạn, mà chúng tôi sẽ không chịu trách nhiệm. Điều này sẽ là trách nhiệm của bạn để đảm bảo rằng bất kỳ sản phẩm, dịch vụ hoặc thông tin nào có sẵn thông qua trang web này đáp ứng đầy đủ yêu cầu cụ thể của bạn.</li>\n        </ul>\n        <p class=\"page-subheading\">Sở hữu trí tuệ:</p>\n        <ul class=\"margin-btm-30\">\n        <li class=\"margin-btm-20\">Trang web này chứa tài liệu do chúng tôi sở hữu hoặc được cấp phép. Tài liệu này bao gồm nhưng không giới hạn đến thiết kế, bố cục, giao diện, và đồ họa. Sao chép là không được phép ngoại trừ theo thông báo bản quyền, là một phần của các điều khoản và điều kiện này.</li>\n        <li class=\"margin-btm-20\">Tất cả các nhãn hiệu được sao chép trong trang web này, không phải là tài sản của hoặc được cấp phép cho nhà khai thác, đều được công nhận trên trang web.</li>\n        </ul>\n        <p class=\"page-subheading\">Chính sách bảo mật:</p>\n        <ul class=\"margin-btm-30\">\n        <li class=\"margin-btm-20\">Quyền riêng tư của bạn là rất quan trọng với chúng tôi. Vui lòng xem lại Chính sách Bảo mật của chúng tôi để hiểu cách chúng tôi thu thập, sử dụng và tiết lộ thông tin về bạn.</li>\n        </ul>\n        <p class=\"page-subheading\">Giới hạn trách nhiệm:</p>\n        <ul class=\"margin-btm-30\">\n        <li class=\"margin-btm-20\">Chúng tôi cũng như bên thứ ba không đảm bảo hoặc cam kết bất kỳ bảo hành nào về độ chính xác, tính kịp thời, hiệu suất, đầy đủ hoặc phù hợp của thông tin và tài liệu được tìm thấy hoặc cung cấp trên trang web này cho bất kỳ mục đích cụ thể nào. Bạn công nhận rằng thông tin và tài liệu này có thể chứa sai sót hoặc lỗi, và chúng tôi tuyên bố loại trừ trách nhiệm về bất kỳ sai sót hoặc lỗi này theo pháp luật cho phép.</li>\n        <li class=\"margin-btm-20\">Việc sử dụng bất kỳ thông tin hoặc tài liệu nào trên trang web này hoàn toàn thuộc trách nhiệm của bạn, mà chúng tôi sẽ không chịu trách nhiệm. Điều này sẽ là trách nhiệm của bạn để đảm bảo rằng bất kỳ sản phẩm, dịch vụ, hoặc thông tin có sẵn qua trang web này đáp ứng đầy đủ yêu cầu cụ thể của bạn.</li>\n        </ul>\n    ','legal-notice'),
+(3,1,1,'Terms and Conditions','Our Terms and Conditions','conditions, terms, use, sell','\n      <h2 class=\"page-heading bottom-indent\">Terms and Conditions</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div>\n      <h3 class=\"page-subheading\"><strong>Cancellation Policy:</strong></h3>\n      <div>\n      <ul>\n      <li><span>Free Cancellation: Up to 48 hours before arrival for standard rates.</span></li>\n      <li><span>Bookings made with a non-refundable rate cannot be canceled or modified.</span></li>\n      <li><span>Cancellations within 24 hours of arrival will incur a fee of one night\'s stay.</span></li>\n      </ul>\n      </div>\n      <br />\n      <h3 class=\"page-subheading\"><strong>Changes to Bookings:</strong></h3>\n      <div>\n      <ul>\n      <li><span>A fee of $25 may apply to change your reservation dates after booking.</span></li>\n      <li><span>Changes to room type or number of guests are subject to availability at the hotel.</span></li>\n      </ul>\n      </div>\n      <br />\n      <h3 class=\"page-subheading\"><strong>Guest Responsibility:</strong></h3>\n      <div>\n      <ul>\n      <li><span>All guests must present a valid government-issued photo ID at check-in.</span></li>\n      <li><span>The maximum occupancy for the room type is 2 adults.</span></li>\n      <li><span>Smoking and alcohol are strictly prohibited in all guest rooms and public areas.</span></li>\n      </ul>\n      </div>\n      </div>\n    ','terms-and-conditions-of-use'),
+(3,2,1,'Điều khoản và Điều kiện','Điều khoản và điều kiện của chúng tôi','điều khoản, điều kiện, sử dụng, bán hàng','\n        <h2 class=\"page-heading bottom-indent\">Điều khoản và Điều kiện</h2>\n        <div>\n        <p style=\"border-left:2px solid #808080;padding-left:5px;\">Trang này chứa nội dung minh họa cho mục đích giảng dạy. Mọi sự tương đồng với sản phẩm, dịch vụ hoặc sự kiện thực tế là hoàn toàn ngẫu nhiên. Cảm ơn sự hiểu biết của bạn.</p>\n        <hr /></div>\n        <div>\n        <h3 class=\"page-subheading\"><strong>Chính sách Hủy đặt phòng:</strong></h3>\n        <div>\n        <ul>\n        <li><span>Miễn phí Hủy đặt phòng: Được thực hiện trong vòng 48 giờ trước khi đến với giá chuẩn.</span></li>\n        <li><span>Các đặt phòng với giá không hoàn lại không thể bị hủy hoặc sửa đổi.</span></li>\n        <li><span>Việc hủy đặt phòng trong vòng 24 giờ trước khi đến sẽ phải chịu phí một đêm.</span></li>\n        </ul>\n        </div>\n        <br />\n        <h3 class=\"page-subheading\"><strong>Thay đổi Đặt phòng:</strong></h3>\n        <div>\n        <ul>\n        <li><span>Có thể áp dụng phí $25 cho việc thay đổi ngày đặt phòng sau khi đặt.</span></li>\n        <li><span>Thay đổi loại phòng hoặc số lượng khách là tùy thuộc vào sự có sẵn tại khách sạn.</span></li>\n        </ul>\n        </div>\n        <br />\n        <h3 class=\"page-subheading\"><strong>Trách nhiệm của Khách:</strong></h3>\n        <div>\n        <ul>\n        <li><span>Tất cả khách hàng phải xuất trình giấy tờ tùy thân có hình ảnh do chính phủ cấp tại quầy nhận phòng.</span></li>\n        <li><span>Sức chứa tối đa cho loại phòng là 2 người lớn.</span></li>\n        <li><span>Hút thuốc và uống rượu là nghiêm cấm tại tất cả các phòng và khu vực công cộng.</span></li>\n        </ul>\n        </div>\n        </div>\n    ','terms-and-conditions'),
+(4,1,1,'About Us','Learn more about us','about us, informations','<h2 class=\"page-heading bottom-indent\">About Us</h2><div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div class=\"row\">\n      <div class=\"col-xs-12 col-sm-8\">\n      <div class=\"cms-block\">\n      <div class=\"margin-btm-30\">\n      <p class=\"dark\">Welcome to our sanctuary of luxury and tranquility, where every stay is crafted to provide an unparalleled experience. Whether you\'re seeking a relaxing getaway, a productive business trip, or a memorable event, we are dedicated to making your visit exceptional.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Story</p>\n      <p>Inspired by serene surroundings and rich local culture, our hotel combines modern comfort with timeless elegance. Our thoughtfully designed rooms, impeccable service, and attention to detail reflect our commitment to providing a haven for travelers.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Mission</p>\n      <p>Our mission is to create a home away from home, offering personalized service and luxurious amenities tailored to your needs. Your comfort and satisfaction are our top priorities, and we strive to exceed your expectations at every turn.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Amenities</p>\n      <p>Indulge in the finest amenities during your stay. Relax in elegantly appointed rooms and suites with breathtaking views. Savor gourmet dining at our on-site restaurant, unwind with a cocktail at our stylish bar, and rejuvenate at our state-of-the-art spa and fitness center. Enjoy our serene outdoor pool, lush gardens, and modern business facilities to cater to all your needs.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Team</p>\n      <p>Our dedicated team of hospitality professionals is here to serve you with a passion for excellence. From personalized concierge services to meticulous housekeeping, every member of our team is committed to making your stay extraordinary.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Join Us</p>\n      <p>Discover the charm and elegance of our hotel for yourself. Whether visiting for leisure or business, we invite you to experience our warm hospitality and luxurious accommodations. Book your stay with us today and let us make your visit unforgettable.</p>\n      </div>\n      </div>\n      </div>\n      <div class=\"col-xs-12 col-sm-4\">\n      <div class=\"cms-box\">\n      <p class=\"page-subheading\">Testimonials</p>\n      <div class=\"testimonials\">\n      <div class=\"inner\"><span class=\"before\">“</span>Hotel Prime surpassed my expectations in every way. The Executive Room was not only luxurious but also provided a peaceful retreat with its stunning lake views. The attention to detail and personalized service made my stay truly memorable. I highly recommend Hotel Prime for both business and leisure travelers looking for a blend of comfort and sophistication<span class=\"after\">”</span></div>\n      </div>\n      <p><strong class=\"dark\">Calrk Kent</strong></p>\n      <div class=\"testimonials\">\n      <div class=\"inner\"><span class=\"before\">“</span>As a frequent traveler, I can confidently say Hotel Prime stands out for its tranquil environment and exceptional hospitality. The View Room provided a perfect retreat with its stunning cityscape views and comfortable accommodations.<span class=\"after\">”</span></div>\n      </div>\n      <p><strong class=\"dark\">john Doe</strong></p>\n      </div>\n      </div>\n      </div>\n    ','about-us'),
+(4,2,1,'About Us','Learn more about us','about us, informations','<h2 class=\"page-heading bottom-indent\">About Us</h2><div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div class=\"row\">\n      <div class=\"col-xs-12 col-sm-8\">\n      <div class=\"cms-block\">\n      <div class=\"margin-btm-30\">\n      <p class=\"dark\">Welcome to our sanctuary of luxury and tranquility, where every stay is crafted to provide an unparalleled experience. Whether you\'re seeking a relaxing getaway, a productive business trip, or a memorable event, we are dedicated to making your visit exceptional.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Story</p>\n      <p>Inspired by serene surroundings and rich local culture, our hotel combines modern comfort with timeless elegance. Our thoughtfully designed rooms, impeccable service, and attention to detail reflect our commitment to providing a haven for travelers.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Mission</p>\n      <p>Our mission is to create a home away from home, offering personalized service and luxurious amenities tailored to your needs. Your comfort and satisfaction are our top priorities, and we strive to exceed your expectations at every turn.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Amenities</p>\n      <p>Indulge in the finest amenities during your stay. Relax in elegantly appointed rooms and suites with breathtaking views. Savor gourmet dining at our on-site restaurant, unwind with a cocktail at our stylish bar, and rejuvenate at our state-of-the-art spa and fitness center. Enjoy our serene outdoor pool, lush gardens, and modern business facilities to cater to all your needs.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Team</p>\n      <p>Our dedicated team of hospitality professionals is here to serve you with a passion for excellence. From personalized concierge services to meticulous housekeeping, every member of our team is committed to making your stay extraordinary.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Join Us</p>\n      <p>Discover the charm and elegance of our hotel for yourself. Whether visiting for leisure or business, we invite you to experience our warm hospitality and luxurious accommodations. Book your stay with us today and let us make your visit unforgettable.</p>\n      </div>\n      </div>\n      </div>\n      <div class=\"col-xs-12 col-sm-4\">\n      <div class=\"cms-box\">\n      <p class=\"page-subheading\">Testimonials</p>\n      <div class=\"testimonials\">\n      <div class=\"inner\"><span class=\"before\">“</span>Hotel Prime surpassed my expectations in every way. The Executive Room was not only luxurious but also provided a peaceful retreat with its stunning lake views. The attention to detail and personalized service made my stay truly memorable. I highly recommend Hotel Prime for both business and leisure travelers looking for a blend of comfort and sophistication<span class=\"after\">”</span></div>\n      </div>\n      <p><strong class=\"dark\">Calrk Kent</strong></p>\n      <div class=\"testimonials\">\n      <div class=\"inner\"><span class=\"before\">“</span>As a frequent traveler, I can confidently say Hotel Prime stands out for its tranquil environment and exceptional hospitality. The View Room provided a perfect retreat with its stunning cityscape views and comfortable accommodations.<span class=\"after\">”</span></div>\n      </div>\n      <p><strong class=\"dark\">john Doe</strong></p>\n      </div>\n      </div>\n      </div>\n    ','about-us'),
+(5,1,1,'Secure payment','Our secure payment method','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Secure payment</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div>We prioritize your security. All transactions made on our website are encrypted using Secure Socket Layer (SSL) technology to ensure your personal information and payment details are protected. We accept major credit cards and provide a secure environment for a seamless booking experience. For any inquiries regarding payment security, feel free to contact our customer support team.</div>\n    ','secure-payment'),
+(5,2,1,'Secure payment','Our secure payment method','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Secure payment</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div>We prioritize your security. All transactions made on our website are encrypted using Secure Socket Layer (SSL) technology to ensure your personal information and payment details are protected. We accept major credit cards and provide a secure environment for a seamless booking experience. For any inquiries regarding payment security, feel free to contact our customer support team.</div>\n    ','secure-payment');
 /*!40000 ALTER TABLE `qlo_cms_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2651,7 +2607,7 @@ INSERT INTO `qlo_configuration` VALUES
 (261,NULL,NULL,'PS_BASE_DISTANCE_UNIT','m','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (262,NULL,NULL,'PS_SHOP_DOMAIN','localhost:8080','0000-00-00 00:00:00','2026-09-02 15:12:35'),
 (263,NULL,NULL,'PS_SHOP_DOMAIN_SSL','localhost:8080','0000-00-00 00:00:00','2026-09-02 15:12:35'),
-(264,NULL,NULL,'PS_SHOP_NAME','Thaithinh Hotel','0000-00-00 00:00:00','2026-09-02 15:12:35'),
+(264,NULL,NULL,'PS_SHOP_NAME','CMS Hotel','0000-00-00 00:00:00','2026-09-02 15:12:35'),
 (265,NULL,NULL,'PS_SHOP_EMAIL','booking@hotel.local','0000-00-00 00:00:00','2026-09-02 15:34:13'),
 (266,NULL,NULL,'PS_MAIL_METHOD','2','0000-00-00 00:00:00','2026-09-02 15:34:13'),
 (267,NULL,NULL,'PS_MAIL_SUBJECT_PREFIX','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
@@ -2681,7 +2637,7 @@ INSERT INTO `qlo_configuration` VALUES
 (291,NULL,NULL,'PS_DASHBOARD_USE_PUSH','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (292,NULL,NULL,'PS_ATTRIBUTE_ANCHOR_SEPARATOR','-','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (293,NULL,NULL,'CONF_AVERAGE_PRODUCT_MARGIN','40','0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(294,NULL,NULL,'PS_DASHBOARD_SIMULATION','0','0000-00-00 00:00:00','2026-09-05 13:31:28'),
+(294,NULL,NULL,'PS_DASHBOARD_SIMULATION','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (295,NULL,NULL,'PS_QUICK_VIEW','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (296,NULL,NULL,'PS_USE_HTMLPURIFIER','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (297,NULL,NULL,'PS_SMARTY_CACHING_TYPE','filesystem','0000-00-00 00:00:00','0000-00-00 00:00:00'),
@@ -2725,13 +2681,13 @@ INSERT INTO `qlo_configuration` VALUES
 (335,NULL,NULL,'WK_SEARCH_AUTO_FOCUS_NEXT_FIELD','1','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (336,NULL,NULL,'WK_ROOM_LEFT_WARNING_NUMBER','10','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (337,NULL,NULL,'WK_HTL_ESTABLISHMENT_YEAR','2010','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(338,NULL,NULL,'PS_SHOP_ADDR1','Thaithinh Hotel - Việt Nam','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(338,NULL,NULL,'PS_SHOP_ADDR1','The Hotel Prime, Monticello Dr, Montgomery, 10010','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (339,NULL,NULL,'PS_SHOP_PHONE','0987654321','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (340,NULL,NULL,'WK_CUSTOMER_SUPPORT_PHONE_NUMBER','0987654321','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(341,NULL,NULL,'WK_CUSTOMER_SUPPORT_EMAIL','support@hotel.local','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(341,NULL,NULL,'WK_CUSTOMER_SUPPORT_EMAIL','hotelprime@htl.com','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (342,NULL,NULL,'WK_DISPLAY_CONTACT_PAGE_HOTEL_LIST','1','2026-09-02 15:12:38','2026-09-02 17:41:27'),
-(343,NULL,NULL,'WK_TITLE_HEADER_BLOCK','Thaithinh Hotel','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(344,NULL,NULL,'WK_CONTENT_HEADER_BLOCK','Đặt phòng trực tuyến - Thanh toán VietQR tức thì - 3 cơ sở trên toàn quốc','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(343,NULL,NULL,'WK_TITLE_HEADER_BLOCK','CMS Hotel','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(344,NULL,NULL,'WK_CONTENT_HEADER_BLOCK','Our hotel is the perfect destination for both business and leisure travelers seeking a memorable stay.','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (345,NULL,NULL,'WK_HOTEL_HEADER_IMAGE','hotel_header_image.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (346,NULL,NULL,'WK_ALLOW_ADVANCED_PAYMENT','1','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (347,NULL,NULL,'WK_ADVANCED_PAYMENT_GLOBAL_MIN_AMOUNT','10','2026-09-02 15:12:38','2026-09-02 15:12:38'),
@@ -2745,7 +2701,7 @@ INSERT INTO `qlo_configuration` VALUES
 (355,NULL,NULL,'WK_MAP_HOTEL_ACTIVE_ONLY','1','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (356,NULL,NULL,'PS_LOGO_MAIL','logo_mail.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (357,NULL,NULL,'PS_LOGO_INVOICE','logo_invoice.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(358,NULL,NULL,'WK_HTL_CHAIN_NAME',NULL,'2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(358,NULL,NULL,'WK_HTL_CHAIN_NAME','CMS Hotel','2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (359,NULL,NULL,'WK_HTL_TAG_LINE',NULL,'2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (360,NULL,NULL,'WK_HTL_SHORT_DESC',NULL,'2026-09-02 15:12:38','2026-09-02 15:12:38'),
 (361,NULL,NULL,'WK_DIMENSION_UNIT',NULL,'2026-09-02 15:12:38','2026-09-02 15:12:38'),
@@ -2805,12 +2761,12 @@ INSERT INTO `qlo_configuration` VALUES
 (415,NULL,NULL,'VIETQR_ACCOUNT_NAME','CMS HOTEL PMS','2026-09-02 15:41:52','2026-09-02 15:41:52'),
 (416,NULL,NULL,'VIETQR_TEMPLATE','compact2','2026-09-02 15:41:52','2026-09-02 15:41:52'),
 (417,NULL,NULL,'QLO_OS_VIETQR_PENDING','13','2026-09-02 15:41:52','2026-09-02 15:41:52'),
-(418,NULL,NULL,'VIETQR_WEBHOOK_SECRET','','2026-09-02 16:22:04','2026-09-02 16:22:04'),
+(418,NULL,NULL,'VIETQR_WEBHOOK_SECRET','secret123','2026-09-02 16:22:04','2026-09-02 16:22:04'),
 (419,NULL,NULL,'PS_CSS_THEME_CACHE','1','2026-09-02 18:03:32','2026-09-02 18:03:32'),
 (420,NULL,NULL,'PS_JS_THEME_CACHE','1','2026-09-02 18:03:32','2026-09-02 18:03:32'),
 (421,NULL,NULL,'PS_HTACCESS_CACHE_CONTROL','1','2026-09-02 18:03:32','2026-09-02 18:03:32'),
 (422,NULL,NULL,'PS_HTML_THEME_COMPRESSION','1','2026-09-02 18:03:32','2026-09-02 18:03:32'),
-(423,NULL,NULL,'PS_CCCCSS_VERSION','1','2026-09-04 22:56:22','2026-09-04 22:56:22');
+(423,NULL,NULL,'PS_CCCCSS_VERSION','1','2026-09-07 21:04:57','2026-09-07 21:04:57');
 /*!40000 ALTER TABLE `qlo_configuration` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2833,7 +2789,7 @@ CREATE TABLE `qlo_configuration_kpi` (
   KEY `name` (`name`),
   KEY `id_shop` (`id_shop`),
   KEY `id_shop_group` (`id_shop_group`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2878,9 +2834,7 @@ INSERT INTO `qlo_configuration_kpi` VALUES
 (33,NULL,NULL,'DASHGOALS_AVG_CART_VALUE_11_2026','80','2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (34,NULL,NULL,'DASHGOALS_TRAFFIC_12_2026','600','2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (35,NULL,NULL,'DASHGOALS_CONVERSION_12_2026','2','2026-09-02 15:12:43','2026-09-02 15:12:43'),
-(36,NULL,NULL,'DASHGOALS_AVG_CART_VALUE_12_2026','80','2026-09-02 15:12:43','2026-09-02 15:12:43'),
-(37,NULL,NULL,'DISABLED_ROOM_TYPES','0','2026-09-05 16:22:03','2026-09-05 16:22:03'),
-(38,NULL,NULL,'DISABLED_ROOM_TYPES_EXPIRE','1788613608','2026-09-05 16:22:03','2026-09-05 18:06:48');
+(36,NULL,NULL,'DASHGOALS_AVG_CART_VALUE_12_2026','80','2026-09-02 15:12:43','2026-09-02 15:12:43');
 /*!40000 ALTER TABLE `qlo_configuration_kpi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2946,26 +2900,26 @@ INSERT INTO `qlo_configuration_lang` VALUES
 (86,2,'0',NULL),
 (92,1,'Dear Customer,\r\n\r\nRegards,\r\nCustomer service',NULL),
 (92,2,'Dear Customer,\r\n\r\nRegards,\r\nCustomer service',NULL),
-(358,1,'Thaithinh Hotel','2026-09-02 15:12:38'),
-(358,2,'Thaithinh Hotel','2026-09-02 15:12:38'),
-(359,1,'3 locations across Vietnam - book online with instant VietQR payment.','2026-09-02 15:12:38'),
-(359,2,'Chuỗi 3 cơ sở trên toàn quốc - Đặt phòng trực tuyến, thanh toán VietQR tức thì.','2026-09-02 15:12:38'),
-(360,1,'Comfortable rooms, fast booking, VietQR payment across all 3 branches.','2026-09-02 15:12:38'),
-(360,2,'Phòng nghỉ tiện nghi, đặt phòng nhanh chóng, thanh toán VietQR tại cả 3 cơ sở.','2026-09-02 15:12:38'),
+(358,1,'CMS Hotel','2026-09-02 15:12:38'),
+(358,2,'CMS Hotel','2026-09-02 15:12:38'),
+(359,1,'A place where comfort and luxury are blended with nature!','2026-09-02 15:12:38'),
+(359,2,'A place where comfort and luxury are blended with nature!','2026-09-02 15:12:38'),
+(360,1,'We offer elegant rooms, gourmet dining, and attentive service for a memorable stay.','2026-09-02 15:12:38'),
+(360,2,'We offer elegant rooms, gourmet dining, and attentive service for a memorable stay.','2026-09-02 15:12:38'),
 (361,1,'ft','2026-09-02 15:12:38'),
 (361,2,'ft','2026-09-02 15:12:38'),
-(376,1,'Inside our rooms','2026-09-02 15:12:42'),
-(376,2,'Không gian phòng nghỉ','2026-09-02 15:12:42'),
-(377,1,'Rooms across our three properties, simply laid out with the essentials for a short stay or a work trip.','2026-09-02 15:12:42'),
-(377,2,'Phòng nghỉ tại ba cơ sở, bố trí gọn gàng và đầy đủ tiện nghi cơ bản cho một kỳ nghỉ hoặc chuyến công tác.','2026-09-02 15:12:42'),
+(376,1,'Explore the Interiors!','2026-09-02 15:12:42'),
+(376,2,'Explore the Interiors!','2026-09-02 15:12:42'),
+(377,1,'Step into the sophisticated elegance of our hotel, where every detail is designed with your comfort in mind.','2026-09-02 15:12:42'),
+(377,2,'Step into the sophisticated elegance of our hotel, where every detail is designed with your comfort in mind.','2026-09-02 15:12:42'),
 (378,1,'Amenities','2026-09-02 15:12:42'),
-(378,2,'Tiện nghi','2026-09-02 15:12:42'),
-(379,1,'Free Wi-Fi, 24/7 reception and daily housekeeping at all three properties.','2026-09-02 15:12:42'),
-(379,2,'Wifi miễn phí, lễ tân trực 24/7 và dọn phòng hàng ngày tại cả ba cơ sở.','2026-09-02 15:12:42'),
+(378,2,'Amenities','2026-09-02 15:12:42'),
+(379,1,'Experience luxury at our hotel with top-notch amenities. Enjoy our fitness center, rejuvenating spa, serene outdoor pool, and exquisite dining.','2026-09-02 15:12:42'),
+(379,2,'Experience luxury at our hotel with top-notch amenities. Enjoy our fitness center, rejuvenating spa, serene outdoor pool, and exquisite dining.','2026-09-02 15:12:42'),
 (380,1,'Our Rooms','2026-09-02 15:12:43'),
-(380,2,'Các hạng phòng','2026-09-02 15:12:43'),
-(381,1,'Pick a room type at any of our properties. Prices are per night, booked online and paid by VietQR.','2026-09-02 15:12:43'),
-(381,2,'Chọn hạng phòng theo từng cơ sở. Giá hiển thị là giá mỗi đêm, đặt trực tuyến và thanh toán bằng mã QR VietQR.','2026-09-02 15:12:43'),
+(380,2,'Our Rooms','2026-09-02 15:12:43'),
+(381,1,'Relax in the comfort of our rooms. With modern amenities, serene decor, and stunning lake or city views, each room offers a peaceful retreat for your stay.','2026-09-02 15:12:43'),
+(381,2,'Relax in the comfort of our rooms. With modern amenities, serene decor, and stunning lake or city views, each room offers a peaceful retreat for your stay.','2026-09-02 15:12:43'),
 (382,1,'What our guests say?','2026-09-02 15:12:43'),
 (382,2,'What our guests say?','2026-09-02 15:12:43'),
 (383,1,'Here are some valuable feedbacks from our guests.','2026-09-02 15:12:43'),
@@ -2993,7 +2947,7 @@ CREATE TABLE `qlo_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3018,131 +2972,18 @@ INSERT INTO `qlo_connections` VALUES
 (13,1,1,13,1,3232252161,'2026-09-02 19:10:48',''),
 (14,1,1,14,1,2890117626,'2026-09-02 19:14:24',''),
 (15,1,1,15,1,3232252161,'2026-09-02 19:18:37',''),
-(24,1,1,24,1,2886860801,'2026-09-04 21:44:45',''),
-(25,1,1,19,1,2886860801,'2026-09-04 21:51:53',''),
-(26,1,1,25,1,2886860801,'2026-09-04 21:54:52',''),
-(27,1,1,26,1,2886860801,'2026-09-04 21:55:41',''),
-(28,1,1,27,1,2886860801,'2026-09-04 21:55:48',''),
-(29,1,1,28,1,2886860801,'2026-09-04 21:55:48',''),
-(30,1,1,29,4,2886860801,'2026-09-04 21:55:54',''),
-(31,1,1,30,1,2886860801,'2026-09-04 21:55:55','http://localhost:8080'),
-(32,1,1,31,4,2886860801,'2026-09-04 21:56:04',''),
-(33,1,1,32,3,2886860801,'2026-09-04 21:56:11',''),
-(34,1,1,33,3,2886860801,'2026-09-04 21:56:18',''),
-(35,1,1,34,5,2886860801,'2026-09-04 21:56:26',''),
-(36,1,1,35,5,2886860801,'2026-09-04 21:56:42',''),
-(37,1,1,36,6,2886860801,'2026-09-04 21:56:49',''),
-(38,1,1,37,6,2886860801,'2026-09-04 21:57:01',''),
-(39,1,1,38,7,2886860801,'2026-09-04 21:57:08',''),
-(40,1,1,39,7,2886860801,'2026-09-04 21:57:18',''),
-(41,1,1,40,7,2886860801,'2026-09-04 21:57:27',''),
-(42,1,1,41,7,2886860801,'2026-09-04 21:57:33',''),
-(43,1,1,42,7,2886860801,'2026-09-04 21:57:41',''),
-(44,1,1,43,7,2886860801,'2026-09-04 21:57:48',''),
-(45,1,1,44,7,2886860801,'2026-09-04 21:57:56',''),
-(46,1,1,45,7,2886860801,'2026-09-04 21:58:03',''),
-(47,1,1,46,7,2886860801,'2026-09-04 21:58:08',''),
-(48,1,1,47,7,2886860801,'2026-09-04 21:58:14',''),
-(49,1,1,48,8,2886860801,'2026-09-04 21:58:24',''),
-(50,1,1,49,8,2886860801,'2026-09-04 21:58:43',''),
-(51,1,1,50,1,2886860801,'2026-09-04 21:58:53',''),
-(52,1,1,51,1,2886860801,'2026-09-04 21:59:03',''),
-(53,1,1,52,1,2886860801,'2026-09-04 22:01:23',''),
-(54,1,1,53,1,2886860801,'2026-09-04 22:05:45',''),
-(55,1,1,54,7,2886860801,'2026-09-04 22:05:57',''),
-(56,1,1,55,1,2886860801,'2026-09-04 22:09:22',''),
-(57,1,1,56,5,2886860801,'2026-09-04 22:13:26',''),
-(58,1,1,57,8,2886860801,'2026-09-04 22:13:38',''),
-(59,1,1,58,1,2886860801,'2026-09-04 22:14:53',''),
-(60,1,1,59,1,2886860801,'2026-09-04 22:15:09',''),
-(61,1,1,60,1,2886860801,'2026-09-04 22:15:18',''),
-(62,1,1,61,1,2886860801,'2026-09-04 22:15:37',''),
-(63,1,1,62,1,2886860801,'2026-09-04 22:25:47',''),
-(64,1,1,19,1,2886860801,'2026-09-04 22:37:04',''),
-(65,1,1,23,1,2886860801,'2026-09-04 22:41:09',''),
-(66,1,1,63,1,2886860801,'2026-09-04 22:41:51',''),
-(67,1,1,64,1,2886860801,'2026-09-04 22:42:39',''),
-(68,1,1,65,1,2886860801,'2026-09-04 22:56:22',''),
-(69,1,1,19,1,2886860801,'2026-09-05 03:07:58',''),
-(70,1,1,66,1,2886860801,'2026-09-05 03:22:25',''),
-(71,1,1,67,1,2886860801,'2026-09-05 03:22:40',''),
-(72,1,1,68,1,2886860801,'2026-09-05 03:22:49',''),
-(73,1,1,69,1,2886860801,'2026-09-05 03:23:00',''),
-(74,1,1,70,1,2886860801,'2026-09-05 03:23:15',''),
-(75,1,1,71,1,2886860801,'2026-09-05 03:28:51',''),
-(76,1,1,19,1,2886860801,'2026-09-05 11:01:42',''),
-(77,1,1,72,1,2886860801,'2026-09-05 11:03:17',''),
-(78,1,1,73,1,2886860801,'2026-09-05 11:03:54',''),
-(79,1,1,74,1,2886860801,'2026-09-05 11:04:06',''),
-(80,1,1,75,1,2886860801,'2026-09-05 11:06:40',''),
-(81,1,1,76,1,2886860801,'2026-09-05 11:07:16',''),
-(82,1,1,77,1,2886860801,'2026-09-05 11:07:36',''),
-(83,1,1,78,1,2886860801,'2026-09-05 11:08:42',''),
-(84,1,1,19,1,2886860801,'2026-09-05 11:32:29',''),
-(85,1,1,79,1,2886860801,'2026-09-05 12:40:40',''),
-(86,1,1,80,1,2886860801,'2026-09-05 12:42:28',''),
-(87,1,1,81,1,2886860801,'2026-09-05 12:44:06',''),
-(88,1,1,82,1,2886860801,'2026-09-05 12:45:20',''),
-(89,1,1,83,4,2886860801,'2026-09-05 12:45:50',''),
-(90,1,1,84,8,2886860801,'2026-09-05 12:46:07',''),
-(91,1,1,85,3,2886860801,'2026-09-05 12:46:28',''),
-(92,1,1,86,4,2886860801,'2026-09-05 12:46:57',''),
-(93,1,1,87,8,2886860801,'2026-09-05 12:47:07',''),
-(94,1,1,88,3,2886860801,'2026-09-05 12:47:17',''),
-(95,1,1,89,1,2886860801,'2026-09-05 12:48:40',''),
-(96,1,1,90,4,2886860801,'2026-09-05 12:48:58',''),
-(97,1,1,91,8,2886860801,'2026-09-05 12:49:13',''),
-(98,1,1,92,3,2886860801,'2026-09-05 12:49:33',''),
-(99,1,1,93,1,2886860801,'2026-09-05 12:51:40',''),
-(100,1,1,94,4,2886860801,'2026-09-05 12:51:55',''),
-(101,1,1,95,8,2886860801,'2026-09-05 12:52:08',''),
-(102,1,1,96,3,2886860801,'2026-09-05 12:52:27',''),
-(103,1,1,97,8,2886860801,'2026-09-05 12:53:26',''),
-(104,1,1,98,1,2886860801,'2026-09-05 12:54:55',''),
-(105,1,1,99,4,2886860801,'2026-09-05 12:55:10',''),
-(106,1,1,100,8,2886860801,'2026-09-05 12:55:23',''),
-(107,1,1,101,3,2886860801,'2026-09-05 12:55:41',''),
-(108,1,1,102,1,2886860801,'2026-09-05 12:57:18',''),
-(109,1,1,103,8,2886860801,'2026-09-05 12:57:38',''),
-(110,1,1,104,1,2886860801,'2026-09-05 12:59:04',''),
-(111,1,1,105,1,2886860801,'2026-09-05 13:00:22',''),
-(112,1,1,106,1,2886860801,'2026-09-05 13:01:50',''),
-(113,1,1,107,7,2886860801,'2026-09-05 13:07:41',''),
-(114,1,1,108,7,2886860801,'2026-09-05 13:07:56',''),
-(115,1,1,109,7,2886860801,'2026-09-05 13:08:05',''),
-(116,1,1,110,7,2886860801,'2026-09-05 13:08:14',''),
-(117,1,1,111,7,2886860801,'2026-09-05 13:08:25',''),
-(118,1,1,112,7,2886860801,'2026-09-05 13:08:36',''),
-(119,1,1,113,7,2886860801,'2026-09-05 13:08:46',''),
-(120,1,1,114,7,2886860801,'2026-09-05 13:09:07',''),
-(121,1,1,115,7,2886860801,'2026-09-05 13:09:17',''),
-(122,1,1,116,7,2886860801,'2026-09-05 13:09:27',''),
-(123,1,1,117,1,2886860801,'2026-09-05 13:10:37',''),
-(124,1,1,19,1,2886860801,'2026-09-05 14:24:10',''),
-(125,1,1,77,1,2886860801,'2026-09-05 14:29:01',''),
-(126,1,1,19,1,2886860801,'2026-09-05 16:18:50',''),
-(127,1,1,19,1,2886860801,'2026-09-06 11:56:55',''),
-(128,1,1,19,1,2886860801,'2026-09-06 14:30:00',''),
-(129,1,1,118,1,2886860801,'2026-09-06 17:23:12',''),
-(130,1,1,119,1,2886860801,'2026-09-06 17:23:36',''),
-(131,1,1,120,4,2886860801,'2026-09-06 17:23:44',''),
-(132,1,1,121,3,2886860801,'2026-09-06 17:23:53',''),
-(133,1,1,122,6,2886860801,'2026-09-06 17:24:05',''),
-(134,1,1,123,9,2886860801,'2026-09-06 17:24:19',''),
-(135,1,1,124,5,2886860801,'2026-09-06 17:24:46',''),
-(136,1,1,125,7,2886860801,'2026-09-06 17:25:01',''),
-(137,1,1,126,7,2886860801,'2026-09-06 17:25:10',''),
-(138,1,1,127,7,2886860801,'2026-09-06 17:25:19',''),
-(139,1,1,128,7,2886860801,'2026-09-06 17:25:28',''),
-(140,1,1,129,7,2886860801,'2026-09-06 17:25:35',''),
-(141,1,1,130,1,2886860801,'2026-09-06 17:25:45',''),
-(142,1,1,131,1,2886860801,'2026-09-06 17:36:02',''),
-(143,1,1,132,4,2886860801,'2026-09-06 17:36:16',''),
-(144,1,1,133,3,2886860801,'2026-09-06 17:36:28',''),
-(145,1,1,134,5,2886860801,'2026-09-06 17:36:39',''),
-(146,1,1,135,9,2886860801,'2026-09-06 17:36:55',''),
-(147,1,1,136,8,2886860801,'2026-09-06 17:37:09',''),
-(148,1,1,137,10,2886860801,'2026-09-06 17:37:32','');
+(16,1,1,16,1,3232252161,'2026-09-03 10:50:58',''),
+(17,1,1,17,1,3232252161,'2026-09-03 10:51:41',''),
+(18,1,1,18,1,2887254017,'2026-09-07 21:04:57',''),
+(19,1,1,19,4,2887254017,'2026-09-07 22:11:32',''),
+(20,1,1,20,1,2887254017,'2026-09-07 22:13:39',''),
+(21,1,1,21,1,2887254017,'2026-09-07 22:51:13',''),
+(22,1,1,22,1,2887254017,'2026-09-07 23:39:59',''),
+(23,1,1,23,1,2887254017,'2026-09-07 23:40:59',''),
+(24,1,1,24,1,2887254017,'2026-09-07 23:53:21',''),
+(25,1,1,25,1,2887254017,'2026-09-07 23:58:02',''),
+(26,1,1,26,1,2887254017,'2026-09-07 23:58:12',''),
+(27,1,1,27,1,2887254017,'2026-09-08 00:00:20','');
 /*!40000 ALTER TABLE `qlo_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4456,7 +4297,7 @@ CREATE TABLE `qlo_customer` (
   KEY `id_gender` (`id_gender`),
   KEY `id_shop_group` (`id_shop_group`),
   KEY `id_shop` (`id_shop`,`date_add`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4467,13 +4308,7 @@ LOCK TABLES `qlo_customer` WRITE;
 /*!40000 ALTER TABLE `qlo_customer` DISABLE KEYS */;
 INSERT INTO `qlo_customer` VALUES
 (1,1,1,1,3,2,0,'','','','John','Doe','pub@qloapps.com','$2y$10$P4zjJsUYGIFLoV4tzfQ3KOXZ50ShbZL7XKbzIwZq01uJmXXdY/DQK','2026-09-02 09:12:38','1996-09-02',1,'','2026-09-02 15:12:38',1,'',0.000000,0,0,'4ca291a8be5f90df86d940d8e4f55833','','1234567890',1,0,0,'2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(2,1,1,0,3,2,0,'','','','Nguyễn','Văn Khách','guest.webhook@example.com','$2y$10$Xp2OSNqSNPLCOsS4lI2hJOVL3sJnVlBL5.qAgEo7CK6QsZZU7Ej6W','2026-09-02 10:24:19','0000-00-00',0,'','0000-00-00 00:00:00',0,'',0.000000,0,0,'89aa89f026132a59da541ca968705365','','',1,0,0,'2026-09-02 16:24:19','2026-09-02 16:24:19'),
-(3,1,1,0,3,2,0,NULL,NULL,NULL,'Minh Anh','Nguyễn','minh.anh@demo.local','e6005c88b2d0b5a8fb97dd321ac4fb8e','2026-09-05 05:26:00','0000-00-00',0,NULL,'0000-00-00 00:00:00',0,NULL,0.000000,0,0,'d6b2258b456198a8257feb453b644f02',NULL,NULL,1,0,0,'2026-09-05 11:26:00','2026-09-05 11:26:00'),
-(4,1,1,0,3,2,0,NULL,NULL,NULL,'Quốc Bảo','Trần','quoc.bao@demo.local','e6005c88b2d0b5a8fb97dd321ac4fb8e','2026-09-05 05:26:09','0000-00-00',0,NULL,'0000-00-00 00:00:00',0,NULL,0.000000,0,0,'c334c8c63c05952ef3cf8bd524407391',NULL,NULL,1,0,0,'2026-09-05 11:26:09','2026-09-05 11:26:09'),
-(5,1,1,0,3,2,0,NULL,NULL,NULL,'Thu Hà','Lê','thu.ha@demo.local','e6005c88b2d0b5a8fb97dd321ac4fb8e','2026-09-05 05:26:10','0000-00-00',0,NULL,'0000-00-00 00:00:00',0,NULL,0.000000,0,0,'6e6a9c9b748bb9458f2ea9acfba8065d',NULL,NULL,1,0,0,'2026-09-05 11:26:10','2026-09-05 11:26:10'),
-(6,1,1,0,3,2,0,NULL,NULL,NULL,'Đức Duy','Phạm','duc.duy@demo.local','e6005c88b2d0b5a8fb97dd321ac4fb8e','2026-09-05 05:26:10','0000-00-00',0,NULL,'0000-00-00 00:00:00',0,NULL,0.000000,0,0,'9f37dae305817e0326fa286950d1a482',NULL,NULL,1,0,0,'2026-09-05 11:26:10','2026-09-05 11:26:10'),
-(7,1,1,0,3,2,0,NULL,NULL,NULL,'Lan Chi','Hoàng','lan.chi@demo.local','e6005c88b2d0b5a8fb97dd321ac4fb8e','2026-09-05 05:26:10','0000-00-00',0,NULL,'0000-00-00 00:00:00',0,NULL,0.000000,0,0,'79bb817ca9237176a58dbeecbea17a30',NULL,NULL,1,0,0,'2026-09-05 11:26:10','2026-09-05 11:26:10'),
-(8,1,1,0,3,2,0,NULL,NULL,NULL,'Thanh Tùng','Vũ','thanh.tung@demo.local','e6005c88b2d0b5a8fb97dd321ac4fb8e','2026-09-05 05:26:10','0000-00-00',0,NULL,'0000-00-00 00:00:00',0,NULL,0.000000,0,0,'d1a00f1d7545a4ffa84c2b242d29132b',NULL,NULL,1,0,0,'2026-09-05 11:26:10','2026-09-05 11:26:10');
+(2,1,1,0,3,2,0,'','','','Nguyễn','Văn Khách','guest.webhook@example.com','$2y$10$Xp2OSNqSNPLCOsS4lI2hJOVL3sJnVlBL5.qAgEo7CK6QsZZU7Ej6W','2026-09-02 10:24:19','0000-00-00',0,'','0000-00-00 00:00:00',0,'',0.000000,0,0,'89aa89f026132a59da541ca968705365','','',1,0,0,'2026-09-02 16:24:19','2026-09-02 16:24:19');
 /*!40000 ALTER TABLE `qlo_customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4501,13 +4336,7 @@ LOCK TABLES `qlo_customer_group` WRITE;
 /*!40000 ALTER TABLE `qlo_customer_group` DISABLE KEYS */;
 INSERT INTO `qlo_customer_group` VALUES
 (1,3),
-(2,3),
-(3,3),
-(4,3),
-(5,3),
-(6,3),
-(7,3),
-(8,3);
+(2,3);
 /*!40000 ALTER TABLE `qlo_customer_group` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4852,7 +4681,7 @@ CREATE TABLE `qlo_employee` (
 LOCK TABLES `qlo_employee` WRITE;
 /*!40000 ALTER TABLE `qlo_employee` DISABLE KEYS */;
 INSERT INTO `qlo_employee` VALUES
-(1,1,2,'Doe','John','admin@hotel.local','$2y$10$CGrFlVtHkn6MBCDtPdM7muFoQOpZBQdsyUKPigNgs5Zd5S8JFtXCy','2026-09-02 09:12:35','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','default','admin-theme.css',1,0,1,1,1,0,0,0,'2026-09-05'),
+(1,1,2,'Doe','John','admin@hotel.local','$2y$10$CGrFlVtHkn6MBCDtPdM7muFoQOpZBQdsyUKPigNgs5Zd5S8JFtXCy','2026-09-02 09:12:35','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','default','admin-theme.css',1,0,1,1,1,0,0,0,'2026-09-02'),
 (2,2,2,'Cơ sở Một','Lễ tân','reception1@hotel.local','$2y$10$u.5pD1JNPqLZm/rMdPBJR.Ee3iHJD.Ou76LM8780ZF3NxnStT21N2','2026-09-02 09:29:25','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','default','admin-theme.css',86,0,1,1,1,0,0,0,'2026-09-02'),
 (3,3,2,'Cơ sở Hai','Lễ tân','reception2@hotel.local','$2y$10$u.5pD1JNPqLZm/rMdPBJR.Ee3iHJD.Ou76LM8780ZF3NxnStT21N2','2026-09-02 09:29:30','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','','admin-theme.css',86,0,1,1,1,0,0,0,'0000-00-00'),
 (4,4,2,'Cơ sở Ba','Lễ tân','reception3@hotel.local','$2y$10$u.5pD1JNPqLZm/rMdPBJR.Ee3iHJD.Ou76LM8780ZF3NxnStT21N2','2026-09-02 09:29:35','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','','admin-theme.css',86,0,1,1,1,0,0,0,'0000-00-00'),
@@ -5507,7 +5336,7 @@ CREATE TABLE `qlo_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=138 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5534,126 +5363,16 @@ INSERT INTO `qlo_guest` VALUES
 (15,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (16,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (17,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(18,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
-(19,0,11,0,0,0,0,0,0,0,0,0,0,0,'vi',0),
-(20,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
-(21,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
+(18,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(19,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(20,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(21,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (22,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(23,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
+(23,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (24,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (25,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (26,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(27,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(28,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(29,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(30,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(31,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(32,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(33,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(34,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(35,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(36,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(37,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(38,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(39,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(40,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(41,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(42,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(43,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(44,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(45,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(46,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(47,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(48,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(49,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(50,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(51,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(52,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(53,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(54,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(55,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(56,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(57,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(58,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(59,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(60,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(61,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(62,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(63,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(64,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(65,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(66,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(67,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(68,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(69,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(70,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
-(71,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(72,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(73,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(74,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(75,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(76,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(77,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
-(78,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(79,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(80,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(81,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(82,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(83,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(84,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(85,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(86,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(87,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(88,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(89,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(90,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(91,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(92,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(93,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(94,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(95,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(96,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(97,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(98,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(99,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(100,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(101,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(102,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(103,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(104,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(105,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(106,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(107,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(108,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(109,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(110,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(111,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(112,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(113,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(114,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(115,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(116,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(117,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(118,0,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),
-(119,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(120,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(121,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(122,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(123,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(124,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(125,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(126,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(127,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(128,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(129,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(130,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(131,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(132,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(133,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(134,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(135,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(136,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(137,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
+(27,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
 /*!40000 ALTER TABLE `qlo_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6277,7 +5996,7 @@ CREATE TABLE `qlo_htl_amenity` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_amenity`)
-) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6287,120 +6006,116 @@ CREATE TABLE `qlo_htl_amenity` (
 LOCK TABLES `qlo_htl_amenity` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_amenity` DISABLE KEYS */;
 INSERT INTO `qlo_htl_amenity` VALUES
-(1,0,1,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(2,1,0,0,'image','2.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(3,1,0,0,'image','3.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(4,1,0,0,'image','4.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(5,1,0,0,'image','5.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(6,1,0,0,'image','6.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(7,1,0,0,'image','7.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(8,1,0,0,'image','8.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(9,0,2,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(10,9,0,0,'image','10.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(11,9,0,0,'image','11.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(12,9,0,0,'image','12.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(13,9,0,0,'image','13.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(14,9,0,0,'image','14.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(15,0,3,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(16,15,0,0,'image','16.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(17,15,0,0,'image','17.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(18,15,0,0,'image','18.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(19,15,0,0,'image','19.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(20,15,0,0,'image','20.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(21,15,0,0,'image','21.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(22,15,0,0,'image','22.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(23,0,4,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(24,23,0,0,'image','24.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(25,23,0,0,'image','25.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(26,23,0,0,'image','26.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(27,23,0,0,'image','27.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(28,23,0,0,'image','28.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(29,23,0,0,'image','29.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(30,23,0,0,'image','30.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(31,23,0,0,'image','31.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(32,23,0,0,'image','32.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(33,23,0,0,'image','33.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(34,23,0,0,'image','34.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(35,23,0,0,'image','35.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(36,23,0,0,'image','36.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(37,0,5,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(38,37,0,0,'image','38.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(39,37,0,0,'image','39.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(40,37,0,0,'image','40.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(41,37,0,0,'image','41.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(42,37,0,0,'image','42.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(43,37,0,0,'image','43.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(44,37,0,0,'image','44.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(45,37,0,0,'image','45.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(46,37,0,0,'image','46.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(47,0,6,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(48,47,0,0,'image','48.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(49,47,0,0,'image','49.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(50,47,0,0,'image','50.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(51,0,7,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(52,51,0,0,'image','52.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(53,51,0,0,'image','53.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(54,0,8,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(55,54,0,0,'image','55.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(56,54,0,0,'image','56.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(57,54,0,0,'image','57.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(58,54,0,0,'image','58.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(59,54,0,0,'image','59.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(60,54,0,0,'image','60.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(61,54,0,0,'image','61.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(62,54,0,0,'image','62.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(63,54,0,0,'image','63.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(64,0,9,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(65,64,0,0,'image','65.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(66,64,0,0,'image','66.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(67,64,0,0,'image','67.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(68,0,10,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(69,68,0,0,'image','69.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(70,68,0,0,'image','70.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(71,68,0,0,'image','71.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(72,68,0,0,'image','72.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(73,68,0,0,'image','73.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(74,68,0,0,'image','74.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(75,68,0,0,'image','75.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(76,68,0,0,'image','76.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(77,68,0,0,'image','77.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(78,68,0,0,'image','78.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(79,68,0,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(80,68,0,0,'image','80.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(81,68,0,0,'image','81.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(82,68,0,0,'image','82.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(83,68,0,0,'image','83.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(84,68,0,0,'image','84.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(85,68,0,0,'image','85.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(86,68,0,0,'image','86.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(87,68,0,0,'image','87.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(88,68,0,0,'image','88.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(89,68,0,0,'image','89.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(90,68,0,0,'image','90.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(91,68,0,0,'image','91.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(92,0,11,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(93,92,0,0,'image','93.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(94,92,0,0,'image','94.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(95,92,0,0,'image','95.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(96,92,0,0,'image','96.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(97,92,0,0,'image','97.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(98,0,12,0,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(99,98,0,0,'image','99.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(100,98,0,0,'image','100.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(101,98,0,0,'image','101.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(102,98,0,0,'image','102.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(103,98,0,0,'image','103.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(104,98,0,0,'image','104.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(105,98,0,0,'image','105.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(106,98,0,0,'image','106.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(107,98,0,0,'image','107.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(108,98,0,0,'image','108.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(109,98,0,0,'image','109.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(110,98,0,0,'image','110.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(111,0,99,1,'icon','','2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(112,111,0,1,'icon','','2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(113,111,1,1,'icon','','2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(114,111,2,1,'icon','','2026-09-04 15:49:51','2026-09-04 15:49:51');
+(1,0,0,1,'icon','','2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(2,0,0,1,'icon','','2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(3,0,0,1,'icon','','2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(4,0,0,1,'icon','','2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(5,0,0,1,'icon','','2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(6,0,0,1,'icon','','2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(7,0,0,1,'icon','','2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(8,0,0,1,'icon','','2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(9,0,0,1,'icon','','2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(10,0,0,1,'icon','','2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(11,9,0,1,'image','11.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(12,9,0,1,'image','12.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(13,9,0,1,'image','13.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(14,9,0,1,'image','14.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(15,0,3,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(16,15,0,1,'image','16.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(17,15,0,1,'image','17.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(18,15,0,1,'image','18.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(19,15,0,1,'image','19.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(20,15,0,1,'image','20.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(21,15,0,1,'image','21.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(22,15,0,1,'image','22.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(23,0,4,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(24,23,0,1,'image','24.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(25,23,0,1,'image','25.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(26,23,0,1,'image','26.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(27,23,0,1,'image','27.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(28,23,0,1,'image','28.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(29,23,0,1,'image','29.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(30,23,0,1,'image','30.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(31,23,0,1,'image','31.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(32,23,0,1,'image','32.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(33,23,0,1,'image','33.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(34,23,0,1,'image','34.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(35,23,0,1,'image','35.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(36,23,0,1,'image','36.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(37,0,5,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(38,37,0,1,'image','38.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(39,37,0,1,'image','39.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(40,37,0,1,'image','40.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(41,37,0,1,'image','41.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(42,37,0,1,'image','42.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(43,37,0,1,'image','43.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(44,37,0,1,'image','44.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(45,37,0,1,'image','45.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(46,37,0,1,'image','46.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(47,0,6,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(48,47,0,1,'image','48.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(49,47,0,1,'image','49.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(50,47,0,1,'image','50.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(51,0,7,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(52,51,0,1,'image','52.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(53,51,0,1,'image','53.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(54,0,8,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(55,54,0,1,'image','55.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(56,54,0,1,'image','56.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(57,54,0,1,'image','57.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(58,54,0,1,'image','58.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(59,54,0,1,'image','59.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(60,54,0,1,'image','60.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(61,54,0,1,'image','61.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(62,54,0,1,'image','62.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(63,54,0,1,'image','63.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(64,0,9,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(65,64,0,1,'image','65.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(66,64,0,1,'image','66.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(67,64,0,1,'image','67.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(68,0,10,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(69,68,0,1,'image','69.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(70,68,0,1,'image','70.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(71,68,0,1,'image','71.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(72,68,0,1,'image','72.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(73,68,0,1,'image','73.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(74,68,0,1,'image','74.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(75,68,0,1,'image','75.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(76,68,0,1,'image','76.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(77,68,0,1,'image','77.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(78,68,0,1,'image','78.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(79,68,0,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(80,68,0,1,'image','80.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(81,68,0,1,'image','81.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(82,68,0,1,'image','82.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(83,68,0,1,'image','83.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(84,68,0,1,'image','84.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(85,68,0,1,'image','85.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(86,68,0,1,'image','86.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(87,68,0,1,'image','87.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(88,68,0,1,'image','88.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(89,68,0,1,'image','89.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(90,68,0,1,'image','90.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(91,68,0,1,'image','91.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(92,0,11,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(93,92,0,1,'image','93.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(94,92,0,1,'image','94.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(95,92,0,1,'image','95.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(96,92,0,1,'image','96.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(97,92,0,1,'image','97.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(98,0,12,1,'','','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(99,98,0,1,'image','99.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(100,98,0,1,'image','100.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(101,98,0,1,'image','101.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(102,98,0,1,'image','102.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(103,98,0,1,'image','103.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(104,98,0,1,'image','104.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(105,98,0,1,'image','105.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(106,98,0,1,'image','106.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(107,98,0,1,'image','107.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(108,98,0,1,'image','108.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(109,98,0,1,'image','109.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38'),
+(110,98,0,1,'image','110.jpg','2026-09-02 15:12:38','2026-09-02 15:12:38');
 /*!40000 ALTER TABLE `qlo_htl_amenity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6426,26 +6141,26 @@ CREATE TABLE `qlo_htl_amenity_lang` (
 LOCK TABLES `qlo_htl_amenity_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_amenity_lang` DISABLE KEYS */;
 INSERT INTO `qlo_htl_amenity_lang` VALUES
-(1,1,'Business Services'),
-(1,2,'Business Services'),
-(2,1,'Business Center'),
-(2,2,'Business Center'),
-(3,1,'Audio-Visual Equipment'),
-(3,2,'Audio-Visual Equipment'),
-(4,1,'Board room'),
-(4,2,'Board room'),
-(5,1,'Conference Facilities'),
-(5,2,'Conference Facilities'),
-(6,1,'Secretarial Services'),
-(6,2,'Secretarial Services'),
-(7,1,'Fax Machine'),
-(7,2,'Fax Machine'),
-(8,1,'Internet Access'),
-(8,2,'Internet Access'),
-(9,1,'Complementary'),
-(9,2,'Complementary'),
-(10,1,'Internet Access Free'),
-(10,2,'Internet Access Free'),
+(1,1,'High-speed Free Wi-Fi'),
+(1,2,'Wifi tốc độ cao (Miễn phí)'),
+(2,1,'Air Conditioning'),
+(2,2,'Điều hòa nhiệt độ 2 chiều'),
+(3,1,'Smart Flat-screen TV'),
+(3,2,'Smart TV truyền hình cáp'),
+(4,1,'Daily Breakfast'),
+(4,2,'Bữa sáng hàng ngày'),
+(5,1,'Daily Housekeeping'),
+(5,2,'Dọn phòng hàng ngày'),
+(6,1,'Complimentary Water & Tea'),
+(6,2,'Nước khoáng & Trà miễn phí'),
+(7,1,'24/7 Front Desk'),
+(7,2,'Lễ tân phục vụ 24/7'),
+(8,1,'Secured Parking'),
+(8,2,'Bãi đỗ xe an toàn'),
+(9,1,'Hairdryer & Toiletries'),
+(9,2,'Máy sấy tóc & Đồ vệ sinh cá nhân'),
+(10,1,'Minibar & Refrigerator'),
+(10,2,'Tủ lạnh mini & Đồ uống'),
 (11,1,'Transfer Available'),
 (11,2,'Transfer Available'),
 (12,1,'NewsPaper In Lobby'),
@@ -6645,15 +6360,7 @@ INSERT INTO `qlo_htl_amenity_lang` VALUES
 (109,1,'Restaurant Veg / Non Veg Kitchens Separate'),
 (109,2,'Restaurant Veg / Non Veg Kitchens Separate'),
 (110,1,'Vegetarian Food / Jain Food Available'),
-(110,2,'Vegetarian Food / Jain Food Available'),
-(111,1,'Hotel services'),
-(111,2,'Dịch vụ khách sạn'),
-(112,1,'Free Wi-Fi'),
-(112,2,'Wifi miễn phí'),
-(113,1,'24/7 Reception'),
-(113,2,'Lễ tân 24/7'),
-(114,1,'Daily housekeeping'),
-(114,2,'Dọn phòng hàng ngày');
+(110,2,'Vegetarian Food / Jain Food Available');
 /*!40000 ALTER TABLE `qlo_htl_amenity_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6762,7 +6469,7 @@ CREATE TABLE `qlo_htl_booking_detail` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6771,43 +6478,6 @@ CREATE TABLE `qlo_htl_booking_detail` (
 
 LOCK TABLES `qlo_htl_booking_detail` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_booking_detail` DISABLE KEYS */;
-INSERT INTO `qlo_htl_booking_detail` VALUES
-(20,11,21,19,20,21,1,3,1,3,'','2026-08-08 14:00:00','2026-08-10 12:00:00','0000-00-00 00:00:00','2026-08-08 14:00:00','2026-08-10 12:00:00',1760000.000000,1760000.000000,1760000.000000,0,'Cơ sở 1 - Trung tâm','Deluxe Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000101','minh.anh@demo.local',NULL,NULL,'101',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(21,11,22,20,21,22,1,4,1,3,'','2026-08-15 14:00:00','2026-08-18 12:00:00','0000-00-00 00:00:00','2026-08-15 14:00:00','2026-08-18 12:00:00',2640000.000000,2640000.000000,2640000.000000,0,'Cơ sở 1 - Trung tâm','Deluxe Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000102','quoc.bao@demo.local',NULL,NULL,'102',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(22,13,23,21,22,41,2,5,1,3,'','2026-08-18 14:00:00','2026-08-20 12:00:00','0000-00-00 00:00:00','2026-08-18 14:00:00','2026-08-20 12:00:00',1100000.000000,1100000.000000,1100000.000000,0,'Cơ sở 2 - Bờ biển','Standard Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000103','thu.ha@demo.local',NULL,NULL,'201',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(23,15,24,22,23,56,3,6,1,3,'','2026-08-22 14:00:00','2026-08-23 12:00:00','0000-00-00 00:00:00','2026-08-22 14:00:00','2026-08-23 12:00:00',550000.000000,550000.000000,550000.000000,0,'Cơ sở 3 - Phố cổ','Standard Room (Cơ sở 3 - Phố cổ)','','','Việt Nam','','0901000104','duc.duy@demo.local',NULL,NULL,'301',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(24,13,25,23,24,42,2,7,1,3,'','2026-08-25 14:00:00','2026-08-29 12:00:00','0000-00-00 00:00:00','2026-08-25 14:00:00','2026-08-29 12:00:00',2200000.000000,2200000.000000,2200000.000000,0,'Cơ sở 2 - Bờ biển','Standard Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000105','lan.chi@demo.local',NULL,NULL,'202',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(25,11,26,24,25,23,1,8,1,3,'','2026-08-29 14:00:00','2026-08-31 12:00:00','0000-00-00 00:00:00','2026-08-29 14:00:00','2026-08-31 12:00:00',1760000.000000,1760000.000000,1760000.000000,0,'Cơ sở 1 - Trung tâm','Deluxe Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000106','thanh.tung@demo.local',NULL,NULL,'103',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(26,15,27,25,26,57,3,3,1,3,'','2026-08-31 14:00:00','2026-09-02 12:00:00','0000-00-00 00:00:00','2026-08-31 14:00:00','2026-09-02 12:00:00',1100000.000000,1100000.000000,1100000.000000,0,'Cơ sở 3 - Phố cổ','Standard Room (Cơ sở 3 - Phố cổ)','','','Việt Nam','','0901000101','minh.anh@demo.local',NULL,NULL,'302',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(27,11,28,26,27,24,1,4,1,2,'','2026-09-04 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-04 14:00:00','2026-09-07 12:00:00',2640000.000000,2640000.000000,2640000.000000,0,'Cơ sở 1 - Trung tâm','Deluxe Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000102','quoc.bao@demo.local',NULL,NULL,'104',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(28,13,29,27,28,43,2,5,1,2,'','2026-09-04 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-04 14:00:00','2026-09-06 12:00:00',1100000.000000,1100000.000000,1100000.000000,0,'Cơ sở 2 - Bờ biển','Standard Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000103','thu.ha@demo.local',NULL,NULL,'203',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(29,15,30,28,29,58,3,6,1,2,'','2026-09-03 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-03 14:00:00','2026-09-06 12:00:00',1650000.000000,1650000.000000,1650000.000000,0,'Cơ sở 3 - Phố cổ','Standard Room (Cơ sở 3 - Phố cổ)','','','Việt Nam','','0901000104','duc.duy@demo.local',NULL,NULL,'303',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(30,11,31,29,30,25,1,7,1,2,'','2026-09-03 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-03 14:00:00','2026-09-07 12:00:00',3520000.000000,3520000.000000,3520000.000000,0,'Cơ sở 1 - Trung tâm','Deluxe Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000105','lan.chi@demo.local',NULL,NULL,'105',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(31,13,32,30,31,44,2,8,1,1,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-07 14:00:00','2026-09-09 12:00:00',1100000.000000,1100000.000000,1100000.000000,0,'Cơ sở 2 - Bờ biển','Standard Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000106','thanh.tung@demo.local',NULL,NULL,'204',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(32,11,33,31,32,26,1,3,1,1,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-09 14:00:00','2026-09-12 12:00:00',2640000.000000,2640000.000000,2640000.000000,0,'Cơ sở 1 - Trung tâm','Deluxe Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000101','minh.anh@demo.local',NULL,NULL,'106',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(33,15,34,32,33,59,3,4,1,1,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-11 14:00:00','2026-09-13 12:00:00',1100000.000000,1100000.000000,1100000.000000,0,'Cơ sở 3 - Phố cổ','Standard Room (Cơ sở 3 - Phố cổ)','','','Việt Nam','','0901000102','quoc.bao@demo.local',NULL,NULL,'304',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(34,13,35,33,34,45,2,5,1,1,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-14 14:00:00','2026-09-17 12:00:00',1650000.000000,1650000.000000,1650000.000000,0,'Cơ sở 2 - Bờ biển','Standard Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000103','thu.ha@demo.local',NULL,NULL,'205',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(35,11,36,34,35,27,1,6,1,1,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-18 14:00:00','2026-09-20 12:00:00',1760000.000000,1760000.000000,1760000.000000,0,'Cơ sở 1 - Trung tâm','Deluxe Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000104','duc.duy@demo.local',NULL,NULL,'107',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(36,15,37,35,36,60,3,7,1,1,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-08 14:00:00','2026-09-10 12:00:00',1100000.000000,1100000.000000,0.000000,0,'Cơ sở 3 - Phố cổ','Standard Room (Cơ sở 3 - Phố cổ)','','','Việt Nam','','0901000105','lan.chi@demo.local',NULL,NULL,'305',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(37,13,38,36,37,46,2,8,1,1,'','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-13 14:00:00','2026-09-14 12:00:00',550000.000000,550000.000000,0.000000,0,'Cơ sở 2 - Bờ biển','Standard Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000106','thanh.tung@demo.local',NULL,NULL,'206',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(38,11,39,37,38,28,1,3,1,2,'','2026-09-03 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-03 14:00:00','2026-09-06 12:00:00',2640000.000000,2640000.000000,2640000.000000,0,'Cơ sở 1 - Trung tâm','Deluxe Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000101','minh.anh@demo.local',NULL,NULL,'108',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(39,11,40,38,39,29,1,4,1,2,'','2026-09-04 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-04 14:00:00','2026-09-06 12:00:00',1760000.000000,1760000.000000,1760000.000000,0,'Cơ sở 1 - Trung tâm','Deluxe Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000102','quoc.bao@demo.local',NULL,NULL,'109',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(40,11,41,39,40,30,1,5,1,2,'','2026-09-02 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-02 14:00:00','2026-09-06 12:00:00',3520000.000000,3520000.000000,3520000.000000,0,'Cơ sở 1 - Trung tâm','Deluxe Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000103','thu.ha@demo.local',NULL,NULL,'110',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(41,12,42,40,41,31,1,6,1,2,'','2026-09-04 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-04 14:00:00','2026-09-06 12:00:00',3300000.000000,3300000.000000,3300000.000000,0,'Cơ sở 1 - Trung tâm','Suite Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000104','duc.duy@demo.local',NULL,NULL,'111',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(42,12,43,41,42,32,1,7,1,2,'','2026-09-03 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-03 14:00:00','2026-09-06 12:00:00',4950000.000000,4950000.000000,4950000.000000,0,'Cơ sở 1 - Trung tâm','Suite Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000105','lan.chi@demo.local',NULL,NULL,'112',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(43,12,44,42,43,33,1,8,1,2,'','2026-09-05 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-05 14:00:00','2026-09-07 12:00:00',3300000.000000,3300000.000000,3300000.000000,0,'Cơ sở 1 - Trung tâm','Suite Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000106','thanh.tung@demo.local',NULL,NULL,'113',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(44,13,45,43,44,47,2,3,1,2,'','2026-09-03 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-03 14:00:00','2026-09-06 12:00:00',1650000.000000,1650000.000000,1650000.000000,0,'Cơ sở 2 - Bờ biển','Standard Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000101','minh.anh@demo.local',NULL,NULL,'207',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(45,13,46,44,45,48,2,4,1,2,'','2026-09-04 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-04 14:00:00','2026-09-06 12:00:00',1100000.000000,1100000.000000,1100000.000000,0,'Cơ sở 2 - Bờ biển','Standard Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000102','quoc.bao@demo.local',NULL,NULL,'208',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(46,14,47,45,46,49,2,5,1,2,'','2026-09-02 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-02 14:00:00','2026-09-06 12:00:00',3520000.000000,3520000.000000,3520000.000000,0,'Cơ sở 2 - Bờ biển','Deluxe Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000103','thu.ha@demo.local',NULL,NULL,'209',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(47,14,48,46,47,50,2,6,1,2,'','2026-09-05 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-05 14:00:00','2026-09-07 12:00:00',1760000.000000,1760000.000000,1760000.000000,0,'Cơ sở 2 - Bờ biển','Deluxe Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000104','duc.duy@demo.local',NULL,NULL,'210',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(48,14,49,47,48,51,2,7,1,2,'','2026-09-04 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-04 14:00:00','2026-09-07 12:00:00',2640000.000000,2640000.000000,2640000.000000,0,'Cơ sở 2 - Bờ biển','Deluxe Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000105','lan.chi@demo.local',NULL,NULL,'211',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(49,15,50,48,49,61,3,8,1,2,'','2026-09-03 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-03 14:00:00','2026-09-05 12:00:00',1100000.000000,1100000.000000,1100000.000000,0,'Cơ sở 3 - Phố cổ','Standard Room (Cơ sở 3 - Phố cổ)','','','Việt Nam','','0901000106','thanh.tung@demo.local',NULL,NULL,'306',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(50,15,51,49,50,62,3,3,1,2,'','2026-09-04 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-04 14:00:00','2026-09-07 12:00:00',1650000.000000,1650000.000000,1650000.000000,0,'Cơ sở 3 - Phố cổ','Standard Room (Cơ sở 3 - Phố cổ)','','','Việt Nam','','0901000101','minh.anh@demo.local',NULL,NULL,'307',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(51,15,52,50,51,63,3,4,1,2,'','2026-09-02 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-02 14:00:00','2026-09-04 12:00:00',1100000.000000,1100000.000000,1100000.000000,0,'Cơ sở 3 - Phố cổ','Standard Room (Cơ sở 3 - Phố cổ)','','','Việt Nam','','0901000102','quoc.bao@demo.local',NULL,NULL,'308',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(52,16,53,51,52,64,3,5,1,2,'','2026-09-04 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-04 14:00:00','2026-09-08 12:00:00',6600000.000000,6600000.000000,6600000.000000,0,'Cơ sở 3 - Phố cổ','Suite Room (Cơ sở 3 - Phố cổ)','','','Việt Nam','','0901000103','thu.ha@demo.local',NULL,NULL,'309',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(53,16,54,52,53,65,3,6,1,2,'','2026-09-05 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-05 14:00:00','2026-09-07 12:00:00',3300000.000000,3300000.000000,3300000.000000,0,'Cơ sở 3 - Phố cổ','Suite Room (Cơ sở 3 - Phố cổ)','','','Việt Nam','','0901000104','duc.duy@demo.local',NULL,NULL,'310',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(54,12,55,53,54,34,1,7,1,2,'','2026-09-04 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-04 14:00:00','2026-09-05 12:00:00',1650000.000000,1650000.000000,1650000.000000,0,'Cơ sở 1 - Trung tâm','Suite Room (Cơ sở 1 - Trung tâm)','','','Việt Nam','','0901000105','lan.chi@demo.local',NULL,NULL,'114',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(55,14,56,54,55,52,2,8,1,2,'','2026-09-04 14:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','2026-09-04 14:00:00','2026-09-05 12:00:00',880000.000000,880000.000000,880000.000000,0,'Cơ sở 2 - Bờ biển','Deluxe Room (Cơ sở 2 - Bờ biển)','','','Việt Nam','','0901000106','thanh.tung@demo.local',NULL,NULL,'212',2,0,'',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `qlo_htl_booking_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6855,7 +6525,7 @@ CREATE TABLE `qlo_htl_branch_amenity` (
   PRIMARY KEY (`id_branch_amenity`),
   KEY `fk_htl_branch_amenity_amenity` (`amenity_id`),
   CONSTRAINT `fk_htl_branch_amenity_amenity` FOREIGN KEY (`amenity_id`) REFERENCES `qlo_htl_amenity` (`id_amenity`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6865,15 +6535,36 @@ CREATE TABLE `qlo_htl_branch_amenity` (
 LOCK TABLES `qlo_htl_branch_amenity` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_branch_amenity` DISABLE KEYS */;
 INSERT INTO `qlo_htl_branch_amenity` VALUES
-(12,1,112,1,'2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(13,2,112,1,'2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(14,3,112,1,'2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(15,1,113,1,'2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(16,2,113,1,'2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(17,3,113,1,'2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(18,1,114,1,'2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(19,2,114,1,'2026-09-04 15:49:51','2026-09-04 15:49:51'),
-(20,3,114,1,'2026-09-04 15:49:51','2026-09-04 15:49:51');
+(1,1,1,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(2,1,2,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(3,1,3,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(4,1,4,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(5,1,5,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(6,1,6,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(7,1,7,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(8,1,8,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(9,1,9,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(10,1,10,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(11,2,1,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(12,2,2,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(13,2,3,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(14,2,4,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(15,2,5,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(16,2,6,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(17,2,7,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(18,2,8,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(19,2,9,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(20,2,10,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(21,3,1,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(22,3,2,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(23,3,3,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(24,3,4,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(25,3,5,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(26,3,6,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(27,3,7,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(28,3,8,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(29,3,9,1,'2026-09-07 15:10:41','2026-09-07 15:10:41'),
+(30,3,10,1,'2026-09-07 15:10:41','2026-09-07 15:10:41');
 /*!40000 ALTER TABLE `qlo_htl_branch_amenity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6943,11 +6634,11 @@ LOCK TABLES `qlo_htl_branch_info_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_branch_info_lang` DISABLE KEYS */;
 INSERT INTO `qlo_htl_branch_info_lang` VALUES
 (1,1,'Cơ sở 1 - Trung tâm','Cơ sở 1 - Trung tâm - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 1 - Trung tâm mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
-(1,2,'Cơ sở 1 - Trung tâm','Cơ sở 1 - Trung tâm - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 1 - Trung tâm mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Nhận phòng: 14:00 | Trả phòng: 12:00</p>'),
+(1,2,'Cơ sở 1 - Trung tâm','Cơ sở 1 - Trung tâm - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 1 - Trung tâm mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
 (2,1,'Cơ sở 2 - Bờ biển','Cơ sở 2 - Bờ biển - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 2 - Bờ biển mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
-(2,2,'Cơ sở 2 - Bờ biển','Cơ sở 2 - Bờ biển - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 2 - Bờ biển mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Nhận phòng: 14:00 | Trả phòng: 12:00</p>'),
+(2,2,'Cơ sở 2 - Bờ biển','Cơ sở 2 - Bờ biển - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 2 - Bờ biển mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
 (3,1,'Cơ sở 3 - Phố cổ','Cơ sở 3 - Phố cổ - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 3 - Phố cổ mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
-(3,2,'Cơ sở 3 - Phố cổ','Cơ sở 3 - Phố cổ - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 3 - Phố cổ mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Nhận phòng: 14:00 | Trả phòng: 12:00</p>');
+(3,2,'Cơ sở 3 - Phố cổ','Cơ sở 3 - Phố cổ - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 3 - Phố cổ mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>');
 /*!40000 ALTER TABLE `qlo_htl_branch_info_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7009,7 +6700,7 @@ CREATE TABLE `qlo_htl_cart_booking_data` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -7018,8 +6709,6 @@ CREATE TABLE `qlo_htl_cart_booking_data` (
 
 LOCK TABLES `qlo_htl_cart_booking_data` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_cart_booking_data` DISABLE KEYS */;
-INSERT INTO `qlo_htl_cart_booking_data` VALUES
-(1,56,118,0,0,1,11,21,1,2,1,'',0,'[]','2026-09-10 00:00:00','2026-09-12 00:00:00',2,0,'[]',0,'2026-09-06 17:27:23','2026-09-06 17:27:23');
 /*!40000 ALTER TABLE `qlo_htl_cart_booking_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7086,7 +6775,7 @@ INSERT INTO `qlo_htl_custom_navigation_link` VALUES
 (3,'/#hotelInteriorBlock',1,0,2,1,0,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (4,'/#hotelAmenitiesBlock',1,0,3,1,0,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (5,'/#hotelRoomsBlock',1,0,4,1,0,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
-(6,'/#hotelTestimonialBlock',1,0,5,1,0,0,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
+(6,'/#hotelTestimonialBlock',1,0,5,1,0,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (7,'',0,1,6,0,1,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (8,'',0,2,7,1,1,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
 (9,'',0,3,8,0,1,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
@@ -7119,15 +6808,15 @@ LOCK TABLES `qlo_htl_custom_navigation_link_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_custom_navigation_link_lang` DISABLE KEYS */;
 INSERT INTO `qlo_htl_custom_navigation_link_lang` VALUES
 (1,1,'Home'),
-(1,2,'Trang chủ'),
+(1,2,'Home'),
 (2,1,'Our Properties'),
-(2,2,'Cơ sở'),
+(2,2,'Our Properties'),
 (3,1,'Interior'),
-(3,2,'Không gian'),
+(3,2,'Interior'),
 (4,1,'Amenities'),
-(4,2,'Tiện nghi'),
+(4,2,'Amenities'),
 (5,1,'Rooms'),
-(5,2,'Phòng'),
+(5,2,'Rooms'),
 (6,1,'Testimonials'),
 (6,2,'Testimonials'),
 (7,1,''),
@@ -7141,7 +6830,7 @@ INSERT INTO `qlo_htl_custom_navigation_link_lang` VALUES
 (11,1,''),
 (11,2,''),
 (12,1,'Contact Us'),
-(12,2,'Liên hệ');
+(12,2,'Contact Us');
 /*!40000 ALTER TABLE `qlo_htl_custom_navigation_link_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7172,7 +6861,7 @@ INSERT INTO `qlo_htl_features_block_data` VALUES
 (1,1,0,'2026-09-02 15:12:42','2026-09-02 15:12:42'),
 (2,1,1,'2026-09-02 15:12:42','2026-09-02 15:12:42'),
 (3,1,2,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
-(4,0,3,'2026-09-02 15:12:43','2026-09-02 15:12:43');
+(4,1,3,'2026-09-02 15:12:43','2026-09-02 15:12:43');
 /*!40000 ALTER TABLE `qlo_htl_features_block_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7199,14 +6888,14 @@ CREATE TABLE `qlo_htl_features_block_data_lang` (
 LOCK TABLES `qlo_htl_features_block_data_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_features_block_data_lang` DISABLE KEYS */;
 INSERT INTO `qlo_htl_features_block_data_lang` VALUES
-(1,1,'Free Wi-Fi','High-speed Wi-Fi throughout the rooms and public areas, free for every guest.'),
-(1,2,'Wifi miễn phí','Wifi tốc độ cao phủ toàn bộ phòng nghỉ và khu vực chung, miễn phí cho mọi khách lưu trú.'),
-(2,1,'24/7 Reception','Reception staffed around the clock at all three properties, for check-in and check-out at any hour.'),
-(2,2,'Lễ tân 24/7','Lễ tân trực suốt ngày đêm tại cả ba cơ sở, hỗ trợ nhận phòng và trả phòng bất kể giờ giấc.'),
-(3,1,'Daily housekeeping','Rooms are cleaned every day, with fresh towels and amenities throughout your stay.'),
-(3,2,'Dọn phòng hàng ngày','Phòng được dọn dẹp mỗi ngày, thay khăn và đồ dùng cá nhân trong suốt thời gian lưu trú.'),
-(4,1,'Gym & Spa','Rejuvenate with our state-of-the-art gym and spa, offering a sanctuary for relaxation and fitness.'),
-(4,2,'Gym & Spa','Rejuvenate with our state-of-the-art gym and spa, offering a sanctuary for relaxation and fitness.');
+(1,1,'Luxurious Rooms','Modern and cozy accommodation at central prime locations in HCMC, Da Nang, and Hanoi.'),
+(1,2,'Phòng nghỉ tiện nghi','Không gian lưu trú hiện đại, tiện nghi đầy đủ tại trung tâm TP.HCM, Đà Nẵng và Hà Nội.'),
+(2,1,'Prime Locations','Centrally located properties close to famous tourist spots and convenient transportation.'),
+(2,2,'Vị trí đắc địa','Tọa lạc tại các vị trí trung tâm, gần các điểm tham quan du lịch nổi tiếng và thuận tiện di chuyển.'),
+(3,1,'Attentive 24/7 Service','Dedicated front desk team with daily housekeeping and round-the-clock guest support.'),
+(3,2,'Dịch vụ tận tâm 24/7','Đội ngũ lễ tân chu đáo, hỗ trợ khách hàng 24/7 và phục vụ bữa sáng hàng ngày.'),
+(4,1,'Instant VietQR Booking','Direct booking with best guaranteed rates and automated QR payment confirmation.'),
+(4,2,'Đặt phòng & Thanh toán QR','Đặt phòng trực tiếp với giá tốt nhất thị trường, quét mã VietQR tự động xác nhận đơn tức thì.');
 /*!40000 ALTER TABLE `qlo_htl_features_block_data_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7455,7 +7144,7 @@ CREATE TABLE `qlo_htl_room_block_data` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_room_block`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -7465,12 +7154,10 @@ CREATE TABLE `qlo_htl_room_block_data` (
 LOCK TABLES `qlo_htl_room_block_data` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_room_block_data` DISABLE KEYS */;
 INSERT INTO `qlo_htl_room_block_data` VALUES
-(5,11,1,0,'2026-09-03 17:47:03','2026-09-03 17:47:03'),
-(6,12,1,1,'2026-09-03 17:47:03','2026-09-03 17:47:03'),
-(7,13,1,2,'2026-09-03 17:47:03','2026-09-03 17:47:03'),
-(8,14,1,3,'2026-09-03 17:47:03','2026-09-03 17:47:03'),
-(9,15,1,4,'2026-09-03 17:47:03','2026-09-03 17:47:03'),
-(10,16,1,5,'2026-09-03 17:47:03','2026-09-03 17:47:03');
+(1,2,1,0,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
+(2,3,1,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
+(3,1,1,2,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
+(4,4,1,3,'2026-09-02 15:12:43','2026-09-02 15:12:43');
 /*!40000 ALTER TABLE `qlo_htl_room_block_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7491,7 +7178,7 @@ CREATE TABLE `qlo_htl_room_disable_dates` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -7500,6 +7187,9 @@ CREATE TABLE `qlo_htl_room_disable_dates` (
 
 LOCK TABLES `qlo_htl_room_disable_dates` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_room_disable_dates` DISABLE KEYS */;
+INSERT INTO `qlo_htl_room_disable_dates` VALUES
+(3,11,21,'2026-10-01','2026-10-05','OTA-FEED-1: Airbnb [airbnb-booking-12345@airbnb.com] - Airbnb (Not available)','2026-09-07 17:48:07','2026-09-07 17:48:07'),
+(4,11,21,'2026-10-15','2026-10-20','OTA-FEED-1: Airbnb [airbnb-booking-67890@airbnb.com] - Airbnb (Not available)','2026-09-07 17:48:07','2026-09-07 17:48:07');
 /*!40000 ALTER TABLE `qlo_htl_room_disable_dates` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7531,7 +7221,7 @@ CREATE TABLE `qlo_htl_room_information` (
 LOCK TABLES `qlo_htl_room_information` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_room_information` DISABLE KEYS */;
 INSERT INTO `qlo_htl_room_information` VALUES
-(21,11,1,'101',1,'Tầng 1','','2026-09-02 15:23:39','2026-09-02 15:23:39'),
+(21,11,1,'101',3,'Tầng 1','','2026-09-02 15:23:39','2026-09-02 15:23:39'),
 (22,11,1,'102',1,'Tầng 1','','2026-09-02 15:23:39','2026-09-02 15:23:39'),
 (23,11,1,'103',1,'Tầng 1','','2026-09-02 15:23:39','2026-09-02 15:23:39'),
 (24,11,1,'104',1,'Tầng 1','','2026-09-02 15:23:39','2026-09-02 15:23:39'),
@@ -8148,9 +7838,9 @@ CREATE TABLE `qlo_htl_testimonials_block_data` (
 LOCK TABLES `qlo_htl_testimonials_block_data` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_testimonials_block_data` DISABLE KEYS */;
 INSERT INTO `qlo_htl_testimonials_block_data` VALUES
-(1,'Steve Rogers','Eon Comics CEO',0,0,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
-(2,'Calrk Kent','Ken Comics Kal',0,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
-(3,'John Doe','Jan Comics Joe',0,2,'2026-09-02 15:12:43','2026-09-02 15:12:43');
+(1,'Steve Rogers','Eon Comics CEO',1,0,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
+(2,'Calrk Kent','Ken Comics Kal',1,1,'2026-09-02 15:12:43','2026-09-02 15:12:43'),
+(3,'John Doe','Jan Comics Joe',1,2,'2026-09-02 15:12:43','2026-09-02 15:12:43');
 /*!40000 ALTER TABLE `qlo_htl_testimonials_block_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8455,7 +8145,7 @@ LOCK TABLES `qlo_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_lang` DISABLE KEYS */;
 INSERT INTO `qlo_lang` VALUES
 (1,'English (English)',1,'en','en-us','m/d/Y','m/d/Y H:i:s',0),
-(2,'Tiếng Việt (Vietnamese)',1,'vn','vi-vn','d/m/Y','H:i:s d/m/Y',0);
+(2,'tiếng Việt (Vietnamese)',1,'vn','vi-vn','d/m/Y','H:i:s d/m/Y',0);
 /*!40000 ALTER TABLE `qlo_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8504,7 +8194,7 @@ CREATE TABLE `qlo_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -8516,12 +8206,7 @@ LOCK TABLES `qlo_log` WRITE;
 INSERT INTO `qlo_log` VALUES
 (1,1,0,'Back Office connection from 192.168.65.1','',0,1,'2026-09-02 19:12:53','2026-09-02 19:12:53'),
 (2,1,0,'Back Office connection from 172.67.177.250','',0,1,'2026-09-02 19:13:23','2026-09-02 19:13:23'),
-(3,1,0,'Back Office connection from 172.67.177.250','',0,2,'2026-09-02 19:15:07','2026-09-02 19:15:07'),
-(4,1,0,'Error - The following e-mail template is missing: /var/www/html/mails/vn/test.txt','',0,0,'2026-09-04 20:53:34','2026-09-04 20:53:34'),
-(5,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 11:43:21','2026-09-05 11:43:21'),
-(6,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 16:21:33','2026-09-05 16:21:33'),
-(7,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 17:35:00','2026-09-05 17:35:00'),
-(8,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 18:06:00','2026-09-05 18:06:00');
+(3,1,0,'Back Office connection from 172.67.177.250','',0,2,'2026-09-02 19:15:07','2026-09-02 19:15:07');
 /*!40000 ALTER TABLE `qlo_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8541,7 +8226,7 @@ CREATE TABLE `qlo_mail` (
   `date_add` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id_mail`),
   KEY `recipient` (`recipient`(10))
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -8552,8 +8237,7 @@ LOCK TABLES `qlo_mail` WRITE;
 /*!40000 ALTER TABLE `qlo_mail` DISABLE KEYS */;
 INSERT INTO `qlo_mail` VALUES
 (1,'khachhang@example.com','order_conf','[CMS Hotel] Xác nhận đặt phòng thành công - Mã #BOOK-2026-001',1,'2026-09-02 15:34:13'),
-(2,'guest.webhook@example.com','payment_accepted','[CMS Hotel] Complete payment received',1,'2026-09-02 16:44:22'),
-(6,'pub@qloapps.com','payment_accepted','[Thaithinh Hotel] Complete payment received',1,'2026-09-04 21:43:36');
+(2,'guest.webhook@example.com','payment_accepted','[CMS Hotel] Complete payment received',1,'2026-09-02 16:44:22');
 /*!40000 ALTER TABLE `qlo_mail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8835,10 +8519,10 @@ INSERT INTO `qlo_meta_lang` VALUES
 (1,1,2,'404 error','This page cannot be found','','page-not-found'),
 (2,1,1,'Best sales','Our best sales','','best-sales'),
 (2,1,2,'Bán chạy','Our best sales','','ban-chay'),
-(3,1,1,'Contact Us & Locations - Thaithinh Hotel','Contact details, hotlines, and Google Maps directions for Thaithinh Hotel branches in Ho Chi Minh City, Da Nang, and Hanoi.','hotel, booking, vietqr, khach san','contact'),
-(3,1,2,'Liên hệ & Vị trí - Thaithinh Hotel','Thông tin liên hệ, hotline hỗ trợ 24/7 và bản đồ vị trí 3 chi nhánh Thaithinh Hotel tại TP.HCM, Đà Nẵng, Hà Nội.','hotel, booking, vietqr, khach san','contact'),
-(4,1,1,'Thaithinh Hotel - Chain Hotel 3 Locations | Official Direct Booking','Book direct at prime locations in Ho Chi Minh City, Da Nang, and Hanoi. Best rates guaranteed with automated VietQR payment.','hotel, booking, vietqr, khach san','index'),
-(4,1,2,'Thaithinh Hotel - Hệ thống Khách sạn Chuỗi 3 Cơ sở | Đặt phòng Trực tuyến','Đặt phòng trực tiếp tại chuỗi khách sạn TP.HCM, Đà Nẵng, Hà Nội. Giá tốt nhất thị trường, hỗ trợ thanh toán mã QR VietQR 24/7.','hotel, booking, vietqr, khach san','index'),
+(3,1,1,'Contact Us & Locations - CMS Hotel','Contact details, hotlines, and Google Maps directions for CMS Hotel branches in Ho Chi Minh City, Da Nang, and Hanoi.','hotel, booking, vietqr, khach san','contact'),
+(3,1,2,'Liên hệ & Vị trí - CMS Hotel','Thông tin liên hệ, hotline hỗ trợ 24/7 và bản đồ vị trí 3 chi nhánh CMS Hotel tại TP.HCM, Đà Nẵng, Hà Nội.','hotel, booking, vietqr, khach san','contact'),
+(4,1,1,'CMS Hotel - Chain Hotel 3 Locations | Official Direct Booking','Book direct at prime locations in Ho Chi Minh City, Da Nang, and Hanoi. Best rates guaranteed with automated VietQR payment.','hotel, booking, vietqr, khach san','index'),
+(4,1,2,'CMS Hotel - Hệ thống Khách sạn Chuỗi 3 Cơ sở | Đặt phòng Trực tuyến','Đặt phòng trực tiếp tại chuỗi khách sạn TP.HCM, Đà Nẵng, Hà Nội. Giá tốt nhất thị trường, hỗ trợ thanh toán mã QR VietQR 24/7.','hotel, booking, vietqr, khach san','index'),
 (5,1,1,'Manufacturers','Manufacturers list','','manufacturers'),
 (5,1,2,'Nhà sản xuất','Manufacturers list','','manufacturers'),
 (6,1,1,'New products','Our new products','','new-products'),
@@ -8877,8 +8561,8 @@ INSERT INTO `qlo_meta_lang` VALUES
 (22,1,2,'Theo dõi khách','','','guest-tracking'),
 (23,1,1,'Order confirmation','','','order-confirmation'),
 (23,1,2,'Xác nhận đặt hàng','','','order-confirmation'),
-(32,1,1,'Our Hotel Properties - Thaithinh Hotel','Explore Thaithinh Hotel locations in Ho Chi Minh City, Da Nang, and Hanoi. Prime central locations with modern amenities.','hotel, booking, vietqr, khach san','our-properties'),
-(32,1,2,'Danh sách Chi nhánh Khách sạn - Thaithinh Hotel','Khám phá các chi nhánh khách sạn Thaithinh Hotel tại TP. Hồ Chí Minh, Đà Nẵng và Hà Nội. Vị trí đắc địa, tiện nghi cao cấp.','hotel, booking, vietqr, khach san','our-properties'),
+(32,1,1,'Our Hotel Properties - CMS Hotel','Explore CMS Hotel locations in Ho Chi Minh City, Da Nang, and Hanoi. Prime central locations with modern amenities.','hotel, booking, vietqr, khach san','our-properties'),
+(32,1,2,'Danh sách Chi nhánh Khách sạn - CMS Hotel','Khám phá các chi nhánh khách sạn CMS Hotel tại TP. Hồ Chí Minh, Đà Nẵng và Hà Nội. Vị trí đắc địa, tiện nghi cao cấp.','hotel, booking, vietqr, khach san','our-properties'),
 (33,1,1,'','','',''),
 (33,1,2,'','','',''),
 (34,1,1,'','','',''),
@@ -8964,7 +8648,7 @@ INSERT INTO `qlo_module` VALUES
 (50,'qlostatsserviceproducts',1,'1.0.1'),
 (51,'blockcart',1,'1.6.7'),
 (52,'blockuserinfo',1,'1.0.1'),
-(53,'qlochannelmanagerconnector',0,'1.0.1'),
+(53,'qlochannelmanagerconnector',1,'1.0.1'),
 (54,'qlovietqr',1,'1.0.0');
 /*!40000 ALTER TABLE `qlo_module` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -9865,7 +9549,7 @@ CREATE TABLE `qlo_order_detail` (
   KEY `product_attribute_id` (`product_attribute_id`),
   KEY `id_tax_rules_group` (`id_tax_rules_group`),
   KEY `id_order_id_order_detail` (`id_order`,`id_order_detail`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -9874,43 +9558,6 @@ CREATE TABLE `qlo_order_detail` (
 
 LOCK TABLES `qlo_order_detail` WRITE;
 /*!40000 ALTER TABLE `qlo_order_detail` DISABLE KEYS */;
-INSERT INTO `qlo_order_detail` VALUES
-(19,21,0,0,1,11,0,'Deluxe Room (Cơ sở 1 - Trung tâm)',2,2,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1760000.000000,1760000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(20,22,0,0,1,11,0,'Deluxe Room (Cơ sở 1 - Trung tâm)',3,3,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,2640000.000000,2640000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(21,23,0,0,1,13,0,'Standard Room (Cơ sở 2 - Bờ biển)',2,2,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1100000.000000,1100000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(22,24,0,0,1,15,0,'Standard Room (Cơ sở 3 - Phố cổ)',1,1,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,550000.000000,550000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(23,25,0,0,1,13,0,'Standard Room (Cơ sở 2 - Bờ biển)',4,4,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,2200000.000000,2200000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(24,26,0,0,1,11,0,'Deluxe Room (Cơ sở 1 - Trung tâm)',2,2,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1760000.000000,1760000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(25,27,0,0,1,15,0,'Standard Room (Cơ sở 3 - Phố cổ)',2,2,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1100000.000000,1100000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(26,28,0,0,1,11,0,'Deluxe Room (Cơ sở 1 - Trung tâm)',3,3,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,2640000.000000,2640000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(27,29,0,0,1,13,0,'Standard Room (Cơ sở 2 - Bờ biển)',2,2,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1100000.000000,1100000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(28,30,0,0,1,15,0,'Standard Room (Cơ sở 3 - Phố cổ)',3,3,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1650000.000000,1650000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(29,31,0,0,1,11,0,'Deluxe Room (Cơ sở 1 - Trung tâm)',4,4,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,3520000.000000,3520000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(30,32,0,0,1,13,0,'Standard Room (Cơ sở 2 - Bờ biển)',2,2,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1100000.000000,1100000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(31,33,0,0,1,11,0,'Deluxe Room (Cơ sở 1 - Trung tâm)',3,3,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,2640000.000000,2640000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(32,34,0,0,1,15,0,'Standard Room (Cơ sở 3 - Phố cổ)',2,2,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1100000.000000,1100000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(33,35,0,0,1,13,0,'Standard Room (Cơ sở 2 - Bờ biển)',3,3,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1650000.000000,1650000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(34,36,0,0,1,11,0,'Deluxe Room (Cơ sở 1 - Trung tâm)',2,2,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1760000.000000,1760000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(35,37,0,0,1,15,0,'Standard Room (Cơ sở 3 - Phố cổ)',2,2,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1100000.000000,1100000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(36,38,0,0,1,13,0,'Standard Room (Cơ sở 2 - Bờ biển)',1,1,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,550000.000000,550000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(37,39,0,0,1,11,0,'Deluxe Room (Cơ sở 1 - Trung tâm)',3,3,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,2640000.000000,2640000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(38,40,0,0,1,11,0,'Deluxe Room (Cơ sở 1 - Trung tâm)',2,2,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1760000.000000,1760000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(39,41,0,0,1,11,0,'Deluxe Room (Cơ sở 1 - Trung tâm)',4,4,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,3520000.000000,3520000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(40,42,0,0,1,12,0,'Suite Room (Cơ sở 1 - Trung tâm)',2,2,0,0,0,1650000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,3300000.000000,3300000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,1650000.000000,0.000000),
-(41,43,0,0,1,12,0,'Suite Room (Cơ sở 1 - Trung tâm)',3,3,0,0,0,1650000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,4950000.000000,4950000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,1650000.000000,0.000000),
-(42,44,0,0,1,12,0,'Suite Room (Cơ sở 1 - Trung tâm)',2,2,0,0,0,1650000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,3300000.000000,3300000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,1650000.000000,0.000000),
-(43,45,0,0,1,13,0,'Standard Room (Cơ sở 2 - Bờ biển)',3,3,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1650000.000000,1650000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(44,46,0,0,1,13,0,'Standard Room (Cơ sở 2 - Bờ biển)',2,2,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1100000.000000,1100000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(45,47,0,0,1,14,0,'Deluxe Room (Cơ sở 2 - Bờ biển)',4,4,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,3520000.000000,3520000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(46,48,0,0,1,14,0,'Deluxe Room (Cơ sở 2 - Bờ biển)',2,2,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1760000.000000,1760000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(47,49,0,0,1,14,0,'Deluxe Room (Cơ sở 2 - Bờ biển)',3,3,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,2640000.000000,2640000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000),
-(48,50,0,0,1,15,0,'Standard Room (Cơ sở 3 - Phố cổ)',2,2,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1100000.000000,1100000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(49,51,0,0,1,15,0,'Standard Room (Cơ sở 3 - Phố cổ)',3,3,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1650000.000000,1650000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(50,52,0,0,1,15,0,'Standard Room (Cơ sở 3 - Phố cổ)',2,2,0,0,0,550000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1100000.000000,1100000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,550000.000000,0.000000),
-(51,53,0,0,1,16,0,'Suite Room (Cơ sở 3 - Phố cổ)',4,4,0,0,0,1650000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,6600000.000000,6600000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,1650000.000000,0.000000),
-(52,54,0,0,1,16,0,'Suite Room (Cơ sở 3 - Phố cổ)',2,2,0,0,0,1650000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,3300000.000000,3300000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,1650000.000000,0.000000),
-(53,55,0,0,1,12,0,'Suite Room (Cơ sở 1 - Trung tâm)',1,1,0,0,0,1650000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,1650000.000000,1650000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,1650000.000000,0.000000),
-(54,56,0,0,1,14,0,'Deluxe Room (Cơ sở 2 - Bờ biển)',1,1,0,0,0,880000.000000,0.00,0.000000,0.000000,0.000000,0.00,0.000000,1,1,0,0,1,1,NULL,NULL,NULL,NULL,0.000000,0,0,'',0.000,0.000000,0.000,0,NULL,0,NULL,880000.000000,880000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,880000.000000,0.000000);
 /*!40000 ALTER TABLE `qlo_order_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9957,7 +9604,7 @@ CREATE TABLE `qlo_order_history` (
   KEY `order_history_order` (`id_order`),
   KEY `id_employee` (`id_employee`),
   KEY `id_order_state` (`id_order_state`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -9968,44 +9615,7 @@ LOCK TABLES `qlo_order_history` WRITE;
 /*!40000 ALTER TABLE `qlo_order_history` DISABLE KEYS */;
 INSERT INTO `qlo_order_history` VALUES
 (1,0,2,13,'2026-09-02 16:44:21'),
-(2,0,2,2,'2026-09-02 16:44:21'),
-(3,0,1,2,'2026-09-04 21:43:32'),
-(22,0,21,2,'2026-08-08 14:05:00'),
-(23,0,22,2,'2026-08-15 14:05:00'),
-(24,0,23,2,'2026-08-18 14:05:00'),
-(25,0,24,2,'2026-08-22 14:05:00'),
-(26,0,25,2,'2026-08-25 14:05:00'),
-(27,0,26,2,'2026-08-29 14:05:00'),
-(28,0,27,2,'2026-08-31 14:05:00'),
-(29,0,28,2,'2026-09-04 14:05:00'),
-(30,0,29,2,'2026-09-04 14:05:00'),
-(31,0,30,2,'2026-09-03 14:05:00'),
-(32,0,31,2,'2026-09-03 14:05:00'),
-(33,0,32,2,'2026-09-07 14:05:00'),
-(34,0,33,2,'2026-09-09 14:05:00'),
-(35,0,34,2,'2026-09-11 14:05:00'),
-(36,0,35,2,'2026-09-14 14:05:00'),
-(37,0,36,2,'2026-09-18 14:05:00'),
-(38,0,37,13,'2026-09-08 14:05:00'),
-(39,0,38,13,'2026-09-13 14:05:00'),
-(40,0,39,2,'2026-09-03 14:05:00'),
-(41,0,40,2,'2026-09-04 14:05:00'),
-(42,0,41,2,'2026-09-02 14:05:00'),
-(43,0,42,2,'2026-09-04 14:05:00'),
-(44,0,43,2,'2026-09-03 14:05:00'),
-(45,0,44,2,'2026-09-05 14:05:00'),
-(46,0,45,2,'2026-09-03 14:05:00'),
-(47,0,46,2,'2026-09-04 14:05:00'),
-(48,0,47,2,'2026-09-02 14:05:00'),
-(49,0,48,2,'2026-09-05 14:05:00'),
-(50,0,49,2,'2026-09-04 14:05:00'),
-(51,0,50,2,'2026-09-03 14:05:00'),
-(52,0,51,2,'2026-09-04 14:05:00'),
-(53,0,52,2,'2026-09-02 14:05:00'),
-(54,0,53,2,'2026-09-04 14:05:00'),
-(55,0,54,2,'2026-09-05 14:05:00'),
-(56,0,55,2,'2026-09-04 14:05:00'),
-(57,0,56,2,'2026-09-04 14:05:00');
+(2,0,2,2,'2026-09-02 16:44:21');
 /*!40000 ALTER TABLE `qlo_order_history` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10040,7 +9650,7 @@ CREATE TABLE `qlo_order_invoice` (
   `date_add` datetime NOT NULL,
   PRIMARY KEY (`id_order_invoice`),
   KEY `id_order` (`id_order`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10050,8 +9660,7 @@ CREATE TABLE `qlo_order_invoice` (
 LOCK TABLES `qlo_order_invoice` WRITE;
 /*!40000 ALTER TABLE `qlo_order_invoice` DISABLE KEYS */;
 INSERT INTO `qlo_order_invoice` VALUES
-(1,2,1,0,'0000-00-00 00:00:00',0.000000,0.000000,0.000000,0.000000,1600000.000000,1600000.000000,0.000000,0.000000,0,0.000000,0.000000,'CMS Hotel<br />The Hotel Prime, Monticello Dr, Montgomery, 10010<br />0987654321','','','','2026-09-02 16:44:21'),
-(2,1,2,0,'0000-00-00 00:00:00',0.000000,0.000000,0.000000,0.000000,1600000.000000,1600000.000000,0.000000,0.000000,0,0.000000,0.000000,'Thaithinh Hotel<br />Thaithinh Hotel - Việt Nam<br />0987654321','','','','2026-09-04 21:43:28');
+(1,2,1,0,'0000-00-00 00:00:00',0.000000,0.000000,0.000000,0.000000,1600000.000000,1600000.000000,0.000000,0.000000,0,0.000000,0.000000,'CMS Hotel<br />The Hotel Prime, Monticello Dr, Montgomery, 10010<br />0987654321','','','','2026-09-02 16:44:21');
 /*!40000 ALTER TABLE `qlo_order_invoice` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10178,7 +9787,7 @@ CREATE TABLE `qlo_order_payment` (
   `date_add` datetime NOT NULL,
   PRIMARY KEY (`id_order_payment`),
   KEY `order_reference` (`order_reference`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10188,42 +9797,7 @@ CREATE TABLE `qlo_order_payment` (
 LOCK TABLES `qlo_order_payment` WRITE;
 /*!40000 ALTER TABLE `qlo_order_payment` DISABLE KEYS */;
 INSERT INTO `qlo_order_payment` VALUES
-(1,'HWJDEKWBZ',1,1600000.000000,'VietQR Bank Transfer',0,1.000000,'TXN_1788342261','','','','','2026-09-02 16:44:21'),
-(2,'NATQFGDRP',1,1600000.000000,'VietQR Bank Transfer',0,1.000000,'TXN_6a9ad91074612','','','','','2026-09-04 21:43:28'),
-(19,'BZBTDTUAW',1,1760000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO21',NULL,NULL,NULL,NULL,'2026-08-08 14:05:00'),
-(20,'GUXLQHFZZ',1,2640000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO22',NULL,NULL,NULL,NULL,'2026-08-15 14:05:00'),
-(21,'TVPZELHPL',1,1100000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO23',NULL,NULL,NULL,NULL,'2026-08-18 14:05:00'),
-(22,'CAFWOHDRC',1,550000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO24',NULL,NULL,NULL,NULL,'2026-08-22 14:05:00'),
-(23,'LRHHTRHVM',1,2200000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO25',NULL,NULL,NULL,NULL,'2026-08-25 14:05:00'),
-(24,'NSMEOXZBV',1,1760000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO26',NULL,NULL,NULL,NULL,'2026-08-29 14:05:00'),
-(25,'ECCMRLPCX',1,1100000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO27',NULL,NULL,NULL,NULL,'2026-08-31 14:05:00'),
-(26,'CNHBOERSJ',1,2640000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO28',NULL,NULL,NULL,NULL,'2026-09-04 14:05:00'),
-(27,'JEQZHVGIO',1,1100000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO29',NULL,NULL,NULL,NULL,'2026-09-04 14:05:00'),
-(28,'VYEKYPGIH',1,1650000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO30',NULL,NULL,NULL,NULL,'2026-09-03 14:05:00'),
-(29,'NKHFYECVQ',1,3520000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO31',NULL,NULL,NULL,NULL,'2026-09-03 14:05:00'),
-(30,'JJMHOPUYM',1,1100000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO32',NULL,NULL,NULL,NULL,'2026-09-07 14:05:00'),
-(31,'YTYTOQUAD',1,2640000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO33',NULL,NULL,NULL,NULL,'2026-09-09 14:05:00'),
-(32,'DMIBDOJYX',1,1100000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO34',NULL,NULL,NULL,NULL,'2026-09-11 14:05:00'),
-(33,'KODPWTHNG',1,1650000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO35',NULL,NULL,NULL,NULL,'2026-09-14 14:05:00'),
-(34,'SZCPXMCTG',1,1760000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO36',NULL,NULL,NULL,NULL,'2026-09-18 14:05:00'),
-(35,'FVPJBFNVB',1,2640000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO39',NULL,NULL,NULL,NULL,'2026-09-03 14:05:00'),
-(36,'GGZAEQZQR',1,1760000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO40',NULL,NULL,NULL,NULL,'2026-09-04 14:05:00'),
-(37,'SENCLGYTD',1,3520000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO41',NULL,NULL,NULL,NULL,'2026-09-02 14:05:00'),
-(38,'ENVBDLDHO',1,3300000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO42',NULL,NULL,NULL,NULL,'2026-09-04 14:05:00'),
-(39,'ULWFBLULN',1,4950000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO43',NULL,NULL,NULL,NULL,'2026-09-03 14:05:00'),
-(40,'OYSWPWTGQ',1,3300000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO44',NULL,NULL,NULL,NULL,'2026-09-05 14:05:00'),
-(41,'FEUULDMPI',1,1650000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO45',NULL,NULL,NULL,NULL,'2026-09-03 14:05:00'),
-(42,'JKCARXGBS',1,1100000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO46',NULL,NULL,NULL,NULL,'2026-09-04 14:05:00'),
-(43,'WGCFZXMCE',1,3520000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO47',NULL,NULL,NULL,NULL,'2026-09-02 14:05:00'),
-(44,'QPBPKZCUH',1,1760000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO48',NULL,NULL,NULL,NULL,'2026-09-05 14:05:00'),
-(45,'OYARMRBUP',1,2640000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO49',NULL,NULL,NULL,NULL,'2026-09-04 14:05:00'),
-(46,'OTFQAWXCR',1,1100000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO50',NULL,NULL,NULL,NULL,'2026-09-03 14:05:00'),
-(47,'SKSFQBJNG',1,1650000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO51',NULL,NULL,NULL,NULL,'2026-09-04 14:05:00'),
-(48,'HXXWALJQF',1,1100000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO52',NULL,NULL,NULL,NULL,'2026-09-02 14:05:00'),
-(49,'NYXFYHHNP',1,6600000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO53',NULL,NULL,NULL,NULL,'2026-09-04 14:05:00'),
-(50,'AGHHOWFLR',1,3300000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO54',NULL,NULL,NULL,NULL,'2026-09-05 14:05:00'),
-(51,'CODAHBWCH',1,1650000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO55',NULL,NULL,NULL,NULL,'2026-09-04 14:05:00'),
-(52,'CGBWBNRGI',1,880000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO56',NULL,NULL,NULL,NULL,'2026-09-04 14:05:00');
+(1,'HWJDEKWBZ',1,1600000.000000,'VietQR Bank Transfer',0,1.000000,'TXN_1788342261','','','','','2026-09-02 16:44:21');
 /*!40000 ALTER TABLE `qlo_order_payment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10242,7 +9816,7 @@ CREATE TABLE `qlo_order_payment_detail` (
   `receipt_number` int(10) NOT NULL,
   `date_add` datetime NOT NULL,
   PRIMARY KEY (`id_order_payment_detail`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10252,8 +9826,7 @@ CREATE TABLE `qlo_order_payment_detail` (
 LOCK TABLES `qlo_order_payment_detail` WRITE;
 /*!40000 ALTER TABLE `qlo_order_payment_detail` DISABLE KEYS */;
 INSERT INTO `qlo_order_payment_detail` VALUES
-(1,1,2,1600000.000000,1,'2026-09-02 16:44:21'),
-(2,2,1,1600000.000000,2,'2026-09-04 21:43:28');
+(1,1,2,1600000.000000,1,'2026-09-02 16:44:21');
 /*!40000 ALTER TABLE `qlo_order_payment_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10666,7 +10239,7 @@ CREATE TABLE `qlo_orders` (
   KEY `current_state` (`current_state`),
   KEY `id_shop` (`id_shop`),
   KEY `date_add` (`date_add`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10676,45 +10249,45 @@ CREATE TABLE `qlo_orders` (
 LOCK TABLES `qlo_orders` WRITE;
 /*!40000 ALTER TABLE `qlo_orders` DISABLE KEYS */;
 INSERT INTO `qlo_orders` VALUES
-(1,'NATQFGDRP',0,0,0,1,1,1,1,1,1,1,2,'098f6bcd4621d373cade4e832627b4f6','VietQR Bank Transfer',0,1.000000,'qlovietqr',1,0,'',0,'',0.000000,0.000000,0.000000,1600000.000000,0.000000,0.000000,1600000.000000,1600000.000000,1600000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,2,0,'2026-09-04 21:43:28','0000-00-00 00:00:00','',1,0,0.000000,0,'2026-09-02 16:44:05','2026-09-04 21:43:32'),
-(2,'HWJDEKWBZ',0,0,0,1,2,1,1,1,1,1,2,'89aa89f026132a59da541ca968705365','VietQR Bank Transfer',0,1.000000,'qlovietqr',1,0,'',0,'',0.000000,0.000000,0.000000,1600000.000000,0.000000,0.000000,1600000.000000,1600000.000000,1600000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,1,0,'2026-09-02 16:44:21','0000-00-00 00:00:00','',1,0,0.000000,0,'2026-09-02 16:44:21','2026-09-02 16:44:21'),
-(21,'BZBTDTUAW',1,1,0,2,3,20,1,1,1,1,2,'2c71e7a83d1fe701bb49942ace107b44','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-08-08 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-08-08 14:00:00','2026-08-08 14:00:00'),
-(22,'GUXLQHFZZ',1,1,0,2,4,21,1,1,1,1,2,'ac8b5fb32ed9a7731cbaeb3110055ff4','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-08-15 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-08-15 14:00:00','2026-08-15 14:00:00'),
-(23,'TVPZELHPL',1,1,0,2,5,22,1,1,1,1,2,'e6eb0fcd5f853e4e490c438ce6463065','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-08-18 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-08-18 14:00:00','2026-08-18 14:00:00'),
-(24,'CAFWOHDRC',1,1,0,2,6,23,1,1,1,1,2,'df0e4d70c576cd09bc54f0987de47275','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,550000.000000,550000.000000,550000.000000,550000.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-08-22 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-08-22 14:00:00','2026-08-22 14:00:00'),
-(25,'LRHHTRHVM',1,1,0,2,7,24,1,1,1,1,2,'d6ef68d14fb45eef0e8c292253d21aa9','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,2200000.000000,2200000.000000,2200000.000000,2200000.000000,2200000.000000,2200000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-08-25 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-08-25 14:00:00','2026-08-25 14:00:00'),
-(26,'NSMEOXZBV',1,1,0,2,8,25,1,1,1,1,2,'cca13f70f3e47a348384ad0a7c3e931d','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-08-29 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-08-29 14:00:00','2026-08-29 14:00:00'),
-(27,'ECCMRLPCX',1,1,0,2,3,26,1,1,1,1,2,'6a31e7c4101a6d0a572cf91625efb0be','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-08-31 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-08-31 14:00:00','2026-08-31 14:00:00'),
-(28,'CNHBOERSJ',1,1,0,2,4,27,1,1,1,1,2,'c2b1f63fa0bf89f4b219578203c42404','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-04 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-04 14:00:00','2026-09-04 14:00:00'),
-(29,'JEQZHVGIO',1,1,0,2,5,28,1,1,1,1,2,'a5f8697a4783318476d12e72abb351fd','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-04 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-04 14:00:00','2026-09-04 14:00:00'),
-(30,'VYEKYPGIH',1,1,0,2,6,29,1,1,1,1,2,'6079af5320c1210962c300d8dc4bade2','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-03 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-03 14:00:00','2026-09-03 14:00:00'),
-(31,'NKHFYECVQ',1,1,0,2,7,30,1,1,1,1,2,'2a6cb9a51935827172a338255955e021','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,3520000.000000,3520000.000000,3520000.000000,3520000.000000,3520000.000000,3520000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-03 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-03 14:00:00','2026-09-03 14:00:00'),
-(32,'JJMHOPUYM',1,1,0,2,8,31,1,1,1,1,2,'6ced9b2454edc9c72a32f076be65c619','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-07 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-07 14:00:00','2026-09-07 14:00:00'),
-(33,'YTYTOQUAD',1,1,0,2,3,32,1,1,1,1,2,'0f5920b4bc11335e82a2cafe8f956e1f','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-09 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-09 14:00:00','2026-09-09 14:00:00'),
-(34,'DMIBDOJYX',1,1,0,2,4,33,1,1,1,1,2,'5995ac01be66abc9eea9744156d6b340','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-11 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-11 14:00:00','2026-09-11 14:00:00'),
-(35,'KODPWTHNG',1,1,0,2,5,34,1,1,1,1,2,'ad5c9fcb653167fc66941c304203f894','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-14 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-14 14:00:00','2026-09-14 14:00:00'),
-(36,'SZCPXMCTG',1,1,0,2,6,35,1,1,1,1,2,'38a1ad04b76cb9eaca3425c26ae94f80','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-18 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-18 14:00:00','2026-09-18 14:00:00'),
-(37,'QJJIVUPXT',1,1,0,2,7,36,1,1,1,1,13,'65166e5a191572b1ba2c13f83b8c5d02','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1100000.000000,1100000.000000,1100000.000000,0.000000,1100000.000000,1100000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00',NULL,0,0,0.000000,0,'2026-09-08 14:00:00','2026-09-08 14:00:00'),
-(38,'YJWDFYHAC',1,1,0,2,8,37,1,1,1,1,13,'d65b44feed86e83a7101905d76d3f0ea','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,550000.000000,550000.000000,550000.000000,0.000000,550000.000000,550000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00',NULL,0,0,0.000000,0,'2026-09-13 14:00:00','2026-09-13 14:00:00'),
-(39,'FVPJBFNVB',1,1,0,2,3,38,1,1,1,1,2,'1235398c49d73da71a6974e2206dc111','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-03 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-03 14:00:00','2026-09-03 14:00:00'),
-(40,'GGZAEQZQR',1,1,0,2,4,39,1,1,1,1,2,'a1057d696792833bec06b4f6b4f17616','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-04 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-04 14:00:00','2026-09-04 14:00:00'),
-(41,'SENCLGYTD',1,1,0,2,5,40,1,1,1,1,2,'ecb367c36b7c4e0570a638ca5024b25c','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,3520000.000000,3520000.000000,3520000.000000,3520000.000000,3520000.000000,3520000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-02 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-02 14:00:00','2026-09-02 14:00:00'),
-(42,'ENVBDLDHO',1,1,0,2,6,41,1,1,1,1,2,'9301019fa851adb8572ef0643f923580','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,3300000.000000,3300000.000000,3300000.000000,3300000.000000,3300000.000000,3300000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-04 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-04 14:00:00','2026-09-04 14:00:00'),
-(43,'ULWFBLULN',1,1,0,2,7,42,1,1,1,1,2,'8665e77287750886242fc8f9005dcbd2','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,4950000.000000,4950000.000000,4950000.000000,4950000.000000,4950000.000000,4950000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-03 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-03 14:00:00','2026-09-03 14:00:00'),
-(44,'OYSWPWTGQ',1,1,0,2,8,43,1,1,1,1,2,'e6050e8c707a9a0a1b21b03f43f25219','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,3300000.000000,3300000.000000,3300000.000000,3300000.000000,3300000.000000,3300000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-05 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-05 14:00:00','2026-09-05 14:00:00'),
-(45,'FEUULDMPI',1,1,0,2,3,44,1,1,1,1,2,'f11bffeed7e6540e0ed054a5fa2acfce','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-03 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-03 14:00:00','2026-09-03 14:00:00'),
-(46,'JKCARXGBS',1,1,0,2,4,45,1,1,1,1,2,'f23ee9b71a827e194cecdd0eda564739','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-04 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-04 14:00:00','2026-09-04 14:00:00'),
-(47,'WGCFZXMCE',1,1,0,2,5,46,1,1,1,1,2,'d6759706905b87eca76ca0ad3b79af82','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,3520000.000000,3520000.000000,3520000.000000,3520000.000000,3520000.000000,3520000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-02 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-02 14:00:00','2026-09-02 14:00:00'),
-(48,'QPBPKZCUH',1,1,0,2,6,47,1,1,1,1,2,'e23c6177eb229ffa0a4d4ba73de3d0be','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-05 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-05 14:00:00','2026-09-05 14:00:00'),
-(49,'OYARMRBUP',1,1,0,2,7,48,1,1,1,1,2,'0f585712a90096997f27776032373f5e','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-04 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-04 14:00:00','2026-09-04 14:00:00'),
-(50,'OTFQAWXCR',1,1,0,2,8,49,1,1,1,1,2,'e09b034dcb083767be58d489884e898c','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-03 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-03 14:00:00','2026-09-03 14:00:00'),
-(51,'SKSFQBJNG',1,1,0,2,3,50,1,1,1,1,2,'af24bdd4f77707bf0c2466e802098acf','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-04 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-04 14:00:00','2026-09-04 14:00:00'),
-(52,'HXXWALJQF',1,1,0,2,4,51,1,1,1,1,2,'d8f3968158c219fcaa1333b2c8bb493c','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-02 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-02 14:00:00','2026-09-02 14:00:00'),
-(53,'NYXFYHHNP',1,1,0,2,5,52,1,1,1,1,2,'e5c3e2994237f7adb310b5bc8e1702b2','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,6600000.000000,6600000.000000,6600000.000000,6600000.000000,6600000.000000,6600000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-04 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-04 14:00:00','2026-09-04 14:00:00'),
-(54,'AGHHOWFLR',1,1,0,2,6,53,1,1,1,1,2,'b1bfbf4c3c47c33c04f3b33007e7ba70','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,3300000.000000,3300000.000000,3300000.000000,3300000.000000,3300000.000000,3300000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-05 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-05 14:00:00','2026-09-05 14:00:00'),
-(55,'CODAHBWCH',1,1,0,2,7,54,1,1,1,1,2,'2caf9377b6d2d7cc0bcaea6cf01865e8','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,1650000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-04 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-04 14:00:00','2026-09-04 14:00:00'),
-(56,'CGBWBNRGI',1,1,0,2,8,55,1,1,1,1,2,'0b128439b8a424f9fd9ac7a2ac455e11','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,880000.000000,880000.000000,880000.000000,880000.000000,880000.000000,880000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-09-04 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-09-04 14:00:00','2026-09-04 14:00:00');
+(1,'NATQFGDRP',0,0,0,1,1,1,1,1,1,1,13,'098f6bcd4621d373cade4e832627b4f6','VietQR Bank Transfer',0,1.000000,'qlovietqr',1,0,'',0,'',0.000000,0.000000,0.000000,1600000.000000,0.000000,0.000000,0.000000,1600000.000000,1600000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00','',0,0,0.000000,0,'2026-09-02 16:44:05','2026-09-02 16:44:05'),
+(2,'HWJDEKWBZ',0,0,0,1,2,1,1,1,1,1,2,'89aa89f026132a59da541ca968705365','VietQR Bank Transfer',0,1.000000,'qlovietqr',1,0,'',0,'',0.000000,0.000000,0.000000,1600000.000000,0.000000,0.000000,1600000.000000,1600000.000000,1600000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,1,0,'2026-09-02 16:44:21','0000-00-00 00:00:00','',1,0,0.000000,0,'2026-09-02 16:44:21','2026-09-02 16:44:21');
 /*!40000 ALTER TABLE `qlo_orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `qlo_ota_sync_feed`
+--
+
+DROP TABLE IF EXISTS `qlo_ota_sync_feed`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `qlo_ota_sync_feed` (
+  `id_feed` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_hotel` int(10) unsigned NOT NULL,
+  `id_room_type` int(10) unsigned DEFAULT 0,
+  `channel_name` varchar(64) NOT NULL,
+  `feed_url` text NOT NULL,
+  `active` tinyint(1) unsigned DEFAULT 1,
+  `last_sync_at` datetime DEFAULT NULL,
+  `last_sync_status` varchar(255) DEFAULT 'Chưa đồng bộ',
+  `last_sync_count` int(11) DEFAULT 0,
+  `date_add` datetime NOT NULL,
+  `date_upd` datetime NOT NULL,
+  PRIMARY KEY (`id_feed`),
+  KEY `id_hotel` (`id_hotel`),
+  KEY `active` (`active`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `qlo_ota_sync_feed`
+--
+
+LOCK TABLES `qlo_ota_sync_feed` WRITE;
+/*!40000 ALTER TABLE `qlo_ota_sync_feed` DISABLE KEYS */;
+INSERT INTO `qlo_ota_sync_feed` VALUES
+(1,1,0,'Airbnb','http://127.0.0.1/test-airbnb.ics',1,'2026-09-07 17:48:07','Thành công: Đã đồng bộ 2 khoảng ngày khoá phòng',2,'2026-09-07 17:13:35','2026-09-07 17:13:35');
+/*!40000 ALTER TABLE `qlo_ota_sync_feed` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -10757,7 +10330,7 @@ CREATE TABLE `qlo_page` (
   PRIMARY KEY (`id_page`),
   KEY `id_page_type` (`id_page_type`),
   KEY `id_object` (`id_object`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10770,13 +10343,7 @@ INSERT INTO `qlo_page` VALUES
 (1,1,NULL),
 (2,2,NULL),
 (3,3,NULL),
-(4,4,NULL),
-(5,5,NULL),
-(6,6,NULL),
-(7,7,NULL),
-(8,8,11),
-(9,9,NULL),
-(10,10,7);
+(4,4,NULL);
 /*!40000 ALTER TABLE `qlo_page` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10792,7 +10359,7 @@ CREATE TABLE `qlo_page_type` (
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id_page_type`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10802,16 +10369,10 @@ CREATE TABLE `qlo_page_type` (
 LOCK TABLES `qlo_page_type` WRITE;
 /*!40000 ALTER TABLE `qlo_page_type` DISABLE KEYS */;
 INSERT INTO `qlo_page_type` VALUES
-(5,'authentication'),
-(10,'category'),
-(7,'cms'),
 (3,'contact'),
 (1,'index'),
-(6,'orderopc'),
 (4,'ourproperties'),
-(2,'pagenotfound'),
-(8,'product'),
-(9,'stores');
+(2,'pagenotfound');
 /*!40000 ALTER TABLE `qlo_page_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10951,10 +10512,10 @@ CREATE TABLE `qlo_product` (
 LOCK TABLES `qlo_product` WRITE;
 /*!40000 ALTER TABLE `qlo_product` DISABLE KEYS */;
 INSERT INTO `qlo_product` VALUES
-(1,0,0,7,1,1,0,0,'','',0.000000,0,1,0,0,0,1000.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,0,'',0,1,0,0,1,0,1,'0000-00-00','new',1,1,'both',0,0,1,1,0,'2026-09-02 15:12:38','2026-09-02 15:12:38',0,3),
-(2,0,0,7,1,1,0,0,'','',0.000000,0,1,0,0,0,1500.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,0,'',0,1,0,0,1,0,1,'0000-00-00','new',1,1,'both',0,0,1,1,0,'2026-09-02 15:12:38','2026-09-02 15:12:38',0,3),
-(3,0,0,7,1,1,0,0,'','',0.000000,0,1,0,0,0,2000.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,0,'',0,1,0,0,1,0,1,'0000-00-00','new',1,1,'both',0,0,1,1,0,'2026-09-02 15:12:39','2026-09-02 15:12:39',0,3),
-(4,0,0,7,1,1,0,0,'','',0.000000,0,1,0,0,0,2500.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,0,'',0,1,0,0,1,0,1,'0000-00-00','new',1,1,'both',0,0,1,1,0,'2026-09-02 15:12:39','2026-09-02 15:12:39',0,3),
+(1,0,0,7,1,1,0,0,'','',0.000000,0,1,0,0,0,1000.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,1,'',0,1,0,0,1,0,1,'0000-00-00','new',1,1,'both',0,0,1,1,0,'2026-09-02 15:12:38','2026-09-02 15:12:38',0,3),
+(2,0,0,7,1,1,0,0,'','',0.000000,0,1,0,0,0,1500.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,1,'',0,1,0,0,1,0,1,'0000-00-00','new',1,1,'both',0,0,1,1,0,'2026-09-02 15:12:38','2026-09-02 15:12:38',0,3),
+(3,0,0,7,1,1,0,0,'','',0.000000,0,1,0,0,0,2000.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,1,'',0,1,0,0,1,0,1,'0000-00-00','new',1,1,'both',0,0,1,1,0,'2026-09-02 15:12:39','2026-09-02 15:12:39',0,3),
+(4,0,0,7,1,1,0,0,'','',0.000000,0,1,0,0,0,2500.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,1,'',0,1,0,0,1,0,1,'0000-00-00','new',1,1,'both',0,0,1,1,0,'2026-09-02 15:12:39','2026-09-02 15:12:39',0,3),
 (5,0,0,11,1,0,0,0,'','',0.000000,0,1,0,0,2,250.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,1,'',0,1,1,1,0,1,1,'0000-00-00','new',1,1,'both',0,0,1,0,0,'2026-09-02 15:12:40','2026-09-02 15:12:40',0,3),
 (6,0,0,11,1,1,0,0,'','',0.000000,0,1,0,0,1,250.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,1,'',0,1,1,2,0,1,1,'0000-00-00','new',1,1,'both',0,0,1,0,0,'2026-09-02 15:12:40','2026-09-02 15:12:40',0,3),
 (7,0,0,9,1,1,0,0,'','',0.000000,0,1,0,0,1,50.000000,0.000000,'',0.000000,0.00,'','','',0.000000,0.000000,0.000000,0.000000,2,0,0,0,0,1,'',0,1,0,1,1,1,1,'0000-00-00','new',1,1,'both',0,0,1,0,0,'2026-09-02 15:12:41','2026-09-02 15:12:41',0,3),
@@ -11424,10 +10985,10 @@ CREATE TABLE `qlo_product_shop` (
 LOCK TABLES `qlo_product_shop` WRITE;
 /*!40000 ALTER TABLE `qlo_product_shop` DISABLE KEYS */;
 INSERT INTO `qlo_product_shop` VALUES
-(1,1,7,1,0,0,0.000000,1,0,0,0,1000.000000,0.000000,'',0.000000,0.00,0,0,0,0,'',0,1,0,0,1,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:38','2026-09-02 15:12:38',3),
-(2,1,7,1,0,0,0.000000,1,0,0,0,1500.000000,0.000000,'',0.000000,0.00,0,0,0,0,'',0,1,0,0,1,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:38','2026-09-02 15:12:38',3),
-(3,1,7,1,0,0,0.000000,1,0,0,0,2000.000000,0.000000,'',0.000000,0.00,0,0,0,0,'',0,1,0,0,1,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:39','2026-09-02 15:12:39',3),
-(4,1,7,1,0,0,0.000000,1,0,0,0,2500.000000,0.000000,'',0.000000,0.00,0,0,0,0,'',0,1,0,0,1,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:39','2026-09-02 15:12:39',3),
+(1,1,7,1,0,0,0.000000,1,0,0,0,1000.000000,0.000000,'',0.000000,0.00,0,0,0,1,'',0,1,0,0,1,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:38','2026-09-02 15:12:38',3),
+(2,1,7,1,0,0,0.000000,1,0,0,0,1500.000000,0.000000,'',0.000000,0.00,0,0,0,1,'',0,1,0,0,1,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:38','2026-09-02 15:12:38',3),
+(3,1,7,1,0,0,0.000000,1,0,0,0,2000.000000,0.000000,'',0.000000,0.00,0,0,0,1,'',0,1,0,0,1,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:39','2026-09-02 15:12:39',3),
+(4,1,7,1,0,0,0.000000,1,0,0,0,2500.000000,0.000000,'',0.000000,0.00,0,0,0,1,'',0,1,0,0,1,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:39','2026-09-02 15:12:39',3),
 (5,1,11,0,0,0,0.000000,1,0,0,2,250.000000,0.000000,'',0.000000,0.00,0,0,0,1,'',0,1,1,1,0,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:40','2026-09-02 15:12:40',3),
 (6,1,11,1,0,0,0.000000,1,0,0,1,250.000000,0.000000,'',0.000000,0.00,0,0,0,1,'',0,1,1,2,0,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:40','2026-09-02 15:12:40',3),
 (7,1,9,1,0,0,0.000000,1,0,0,1,50.000000,0.000000,'',0.000000,0.00,0,0,0,1,'',0,1,0,1,1,1,'0000-00-00','new',1,1,'both',0,0,'2026-09-02 15:12:41','2026-09-02 15:12:41',3),
@@ -12897,7 +12458,7 @@ CREATE TABLE `qlo_search_word` (
   `word` varchar(15) NOT NULL,
   PRIMARY KEY (`id_word`),
   UNIQUE KEY `id_lang` (`id_lang`,`id_shop`,`word`)
-) ENGINE=InnoDB AUTO_INCREMENT=594 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=592 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -13468,7 +13029,7 @@ CREATE TABLE `qlo_shop` (
 LOCK TABLES `qlo_shop` WRITE;
 /*!40000 ALTER TABLE `qlo_shop` DISABLE KEYS */;
 INSERT INTO `qlo_shop` VALUES
-(1,1,'Thaithinh Hotel',2,1,1,0);
+(1,1,'CMS Hotel',2,1,1,0);
 /*!40000 ALTER TABLE `qlo_shop` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -14699,7 +14260,7 @@ CREATE TABLE `qlo_tab` (
   PRIMARY KEY (`id_tab`),
   KEY `class_name` (`class_name`),
   KEY `id_parent` (`id_parent`)
-) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -14816,8 +14377,7 @@ INSERT INTO `qlo_tab` VALUES
 (105,-1,'AdminFooterPaymentBlockSetting','wkfooterpaymentblock',14,1,0),
 (106,-1,'AdminCustomNavigationLinkSetting','blocknavigationmenu',15,1,0),
 (107,-1,'AdminDashgoals','dashgoals',16,1,0),
-(108,0,'AdminQloappsChannelManagerConnector','qlochannelmanagerconnector',6,0,0),
-(109,0,'AdminOtaSync','',14,1,0);
+(108,0,'AdminQloappsChannelManagerConnector','qlochannelmanagerconnector',6,1,0);
 /*!40000 ALTER TABLE `qlo_tab` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -15058,9 +14618,7 @@ INSERT INTO `qlo_tab_lang` VALUES
 (107,1,'Dashgoals'),
 (107,2,'Dashgoals'),
 (108,1,'Channel Manager'),
-(108,2,'Đồng bộ Kênh bán phòng (OTA)'),
-(109,1,'OTA Sync (Agoda/Airbnb)'),
-(109,2,'Đồng bộ OTA (Agoda/Airbnb)');
+(108,2,'Đồng bộ Kênh bán phòng (OTA)');
 /*!40000 ALTER TABLE `qlo_tab_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -16285,10 +15843,6 @@ INSERT INTO `qlo_zone_shop` VALUES
 (8,1);
 /*!40000 ALTER TABLE `qlo_zone_shop` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'qloapps'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -16299,4 +15853,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-06 10:45:49
+-- Dump completed on 2026-09-07 17:48:52
