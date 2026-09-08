@@ -1,5 +1,5 @@
 /*M!999999\- enable the sandbox mode */ 
--- MariaDB dump 10.19  Distrib 10.11.19-MariaDB, for debian-linux-gnu (aarch64)
+-- MariaDB dump 10.19  Distrib 10.11.19-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: qloapps
 -- ------------------------------------------------------
@@ -6634,11 +6634,11 @@ LOCK TABLES `qlo_htl_branch_info_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_htl_branch_info_lang` DISABLE KEYS */;
 INSERT INTO `qlo_htl_branch_info_lang` VALUES
 (1,1,'Cơ sở 1 - Trung tâm','Cơ sở 1 - Trung tâm - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 1 - Trung tâm mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
-(1,2,'Cơ sở 1 - Trung tâm','Cơ sở 1 - Trung tâm - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 1 - Trung tâm mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
+(1,2,'Cơ sở 1 - Trung tâm','Cơ sở 1 - Trung tâm - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 1 - Trung tâm mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Nhận phòng: 14:00 | Trả phòng: 12:00</p>'),
 (2,1,'Cơ sở 2 - Bờ biển','Cơ sở 2 - Bờ biển - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 2 - Bờ biển mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
-(2,2,'Cơ sở 2 - Bờ biển','Cơ sở 2 - Bờ biển - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 2 - Bờ biển mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
+(2,2,'Cơ sở 2 - Bờ biển','Cơ sở 2 - Bờ biển - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 2 - Bờ biển mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Nhận phòng: 14:00 | Trả phòng: 12:00</p>'),
 (3,1,'Cơ sở 3 - Phố cổ','Cơ sở 3 - Phố cổ - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 3 - Phố cổ mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>'),
-(3,2,'Cơ sở 3 - Phố cổ','Cơ sở 3 - Phố cổ - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 3 - Phố cổ mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Check-in: 14:00 | Check-out: 12:00</p>');
+(3,2,'Cơ sở 3 - Phố cổ','Cơ sở 3 - Phố cổ - Dịch vụ tiêu chuẩn, vị trí thuận tiện.','<p>Cơ sở 3 - Phố cổ mang lại trải nghiệm nghỉ dưỡng tiện nghi, hiện đại.</p>','<p>Nhận phòng: 14:00 | Trả phòng: 12:00</p>');
 /*!40000 ALTER TABLE `qlo_htl_branch_info_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -14450,7 +14450,7 @@ INSERT INTO `qlo_tab_lang` VALUES
 (23,1,'Invoices'),
 (23,2,'Hóa đơn'),
 (24,1,'Payment Receipts'),
-(24,2,'Payment Receipts'),
+(24,2,'Biên nhận thanh toán'),
 (25,1,'Credit Slips'),
 (25,2,'Phiếu tín dụng'),
 (26,1,'Statuses'),
@@ -15843,6 +15843,10 @@ INSERT INTO `qlo_zone_shop` VALUES
 (8,1);
 /*!40000 ALTER TABLE `qlo_zone_shop` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'qloapps'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -15853,4 +15857,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-07 17:48:52
+-- Dump completed on 2026-09-08  7:09:27
