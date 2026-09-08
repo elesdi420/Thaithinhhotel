@@ -2982,7 +2982,7 @@ CREATE TABLE `qlo_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3047,7 +3047,19 @@ INSERT INTO `qlo_connections` VALUES
 (53,1,1,53,7,2886860801,'2026-09-08 16:02:39',''),
 (54,1,1,54,7,2886860801,'2026-09-08 16:02:46',''),
 (55,1,1,55,7,2886860801,'2026-09-08 16:02:53',''),
-(56,1,1,56,7,2886860801,'2026-09-08 16:02:59','');
+(56,1,1,56,7,2886860801,'2026-09-08 16:02:59',''),
+(57,1,1,57,1,2886860801,'2026-09-08 16:05:32',''),
+(58,1,1,58,7,2886860801,'2026-09-08 16:05:42',''),
+(59,1,1,59,7,2886860801,'2026-09-08 16:05:50',''),
+(60,1,1,60,6,2886860801,'2026-09-08 16:05:58',''),
+(61,1,1,61,1,2886860801,'2026-09-08 16:19:28',''),
+(62,1,1,62,1,2886860801,'2026-09-08 16:19:41',''),
+(63,1,1,63,7,2886860801,'2026-09-08 16:19:48',''),
+(64,1,1,64,1,2886860801,'2026-09-08 16:20:15',''),
+(65,1,1,65,4,2886860801,'2026-09-08 16:20:24',''),
+(66,1,1,66,7,2886860801,'2026-09-08 16:20:32',''),
+(67,1,1,67,6,2886860801,'2026-09-08 16:20:39',''),
+(68,1,1,68,5,2886860801,'2026-09-08 16:20:49','');
 /*!40000 ALTER TABLE `qlo_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5408,7 +5420,7 @@ CREATE TABLE `qlo_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5473,7 +5485,19 @@ INSERT INTO `qlo_guest` VALUES
 (53,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (54,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (55,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(56,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
+(56,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(57,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(58,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(59,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(60,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(61,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(62,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(63,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(64,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(65,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(66,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(67,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(68,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
 /*!40000 ALTER TABLE `qlo_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8282,7 +8306,7 @@ CREATE TABLE `qlo_lang` (
 LOCK TABLES `qlo_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_lang` DISABLE KEYS */;
 INSERT INTO `qlo_lang` VALUES
-(1,'English (English)',1,'en','en-us','m/d/Y','m/d/Y H:i:s',0),
+(1,'English (English)',0,'en','en-us','m/d/Y','m/d/Y H:i:s',0),
 (2,'tiếng Việt (Vietnamese)',1,'vn','vi-vn','d/m/Y','H:i:s d/m/Y',0);
 /*!40000 ALTER TABLE `qlo_lang` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -16139,4 +16163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-08  9:03:15
+-- Dump completed on 2026-09-08  9:22:28
