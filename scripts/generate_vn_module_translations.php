@@ -323,7 +323,13 @@ foreach ($targets as $name) {
     foreach ($lines as $key => $value) {
         $php .= "\$_MODULE['".$key."'] = '".str_replace(array('\\', "'"), array('\\\\', "\\'"), $value)."';\n";
     }
-    file_put_contents($dir.'/translations/vn.php', $php);
+    // Xem ghi chú cùng chỗ trong generate_vn_admin_translations.php: ghi hỏng vì
+    // quyền thì phải báo, không được im lặng rồi in ra con số như thể đã xong.
+    if (file_put_contents($dir.'/translations/vn.php', $php) === false) {
+        fwrite(STDERR, "LỖI: không ghi được {$dir}/translations/vn.php. Kiểm tra quyền:\n"
+            ."  docker compose exec web chown -R www-data:www-data /var/www/html/modules\n");
+        exit(1);
+    }
 
     // index.php giữ nguyên nếp của dự án: chặn liệt kê thư mục
     if (!file_exists($dir.'/translations/index.php') && file_exists($moduleDir.'index.php')) {

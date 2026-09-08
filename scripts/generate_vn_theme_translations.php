@@ -331,7 +331,13 @@ $php = "<?php\n\n"
 foreach ($out as $key => $value) {
     $php .= "\$_LANG['".$key."'] = '".str_replace(array('\\', "'"), array('\\\\', "\\'"), $value)."';\n";
 }
-file_put_contents($themeLangDir.'/vn.php', $php);
+// Xem ghi chú cùng chỗ trong generate_vn_admin_translations.php: ghi hỏng vì
+// quyền thì phải báo, không được im lặng rồi in ra con số như thể đã xong.
+if (file_put_contents($themeLangDir.'/vn.php', $php) === false) {
+    fwrite(STDERR, "LỖI: không ghi được {$themeLangDir}/vn.php. Kiểm tra quyền:\n"
+        ."  docker compose exec web chown -R www-data:www-data /var/www/html/themes\n");
+    exit(1);
+}
 
 echo 'Tổng khoá ghi ra:            '.count($out)."\n";
 echo 'Dịch theo khung en.php:      '.$translated."\n";

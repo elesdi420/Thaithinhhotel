@@ -319,3 +319,6 @@ $_LANGADM['AdminControllerfc6c83f09010c4cd70f436b8402b22b7'] = 'Cấu hình lợ
 $_LANGADM['AdminController719d7270f0014508129eecfe03ffd84e'] = 'Chi phí khác trên mỗi đơn';
 $_LANGADM['AdminController6894510fe0d12804bb8c93f374a485c0'] = 'Phí ngân hàng trung bình theo phương thức';
 $_LANGADM['AdminController8fd7b2eaaf9c0d4c29fc596c27de1e4c'] = 'Tỷ lệ chi phí vận hành gộp trung bình';
+$_LANGADM['AdminController887ee91702c962a70b87cbef07bbcaec'] = 'chưa gồm thuế';
+$_LANGADM['AdminControllere2e79605fc9450ec17957cf0e910f5c6'] = 'đã gồm thuế';
+$_LANGADM['AdminController915000b6f3e7bb451a6ed4ffc2839ab6'] = 'Từ %s đến %s';

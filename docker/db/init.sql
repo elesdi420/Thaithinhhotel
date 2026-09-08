@@ -2493,8 +2493,8 @@ INSERT INTO `qlo_configuration` VALUES
 (103,NULL,NULL,'PS_STORES_DISPLAY_CMS','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (104,NULL,NULL,'PS_STORES_DISPLAY_FOOTER','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (105,NULL,NULL,'PS_STORES_SIMPLIFIED','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(106,NULL,NULL,'SHOP_LOGO_WIDTH','243','0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(107,NULL,NULL,'SHOP_LOGO_HEIGHT','120','0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(106,NULL,NULL,'SHOP_LOGO_WIDTH','420','0000-00-00 00:00:00','2026-09-06 20:17:55'),
+(107,NULL,NULL,'SHOP_LOGO_HEIGHT','110','0000-00-00 00:00:00','2026-09-06 20:17:55'),
 (108,NULL,NULL,'EDITORIAL_IMAGE_WIDTH','530','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (109,NULL,NULL,'EDITORIAL_IMAGE_HEIGHT','228','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (110,NULL,NULL,'PS_STATSDATA_CUSTOMER_PAGESVIEWS','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
@@ -2525,7 +2525,7 @@ INSERT INTO `qlo_configuration` VALUES
 (135,NULL,NULL,'PS_STORES_CENTER_LONG','-80.226439','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (136,NULL,NULL,'PS_USE_ECOTAX','0','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (137,NULL,NULL,'PS_CANONICAL_REDIRECT','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
-(138,NULL,NULL,'PS_IMG_UPDATE_TIME','1324977642','0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(138,NULL,NULL,'PS_IMG_UPDATE_TIME','1788703602','0000-00-00 00:00:00','2026-09-06 21:06:42'),
 (139,NULL,NULL,'PS_BACKUP_DROP_TABLE','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (140,NULL,NULL,'PS_OS_AWAITING_PAYMENT','1','0000-00-00 00:00:00','0000-00-00 00:00:00'),
 (141,NULL,NULL,'PS_OS_PAYMENT_ACCEPTED','2','0000-00-00 00:00:00','0000-00-00 00:00:00'),
@@ -2993,7 +2993,7 @@ CREATE TABLE `qlo_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=149 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=158 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3142,7 +3142,16 @@ INSERT INTO `qlo_connections` VALUES
 (145,1,1,134,5,2886860801,'2026-09-06 17:36:39',''),
 (146,1,1,135,9,2886860801,'2026-09-06 17:36:55',''),
 (147,1,1,136,8,2886860801,'2026-09-06 17:37:09',''),
-(148,1,1,137,10,2886860801,'2026-09-06 17:37:32','');
+(148,1,1,137,10,2886860801,'2026-09-06 17:37:32',''),
+(149,1,1,138,1,2886860801,'2026-09-06 17:47:49',''),
+(150,1,1,139,6,2886860801,'2026-09-06 17:48:03',''),
+(151,1,1,140,3,2886860801,'2026-09-06 17:48:14',''),
+(152,1,1,141,1,2130706433,'2026-09-07 23:56:13',''),
+(153,1,1,142,1,2886860801,'2026-09-07 23:57:23',''),
+(154,1,1,143,1,2130706433,'2026-09-07 23:57:59',''),
+(155,1,1,144,1,2886860801,'2026-09-07 23:58:40',''),
+(156,1,1,145,1,2886860801,'2026-09-08 00:02:53',''),
+(157,1,1,146,1,2886860801,'2026-09-08 00:04:12','');
 /*!40000 ALTER TABLE `qlo_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4852,7 +4861,7 @@ CREATE TABLE `qlo_employee` (
 LOCK TABLES `qlo_employee` WRITE;
 /*!40000 ALTER TABLE `qlo_employee` DISABLE KEYS */;
 INSERT INTO `qlo_employee` VALUES
-(1,1,2,'Doe','John','admin@hotel.local','$2y$10$CGrFlVtHkn6MBCDtPdM7muFoQOpZBQdsyUKPigNgs5Zd5S8JFtXCy','2026-09-02 09:12:35','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','default','admin-theme.css',1,0,1,1,1,0,0,0,'2026-09-05'),
+(1,1,2,'Doe','John','admin@hotel.local','$2y$10$CGrFlVtHkn6MBCDtPdM7muFoQOpZBQdsyUKPigNgs5Zd5S8JFtXCy','2026-09-02 09:12:35','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','default','admin-theme.css',1,0,1,1,1,0,0,0,'2026-09-08'),
 (2,2,2,'Cơ sở Một','Lễ tân','reception1@hotel.local','$2y$10$u.5pD1JNPqLZm/rMdPBJR.Ee3iHJD.Ou76LM8780ZF3NxnStT21N2','2026-09-02 09:29:25','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','default','admin-theme.css',86,0,1,1,1,0,0,0,'2026-09-02'),
 (3,3,2,'Cơ sở Hai','Lễ tân','reception2@hotel.local','$2y$10$u.5pD1JNPqLZm/rMdPBJR.Ee3iHJD.Ou76LM8780ZF3NxnStT21N2','2026-09-02 09:29:30','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','','admin-theme.css',86,0,1,1,1,0,0,0,'0000-00-00'),
 (4,4,2,'Cơ sở Ba','Lễ tân','reception3@hotel.local','$2y$10$u.5pD1JNPqLZm/rMdPBJR.Ee3iHJD.Ou76LM8780ZF3NxnStT21N2','2026-09-02 09:29:35','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','','admin-theme.css',86,0,1,1,1,0,0,0,'0000-00-00'),
@@ -5507,7 +5516,7 @@ CREATE TABLE `qlo_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=138 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=147 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5653,7 +5662,16 @@ INSERT INTO `qlo_guest` VALUES
 (134,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (135,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (136,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(137,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
+(137,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(138,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(139,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(140,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(141,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(142,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(143,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(144,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(145,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(146,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
 /*!40000 ALTER TABLE `qlo_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8504,7 +8522,7 @@ CREATE TABLE `qlo_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -8521,7 +8539,8 @@ INSERT INTO `qlo_log` VALUES
 (5,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 11:43:21','2026-09-05 11:43:21'),
 (6,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 16:21:33','2026-09-05 16:21:33'),
 (7,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 17:35:00','2026-09-05 17:35:00'),
-(8,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 18:06:00','2026-09-05 18:06:00');
+(8,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-05 18:06:00','2026-09-05 18:06:00'),
+(9,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-08 13:56:54','2026-09-08 13:56:54');
 /*!40000 ALTER TABLE `qlo_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -14890,7 +14909,7 @@ INSERT INTO `qlo_tab_lang` VALUES
 (23,1,'Invoices'),
 (23,2,'Hóa đơn'),
 (24,1,'Payment Receipts'),
-(24,2,'Payment Receipts'),
+(24,2,'Biên nhận thanh toán'),
 (25,1,'Credit Slips'),
 (25,2,'Phiếu tín dụng'),
 (26,1,'Statuses'),
@@ -16299,4 +16318,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-06 10:45:49
+-- Dump completed on 2026-09-08  7:05:32

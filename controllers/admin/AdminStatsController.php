@@ -1236,7 +1236,9 @@ class AdminStatsControllerCore extends AdminStatsTabController
             case 'average_guest_in_booking':
                 $dateToday = date('Y-m-d');
                 $value = AdminStatsController::getAverageGuestsPerBooking('', '', $idHotels);
-                $value = Tools::ps_round($value['avg_adults'], 2).''.$this->l('Adults').', '.Tools::ps_round($value['avg_children'], 2).''.$this->l('Children');
+                // Bản gốc nối số với chữ bằng .''. nên ra "2Người lớn" dính liền -
+                // tiếng Anh cũng sai y hệt ("2Adults"). Thêm dấu cách.
+                $value = Tools::ps_round($value['avg_adults'], 2).' '.$this->l('Adults').', '.Tools::ps_round($value['avg_children'], 2).' '.$this->l('Children');
                 break;
             default:
                 $value = false;

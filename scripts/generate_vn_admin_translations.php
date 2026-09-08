@@ -413,6 +413,13 @@ $dict = array(
     'Other fees per order' => 'Chi phí khác trên mỗi đơn',
     'Average bank fees per payment method' => 'Phí ngân hàng trung bình theo phương thức',
     'Average gross operating cost percentage' => 'Tỷ lệ chi phí vận hành gộp trung bình',
+
+    // --- Nhãn còn sót trên dải KPI trang Đơn hàng (phát hiện khi soi ảnh chụp) ---
+    'tax excl.' => 'chưa gồm thuế',
+    'tax incl.' => 'đã gồm thuế',
+    'From %s to %s' => 'Từ %s đến %s',
+    'Adults' => 'Người lớn',
+    'Children' => 'Trẻ em',
 );
 
 $targetFile = dirname(__DIR__).'/translations/vn/admin.php';
@@ -429,6 +436,13 @@ foreach ($dict as $source => $translated) {
 }
 
 $php = "<?php\n\nglobal \$_LANGADM;\n\$_LANGADM = array();\n\n".implode("\n", $lines)."\n";
-file_put_contents($targetFile, $php);
+// Kiểm tra ghi có thành công không. Chạy script bằng www-data trong khi tệp cũ
+// do root tạo thì file_put_contents thất bại lặng lẽ, script vẫn in "đã ghi N
+// khoá" còn tệp thì y nguyên - đã mất công truy vết vì đúng cái bẫy này.
+if (file_put_contents($targetFile, $php) === false) {
+    fwrite(STDERR, "LỖI: không ghi được {$targetFile}. Kiểm tra quyền:\n"
+        ."  docker compose exec web chown -R www-data:www-data /var/www/html/translations\n");
+    exit(1);
+}
 
 echo "Đã ghi {$count} khoá vào {$targetFile}\n";
