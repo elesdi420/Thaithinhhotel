@@ -48,9 +48,11 @@
 								<div class="row">
 									<a href="{$room_v['product_link']|escape:'htmlall':'UTF-8'}"><p class="rm_heading col-sm-12 col-md-7">{$room_v['name']|escape:'htmlall':'UTF-8'}</p></a>
 									{if !isset($restricted_country_mode) && !$PS_CATALOG_MODE && !$order_date_restrict}
-										<p class="rm_left col-sm-12 col-md-5" {if !empty($display_all_room_types) || $room_v['room_left'] > $warning_num} style="display:none"{/if}>
-											{l s='Hurry!'} <span class="remain_rm_qty">{$room_v['room_left']|escape:'htmlall':'UTF-8'}</span> {l s='rooms left'}
-										</p>
+										{if empty($display_all_room_types) && $room_v['room_left'] <= 3}
+											<p class="rm_left col-sm-12 col-md-5">
+												{l s='Hurry!'} <span class="remain_rm_qty">{$room_v['room_left']|escape:'htmlall':'UTF-8'}</span> {l s='rooms left'}
+											</p>
+										{/if}
 									{/if}
 								</div>
 							{/block}
@@ -69,13 +71,16 @@
 											{if !empty($room_v['feature'])}
 												<p class="rm_amenities_cont">
 													{foreach from=$room_v['feature'] key=feat_k item=feat_v}
-														{if $feat_v.logo_type == 'icon' && $feat_v.logo}
-															<i class="{$feat_v.logo|escape:'htmlall':'UTF-8'} rm_amen" title="{$feat_v.name|escape:'htmlall':'UTF-8'}"></i>
-														{elseif $feat_v.logo_type == 'image' && $feat_v.logo}
-															<img title="{$feat_v.name|escape:'htmlall':'UTF-8'}"
-																 src="{$amenity_img_dir|escape:'htmlall':'UTF-8'}{$feat_v.id|intval}.jpg"
-																 class="rm_amen" />
-														{/if}
+														<span class="rm_amen" title="{$feat_v.name|escape:'htmlall':'UTF-8'}">
+															{if $feat_v.logo_type == 'icon' && $feat_v.logo}
+																<i class="{$feat_v.logo|escape:'htmlall':'UTF-8'}"></i>
+															{elseif $feat_v.logo_type == 'image' && $feat_v.logo}
+																<img src="{$amenity_img_dir|escape:'htmlall':'UTF-8'}{$feat_v.id|intval}.jpg" />
+															{else}
+																<i class="icon-check"></i>
+															{/if}
+															<span>{$feat_v.name|escape:'htmlall':'UTF-8'}</span>
+														</span>
 													{/foreach}
 												</p>
 											{/if}

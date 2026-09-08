@@ -3,8 +3,6 @@
  * Theme: Indochine Luxury (Xanh Lục Bảo & Vàng Kim Champagne)
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
 :root {
   --hotel-primary: #047857;          /* Emerald Lục Bảo */
   --hotel-primary-hover: #065f46;
@@ -156,6 +154,12 @@ a:hover, a:focus {
   margin-bottom: 0 !important;
 }
 
+select.header-rmsearch-input,
+select.chosen,
+select#id_hotel_button {
+  display: none !important;
+}
+
 .header-rmsearch-input {
   height: 52px !important;
   border: 1.5px solid var(--hotel-border) !important;
@@ -171,11 +175,81 @@ a:hover, a:focus {
   transition: all 0.2s ease-in-out !important;
 }
 
+/* Đệm chuẩn cho các ô input có icon bên trái để không đè chữ */
+.header-rmsearch-input.input-date,
+.header-rmsearch-input.input-occupancy,
+#daterange_value,
+#daterange_value_from,
+#daterange_value_to,
+#guest_occupancy {
+  padding-left: 44px !important;
+  padding-right: 28px !important;
+}
+
 .header-rmsearch-input:focus,
 .header-rmsearch-input.active {
   border-color: var(--hotel-primary) !important;
   background-color: #ffffff !important;
   box-shadow: 0 0 0 4px var(--hotel-primary-light) !important;
+}
+
+/* Tùy biến Chosen.js dropdown cho chọn khách sạn */
+#id_hotel_button_chosen.chosen-container {
+  width: 100% !important;
+  font-family: var(--hotel-font) !important;
+}
+
+#id_hotel_button_chosen .chosen-single {
+  height: 52px !important;
+  line-height: 50px !important;
+  border: 1.5px solid var(--hotel-border) !important;
+  border-radius: var(--hotel-radius-md) !important;
+  background-color: var(--hotel-bg) !important;
+  color: var(--hotel-text-main) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding: 0 36px 0 44px !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  background-image: url("../img/icon/icon-hotel.svg"), url("../img/icon/icon-dropdown-arrow.svg") !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: 12px 50%, calc(100% - 14px) 50% !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+#id_hotel_button_chosen.chosen-container-active .chosen-single,
+#id_hotel_button_chosen.chosen-with-drop .chosen-single {
+  border-color: var(--hotel-primary) !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 4px var(--hotel-primary-light) !important;
+}
+
+#id_hotel_button_chosen .chosen-drop {
+  border: 1.5px solid var(--hotel-border) !important;
+  border-radius: var(--hotel-radius-md) !important;
+  box-shadow: var(--hotel-shadow-lg) !important;
+  margin-top: 6px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  padding: 6px 0 !important;
+}
+
+#id_hotel_button_chosen .chosen-results {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#id_hotel_button_chosen .chosen-results li {
+  padding: 10px 16px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--hotel-text-body) !important;
+}
+
+#id_hotel_button_chosen .chosen-results li.highlighted {
+  background: var(--hotel-primary) !important;
+  color: #ffffff !important;
 }
 
 /* Nút tìm phòng CTA vàng kim Champagne */
@@ -332,8 +406,12 @@ a:hover, a:focus {
   padding: 4px 10px !important;
   border-radius: var(--hotel-radius-full) !important;
   border: 1px solid #fecaca !important;
-  display: inline-block !important;
+  display: inline-block;
   margin-bottom: 8px !important;
+}
+
+.rm_left[style*="none"] {
+  display: none !important;
 }
 
 .rm_desc {
@@ -368,21 +446,30 @@ a:hover, a:focus {
 .rm_amenities_cont {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 6px !important;
+  gap: 8px !important;
   margin-bottom: 16px !important;
 }
 
 .rm_amen {
+  width: auto !important;
+  max-width: 100% !important;
+  white-space: nowrap !important;
   background: var(--hotel-primary-light) !important;
   color: var(--hotel-primary) !important;
   border: 1px solid var(--hotel-primary-border) !important;
   border-radius: var(--hotel-radius-full) !important;
-  padding: 5px 10px !important;
+  padding: 6px 12px !important;
   font-size: 12px !important;
   font-weight: 600 !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 5px;
+  gap: 6px !important;
+  line-height: 1.2 !important;
+}
+
+.rm_amen i {
+  font-size: 11px !important;
+  color: var(--hotel-primary) !important;
 }
 
 /* Khối Giá & CTA đặt phòng */
@@ -420,8 +507,11 @@ a:hover, a:focus {
   margin-bottom: 10px;
 }
 
-/* Nút Chọn phòng / Đặt ngay phong cách Exely */
-.btn_book_now_with_occupancy {
+/* Nút Chọn phòng / Đặt ngay phong cách Exely - Xóa bỏ hoàn toàn viền nâu và nền xanh cũ */
+.button.ajax_add_to_cart_button,
+.btn_book_now_with_occupancy,
+a.btn_book_now_with_occupancy,
+a.ajax_add_to_cart_button {
   background: linear-gradient(135deg, var(--hotel-accent) 0%, #b45309 100%) !important;
   color: #ffffff !important;
   font-size: 15px !important;
@@ -429,28 +519,182 @@ a:hover, a:focus {
   padding: 12px 28px !important;
   border-radius: var(--hotel-radius-md) !important;
   border: none !important;
-  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3) !important;
-  transition: all 0.2s ease-in-out !important;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-shadow: none !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px;
+  gap: 8px !important;
+  text-decoration: none !important;
 }
 
-.btn_book_now_with_occupancy:hover {
+.button.ajax_add_to_cart_button span,
+.btn_book_now_with_occupancy span,
+a.btn_book_now_with_occupancy span,
+a.ajax_add_to_cart_button span {
+  background: none !important;
+  background-image: none !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #ffffff !important;
+  font-family: var(--hotel-font) !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  text-shadow: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.button.ajax_add_to_cart_button:hover,
+.btn_book_now_with_occupancy:hover,
+a.btn_book_now_with_occupancy:hover,
+a.ajax_add_to_cart_button:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 20px rgba(217, 119, 6, 0.4) !important;
+  box-shadow: 0 8px 22px rgba(217, 119, 6, 0.45) !important;
+  background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.button.ajax_add_to_cart_button:hover span,
+.btn_book_now_with_occupancy:hover span,
+a.btn_book_now_with_occupancy:hover span,
+a.ajax_add_to_cart_button:hover span {
+  background: none !important;
+  border: none !important;
   color: #ffffff !important;
 }
 
-.btn_book_now_with_occupancy span::after {
+.btn_book_now_with_occupancy span::after,
+.button.ajax_add_to_cart_button span::after {
   content: " →";
   font-weight: 800;
   transition: transform 0.2s ease;
 }
 
-.btn_book_now_with_occupancy:hover span::after {
+.btn_book_now_with_occupancy:hover span::after,
+.button.ajax_add_to_cart_button:hover span::after {
   transform: translateX(4px);
+}
+
+/* ==========================================================================
+   NAVIGATION HAMBURGER & MOBILE MENU OVERRIDES
+   ========================================================================== */
+.nav_toggle {
+  background-color: var(--hotel-primary) !important;
+  border-radius: var(--hotel-radius-sm) !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.nav_toggle:hover {
+  background-color: var(--hotel-primary-hover) !important;
+}
+
+.close_navbar {
+  background-color: var(--hotel-primary) !important;
+}
+
+/* ==========================================================================
+   DATE RANGE PICKER INDOCHINE LUXURY THEME
+   ========================================================================== */
+.date-picker-wrapper {
+  font-family: var(--hotel-font) !important;
+  border-radius: var(--hotel-radius-lg) !important;
+  border: 1px solid var(--hotel-border) !important;
+  box-shadow: var(--hotel-shadow-lg) !important;
+  padding: 16px !important;
+  z-index: 9999 !important;
+}
+
+.date-picker-wrapper .month-name {
+  font-family: var(--hotel-font) !important;
+  font-weight: 700 !important;
+  color: var(--hotel-text-main) !important;
+}
+
+.date-picker-wrapper .first-date-selected,
+.date-picker-wrapper .last-date-selected {
+  background-color: var(--hotel-primary) !important;
+  color: #ffffff !important;
+  border-radius: var(--hotel-radius-sm) !important;
+}
+
+.date-picker-wrapper .month-wrapper table .day.checked {
+  background-color: var(--hotel-primary-light) !important;
+  color: var(--hotel-primary-dark) !important;
+}
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
+  background-color: var(--hotel-primary-light) !important;
+  color: var(--hotel-primary-dark) !important;
+}
+
+/* ==========================================================================
+   GUEST OCCUPANCY DROPDOWN POPUP
+   ========================================================================== */
+#search_occupancy_wrapper {
+  border-radius: var(--hotel-radius-lg) !important;
+  border: 1px solid var(--hotel-border) !important;
+  box-shadow: var(--hotel-shadow-lg) !important;
+  padding: 20px !important;
+  font-family: var(--hotel-font) !important;
+}
+
+#search_occupancy_wrapper .add_new_occupancy_btn {
+  color: var(--hotel-primary) !important;
+  font-weight: 600 !important;
+}
+
+#search_occupancy_wrapper .add_new_occupancy_btn:hover {
+  color: var(--hotel-primary-hover) !important;
+}
+
+#search_occupancy_wrapper .occupancy_info_block .occupancy_count {
+  border-radius: var(--hotel-radius-sm) !important;
+  border-color: var(--hotel-border) !important;
+  font-weight: 700 !important;
+}
+
+#search_occupancy_wrapper .occupancy_info_block .qty_direction a {
+  border-radius: var(--hotel-radius-sm) !important;
+  border-color: var(--hotel-border) !important;
+}
+
+#search_occupancy_wrapper .occupancy_info_block .qty_direction a:hover {
+  background-color: var(--hotel-primary-light) !important;
+  color: var(--hotel-primary) !important;
+}
+
+/* ==========================================================================
+   SIDEBAR FILTER & PRICE SLIDER (SEARCH RESULTS)
+   ========================================================================== */
+.layered_filter_cont {
+  border-radius: var(--hotel-radius-md) !important;
+  border: 1px solid var(--hotel-border) !important;
+  box-shadow: var(--hotel-shadow-sm) !important;
+  overflow: hidden !important;
+}
+
+.layered_filter_cont div.layered_filter_heading {
+  background: var(--hotel-surface-alt) !important;
+  border-bottom: 1px solid var(--hotel-border) !important;
+  padding: 12px 16px !important;
+}
+
+.layered_filter_cont div.layered_filter_heading div.lf_headingmain_wrapper span {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  color: var(--hotel-text-main) !important;
+}
+
+#filter_price_silder .ui-slider-range {
+  background-color: var(--hotel-primary) !important;
+}
+
+#filter_price_silder .ui-slider-handle {
+  border: 2px solid var(--hotel-primary) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* ==========================================================================
