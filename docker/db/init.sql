@@ -634,7 +634,7 @@ CREATE TABLE `qlo_address` (
 LOCK TABLES `qlo_address` WRITE;
 /*!40000 ALTER TABLE `qlo_address` DISABLE KEYS */;
 INSERT INTO `qlo_address` VALUES
-(1,222,0,1,0,0,0,0,'My Address','','Doe','John','16, Main street','2nd floor','016523','Demo City','','0102030405','','','','2026-09-02 15:12:38','2026-09-02 15:12:38',1,0,0),
+(1,222,0,1,0,0,0,0,'My Address','','Doe','John','16, Main street','2nd floor','016523','Demo City','','0102030405','','','','2026-09-02 15:12:38','2026-09-08 15:51:31',1,1,0),
 (2,222,0,0,0,0,0,1,'Cơ sở 1 - Trung tâm','','Cơ sở 1 - Trung tâm','Cơ sở 1 - Trung tâm','123 Lê Lợi, Quận 1','','054447','Hồ Chí Minh','','02838220001','','','','2026-09-02 15:12:38','2026-09-02 15:23:39',1,0,0),
 (3,222,0,0,0,0,0,2,'Cơ sở 2 - Bờ biển','','Cơ sở 2 - Bờ biển','Cơ sở 2 - Bờ biển','456 Võ Nguyên Giáp, Sơn Trà','','','Đà Nẵng','','023638220002','','','','2026-09-02 15:23:39','2026-09-02 15:23:39',1,0,0),
 (4,222,0,0,0,0,0,3,'Cơ sở 3 - Phố cổ','','Cơ sở 3 - Phố cổ','Cơ sở 3 - Phố cổ','789 Hàng Trống, Hoàn Kiếm','','','Hà Nội','','02438220003','','','','2026-09-02 15:23:39','2026-09-02 15:23:39',1,0,0);
@@ -1378,7 +1378,6 @@ CREATE TABLE `qlo_cart` (
 LOCK TABLES `qlo_cart` WRITE;
 /*!40000 ALTER TABLE `qlo_cart` DISABLE KEYS */;
 INSERT INTO `qlo_cart` VALUES
-(1,0,1,0,'',1,0,0,1,2,0,'89aa89f026132a59da541ca968705365',0,0,'',0,0,0,'2026-09-02 16:24:19','2026-09-02 16:24:19'),
 (2,1,1,0,'',2,1,1,1,3,1,'59b5f495fbe9f376d70b7a775ada8264',1,0,'',0,0,0,'2026-09-08 07:48:14','2026-09-08 07:48:14'),
 (3,1,1,0,'',2,1,1,1,4,1,'025cad34c655978c620571037de0e0cb',1,0,'',0,0,0,'2026-09-08 07:48:14','2026-09-08 07:48:14'),
 (4,1,1,0,'',2,1,1,1,5,1,'a83afb626360918ce4e9b41d58fad5f7',1,0,'',0,0,0,'2026-09-08 07:48:14','2026-09-08 07:48:14'),
@@ -2216,10 +2215,10 @@ INSERT INTO `qlo_cms_lang` VALUES
 (2,2,1,'Thông báo pháp lý','Thông báo pháp lý của chúng tôi','thông báo, pháp lý, tín dụng','\n        <h2 class=\"page-heading bottom-indent\"><strong>Thông báo pháp lý</strong></h2>\n        <div>\n        <p style=\"border-left:2px solid #808080;padding-left:5px;\">Trang này chứa nội dung minh họa cho mục đích giảng dạy. Mọi sự tương đồng với sản phẩm, dịch vụ hoặc sự kiện thực tế là hoàn toàn ngẫu nhiên. Cảm ơn sự hiểu biết của bạn.</p>\n        <hr /></div>\n        <p class=\"margin-btm-30 page-subheading\">Điều khoản sử dụng Website:</p>\n        <ul class=\"margin-btm-30\">\n        <li class=\"margin-btm-20\">Nội dung của các trang web này chỉ dành cho mục đích thông tin và sử dụng chung của bạn. Nó có thể thay đổi mà không cần thông báo trước.</li>\n        <li class=\"margin-btm-20\">Chúng tôi cũng như bên thứ ba không đảm bảo hoặc cam kết bất kỳ bảo hành nào về độ chính xác, tính kịp thời, hiệu suất, đầy đủ hoặc phù hợp của thông tin và tài liệu được tìm thấy hoặc cung cấp trên trang web này cho bất kỳ mục đích cụ thể nào. Bạn công nhận rằng thông tin và tài liệu này có thể chứa sai sót hoặc lỗi, và chúng tôi tuyên bố loại trừ trách nhiệm về bất kỳ sai sót hoặc lỗi này theo pháp luật cho phép.</li>\n        <li class=\"margin-btm-20\">Việc sử dụng bất kỳ thông tin hoặc tài liệu nào trên trang web này hoàn toàn thuộc trách nhiệm của bạn, mà chúng tôi sẽ không chịu trách nhiệm. Điều này sẽ là trách nhiệm của bạn để đảm bảo rằng bất kỳ sản phẩm, dịch vụ hoặc thông tin nào có sẵn thông qua trang web này đáp ứng đầy đủ yêu cầu cụ thể của bạn.</li>\n        </ul>\n        <p class=\"page-subheading\">Sở hữu trí tuệ:</p>\n        <ul class=\"margin-btm-30\">\n        <li class=\"margin-btm-20\">Trang web này chứa tài liệu do chúng tôi sở hữu hoặc được cấp phép. Tài liệu này bao gồm nhưng không giới hạn đến thiết kế, bố cục, giao diện, và đồ họa. Sao chép là không được phép ngoại trừ theo thông báo bản quyền, là một phần của các điều khoản và điều kiện này.</li>\n        <li class=\"margin-btm-20\">Tất cả các nhãn hiệu được sao chép trong trang web này, không phải là tài sản của hoặc được cấp phép cho nhà khai thác, đều được công nhận trên trang web.</li>\n        </ul>\n        <p class=\"page-subheading\">Chính sách bảo mật:</p>\n        <ul class=\"margin-btm-30\">\n        <li class=\"margin-btm-20\">Quyền riêng tư của bạn là rất quan trọng với chúng tôi. Vui lòng xem lại Chính sách Bảo mật của chúng tôi để hiểu cách chúng tôi thu thập, sử dụng và tiết lộ thông tin về bạn.</li>\n        </ul>\n        <p class=\"page-subheading\">Giới hạn trách nhiệm:</p>\n        <ul class=\"margin-btm-30\">\n        <li class=\"margin-btm-20\">Chúng tôi cũng như bên thứ ba không đảm bảo hoặc cam kết bất kỳ bảo hành nào về độ chính xác, tính kịp thời, hiệu suất, đầy đủ hoặc phù hợp của thông tin và tài liệu được tìm thấy hoặc cung cấp trên trang web này cho bất kỳ mục đích cụ thể nào. Bạn công nhận rằng thông tin và tài liệu này có thể chứa sai sót hoặc lỗi, và chúng tôi tuyên bố loại trừ trách nhiệm về bất kỳ sai sót hoặc lỗi này theo pháp luật cho phép.</li>\n        <li class=\"margin-btm-20\">Việc sử dụng bất kỳ thông tin hoặc tài liệu nào trên trang web này hoàn toàn thuộc trách nhiệm của bạn, mà chúng tôi sẽ không chịu trách nhiệm. Điều này sẽ là trách nhiệm của bạn để đảm bảo rằng bất kỳ sản phẩm, dịch vụ, hoặc thông tin có sẵn qua trang web này đáp ứng đầy đủ yêu cầu cụ thể của bạn.</li>\n        </ul>\n    ','legal-notice'),
 (3,1,1,'Terms and Conditions','Our Terms and Conditions','conditions, terms, use, sell','\n      <h2 class=\"page-heading bottom-indent\">Terms and Conditions</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div>\n      <h3 class=\"page-subheading\"><strong>Cancellation Policy:</strong></h3>\n      <div>\n      <ul>\n      <li><span>Free Cancellation: Up to 48 hours before arrival for standard rates.</span></li>\n      <li><span>Bookings made with a non-refundable rate cannot be canceled or modified.</span></li>\n      <li><span>Cancellations within 24 hours of arrival will incur a fee of one night\'s stay.</span></li>\n      </ul>\n      </div>\n      <br />\n      <h3 class=\"page-subheading\"><strong>Changes to Bookings:</strong></h3>\n      <div>\n      <ul>\n      <li><span>A fee of $25 may apply to change your reservation dates after booking.</span></li>\n      <li><span>Changes to room type or number of guests are subject to availability at the hotel.</span></li>\n      </ul>\n      </div>\n      <br />\n      <h3 class=\"page-subheading\"><strong>Guest Responsibility:</strong></h3>\n      <div>\n      <ul>\n      <li><span>All guests must present a valid government-issued photo ID at check-in.</span></li>\n      <li><span>The maximum occupancy for the room type is 2 adults.</span></li>\n      <li><span>Smoking and alcohol are strictly prohibited in all guest rooms and public areas.</span></li>\n      </ul>\n      </div>\n      </div>\n    ','terms-and-conditions-of-use'),
 (3,2,1,'Điều khoản và Điều kiện','Điều khoản và điều kiện của chúng tôi','điều khoản, điều kiện, sử dụng, bán hàng','\n        <h2 class=\"page-heading bottom-indent\">Điều khoản và Điều kiện</h2>\n        <div>\n        <p style=\"border-left:2px solid #808080;padding-left:5px;\">Trang này chứa nội dung minh họa cho mục đích giảng dạy. Mọi sự tương đồng với sản phẩm, dịch vụ hoặc sự kiện thực tế là hoàn toàn ngẫu nhiên. Cảm ơn sự hiểu biết của bạn.</p>\n        <hr /></div>\n        <div>\n        <h3 class=\"page-subheading\"><strong>Chính sách Hủy đặt phòng:</strong></h3>\n        <div>\n        <ul>\n        <li><span>Miễn phí Hủy đặt phòng: Được thực hiện trong vòng 48 giờ trước khi đến với giá chuẩn.</span></li>\n        <li><span>Các đặt phòng với giá không hoàn lại không thể bị hủy hoặc sửa đổi.</span></li>\n        <li><span>Việc hủy đặt phòng trong vòng 24 giờ trước khi đến sẽ phải chịu phí một đêm.</span></li>\n        </ul>\n        </div>\n        <br />\n        <h3 class=\"page-subheading\"><strong>Thay đổi Đặt phòng:</strong></h3>\n        <div>\n        <ul>\n        <li><span>Có thể áp dụng phí $25 cho việc thay đổi ngày đặt phòng sau khi đặt.</span></li>\n        <li><span>Thay đổi loại phòng hoặc số lượng khách là tùy thuộc vào sự có sẵn tại khách sạn.</span></li>\n        </ul>\n        </div>\n        <br />\n        <h3 class=\"page-subheading\"><strong>Trách nhiệm của Khách:</strong></h3>\n        <div>\n        <ul>\n        <li><span>Tất cả khách hàng phải xuất trình giấy tờ tùy thân có hình ảnh do chính phủ cấp tại quầy nhận phòng.</span></li>\n        <li><span>Sức chứa tối đa cho loại phòng là 2 người lớn.</span></li>\n        <li><span>Hút thuốc và uống rượu là nghiêm cấm tại tất cả các phòng và khu vực công cộng.</span></li>\n        </ul>\n        </div>\n        </div>\n    ','terms-and-conditions'),
-(4,1,1,'About Us','Learn more about us','about us, informations','<h2 class=\"page-heading bottom-indent\">About Us</h2><div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div class=\"row\">\n      <div class=\"col-xs-12 col-sm-8\">\n      <div class=\"cms-block\">\n      <div class=\"margin-btm-30\">\n      <p class=\"dark\">Welcome to our sanctuary of luxury and tranquility, where every stay is crafted to provide an unparalleled experience. Whether you\'re seeking a relaxing getaway, a productive business trip, or a memorable event, we are dedicated to making your visit exceptional.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Story</p>\n      <p>Inspired by serene surroundings and rich local culture, our hotel combines modern comfort with timeless elegance. Our thoughtfully designed rooms, impeccable service, and attention to detail reflect our commitment to providing a haven for travelers.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Mission</p>\n      <p>Our mission is to create a home away from home, offering personalized service and luxurious amenities tailored to your needs. Your comfort and satisfaction are our top priorities, and we strive to exceed your expectations at every turn.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Amenities</p>\n      <p>Indulge in the finest amenities during your stay. Relax in elegantly appointed rooms and suites with breathtaking views. Savor gourmet dining at our on-site restaurant, unwind with a cocktail at our stylish bar, and rejuvenate at our state-of-the-art spa and fitness center. Enjoy our serene outdoor pool, lush gardens, and modern business facilities to cater to all your needs.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Team</p>\n      <p>Our dedicated team of hospitality professionals is here to serve you with a passion for excellence. From personalized concierge services to meticulous housekeeping, every member of our team is committed to making your stay extraordinary.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Join Us</p>\n      <p>Discover the charm and elegance of our hotel for yourself. Whether visiting for leisure or business, we invite you to experience our warm hospitality and luxurious accommodations. Book your stay with us today and let us make your visit unforgettable.</p>\n      </div>\n      </div>\n      </div>\n      <div class=\"col-xs-12 col-sm-4\">\n      <div class=\"cms-box\">\n      <p class=\"page-subheading\">Testimonials</p>\n      <div class=\"testimonials\">\n      <div class=\"inner\"><span class=\"before\">“</span>Hotel Prime surpassed my expectations in every way. The Executive Room was not only luxurious but also provided a peaceful retreat with its stunning lake views. The attention to detail and personalized service made my stay truly memorable. I highly recommend Hotel Prime for both business and leisure travelers looking for a blend of comfort and sophistication<span class=\"after\">”</span></div>\n      </div>\n      <p><strong class=\"dark\">Calrk Kent</strong></p>\n      <div class=\"testimonials\">\n      <div class=\"inner\"><span class=\"before\">“</span>As a frequent traveler, I can confidently say Hotel Prime stands out for its tranquil environment and exceptional hospitality. The View Room provided a perfect retreat with its stunning cityscape views and comfortable accommodations.<span class=\"after\">”</span></div>\n      </div>\n      <p><strong class=\"dark\">john Doe</strong></p>\n      </div>\n      </div>\n      </div>\n    ','about-us'),
-(4,2,1,'Giới thiệu','Learn more about us','about us, informations','<h2 class=\"page-heading bottom-indent\">About Us</h2><div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div class=\"row\">\n      <div class=\"col-xs-12 col-sm-8\">\n      <div class=\"cms-block\">\n      <div class=\"margin-btm-30\">\n      <p class=\"dark\">Welcome to our sanctuary of luxury and tranquility, where every stay is crafted to provide an unparalleled experience. Whether you\'re seeking a relaxing getaway, a productive business trip, or a memorable event, we are dedicated to making your visit exceptional.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Story</p>\n      <p>Inspired by serene surroundings and rich local culture, our hotel combines modern comfort with timeless elegance. Our thoughtfully designed rooms, impeccable service, and attention to detail reflect our commitment to providing a haven for travelers.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Mission</p>\n      <p>Our mission is to create a home away from home, offering personalized service and luxurious amenities tailored to your needs. Your comfort and satisfaction are our top priorities, and we strive to exceed your expectations at every turn.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Amenities</p>\n      <p>Indulge in the finest amenities during your stay. Relax in elegantly appointed rooms and suites with breathtaking views. Savor gourmet dining at our on-site restaurant, unwind with a cocktail at our stylish bar, and rejuvenate at our state-of-the-art spa and fitness center. Enjoy our serene outdoor pool, lush gardens, and modern business facilities to cater to all your needs.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Our Team</p>\n      <p>Our dedicated team of hospitality professionals is here to serve you with a passion for excellence. From personalized concierge services to meticulous housekeeping, every member of our team is committed to making your stay extraordinary.</p>\n      </div>\n      <div class=\"margin-btm-30\">\n      <p class=\"page-subheading\">Join Us</p>\n      <p>Discover the charm and elegance of our hotel for yourself. Whether visiting for leisure or business, we invite you to experience our warm hospitality and luxurious accommodations. Book your stay with us today and let us make your visit unforgettable.</p>\n      </div>\n      </div>\n      </div>\n      <div class=\"col-xs-12 col-sm-4\">\n      <div class=\"cms-box\">\n      <p class=\"page-subheading\">Testimonials</p>\n      <div class=\"testimonials\">\n      <div class=\"inner\"><span class=\"before\">“</span>Hotel Prime surpassed my expectations in every way. The Executive Room was not only luxurious but also provided a peaceful retreat with its stunning lake views. The attention to detail and personalized service made my stay truly memorable. I highly recommend Hotel Prime for both business and leisure travelers looking for a blend of comfort and sophistication<span class=\"after\">”</span></div>\n      </div>\n      <p><strong class=\"dark\">Calrk Kent</strong></p>\n      <div class=\"testimonials\">\n      <div class=\"inner\"><span class=\"before\">“</span>As a frequent traveler, I can confidently say Hotel Prime stands out for its tranquil environment and exceptional hospitality. The View Room provided a perfect retreat with its stunning cityscape views and comfortable accommodations.<span class=\"after\">”</span></div>\n      </div>\n      <p><strong class=\"dark\">john Doe</strong></p>\n      </div>\n      </div>\n      </div>\n    ','about-us'),
-(5,1,1,'Secure payment','Our secure payment method','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Secure payment</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div>We prioritize your security. All transactions made on our website are encrypted using Secure Socket Layer (SSL) technology to ensure your personal information and payment details are protected. We accept major credit cards and provide a secure environment for a seamless booking experience. For any inquiries regarding payment security, feel free to contact our customer support team.</div>\n    ','secure-payment'),
-(5,2,1,'Thanh toán an toàn','Our secure payment method','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Secure payment</h2>\n      <div>\n      <p style=\"border-left:2px solid #808080;padding-left:5px;\">This page contains demo content for illustrative purposes only. Any resemblance to actual products, services, or events is purely coincidental. Thank you for your understanding.</p>\n      <hr /></div>\n      <div>We prioritize your security. All transactions made on our website are encrypted using Secure Socket Layer (SSL) technology to ensure your personal information and payment details are protected. We accept major credit cards and provide a secure environment for a seamless booking experience. For any inquiries regarding payment security, feel free to contact our customer support team.</div>\n    ','secure-payment');
+(4,1,1,'Giới thiệu','Thaithinh Hotel - hệ thống 3 cơ sở tại Hồ Chí Minh, Đà Nẵng, Hà Nội với 50 phòng. Đặt phòng trực tuyến, thanh toán VietQR.','about us, informations','<h2 class=\"page-heading bottom-indent\">Giới thiệu Thaithinh Hotel</h2>\n<div>\n<p>Thaithinh Hotel là hệ thống khách sạn 3 cơ sở tại Hồ Chí Minh, Đà Nẵng và Hà Nội, tổng cộng 50 phòng. Mỗi cơ sở đặt ở khu trung tâm của thành phố để quý khách thuận tiện di chuyển, dù đi công tác hay nghỉ dưỡng.</p>\n\n<h3>Hệ thống cơ sở</h3>\n<ul>\n<li><strong>Cơ sở 1 – Trung tâm</strong> · 123 Lê Lợi, Quận 1, Hồ Chí Minh · 20 phòng · ĐT: 028 3822 0001</li>\n<li><strong>Cơ sở 2 – Bờ biển</strong> · 456 Võ Nguyên Giáp, Sơn Trà, Đà Nẵng · 15 phòng · ĐT: 0236 3822 0002</li>\n<li><strong>Cơ sở 3 – Phố cổ</strong> · 789 Hàng Trống, Hoàn Kiếm, Hà Nội · 15 phòng · ĐT: 024 3822 0003</li>\n</ul>\n\n<h3>Dịch vụ có tại mọi cơ sở</h3>\n<ul>\n<li>Wifi miễn phí toàn khách sạn</li>\n<li>Lễ tân trực 24/7</li>\n<li>Dọn phòng hàng ngày</li>\n</ul>\n\n<h3>Đặt phòng và thanh toán</h3>\n<p>Quý khách đặt phòng trực tiếp trên website, không qua trung gian. Sau khi chọn phòng, hệ thống sinh mã VietQR để chuyển khoản; giao dịch được đối soát tự động theo mã đơn nên phòng được giữ ngay khi thanh toán thành công.</p>\n<p>Giờ nhận phòng từ <strong>14:00</strong>, trả phòng trước <strong>12:00</strong>.</p>\n\n<h3>Liên hệ</h3>\n<p>Email: <a href=\"mailto:support@hotel.local\">support@hotel.local</a> · Hotline: 0987654321</p>\n</div>\n','about-us'),
+(4,2,1,'Giới thiệu','Thaithinh Hotel - hệ thống 3 cơ sở tại Hồ Chí Minh, Đà Nẵng, Hà Nội với 50 phòng. Đặt phòng trực tuyến, thanh toán VietQR.','about us, informations','<h2 class=\"page-heading bottom-indent\">Giới thiệu Thaithinh Hotel</h2>\n<div>\n<p>Thaithinh Hotel là hệ thống khách sạn 3 cơ sở tại Hồ Chí Minh, Đà Nẵng và Hà Nội, tổng cộng 50 phòng. Mỗi cơ sở đặt ở khu trung tâm của thành phố để quý khách thuận tiện di chuyển, dù đi công tác hay nghỉ dưỡng.</p>\n\n<h3>Hệ thống cơ sở</h3>\n<ul>\n<li><strong>Cơ sở 1 – Trung tâm</strong> · 123 Lê Lợi, Quận 1, Hồ Chí Minh · 20 phòng · ĐT: 028 3822 0001</li>\n<li><strong>Cơ sở 2 – Bờ biển</strong> · 456 Võ Nguyên Giáp, Sơn Trà, Đà Nẵng · 15 phòng · ĐT: 0236 3822 0002</li>\n<li><strong>Cơ sở 3 – Phố cổ</strong> · 789 Hàng Trống, Hoàn Kiếm, Hà Nội · 15 phòng · ĐT: 024 3822 0003</li>\n</ul>\n\n<h3>Dịch vụ có tại mọi cơ sở</h3>\n<ul>\n<li>Wifi miễn phí toàn khách sạn</li>\n<li>Lễ tân trực 24/7</li>\n<li>Dọn phòng hàng ngày</li>\n</ul>\n\n<h3>Đặt phòng và thanh toán</h3>\n<p>Quý khách đặt phòng trực tiếp trên website, không qua trung gian. Sau khi chọn phòng, hệ thống sinh mã VietQR để chuyển khoản; giao dịch được đối soát tự động theo mã đơn nên phòng được giữ ngay khi thanh toán thành công.</p>\n<p>Giờ nhận phòng từ <strong>14:00</strong>, trả phòng trước <strong>12:00</strong>.</p>\n\n<h3>Liên hệ</h3>\n<p>Email: <a href=\"mailto:support@hotel.local\">support@hotel.local</a> · Hotline: 0987654321</p>\n</div>\n','about-us'),
+(5,1,1,'Thanh toán an toàn','Thaithinh Hotel nhận thanh toán qua mã VietQR, đối soát tự động theo mã đơn. Website không lưu thông tin thẻ hay tài khoản ngân hàng.','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Thanh toán an toàn</h2>\n<div>\n<p>Thaithinh Hotel nhận thanh toán bằng <strong>chuyển khoản ngân hàng qua mã VietQR</strong>. Đây là phương thức thanh toán duy nhất trên website.</p>\n\n<h3>Quy trình</h3>\n<ol>\n<li>Quý khách chọn cơ sở, ngày ở và loại phòng, sau đó xác nhận đặt phòng.</li>\n<li>Hệ thống sinh một mã VietQR riêng cho đơn của quý khách, đã điền sẵn số tiền và nội dung chuyển khoản theo mã đơn.</li>\n<li>Quý khách quét mã bằng ứng dụng ngân hàng và chuyển khoản.</li>\n<li>Hệ thống đối soát tự động theo mã đơn. Khi số tiền khớp, đơn chuyển sang trạng thái đã thanh toán và email xác nhận được gửi tới quý khách.</li>\n</ol>\n\n<h3>Vì sao an toàn</h3>\n<ul>\n<li>Giao dịch diễn ra trong ứng dụng ngân hàng của chính quý khách. Website không yêu cầu và <strong>không lưu bất kỳ thông tin thẻ hay tài khoản ngân hàng</strong> nào.</li>\n<li>Nội dung chuyển khoản gắn với mã đơn cụ thể, nên tiền vào đúng đơn, tránh nhầm lẫn.</li>\n<li>Số tiền đã điền sẵn trong mã QR, quý khách không phải gõ tay.</li>\n</ul>\n\n<h3>Lưu ý</h3>\n<p>Vui lòng <strong>giữ nguyên nội dung chuyển khoản</strong> mà hệ thống tạo ra. Nếu sửa nội dung, giao dịch có thể không được đối soát tự động và phòng chưa được giữ.</p>\n<p>Nếu đã chuyển khoản nhưng sau 15 phút đơn chưa đổi trạng thái, xin liên hệ <a href=\"mailto:support@hotel.local\">support@hotel.local</a> hoặc hotline 0987654321 kèm mã đơn để được kiểm tra.</p>\n</div>\n','secure-payment'),
+(5,2,1,'Thanh toán an toàn','Thaithinh Hotel nhận thanh toán qua mã VietQR, đối soát tự động theo mã đơn. Website không lưu thông tin thẻ hay tài khoản ngân hàng.','secure payment, ssl, visa, mastercard, paypal','<h2 class=\"page-heading bottom-indent\">Thanh toán an toàn</h2>\n<div>\n<p>Thaithinh Hotel nhận thanh toán bằng <strong>chuyển khoản ngân hàng qua mã VietQR</strong>. Đây là phương thức thanh toán duy nhất trên website.</p>\n\n<h3>Quy trình</h3>\n<ol>\n<li>Quý khách chọn cơ sở, ngày ở và loại phòng, sau đó xác nhận đặt phòng.</li>\n<li>Hệ thống sinh một mã VietQR riêng cho đơn của quý khách, đã điền sẵn số tiền và nội dung chuyển khoản theo mã đơn.</li>\n<li>Quý khách quét mã bằng ứng dụng ngân hàng và chuyển khoản.</li>\n<li>Hệ thống đối soát tự động theo mã đơn. Khi số tiền khớp, đơn chuyển sang trạng thái đã thanh toán và email xác nhận được gửi tới quý khách.</li>\n</ol>\n\n<h3>Vì sao an toàn</h3>\n<ul>\n<li>Giao dịch diễn ra trong ứng dụng ngân hàng của chính quý khách. Website không yêu cầu và <strong>không lưu bất kỳ thông tin thẻ hay tài khoản ngân hàng</strong> nào.</li>\n<li>Nội dung chuyển khoản gắn với mã đơn cụ thể, nên tiền vào đúng đơn, tránh nhầm lẫn.</li>\n<li>Số tiền đã điền sẵn trong mã QR, quý khách không phải gõ tay.</li>\n</ul>\n\n<h3>Lưu ý</h3>\n<p>Vui lòng <strong>giữ nguyên nội dung chuyển khoản</strong> mà hệ thống tạo ra. Nếu sửa nội dung, giao dịch có thể không được đối soát tự động và phòng chưa được giữ.</p>\n<p>Nếu đã chuyển khoản nhưng sau 15 phút đơn chưa đổi trạng thái, xin liên hệ <a href=\"mailto:support@hotel.local\">support@hotel.local</a> hoặc hotline 0987654321 kèm mã đơn để được kiểm tra.</p>\n</div>\n','secure-payment');
 /*!40000 ALTER TABLE `qlo_cms_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2983,7 +2982,7 @@ CREATE TABLE `qlo_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3033,7 +3032,22 @@ INSERT INTO `qlo_connections` VALUES
 (38,1,1,38,1,2886860801,'2026-09-08 15:22:22',''),
 (39,1,1,39,5,2886860801,'2026-09-08 15:22:35',''),
 (40,1,1,40,3,2886860801,'2026-09-08 15:22:45',''),
-(41,1,1,41,1,2886860801,'2026-09-08 15:34:57','');
+(41,1,1,41,1,2886860801,'2026-09-08 15:34:57',''),
+(42,1,1,42,1,2886860801,'2026-09-08 15:53:54',''),
+(43,1,1,43,1,2886860801,'2026-09-08 15:55:23',''),
+(44,1,1,44,4,2886860801,'2026-09-08 15:55:30',''),
+(45,1,1,45,7,2886860801,'2026-09-08 15:55:39',''),
+(46,1,1,46,7,2886860801,'2026-09-08 16:00:07',''),
+(47,1,1,47,7,2886860801,'2026-09-08 16:00:32',''),
+(48,1,1,48,7,2886860801,'2026-09-08 16:00:39',''),
+(49,1,1,49,7,2886860801,'2026-09-08 16:00:49',''),
+(50,1,1,50,7,2886860801,'2026-09-08 16:00:57',''),
+(51,1,1,51,7,2886860801,'2026-09-08 16:01:05',''),
+(52,1,1,52,7,2886860801,'2026-09-08 16:02:29',''),
+(53,1,1,53,7,2886860801,'2026-09-08 16:02:39',''),
+(54,1,1,54,7,2886860801,'2026-09-08 16:02:46',''),
+(55,1,1,55,7,2886860801,'2026-09-08 16:02:53',''),
+(56,1,1,56,7,2886860801,'2026-09-08 16:02:59','');
 /*!40000 ALTER TABLE `qlo_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4357,8 +4371,6 @@ CREATE TABLE `qlo_customer` (
 LOCK TABLES `qlo_customer` WRITE;
 /*!40000 ALTER TABLE `qlo_customer` DISABLE KEYS */;
 INSERT INTO `qlo_customer` VALUES
-(1,1,1,1,3,2,0,'','','','John','Doe','pub@qloapps.com','$2y$10$P4zjJsUYGIFLoV4tzfQ3KOXZ50ShbZL7XKbzIwZq01uJmXXdY/DQK','2026-09-02 09:12:38','1996-09-02',1,'','2026-09-02 15:12:38',1,'',0.000000,0,0,'4ca291a8be5f90df86d940d8e4f55833','','1234567890',1,0,0,'2026-09-02 15:12:38','2026-09-02 15:12:38'),
-(2,1,1,0,3,2,0,'','','','Nguyễn','Văn Khách','guest.webhook@example.com','$2y$10$Xp2OSNqSNPLCOsS4lI2hJOVL3sJnVlBL5.qAgEo7CK6QsZZU7Ej6W','2026-09-02 10:24:19','0000-00-00',0,'','0000-00-00 00:00:00',0,'',0.000000,0,0,'89aa89f026132a59da541ca968705365','','',1,0,0,'2026-09-02 16:24:19','2026-09-02 16:24:19'),
 (3,1,1,0,3,2,0,NULL,NULL,NULL,'Minh Anh','Nguyễn','minh.anh@demo.local','e6005c88b2d0b5a8fb97dd321ac4fb8e','2026-09-08 08:48:07','0000-00-00',0,NULL,'0000-00-00 00:00:00',0,NULL,0.000000,0,0,'2d3051cff521d5e74ed67ff7b8731cbe',NULL,NULL,1,0,0,'2026-09-08 14:48:07','2026-09-08 14:48:07'),
 (4,1,1,0,3,2,0,NULL,NULL,NULL,'Quốc Bảo','Trần','quoc.bao@demo.local','e6005c88b2d0b5a8fb97dd321ac4fb8e','2026-09-08 08:48:14','0000-00-00',0,NULL,'0000-00-00 00:00:00',0,NULL,0.000000,0,0,'c12894eebd7fdf251b492c8b45e18f1f',NULL,NULL,1,0,0,'2026-09-08 14:48:14','2026-09-08 14:48:14'),
 (5,1,1,0,3,2,0,NULL,NULL,NULL,'Thu Hà','Lê','thu.ha@demo.local','e6005c88b2d0b5a8fb97dd321ac4fb8e','2026-09-08 08:48:14','0000-00-00',0,NULL,'0000-00-00 00:00:00',0,NULL,0.000000,0,0,'59a784fd3e06452cf60faa460e257e33',NULL,NULL,1,0,0,'2026-09-08 14:48:14','2026-09-08 14:48:14'),
@@ -4391,8 +4403,6 @@ CREATE TABLE `qlo_customer_group` (
 LOCK TABLES `qlo_customer_group` WRITE;
 /*!40000 ALTER TABLE `qlo_customer_group` DISABLE KEYS */;
 INSERT INTO `qlo_customer_group` VALUES
-(1,3),
-(2,3),
 (3,3),
 (4,3),
 (5,3),
@@ -5398,7 +5408,7 @@ CREATE TABLE `qlo_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5448,7 +5458,22 @@ INSERT INTO `qlo_guest` VALUES
 (38,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (39,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (40,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(41,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
+(41,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(42,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(43,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(44,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(45,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(46,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(47,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(48,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(49,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(50,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(51,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(52,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(53,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(54,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(55,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(56,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
 /*!40000 ALTER TABLE `qlo_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8351,9 +8376,6 @@ CREATE TABLE `qlo_mail` (
 
 LOCK TABLES `qlo_mail` WRITE;
 /*!40000 ALTER TABLE `qlo_mail` DISABLE KEYS */;
-INSERT INTO `qlo_mail` VALUES
-(1,'khachhang@example.com','order_conf','[CMS Hotel] Xác nhận đặt phòng thành công - Mã #BOOK-2026-001',1,'2026-09-02 15:34:13'),
-(2,'guest.webhook@example.com','payment_accepted','[CMS Hotel] Complete payment received',1,'2026-09-02 16:44:22');
 /*!40000 ALTER TABLE `qlo_mail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9767,8 +9789,6 @@ CREATE TABLE `qlo_order_history` (
 LOCK TABLES `qlo_order_history` WRITE;
 /*!40000 ALTER TABLE `qlo_order_history` DISABLE KEYS */;
 INSERT INTO `qlo_order_history` VALUES
-(1,0,2,13,'2026-09-02 16:44:21'),
-(2,0,2,2,'2026-09-02 16:44:21'),
 (3,0,3,2,'2026-08-11 14:05:00'),
 (4,0,4,2,'2026-08-18 14:05:00'),
 (5,0,5,2,'2026-08-21 14:05:00'),
@@ -9986,7 +10006,6 @@ CREATE TABLE `qlo_order_payment` (
 LOCK TABLES `qlo_order_payment` WRITE;
 /*!40000 ALTER TABLE `qlo_order_payment` DISABLE KEYS */;
 INSERT INTO `qlo_order_payment` VALUES
-(1,'HWJDEKWBZ',1,1600000.000000,'VietQR Bank Transfer',0,1.000000,'TXN_1788342261','','','','','2026-09-02 16:44:21'),
 (2,'SLENOZXLX',1,1760000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO3',NULL,NULL,NULL,NULL,'2026-08-11 14:05:00'),
 (3,'GOWDSDNVP',1,2640000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO4',NULL,NULL,NULL,NULL,'2026-08-18 14:05:00'),
 (4,'ZRRNYUMYQ',1,1100000.000000,'Chuyển khoản VietQR',0,1.000000,'DEMO5',NULL,NULL,NULL,NULL,'2026-08-21 14:05:00'),
@@ -10472,8 +10491,6 @@ CREATE TABLE `qlo_orders` (
 LOCK TABLES `qlo_orders` WRITE;
 /*!40000 ALTER TABLE `qlo_orders` DISABLE KEYS */;
 INSERT INTO `qlo_orders` VALUES
-(1,'NATQFGDRP',0,0,0,1,1,1,1,1,1,1,13,'098f6bcd4621d373cade4e832627b4f6','VietQR Bank Transfer',0,1.000000,'qlovietqr',1,0,'',0,'',0.000000,0.000000,0.000000,1600000.000000,0.000000,0.000000,0.000000,1600000.000000,1600000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00','',0,0,0.000000,0,'2026-09-02 16:44:05','2026-09-02 16:44:05'),
-(2,'HWJDEKWBZ',0,0,0,1,2,1,1,1,1,1,2,'89aa89f026132a59da541ca968705365','VietQR Bank Transfer',0,1.000000,'qlovietqr',1,0,'',0,'',0.000000,0.000000,0.000000,1600000.000000,0.000000,0.000000,1600000.000000,1600000.000000,1600000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,1,0,'2026-09-02 16:44:21','0000-00-00 00:00:00','',1,0,0.000000,0,'2026-09-02 16:44:21','2026-09-02 16:44:21'),
 (3,'SLENOZXLX',1,1,0,2,3,2,1,1,1,1,2,'fa1eb1cf486fc71d0539d19135a2865d','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,1760000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-08-11 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-08-11 14:00:00','2026-08-11 14:00:00'),
 (4,'GOWDSDNVP',1,1,0,2,4,3,1,1,1,1,2,'f3a6b2977331f06e129ed1e0ea7d06ac','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,2640000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-08-18 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-08-18 14:00:00','2026-08-18 14:00:00'),
 (5,'ZRRNYUMYQ',1,1,0,2,5,4,1,1,1,1,2,'50d7634ad039643cdd37dba3ed224512','Chuyển khoản VietQR',0,1.000000,'qlovietqr',1,0,'',0,NULL,0.000000,0.000000,0.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,1100000.000000,0.000000,0.000000,0.000000,0.000,0.000000,0.000000,0.000000,0,0,0,0,'2026-08-21 14:00:00','0000-00-00 00:00:00',NULL,1,0,0.000000,0,'2026-08-21 14:00:00','2026-08-21 14:00:00'),
@@ -10589,7 +10606,7 @@ CREATE TABLE `qlo_page` (
   PRIMARY KEY (`id_page`),
   KEY `id_page_type` (`id_page_type`),
   KEY `id_object` (`id_object`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10604,7 +10621,8 @@ INSERT INTO `qlo_page` VALUES
 (3,3,NULL),
 (4,4,NULL),
 (5,5,7),
-(6,6,NULL);
+(6,6,NULL),
+(7,7,NULL);
 /*!40000 ALTER TABLE `qlo_page` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10620,7 +10638,7 @@ CREATE TABLE `qlo_page_type` (
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id_page_type`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10631,6 +10649,7 @@ LOCK TABLES `qlo_page_type` WRITE;
 /*!40000 ALTER TABLE `qlo_page_type` DISABLE KEYS */;
 INSERT INTO `qlo_page_type` VALUES
 (5,'category'),
+(7,'cms'),
 (3,'contact'),
 (1,'index'),
 (6,'orderopc'),
@@ -16120,4 +16139,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-08  8:47:30
+-- Dump completed on 2026-09-08  9:03:15
