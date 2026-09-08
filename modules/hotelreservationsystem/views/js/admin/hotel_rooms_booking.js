@@ -27,6 +27,9 @@ $(document).ready(function() {
     function initBookingCalendar() {
         calendar = new FullCalendar.Calendar($('#fullcalendar').get(0), {
             initialView: 'dayGridMonth',
+            // Tên tháng, tên thứ và nút "today" lấy theo gói ngôn ngữ do
+            // controller nạp. Rỗng thì FullCalendar giữ mặc định tiếng Anh.
+            locale: (typeof calendarLocale !== 'undefined' && calendarLocale) ? calendarLocale : undefined,
             initialDate: initialDate,
             events: {
                 url: rooms_booking_url,

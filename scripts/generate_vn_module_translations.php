@@ -219,7 +219,8 @@ $dict = array(
     '%s Unavailable Rooms' => '%s phòng bị khoá',
     'Booked Rooms' => 'Phòng đã đặt',
     'Unavailable Rooms' => 'Phòng bị khoá',
-    'In-Cart Rooms' => 'Phòng đang giữ trong giỏ',
+    // Ô thống kê rất hẹp: bản dài "Phòng đang giữ trong giỏ" bị cắt còn "Giỏ".
+    'In-Cart Rooms' => 'Phòng trong giỏ',
     'Room Occupancy' => 'Sức chứa phòng',
     'Maximum adults' => 'Tối đa người lớn',
     'Maximum children' => 'Tối đa trẻ em',

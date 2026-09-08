@@ -155,6 +155,6 @@ $_MODULE['<{hotelreservationsystem}prestashop>booking-rooms_ca7fd6bae4dd10fc404f
 $_MODULE['<{hotelreservationsystem}prestashop>booking-rooms_d8fa4cd324ea11a8aa5dc55876d31c8d'] = 'Chuyển phòng';
 $_MODULE['<{hotelreservationsystem}prestashop>booking-rooms_e1ba155a9f2e8c3be94020eef32a0301'] = 'Thủ công';
 $_MODULE['<{hotelreservationsystem}prestashop>booking-rooms_06b9281e396db002010bde1de57262eb'] = 'Tự động';
-$_MODULE['<{hotelreservationsystem}prestashop>search-stats_6d0a1a3f0b1eb2e2149c419f3afb0151'] = 'Phòng đang giữ trong giỏ';
+$_MODULE['<{hotelreservationsystem}prestashop>search-stats_6d0a1a3f0b1eb2e2149c419f3afb0151'] = 'Phòng trong giỏ';
 $_MODULE['<{hotelreservationsystem}prestashop>copyright_18ecb7a054863968fe0586031fc6db58'] = 'Bảo lưu mọi quyền.';
 $_MODULE['<{hotelreservationsystem}prestashop>headerhoteldescblock_1c9b5c29d6c1d0ab2595b793cf1ddfd7'] = 'Chào mừng đến với';

@@ -327,8 +327,21 @@ class AdminHotelRoomsBookingController extends ModuleAdminController
             'booking_product' => $this->booking_product,
             'is_occupancy_wise_search' => $isOccupancyWiseSearch,
         ));
+        // Mã ngôn ngữ cho FullCalendar, xem chú thích chỗ nạp tệp locale bên dưới.
+        // _PS_JS_DIR_ là đường dẫn URI ("/js/") chứ không phải đường dẫn trên đĩa,
+        // nên muốn kiểm tra tệp thì phải ghép với _PS_ROOT_DIR_.
+        $langCode = strtolower($this->context->language->language_code);
+        $calendarLocale = '';
+        foreach (array(strstr($langCode, '-', true) ?: $langCode, $langCode) as $locale) {
+            if ($locale && file_exists(_PS_ROOT_DIR_._PS_JS_DIR_.'fullcalendar/locales/'.$locale.'.js')) {
+                $calendarLocale = $locale;
+                break;
+            }
+        }
+
         MediaCore::addJsDef(array(
-            'initialDate' => $this->date_from
+            'initialDate' => $this->date_from,
+            'calendarLocale' => $calendarLocale,
         ));
 
     }
@@ -1168,6 +1181,28 @@ public function ajaxProcessGetCalenderData()
 
         $this->addCSS(_PS_JS_DIR_.'fullcalendar/main.css');
         $this->addJs(_PS_JS_DIR_.'fullcalendar/main.js');
+
+        // Lịch vẫn hiện "September 2026", "Sun Mon Tue..." và nút "today" bằng
+        // tiếng Anh vì không tệp ngôn ngữ nào được nạp. FullCalendar có sẵn gói
+        // vi.js trong js/fullcalendar/locales/ nên chỉ cần nạp thêm rồi đặt
+        // locale ở chỗ khởi tạo - không phải dịch tay tên tháng, tên thứ.
+        // Không dùng iso_code: shop này đặt mã tiếng Việt là "vn" (theo nếp của
+        // PrestaShop, cũng là tên thư mục mails/vn/), trong khi FullCalendar đặt
+        // tên tệp theo ISO 639-1 nên là "vi.js" - tra bằng iso_code sẽ trượt.
+        // language_code là "vi-vn", lấy phần đầu ra đúng "vi"; vẫn thử cả
+        // iso_code để phòng ngôn ngữ khác trùng khớp theo kiểu kia.
+        $langCode = strtolower($this->context->language->language_code);
+        $candidates = array(
+            strstr($langCode, '-', true) ?: $langCode,
+            $langCode,
+            strtolower($this->context->language->iso_code),
+        );
+        foreach ($candidates as $locale) {
+            if ($locale && file_exists(_PS_ROOT_DIR_._PS_JS_DIR_.'fullcalendar/locales/'.$locale.'.js')) {
+                $this->addJs(_PS_JS_DIR_.'fullcalendar/locales/'.$locale.'.js');
+                break;
+            }
+        }
 
         $this->addCSS(array(_MODULE_DIR_.'hotelreservationsystem/views/css/HotelReservationAdmin.css'));
         $this->addJs(_MODULE_DIR_.$this->module->name.'/views/js/admin/hotel_rooms_booking.js');
