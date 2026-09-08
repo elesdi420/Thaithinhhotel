@@ -36,10 +36,10 @@ $_MODULE['<{hotelreservationsystem}prestashop>view_26e28738b51eebd25cf4d734b33b5
 $_MODULE['<{hotelreservationsystem}prestashop>hotelreservationsystem_aed79f9826716009fb38001e557f502f'] = 'Đặt phòng';
 $_MODULE['<{hotelreservationsystem}prestashop>adminhotelroomsbookingcontroller_aed79f9826716009fb38001e557f502f'] = 'Đặt phòng';
 $_MODULE['<{hotelreservationsystem}prestashop>booking-cart_aed79f9826716009fb38001e557f502f'] = 'Đặt phòng';
-$_MODULE['<{hotelreservationsystem}prestashop>hotelreservationsystem_57ab82d7cdbdf8b90ebc88e56efbdf1f'] = '%s phòng còn trống';
-$_MODULE['<{hotelreservationsystem}prestashop>adminhotelroomsbookingcontroller_57ab82d7cdbdf8b90ebc88e56efbdf1f'] = '%s phòng còn trống';
-$_MODULE['<{hotelreservationsystem}prestashop>hotelreservationsystem_0f98f2f0886532d927104e6ceb04c931'] = '%s phòng trống một phần';
-$_MODULE['<{hotelreservationsystem}prestashop>adminhotelroomsbookingcontroller_0f98f2f0886532d927104e6ceb04c931'] = '%s phòng trống một phần';
+$_MODULE['<{hotelreservationsystem}prestashop>hotelreservationsystem_57ab82d7cdbdf8b90ebc88e56efbdf1f'] = '%s phòng trống';
+$_MODULE['<{hotelreservationsystem}prestashop>adminhotelroomsbookingcontroller_57ab82d7cdbdf8b90ebc88e56efbdf1f'] = '%s phòng trống';
+$_MODULE['<{hotelreservationsystem}prestashop>hotelreservationsystem_0f98f2f0886532d927104e6ceb04c931'] = '%s trống một phần';
+$_MODULE['<{hotelreservationsystem}prestashop>adminhotelroomsbookingcontroller_0f98f2f0886532d927104e6ceb04c931'] = '%s trống một phần';
 $_MODULE['<{hotelreservationsystem}prestashop>hotelreservationsystem_90b2f7433dcfc30b034860cef231c65e'] = 'Tất cả hạng phòng';
 $_MODULE['<{hotelreservationsystem}prestashop>adminhotelroomsbookingcontroller_90b2f7433dcfc30b034860cef231c65e'] = 'Tất cả hạng phòng';
 $_MODULE['<{hotelreservationsystem}prestashop>view_90b2f7433dcfc30b034860cef231c65e'] = 'Tất cả hạng phòng';

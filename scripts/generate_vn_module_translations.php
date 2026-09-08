@@ -213,10 +213,12 @@ $dict = array(
     'Total Available' => 'Tổng phòng trống',
     'Partially Available' => 'Trống một phần',
     'Partially Available Rooms' => 'Phòng trống một phần',
-    '%s Partially Available Rooms' => '%s phòng trống một phần',
-    '%s Available Rooms' => '%s phòng còn trống',
-    '%s Booked Rooms' => '%s phòng đã đặt',
-    '%s Unavailable Rooms' => '%s phòng bị khoá',
+    '%s Partially Available Rooms' => '%s trống một phần',
+    // Nhãn này nằm trong ô một ngày của lịch nên rất hẹp: bản dài "%s phòng còn
+    // trống" bị cắt thành "11 phòng cò...". Rút cho vừa.
+    '%s Available Rooms' => '%s phòng trống',
+    '%s Booked Rooms' => '%s đã đặt',
+    '%s Unavailable Rooms' => '%s bị khoá',
     'Booked Rooms' => 'Phòng đã đặt',
     'Unavailable Rooms' => 'Phòng bị khoá',
     // Ô thống kê rất hẹp: bản dài "Phòng đang giữ trong giỏ" bị cắt còn "Giỏ".

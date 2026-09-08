@@ -253,6 +253,10 @@
   trắng trên nền trắng.
 *}
 <style>
+	/* Gói ngôn ngữ vi của FullCalendar trả tiêu đề viết thường ("tháng 9 năm
+	   2026"). Viết hoa chữ đầu cho ra dáng tiêu đề, không đụng vào gói. */
+	#fullcalendar .fc-toolbar-title::first-letter { text-transform: uppercase; }
+
 	#date-stats-tooltop .tooltip_cont {
 		background: #ffffff;
 		color: #333333;
