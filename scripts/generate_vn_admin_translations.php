@@ -481,6 +481,47 @@ $dict = array(
     'Room Types, Service products...' => 'Loại phòng, dịch vụ...',
     'by name' => 'theo tên',
     'by ip address' => 'theo địa chỉ IP',
+
+    // --- Form sửa loại phòng, tab Thông tin (AdminProducts) ---
+    'Edit: %s' => 'Sửa: %s',
+    'Recommended Modules and Services' => 'Module và dịch vụ gợi ý',
+    'Loading...' => 'Đang tải...',
+    'Hotel once assigned cannot be reassigned'
+        => 'Đã gán cơ sở thì không đổi sang cơ sở khác được',
+    'Reference code' => 'Mã tham chiếu',
+    'EAN-13 or JAN barcode' => 'Mã vạch EAN-13 hoặc JAN',
+    'UPC barcode' => 'Mã vạch UPC',
+    'Short description' => 'Mô tả ngắn',
+    'Visibility' => 'Phạm vi hiển thị',
+    'Catalog only' => 'Chỉ trong danh mục',
+    'Search only' => 'Chỉ khi tìm kiếm',
+    'Nowhere' => 'Không hiện ở đâu',
+    'Show at front office' => 'Hiện ở trang khách',
+    'Available for order' => 'Cho phép đặt',
+    'Show price' => 'Hiện giá',
+    'Online only (not sold in your retail store)' => 'Chỉ bán online',
+    'Related room type' => 'Loại phòng liên quan',
+    'No related room type.' => 'Không có loại phòng liên quan.',
+    'Redirect when disabled' => 'Chuyển hướng khi bị tắt',
+    'No redirect (404)' => 'Không chuyển hướng (404)',
+    'Redirected permanently (301)' => 'Chuyển hướng vĩnh viễn (301)',
+    'Redirected temporarily (302)' => 'Chuyển hướng tạm thời (302)',
+    '404 Not Found = Do not redirect and display a 404 page.'
+        => '404 Not Found = Không chuyển hướng, hiện trang báo lỗi 404.',
+    '301 Moved Permanently = Permanently display another room type instead.'
+        => '301 Moved Permanently = Hiện vĩnh viễn một loại phòng khác thay thế.',
+    '302 Moved Temporarily = Temporarily display another room type instead.'
+        => '302 Moved Temporarily = Hiện tạm thời một loại phòng khác thay thế.',
+
+    // Hộp thoại nhân bản loại phòng và ghi chú về thứ tự hiển thị.
+    'Duplication options' => 'Tuỳ chọn nhân bản',
+    'Duplicate images' => 'Nhân bản cả hình ảnh',
+    'Select hotel' => 'Chọn cơ sở',
+    'Submit' => 'Gửi',
+    'Please note that position numbering starts from 0. A position of 0 means room type will be displayed at the topmost position.'
+        => 'Lưu ý: thứ tự đánh số từ 0. Vị trí 0 nghĩa là loại phòng hiện trên cùng.',
+    'You can manage positions of the room types of this hotel from here.'
+        => 'Bạn có thể sắp thứ tự các loại phòng của cơ sở này tại đây.',
 );
 
 $targetFile = dirname(__DIR__).'/translations/vn/admin.php';
