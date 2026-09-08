@@ -52,6 +52,11 @@ development_status:
   3-2-cấu-hình-seo-meta-tags-cơ-bản: done
   epic-3-retrospective: optional
 
+  epic-4: done
+  4-1-chuẩn-hóa-tiện-ích-và-giao-diện-thực-tế: done
+  4-2-đồng-bộ-lịch-hai-chiều-ota-ical: done
+  epic-4-retrospective: done
+
 # Verification run 09-04-2026 — every story exercised against a from-scratch
 # `docker compose down -v && up` rebuild, not just read from the DB.
 verification_evidence:
@@ -144,7 +149,7 @@ action_items:
       Both carry mockup warnings in their file headers. Replace the files wholesale
       when FR-9 and FR-14/15/16 are built for real; neither is wired to anything.
   - id: AI-5
-    status: partial
+    status: done
     title: The site advertises facilities nobody has confirmed exist
     detail: >
       Branch 1 lists these amenities, straight from the QloApps demo fixture and

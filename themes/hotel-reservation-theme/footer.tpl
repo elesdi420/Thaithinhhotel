@@ -54,7 +54,5 @@
 {block name='global'}
 	{include file="$tpl_dir./global.tpl"}
 {/block}
-{* Vỏ giao diện chatbot phục vụ demo - chưa đấu nối AI. Xoá dòng này để gỡ. *}
-{include file="$tpl_dir./chat-widget-mockup.tpl"}
 	</body>
 </html>
