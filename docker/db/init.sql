@@ -2983,7 +2983,7 @@ CREATE TABLE `qlo_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3029,7 +3029,11 @@ INSERT INTO `qlo_connections` VALUES
 (34,1,1,34,1,2886860801,'2026-09-08 15:19:32',''),
 (35,1,1,35,1,2886860801,'2026-09-08 15:20:40',''),
 (36,1,1,36,1,2886860801,'2026-09-08 15:20:58',''),
-(37,1,1,37,1,2886860801,'2026-09-08 15:21:50','');
+(37,1,1,37,1,2886860801,'2026-09-08 15:21:50',''),
+(38,1,1,38,1,2886860801,'2026-09-08 15:22:22',''),
+(39,1,1,39,5,2886860801,'2026-09-08 15:22:35',''),
+(40,1,1,40,3,2886860801,'2026-09-08 15:22:45',''),
+(41,1,1,41,1,2886860801,'2026-09-08 15:34:57','');
 /*!40000 ALTER TABLE `qlo_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5394,7 +5398,7 @@ CREATE TABLE `qlo_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5440,7 +5444,11 @@ INSERT INTO `qlo_guest` VALUES
 (34,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (35,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (36,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(37,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
+(37,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(38,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(39,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(40,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(41,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
 /*!40000 ALTER TABLE `qlo_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8299,7 +8307,7 @@ CREATE TABLE `qlo_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -8312,7 +8320,9 @@ INSERT INTO `qlo_log` VALUES
 (1,1,0,'Back Office connection from 192.168.65.1','',0,1,'2026-09-02 19:12:53','2026-09-02 19:12:53'),
 (2,1,0,'Back Office connection from 172.67.177.250','',0,1,'2026-09-02 19:13:23','2026-09-02 19:13:23'),
 (3,1,0,'Back Office connection from 172.67.177.250','',0,2,'2026-09-02 19:15:07','2026-09-02 19:15:07'),
-(4,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-08 14:47:43','2026-09-08 14:47:43');
+(4,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-08 14:47:43','2026-09-08 14:47:43'),
+(5,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-08 15:27:20','2026-09-08 15:27:20'),
+(6,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-08 15:28:33','2026-09-08 15:28:33');
 /*!40000 ALTER TABLE `qlo_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -11634,9 +11644,9 @@ LOCK TABLES `qlo_quick_access_lang` WRITE;
 /*!40000 ALTER TABLE `qlo_quick_access_lang` DISABLE KEYS */;
 INSERT INTO `qlo_quick_access_lang` VALUES
 (1,1,'New room type'),
-(1,2,'New room type'),
+(1,2,'Loại phòng mới'),
 (2,1,'New voucher'),
-(2,2,'New voucher');
+(2,2,'Phiếu giảm giá mới');
 /*!40000 ALTER TABLE `qlo_quick_access_lang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -16110,4 +16120,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-08  8:22:11
+-- Dump completed on 2026-09-08  8:47:30

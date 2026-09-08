@@ -420,6 +420,67 @@ $dict = array(
     'From %s to %s' => 'Từ %s đến %s',
     'Adults' => 'Người lớn',
     'Children' => 'Trẻ em',
+
+    // --- Thanh tiêu đề dùng chung cho MỌI trang quản trị (header.tpl) ---
+    // Ba menu thả xuống cạnh chuông thông báo và menu Quick Access. Không nhìn
+    // thấy trên ảnh chụp vì phải bấm mới mở, nhưng badge đang hiện số nên chắc
+    // chắn nhân viên sẽ bấm vào.
+    'Latest Orders' => 'Đơn mới nhất',
+    'Latest Registrations' => 'Khách đăng ký mới nhất',
+    'Latest Messages' => 'Tin nhắn mới nhất',
+    'No new orders have been placed on your shop.' => 'Chưa có đơn đặt phòng mới.',
+    'No new customers have registered on your shop.' => 'Chưa có khách đăng ký mới.',
+    'No new messages have been posted on your shop.' => 'Chưa có tin nhắn mới.',
+    'A new order has been placed on your shop.' => 'Vừa có đơn đặt phòng mới.',
+    'A new customer registered on your shop.' => 'Vừa có khách đăng ký mới.',
+    'A new message was posted on your shop.' => 'Vừa có tin nhắn mới.',
+    'Show all orders' => 'Xem tất cả đơn',
+    'Show all customers' => 'Xem tất cả khách',
+    'Show all messages' => 'Xem tất cả tin nhắn',
+    'View this order' => 'Xem đơn này',
+    'Read this message' => 'Đọc tin nhắn này',
+    'Order number:' => 'Mã đơn:',
+    'Customer name:' => 'Tên khách:',
+    'Total:' => 'Tổng cộng:',
+    'From:' => 'Từ:',
+
+    'Quick Access' => 'Truy cập nhanh',
+    'Add current page to QuickAccess' => 'Thêm trang này vào Truy cập nhanh',
+    'Remove from QuickAccess' => 'Bỏ khỏi Truy cập nhanh',
+    'Please name this shortcut:' => 'Đặt tên cho lối tắt này:',
+    'New room type' => 'Loại phòng mới',
+    'New voucher' => 'Phiếu giảm giá mới',
+    'Search for a product' => 'Tìm loại phòng',
+    'Choose language' => 'Chọn ngôn ngữ',
+    'My preferences' => 'Tuỳ chọn của tôi',
+    'My site' => 'Trang của tôi',
+    'View my shop' => 'Xem trang khách',
+    'Sign out' => 'Đăng xuất',
+    'Me' => 'Tôi',
+    'Site' => 'Trang',
+
+    'Maintenance mode' => 'Chế độ bảo trì',
+    'Your site is in maintenance.' => 'Trang đang ở chế độ bảo trì.',
+    'Debug mode' => 'Chế độ gỡ lỗi',
+    'Your site is in debug mode.' => 'Trang đang ở chế độ gỡ lỗi.',
+    'For security reasons, you must also delete the /install folder.'
+        => 'Vì lý do bảo mật, cần xoá thêm thư mục /install.',
+
+    // --- Ô tìm kiếm ở góc trái, có trên mọi trang (search_form.tpl) ---
+    'What are you looking for?' => 'Bạn đang tìm gì?',
+    'Everywhere' => 'Mọi nơi',
+    'Catalog' => 'Danh mục',
+    'Carts' => 'Giỏ hàng',
+    'Invoices' => 'Hoá đơn',
+    'Modules' => 'Module',
+    'Cart ID' => 'Mã giỏ hàng',
+    'Order ID' => 'Mã đơn hàng',
+    'Invoice Number' => 'Số hoá đơn',
+    'Module name' => 'Tên module',
+    'Email, name...' => 'Email, tên...',
+    'Room Types, Service products...' => 'Loại phòng, dịch vụ...',
+    'by name' => 'theo tên',
+    'by ip address' => 'theo địa chỉ IP',
 );
 
 $targetFile = dirname(__DIR__).'/translations/vn/admin.php';
