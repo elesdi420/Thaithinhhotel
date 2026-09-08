@@ -29,8 +29,12 @@
 			<div class="col-sm-12 room_cont" data-id-product="{$room_v['id_product']|escape:'htmlall':'UTF-8'}">
 				<div class="row">
 					{block name='room_type_list_room_image'}
-						<div class="col-sm-4">
-								<a href="{$room_v['product_link']|escape:'htmlall':'UTF-8'}">
+						<div class="col-sm-4" style="position: relative;">
+							<div class="exely-badge-container">
+								<span class="exely-badge-direct">🏷️ Ưu đãi trực tiếp</span>
+								<span class="exely-badge-instant">⚡ Xác nhận ngay</span>
+							</div>
+							<a href="{$room_v['product_link']|escape:'htmlall':'UTF-8'}">
 								<img src="{$room_v['image']|escape:'htmlall':'UTF-8'}" class="img-responsive room-type-image">
 								{block name='displayRoomTypeListImageAfter'}
 									{hook h='displayRoomTypeListImageAfter' product=$room_v}
@@ -53,6 +57,11 @@
 							{block name='room_type_list_room_description'}
 								<div class="rm_desc">{$room_v['description_short']|truncate:190:"":true}&nbsp;<a class="view_more" href="{$room_v['product_link']|escape:'htmlall':'UTF-8'}">{l s='View More'}....</a></div>
 							{/block}
+							<div class="exely-room-specs">
+								<span class="exely-spec-chip"><i class="icon-arrows-alt"></i> 28 m²</span>
+								<span class="exely-spec-chip"><i class="icon-bed"></i> Giường đôi Queen/King</span>
+								<span class="exely-spec-chip"><i class="icon-user"></i> Tối đa {$room_v['max_adults']|escape:'htmlall':'UTF-8'} người lớn</span>
+							</div>
 							<div class="room_features_cont">
 								<div class="row">
 									{block name='room_type_list_room_features'}
@@ -93,6 +102,8 @@
 													{/if}
 													<span class="rm_price_txt">/{l s='Per Night'}</span>
 												</p>
+												<div class="exely-tax-note">✓ Đã bao gồm thuế & phí dịch vụ</div>
+												<div class="exely-tax-note" style="color: var(--hotel-primary); font-weight: 600;">✓ Miễn phí hủy trước 24h</div>
 											{/if}
 										</div>
 									{/block}
