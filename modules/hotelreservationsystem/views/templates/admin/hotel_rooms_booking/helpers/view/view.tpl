@@ -242,6 +242,43 @@
 	{include file="./_partials/booking-cart.tpl"}
 </div>
 
+{*
+  Bảng chú giải khi rê chuột lên một ngày trong lịch. Bản gốc không có lấy một
+  dòng CSS nào cho .tooltip_cont / .tip_element_head / .tip_element_value - đã
+  tìm khắp module và admin theme đều không thấy - nên nhãn và số xếp chồng lên
+  nhau thành một khối chữ thô, đọc rất khó.
+
+  Đặt nền và màu chữ tường minh (không dựa vào giá trị kế thừa), vì trình duyệt
+  bật chế độ tối cưỡng bức sẽ đảo nền mà không đảo chữ, biến khối này thành chữ
+  trắng trên nền trắng.
+*}
+<style>
+	#date-stats-tooltop .tooltip_cont {
+		background: #ffffff;
+		color: #333333;
+		border: 1px solid #ccd2d9;
+		border-radius: 4px;
+		box-shadow: 0 2px 10px rgba(0,0,0,.18);
+		padding: 8px 10px;
+		min-width: 190px;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+	#date-stats-tooltop .tip_header {
+		font-weight: 700;
+		color: #333333;
+		border-bottom: 1px solid #e3e7eb;
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+	}
+	#date-stats-tooltop .tip-body > div {
+		display: flex;
+		justify-content: space-between;
+		gap: 14px;
+	}
+	#date-stats-tooltop .tip_element_head { color: #6c7789; }
+	#date-stats-tooltop .tip_element_value { font-weight: 700; color: #333333; }
+</style>
 <div id="date-stats-tooltop" style="display:none">
 	<div class="tooltip_cont">
 		<div class="tip_header">

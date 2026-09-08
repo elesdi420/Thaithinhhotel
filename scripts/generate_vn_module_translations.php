@@ -198,6 +198,66 @@ $dict = array(
     'Online visitors' => 'Đang truy cập',
     'Abandoned carts' => 'Giỏ hàng bỏ dở',
     'Refresh' => 'Làm mới',
+
+    // --- Màn hình Lịch phòng & Đặt phòng (Book Now) - lễ tân dùng hằng ngày ---
+    'Book Now' => 'Đặt phòng',
+    'Booking Form' => 'Phiếu đặt phòng',
+    // Bản gốc viết sai chính tả "Calender"; giữ nguyên khoá, sửa ở bản dịch.
+    'Booking Calender' => 'Lịch đặt phòng',
+    'Check-In' => 'Nhận phòng',
+    'Check-Out' => 'Trả phòng',
+    'All Types' => 'Tất cả hạng phòng',
+    'Search' => 'Tìm kiếm',
+    'Total Rooms' => 'Tổng số phòng',
+    'Available Rooms' => 'Phòng còn trống',
+    'Total Available' => 'Tổng phòng trống',
+    'Partially Available' => 'Trống một phần',
+    'Partially Available Rooms' => 'Phòng trống một phần',
+    '%s Partially Available Rooms' => '%s phòng trống một phần',
+    '%s Available Rooms' => '%s phòng còn trống',
+    '%s Booked Rooms' => '%s phòng đã đặt',
+    '%s Unavailable Rooms' => '%s phòng bị khoá',
+    'Booked Rooms' => 'Phòng đã đặt',
+    'Unavailable Rooms' => 'Phòng bị khoá',
+    'In-Cart Rooms' => 'Phòng đang giữ trong giỏ',
+    'Room Occupancy' => 'Sức chứa phòng',
+    'Maximum adults' => 'Tối đa người lớn',
+    'Maximum children' => 'Tối đa trẻ em',
+    'Maximum guests' => 'Tối đa khách',
+    // Thông báo JS bật lên khi lễ tân chọn quá sức chứa cho phép.
+    'Maximum room occupancy reached' => 'Đã đạt sức chứa tối đa của phòng',
+    'Maximum adult occupancy reached' => 'Đã đạt số người lớn tối đa',
+    'Maximum children occupancy reached' => 'Đã đạt số trẻ em tối đa',
+    'Allotment Type' => 'Kiểu xếp phòng',
+    'Auto Allotment' => 'Xếp tự động',
+    'Manual Allotment' => 'Xếp thủ công',
+    'Auto' => 'Tự động',
+    'Manual' => 'Thủ công',
+    'Select occupancy' => 'Chọn số khách',
+    'Select age' => 'Chọn tuổi',
+    'Add To Cart' => 'Thêm vào giỏ',
+    'Add Room' => 'Thêm phòng',
+    'Cart' => 'Giỏ hàng',
+    'Cart Options' => 'Tuỳ chọn giỏ hàng',
+    'Reallocate' => 'Chuyển phòng',
+    'Duration' => 'Thời lượng',
+    'Guests' => 'Số khách',
+    'Hotel Name' => 'Tên cơ sở',
+    'Status' => 'Trạng thái',
+    'Action' => 'Thao tác',
+    'Close' => 'Đóng',
+    'Remove' => 'Bỏ',
+    'Service Products' => 'Dịch vụ kèm theo',
+    'Rooms Amount (Tax excl.):' => 'Tiền phòng (chưa thuế):',
+    'Convenience Fee (Tax excl.):' => 'Phí tiện ích (chưa thuế):',
+    'Total Amount (Tax excl.):' => 'Tổng cộng (chưa thuế):',
+    'Amount (Tax excl.)' => 'Số tiền (chưa thuế)',
+    '1 Adult, 1 Room' => '1 Người lớn, 1 Phòng',
+    'Room - 1' => 'Phòng 1',
+    'All Children' => 'Tất cả trẻ em',
+    'Under 1' => 'Dưới 1',
+    'Below' => 'Dưới',
+    'years' => 'tuổi',
     'Available' => 'Còn trống',
     'Unavailable' => 'Khoá phòng',
     'Occupied' => 'Có khách',
@@ -260,10 +320,35 @@ function collectStrings($dir, $name)
         $code = file_get_contents($path);
 
         if ('php' === $ext) {
-            // $this->l('...') - nguồn là tên module
+            // Nguồn khoá của $this->l() KHÔNG phải lúc nào cũng là tên module.
+            //
+            // Với controller admin của module, AdminController::l() gọi
+            // Translate::getAdminTranslation($string, get_class($this)); hàm này
+            // thấy lớp thuộc một tab của module nên chuyển sang
+            // getModuleTranslation(..., $source = get_class($this).'controller'),
+            // tức nguồn là TÊN LỚP CONTROLLER viết thường. Trước đây script luôn
+            // dùng tên module nên mọi chuỗi trong controller admin của module
+            // không bao giờ khớp - "Book Now" và "All Types" trên màn hình Lịch
+            // phòng vẫn tiếng Anh dù từ điển đã có.
+            //
+            // Sinh cả hai nguồn cho chắc: thừa một khoá không hại gì, thiếu thì
+            // chuỗi rơi về tiếng Anh.
+            $sources = array($name);
+            if (preg_match('#'.preg_quote(DIRECTORY_SEPARATOR.'controllers'.DIRECTORY_SEPARATOR, '#').'#', $path)) {
+                // AdminController::l() cắt 10 ký tự cuối ("Controller") khỏi
+                // get_class($this), rồi Translate::getAdminTranslation nối lại
+                // chuỗi 'controller'. Kết quả đúng bằng tên lớp viết thường -
+                // đừng nối thêm lần nữa kẻo thành "...controllercontroller".
+                $cls = basename($path, '.php');
+                $sources[] = strtolower(
+                    substr($cls, -10) === 'Controller' ? $cls : $cls.'controller'
+                );
+            }
             if (preg_match_all('/->l\(\s*(["\'])((?:(?!\1).)*)\1/s', $code, $m)) {
                 foreach ($m[2] as $s) {
-                    $addHit($s, $name);
+                    foreach ($sources as $src) {
+                        $addHit($s, $src);
+                    }
                 }
             }
         } else {

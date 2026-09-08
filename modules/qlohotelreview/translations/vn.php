@@ -8,9 +8,13 @@
 global $_MODULE;
 $_MODULE = array();
 
+$_MODULE['<{qlohotelreview}prestashop>qlohotelreview_ec53a8c4f07baed5d8825072c89799be'] = 'Trạng thái';
+$_MODULE['<{qlohotelreview}prestashop>adminhotelreviewcategorycontroller_ec53a8c4f07baed5d8825072c89799be'] = 'Trạng thái';
 $_MODULE['<{qlohotelreview}prestashop>qlohotelreview_26e28738b51eebd25cf4d734b33b539f'] = 'Cơ sở';
+$_MODULE['<{qlohotelreview}prestashop>adminhotelreviewhotelreviewcontroller_26e28738b51eebd25cf4d734b33b539f'] = 'Cơ sở';
 $_MODULE['<{qlohotelreview}prestashop>review_26e28738b51eebd25cf4d734b33b539f'] = 'Cơ sở';
 $_MODULE['<{qlohotelreview}prestashop>qlohotelreview_34e80a799d144cfe4af46815e103f017'] = 'Đánh giá';
+$_MODULE['<{qlohotelreview}prestashop>adminhotelreviewhotelreviewcontroller_34e80a799d144cfe4af46815e103f017'] = 'Đánh giá';
 $_MODULE['<{qlohotelreview}prestashop>admin-after-header_34e80a799d144cfe4af46815e103f017'] = 'Đánh giá';
 $_MODULE['<{qlohotelreview}prestashop>product-tab_34e80a799d144cfe4af46815e103f017'] = 'Đánh giá';
 $_MODULE['<{qlohotelreview}prestashop>review_b5a7adde1af5c87d7fd797b6245c2a39'] = 'Mô tả';
