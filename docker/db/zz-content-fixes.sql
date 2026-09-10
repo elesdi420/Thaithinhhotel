@@ -1,6 +1,6 @@
 -- Sinh tự động bởi scripts/export_content_fixes.php - ĐỪNG SỬA TAY.
 -- Chạy sau init.sql nhờ tiền tố 'zz-'. Xem chú thích đầu script đó.
--- Sinh lúc: 2026-09-10 11:51:43
+-- Sinh lúc: 2026-09-10 13:29:01
 
 SET NAMES utf8mb4;
 
@@ -9,6 +9,16 @@ UPDATE `qlo_configuration` SET `value` = 'Thaithinh Hotel' WHERE `name` = 'PS_SH
 UPDATE `qlo_configuration` SET `value` = 'Thaithinh Hotel' WHERE `name` = 'WK_TITLE_HEADER_BLOCK';
 UPDATE `qlo_configuration` SET `value` = '123 Lê Lợi, Quận 1, Hồ Chí Minh' WHERE `name` = 'PS_SHOP_ADDR1';
 UPDATE `qlo_configuration` SET `value` = '2' WHERE `name` = 'PS_LANG_DEFAULT';
+UPDATE `qlo_configuration` SET `value` = 'THAITHINH HOTEL' WHERE `name` = 'VIETQR_ACCOUNT_NAME';
+UPDATE `qlo_configuration` SET `value` = '0901234567' WHERE `name` = 'VIETQR_ACCOUNT_NO';
+UPDATE `qlo_configuration` SET `value` = '' WHERE `name` = 'VIETQR_WEBHOOK_SECRET';
+UPDATE `qlo_configuration_lang` cl JOIN `qlo_configuration` c ON c.`id_configuration` = cl.`id_configuration` SET cl.`value` = 'Wifi tốc độ cao miễn phí, bữa sáng và dọn phòng hằng ngày, lễ tân phục vụ 24/7 và bãi đỗ xe an toàn tại cả ba cơ sở.' WHERE c.`name` = 'HOTEL_AMENITIES_DESCRIPTION' AND cl.`id_lang` = 2;
+UPDATE `qlo_configuration_lang` cl JOIN `qlo_configuration` c ON c.`id_configuration` = cl.`id_configuration` SET cl.`value` = 'Tiện nghi' WHERE c.`name` = 'HOTEL_AMENITIES_HEADING' AND cl.`id_lang` = 2;
+UPDATE `qlo_configuration_lang` cl JOIN `qlo_configuration` c ON c.`id_configuration` = cl.`id_configuration` SET cl.`value` = 'Không gian gọn gàng, sáng sủa, bố trí ưu tiên sự thoải mái cho cả kỳ nghỉ lẫn chuyến công tác.' WHERE c.`name` = 'HOTEL_INTERIOR_DESCRIPTION' AND cl.`id_lang` = 2;
+UPDATE `qlo_configuration_lang` cl JOIN `qlo_configuration` c ON c.`id_configuration` = cl.`id_configuration` SET cl.`value` = 'Không gian khách sạn' WHERE c.`name` = 'HOTEL_INTERIOR_HEADING' AND cl.`id_lang` = 2;
+UPDATE `qlo_configuration_lang` cl JOIN `qlo_configuration` c ON c.`id_configuration` = cl.`id_configuration` SET cl.`value` = 'Sáu loại phòng tại ba cơ sở ở TP. Hồ Chí Minh, Đà Nẵng và Hà Nội. Chọn ngày để xem phòng còn trống và giá theo đêm.' WHERE c.`name` = 'HOTEL_ROOM_DISPLAY_DESCRIPTION' AND cl.`id_lang` = 2;
+UPDATE `qlo_configuration_lang` cl JOIN `qlo_configuration` c ON c.`id_configuration` = cl.`id_configuration` SET cl.`value` = 'Các loại phòng' WHERE c.`name` = 'HOTEL_ROOM_DISPLAY_HEADING' AND cl.`id_lang` = 2;
+UPDATE `qlo_configuration` SET `value` = 'booking@hotel.local' WHERE `name` = 'WK_CUSTOMER_SUPPORT_EMAIL';
 UPDATE `qlo_shop` SET `name` = 'Thaithinh Hotel' WHERE `id_shop` = 1;
 
 -- Tiếng Anh tắt cho tới khi khách duyệt bản dịch ba trang pháp lý.

@@ -54,5 +54,10 @@
 {block name='global'}
 	{include file="$tpl_dir./global.tpl"}
 {/block}
+{* Vỏ giao diện chatbot phục vụ demo - chưa đấu nối AI. Xoá dòng này để gỡ.
+   Bị gỡ ở commit 0c09567 (Story 4.1) rồi bật lại: khách có yêu cầu bằng văn
+   bản cho buổi demo MVP, ghi trong sprint-status.yaml mục AI-7. Nếu quyết bỏ
+   hẳn thì cập nhật AI-7 trước, đừng chỉ xoá dòng include. *}
+{include file="$tpl_dir./chat-widget-mockup.tpl"}
 	</body>
 </html>

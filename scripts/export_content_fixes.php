@@ -61,6 +61,58 @@ foreach ($cfgNames as $name) {
     $out[] = "UPDATE `PREFIX_configuration` SET `value` = ".$q($v)." WHERE `name` = ".$q($name).";";
     $count++;
 }
+// ---- 1b. Cấu hình VietQR ----
+// VIETQR_WEBHOOK_SECRET phải rỗng trong seed. Bản dump cũ từng mang lại giá trị
+// "secret123"; kho mã này công khai nên một secret nằm trong seed thì không còn
+// là secret, và tệ hơn: nó khiến cổng webhook mở với một khoá ai cũng đoán được.
+// Để rỗng thì hàm kiểm chữ ký thất bại đóng - đúng hành vi mong muốn khi chưa
+// cấu hình .env. Tên chủ tài khoản thì ngược lại, phải có, kẻo mã QR in ra sai tên.
+foreach (array('VIETQR_ACCOUNT_NAME', 'VIETQR_ACCOUNT_NO', 'VIETQR_BANK_BIN', 'VIETQR_WEBHOOK_SECRET') as $name) {
+    $v = Configuration::getGlobalValue($name);
+    if ($v === false || $v === null) {
+        continue;
+    }
+    if ($name === 'VIETQR_WEBHOOK_SECRET') {
+        $v = '';
+    }
+    $out[] = "UPDATE `PREFIX_configuration` SET `value` = ".$q($v)." WHERE `name` = ".$q($name).";";
+    $count++;
+}
+
+// ---- 1c. Ba khoi noi dung trang chu (luu theo ngon ngu) ----
+// configuration_lang chu khong phai configuration, nen nhom o tren khong cham toi.
+// Ban goc QloApps de nguyen van demo tieng Anh o CA hai ngon ngu - tuc la trang chu
+// tieng Viet van hien "Amenities / Our Rooms / Explore the Interiors!" kem doan mo ta
+// quang cao spa, be boi ngoai troi va nha hang cao cap ma khach san chua he xac nhan
+// co (xem AI-5). Ban dich chi neu nhung tien nghi da co trong qlo_htl_amenity.
+// Chi xuat ban tieng Viet: ghi de ca id_lang=1 thi ban tieng Anh se thanh tieng Viet.
+$cfgLangNames = array(
+    'HOTEL_AMENITIES_HEADING', 'HOTEL_AMENITIES_DESCRIPTION',
+    'HOTEL_INTERIOR_HEADING', 'HOTEL_INTERIOR_DESCRIPTION',
+    'HOTEL_ROOM_DISPLAY_HEADING', 'HOTEL_ROOM_DISPLAY_DESCRIPTION',
+);
+foreach ($db->executeS(
+    'SELECT c.`name`, cl.`id_lang`, cl.`value`
+       FROM `'._DB_PREFIX_.'configuration_lang` cl
+       JOIN `'._DB_PREFIX_.'configuration` c ON c.`id_configuration` = cl.`id_configuration`
+      WHERE cl.`id_lang` = 2 AND c.`name` IN ("'.implode('","', $cfgLangNames).'")'
+) as $r) {
+    $out[] = "UPDATE `PREFIX_configuration_lang` cl"
+        ." JOIN `PREFIX_configuration` c ON c.`id_configuration` = cl.`id_configuration`"
+        ." SET cl.`value` = ".$q($r['value'])
+        ." WHERE c.`name` = ".$q($r['name'])." AND cl.`id_lang` = ".(int) $r['id_lang'].";";
+    $count++;
+}
+
+// Email ho tro hien o thanh dau moi trang. Ban seed mang gia tri hotelprime@htl.com -
+// ten thuong hieu cua ban demo QloApps ("Hotel Prime"), khong phai cua khach san nay.
+$supportEmail = Configuration::getGlobalValue('WK_CUSTOMER_SUPPORT_EMAIL');
+if ($supportEmail !== false && $supportEmail !== null) {
+    $out[] = "UPDATE `PREFIX_configuration` SET `value` = ".$q($supportEmail)
+        ." WHERE `name` = 'WK_CUSTOMER_SUPPORT_EMAIL';";
+    $count++;
+}
+
 $shopName = $db->getValue('SELECT name FROM `'._DB_PREFIX_.'shop` WHERE id_shop = 1');
 $out[] = "UPDATE `PREFIX_shop` SET `name` = ".$q($shopName)." WHERE `id_shop` = 1;";
 $count++;

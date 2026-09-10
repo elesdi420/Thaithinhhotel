@@ -82,6 +82,27 @@ foreach ($db->executeS(
     $hotelNames[(int) $r['id']] = $r['name'];
 }
 
+// HotelBookingDetail khai `city` là bắt buộc (kèm validate isCityName). Bản đầu
+// của script để rỗng, nên ObjectModel::validateFields() ném
+// "Property HotelBookingDetail->city is empty" ngay khi lễ tân bấm Nhận phòng -
+// tức là KHÔNG check-in được đơn mẫu nào. Lấy thành phố thật của từng cơ sở.
+$hotelCities = array();
+foreach ($db->executeS(
+    'SELECT `id_hotel`, `city` FROM '._DB_PREFIX_.'address WHERE `id_hotel` > 0'
+) as $r) {
+    $hotelCities[(int) $r['id_hotel']] = $r['city'];
+}
+
+// check_in_time / check_out_time / planned_check_out cũng bắt buộc. Lấy giờ
+// chính sách từ cơ sở thay vì viết cứng, để đổi giờ nhận/trả trong admin là
+// dữ liệu mẫu sinh sau cũng theo.
+$hotelTimes = array();
+foreach ($db->executeS(
+    'SELECT `id`, `check_in`, `check_out` FROM '._DB_PREFIX_.'htl_branch_info'
+) as $r) {
+    $hotelTimes[(int) $r['id']] = array($r['check_in'], $r['check_out']);
+}
+
 /**
  * Kịch bản: cơ sở, số đêm, lệch ngày nhận so với hôm nay, trạng thái phòng,
  * trạng thái đơn.
@@ -200,8 +221,8 @@ foreach ($plan as $i => $p) {
     $g = $guests[$i % count($guests)];
 
     $db->execute('INSERT INTO '._DB_PREFIX_.'htl_booking_detail
-        (id_product,id_order,id_order_detail,id_cart,id_room,id_hotel,id_customer,booking_type,id_status,comment,check_in,check_out,date_from,date_to,total_price_tax_excl,total_price_tax_incl,total_paid_amount,is_back_order,hotel_name,room_type_name,city,state,country,zipcode,phone,email,room_num,adults,children,is_refunded)
-        VALUES ('.(int) $idProduct.','.(int) $idOrder.','.(int) $idOrderDetail.','.(int) $idCart.','.(int) $room['id'].','.(int) $idHotel.','.(int) $idCustomer.',1,'.(int) $roomStatus.',"","'.trim($checkIn, '"').'","'.trim($checkOut, '"').'","'.pSQL($from).' 14:00:00","'.pSQL($to).' 12:00:00",'.$total.','.$total.','.($paid ? $total : 0).',0,"'.pSQL($hotelNames[$idHotel]).'","'.pSQL($productName).'","","","Việt Nam","","'.pSQL($g[3]).'","'.pSQL($g[2]).'","'.pSQL($room['room_num']).'",2,0,0)');
+        (id_product,id_order,id_order_detail,id_cart,id_room,id_hotel,id_customer,booking_type,id_status,comment,check_in,check_out,date_from,date_to,total_price_tax_excl,total_price_tax_incl,total_paid_amount,is_back_order,hotel_name,room_type_name,city,state,country,zipcode,phone,email,room_num,adults,children,is_refunded,check_in_time,check_out_time,planned_check_out,date_add,date_upd)
+        VALUES ('.(int) $idProduct.','.(int) $idOrder.','.(int) $idOrderDetail.','.(int) $idCart.','.(int) $room['id'].','.(int) $idHotel.','.(int) $idCustomer.',1,'.(int) $roomStatus.',"","'.trim($checkIn, '"').'","'.trim($checkOut, '"').'","'.pSQL($from).' 14:00:00","'.pSQL($to).' 12:00:00",'.$total.','.$total.','.($paid ? $total : 0).',0,"'.pSQL($hotelNames[$idHotel]).'","'.pSQL($productName).'","'.pSQL(isset($hotelCities[$idHotel]) ? $hotelCities[$idHotel] : "Việt Nam").'","","Việt Nam","","'.pSQL($g[3]).'","'.pSQL($g[2]).'","'.pSQL($room['room_num']).'",2,0,0,"'.pSQL(isset($hotelTimes[$idHotel]) ? $hotelTimes[$idHotel][0] : "14:00").'","'.pSQL(isset($hotelTimes[$idHotel]) ? $hotelTimes[$idHotel][1] : "12:00").'","'.pSQL($to).' 12:00:00","'.pSQL($from).' 14:00:00","'.pSQL($from).' 14:00:00")');
 
     ++$made;
     if ($orderState == 13) {

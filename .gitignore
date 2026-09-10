@@ -243,7 +243,11 @@ admin/themes/default/css/screen.css
 # /modules/*/translations/vn.php: thiếu ngoại lệ này thì bản vá việt hoá
 # không rời khỏi máy local.
 !/translations/vn/
-!/translations/vn/admin.php
+# Dung glob thay vi liet ke tung ten: cai bay nay da can 6 lan (mails/vn/,
+# themes/*/lang/vn.php, modules/*/translations/vn.php, translations/vn/admin.php,
+# docker/db/zz-content-fixes.sql, translations/vn/errors.php). Them tu dien moi
+# ma quen sua .gitignore thi ban va viet hoa khong roi khoi may local.
+!/translations/vn/*.php
 
 !/translations/export/
 !/translations/export/index.php

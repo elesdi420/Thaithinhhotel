@@ -103,6 +103,10 @@ $dict = array(
     'Additional Facilities' => 'Dịch vụ thêm',
     'Add to cart' => 'Thêm vào giỏ',
     'Modify Search' => 'Sửa tìm kiếm',
+    // Trang stores.tpl (bản đồ điểm bán của PrestaShop). Không có liên kết nào
+    // trỏ tới nó trên site này, nhưng gõ thẳng URL vẫn vào được nên vẫn dịch.
+    'Search' => 'Tìm',
+    'Enter a location (e.g. zip/postal code, address, city or country) in order to find the nearest stores.' => 'Nhập địa điểm (mã bưu chính, địa chỉ, tỉnh/thành hoặc quốc gia) để tìm cơ sở gần nhất.',
     'Searched results for' => 'Kết quả tìm kiếm cho',
     'Searched results for:' => 'Kết quả tìm kiếm cho:',
     'Refund Policies' => 'Chính sách hoàn tiền',

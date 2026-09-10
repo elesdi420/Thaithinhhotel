@@ -40,7 +40,7 @@ class QloVietQr extends PaymentModule
         // Set default configurations
         Configuration::updateValue('VIETQR_BANK_ID', 'MB');
         Configuration::updateValue('VIETQR_ACCOUNT_NO', '0901234567');
-        Configuration::updateValue('VIETQR_ACCOUNT_NAME', 'CMS HOTEL PMS');
+        Configuration::updateValue('VIETQR_ACCOUNT_NAME', 'THAITHINH HOTEL');
         Configuration::updateValue('VIETQR_TEMPLATE', 'compact2');
         // Deliberately left blank: a shipped default would be public in this repo and
         // therefore useless as a secret. Set VIETQR_WEBHOOK_SECRET in .env instead.

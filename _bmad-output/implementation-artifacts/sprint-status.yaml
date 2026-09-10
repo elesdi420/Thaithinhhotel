@@ -29,7 +29,7 @@
 # - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
 # - Retrospective appends its action items to action_items; the status view surfaces open ones
 generated: 09-02-2026 14:48
-last_updated: 09-04-2026 21:30
+last_updated: 09-10-2026 12:55
 project: CMS
 project_key: NOKEY
 tracking_system: file-system
@@ -91,11 +91,16 @@ action_items:
       via webhook now delivers "Đã nhận được thanh toán đầy đủ" to Mailpit.
   - id: AI-2
     status: open
-    title: VietQR is running on placeholder bank details
+    title: VietQR is running on a placeholder account number
     detail: >
-      VIETQR_ACCOUNT_NO=0901234567 and VIETQR_ACCOUNT_NAME="CMS HOTEL PMS" are
-      placeholders. The QR mechanics work, but money would not reach the hotel.
-      Needs the real account number and account-holder name before go-live.
+      Half closed. VIETQR_ACCOUNT_NAME was "CMS HOTEL PMS" - the old codename, not
+      this hotel - and is now "THAITHINH HOTEL", fixed at the install default in
+      modules/qlovietqr/qlovietqr.php as well as in the database, so a fresh clone
+      no longer prints the wrong payee on the QR code.
+      Still open: VIETQR_ACCOUNT_NO=0901234567 is a placeholder. The QR mechanics
+      work, but money would not reach the hotel. The client has twice said to skip
+      real bank details for now, so this stays open by their choice, not by
+      oversight - it must be set before go-live.
   - id: AI-3
     status: done
     title: Webhook secret was published in a public repo, and no secret meant no auth
@@ -118,6 +123,13 @@ action_items:
       header -> 200 and the order moves to paid, replay -> already_paid, underpayment
       -> 422, and with no secret configured a forged callback gets 503 while the order
       stays unpaid. secret123 no longer appears anywhere in the tracked tree.
+      Regression caught 09-10-2026: secret123 was back in the database, restored by a
+      seed dump taken before this fix. Runtime was still safe because the .env value
+      wins, but a fresh clone with no .env would have fallen back to the published
+      value - the fix had been applied to the code and lost from the data. The
+      database value is now empty (fail-closed), and export_content_fixes.php writes
+      the whole VIETQR group into docker/db/zz-content-fixes.sql, which runs after
+      init.sql, so a future dump cannot bring it back a second time.
   - id: AI-4
     status: done
     title: Logo is still the stock QloApps "Qlo" mark
@@ -174,6 +186,9 @@ action_items:
       real business's legal terms in another language is the client's call, not
       something to improvise. Either have them translated properly or turn the
       English language off until they are.
+      Resolved by the second option on the client's instruction: English is now
+      disabled (qlo_lang id 1 active=0), so the boilerplate pages are unreachable.
+      Turning English back on brings them back - translate them properly first.
   - id: AI-6
     status: done
     title: Vietnamese was switched on without any interface translation files
@@ -200,3 +215,50 @@ action_items:
       work would not have left this machine - the fourth time that trap appeared.
       Home page, properties list and contact page carry no English at all; the room
       page has one label left, "Room - 1" in the occupancy picker.
+  - id: AI-8
+    status: done
+    title: Check-in was impossible on every one of the 36 demo bookings
+    detail: >
+      The single worst defect of the review, and it was in our own seed script, not
+      in QloApps. seed_demo_bookings.php left city, check_in_time, check_out_time and
+      planned_check_out empty and wrote date_add as 0000-00-00. HotelBookingDetail
+      extends ObjectModel, so pressing "Nhận phòng" calls save() -> validateFields(),
+      which rejects those fields. The button would have done nothing at all, with no
+      message on screen - the worst possible failure to hit live in front of the
+      client.
+      Found by running validateFields() over every existing record rather than by
+      reading the code, which is what made it visible; the page renders fine and the
+      list looks correct, so nothing about the screen suggests a problem.
+      Fixed in two places: the existing rows were backfilled (needs SET SESSION
+      sql_mode='' because of the zero dates), and the seeder now takes check-in and
+      check-out times from htl_branch_info per hotel instead of hardcoding them, so
+      the times match whatever each branch is configured for.
+      Verified the hard way - wiped the bookings, re-ran the patched seeder from
+      empty, and re-ran the sweep: 36/36 valid. Then drove the real handler,
+      AdminOrdersController::changeRoomStatus(), through all three paths on a
+      from-scratch rebuild: allotted -> checked in (2, timestamp 14:00), checked in ->
+      checked out (3, timestamp 12:00), and check-out attempted before check-in
+      correctly refused.
+  - id: AI-9
+    status: done
+    title: Tools::displayError() has its own dictionary, and it did not exist
+    detail: >
+      The seventh discovery of the same root cause: Vietnamese switched on without
+      the companion file. Every error message raised through Tools::displayError()
+      was rendering in English even after the string had been added to
+      translations/vn/admin.php, because that function does not use Translate:: at
+      all - it includes translations/<iso>/errors.php directly, reads the global
+      $_ERRORS, and looks up md5(str_replace("'", "\'", $string)), the md5 of the
+      string as escaped in source, not as it exists at runtime. With no file, $_ERRORS
+      is not an array and the function silently returns the English original.
+      This is the third translation dictionary in the project, with a third key
+      format: admin.php ($_LANGADM, class-prefixed md5), modules/*/translations/vn.php
+      (module-prefixed md5), and now errors.php.
+      Added scripts/generate_vn_errors.php with 109 strings: the seven guards in the
+      check-in/check-out flow that reception meets exactly when something goes wrong,
+      plus the room, date, cart, account, address and contact messages a guest can
+      hit while booking. The project contains 1256 distinct displayError strings;
+      the rest stay English on purpose - translating all of them is language-pack
+      work, not demo preparation.
+      .gitignore blocked the new file, the sixth time that trap has appeared, so the
+      rule is now the glob !/translations/vn/*.php rather than one line per filename.
