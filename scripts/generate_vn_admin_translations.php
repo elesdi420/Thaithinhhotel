@@ -400,6 +400,9 @@ $dict = array(
     '%d Days' => '%d ngày',
 
     // --- Bảng điều khiển: bộ lọc ngày và chọn cơ sở (AdminDashboard) ---
+    // AdminStatsTabController gọi $this->l('Stats', 'AdminStatsTab'); khoá riêng
+    // của lớp đó không có nên rơi về bucket dùng chung này.
+    'Stats' => 'Báo cáo Thống kê',
     'Calendar' => 'Lịch',
     'Day' => 'Ngày',
     'Month' => 'Tháng',

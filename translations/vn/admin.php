@@ -306,6 +306,7 @@ $_LANGADM['AdminController45836abbcd336f2000d3b251f478ac3b'] = 'Số phòng đan
 $_LANGADM['AdminController885d40cad29a3bbce82973f7866b4a12'] = 'Số loại phòng đang bị khoá.';
 $_LANGADM['AdminControllerf99408ceda9590a171cd887e90cd5bd3'] = '%d ngày';
 $_LANGADM['AdminController55d4ecb9c8b876b86ba853de02906528'] = '%d ngày';
+$_LANGADM['AdminController452a7601dbc6f2c38aa89e68bda8b603'] = 'Báo cáo Thống kê';
 $_LANGADM['AdminController8ff922bbcd8ad41cdfc48d3c5163b2ab'] = 'Lịch';
 $_LANGADM['AdminController03727ac48595a24daed975559c944a44'] = 'Ngày';
 $_LANGADM['AdminController7cbb885aa1164b390a0bc050a64e1812'] = 'Tháng';

@@ -34,6 +34,14 @@ $targets = array(
     'wkfooterpaymentblock', 'wkhotelfilterblock', 'wktestimonialblock', 'qlohotelreview',
     // Bảng điều khiển
     'dashguestcycle', 'dashactivity', 'dashoccupancy', 'dashtrends',
+    // Báo cáo Thống kê: quản lý chuỗi xem doanh thu ở đây. Tên từng báo cáo
+    // trong danh sách bên trái chính là displayName của module, nên phải quét
+    // cả nhóm này thì menu đó mới ra tiếng Việt.
+    'statsforecast', 'statsdata', 'statsbestcustomers', 'statsbestproducts',
+    'statsbestcategories', 'statsbestvouchers', 'statscatalog', 'statscheckup',
+    'statsequipment', 'statslive', 'statsnewsletter', 'statsorigin',
+    'statspersonalinfos', 'statsproduct', 'statsregistrations', 'statssales',
+    'statsvisits', 'sekeywords', 'pagesnotfound', 'qlostatsserviceproducts',
 );
 
 /** Chuỗi gốc => bản dịch. Chỉ dịch chuỗi khách và lễ tân thực sự nhìn thấy. */
@@ -231,6 +239,69 @@ $dict = array(
     'Maximum room occupancy reached' => 'Đã đạt sức chứa tối đa của phòng',
     'Maximum adult occupancy reached' => 'Đã đạt số người lớn tối đa',
     'Maximum children occupancy reached' => 'Đã đạt số trẻ em tối đa',
+
+    // --- Báo cáo Thống kê: tên từng báo cáo ở danh sách bên trái ---
+    'Stats Dashboard' => 'Tổng quan Thống kê',
+    'Sales and orders' => 'Doanh thu và đơn hàng',
+    'Best hotels' => 'Cơ sở doanh thu cao nhất',
+    'Best customers' => 'Khách hàng chi nhiều nhất',
+    'Best vouchers' => 'Phiếu giảm giá hiệu quả nhất',
+    'Best-selling room types' => 'Loại phòng bán chạy nhất',
+    'Room type details' => 'Chi tiết loại phòng',
+    'Hotel statistics' => 'Thống kê theo cơ sở',
+    'Catalog evaluation' => 'Đánh giá danh mục',
+    'Customer accounts' => 'Tài khoản khách hàng',
+    'Registered customer information' => 'Thông tin khách đã đăng ký',
+    'Extra services overview' => 'Tổng quan dịch vụ thêm',
+    'Visits and visitors' => 'Lượt truy cập',
+    'Visitors online' => 'Khách đang online',
+    'Visitors origin' => 'Nguồn truy cập',
+    'Browsers and operating systems' => 'Trình duyệt và hệ điều hành',
+    'Search engine keywords' => 'Từ khoá tìm kiếm',
+    'Pages not found' => 'Trang không tìm thấy',
+    'Data mining for statistics' => 'Thu thập dữ liệu thống kê',
+
+    // --- Bảng Tổng quan Thống kê (statsforecast) ---
+    'The listed amounts do not include tax.' => 'Các số tiền dưới đây chưa gồm thuế.',
+    'Time frame' => 'Khoảng thời gian',
+    'Daily' => 'Theo ngày',
+    'Weekly' => 'Theo tuần',
+    'Monthly' => 'Theo tháng',
+    'Yearly' => 'Theo năm',
+    'Visits' => 'Lượt truy cập',
+    'Registrations' => 'Lượt đăng ký',
+    'Orders placed' => 'Đơn đã đặt',
+    'Booked rooms' => 'Phòng đã đặt',
+    'Percentage of registrations' => 'Tỷ lệ đăng ký',
+    'Conversion rate' => 'Tỷ lệ chuyển đổi',
+    'Revenue' => 'Doanh thu',
+    'Revenue (converted)' => 'Doanh thu (đã quy đổi)',
+    'Margin' => 'Lợi nhuận gộp',
+    'Total' => 'Tổng cộng',
+    'Average' => 'Trung bình',
+    'Forecast' => 'Dự báo',
+    'Conversion' => 'Chuyển đổi',
+    'Visitors' => 'Khách truy cập',
+    'Registered' => 'Đã đăng ký',
+    'Unregistered' => 'Chưa đăng ký',
+    'A simple statistical calculation lets you know the monetary value of your visitors:'
+        => 'Một phép tính đơn giản cho biết giá trị bằng tiền của mỗi khách truy cập:',
+    'On average, each visitor places an order for this amount:'
+        => 'Trung bình mỗi khách truy cập đặt đơn trị giá:',
+    'On average, each registered visitor places an order for this amount:'
+        => 'Trung bình mỗi khách đã đăng ký đặt đơn trị giá:',
+    'Payment distribution' => 'Phân bổ theo phương thức thanh toán',
+    'The amounts in this section include taxes, so you can get an estimation of the commission due to the payment method.'
+        => 'Số tiền ở mục này đã gồm thuế, để ước lượng phí phải trả cho từng phương thức thanh toán.',
+    'Language distribution' => 'Phân bổ theo ngôn ngữ',
+    'Zone distribution' => 'Phân bổ theo khu vực',
+    'Currency distribution' => 'Phân bổ theo đơn vị tiền tệ',
+    'Percentage of orders' => 'Tỷ lệ đơn hàng',
+    'Percentage of revenue' => 'Tỷ lệ doanh thu',
+    'Average payment value' => 'Giá trị thanh toán trung bình',
+    'No data available.' => 'Chưa có dữ liệu.',
+    'Zone' => 'Khu vực',
+    '-- No filter --' => '-- Không lọc --',
     'Allotment Type' => 'Kiểu xếp phòng',
     'Auto Allotment' => 'Xếp tự động',
     'Manual Allotment' => 'Xếp thủ công',

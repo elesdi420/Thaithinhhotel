@@ -2984,7 +2984,7 @@ CREATE TABLE `qlo_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3073,7 +3073,8 @@ INSERT INTO `qlo_connections` VALUES
 (77,1,1,77,5,2886860801,'2026-09-08 17:28:31',''),
 (78,1,1,78,8,2886860801,'2026-09-08 17:28:43',''),
 (79,1,1,79,6,2886860801,'2026-09-08 17:28:58',''),
-(80,1,1,80,4,2886860801,'2026-09-08 17:29:08','');
+(80,1,1,80,4,2886860801,'2026-09-08 17:29:08',''),
+(81,1,1,81,1,2886860801,'2026-09-08 18:18:03','');
 /*!40000 ALTER TABLE `qlo_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4779,7 +4780,7 @@ CREATE TABLE `qlo_employee` (
 LOCK TABLES `qlo_employee` WRITE;
 /*!40000 ALTER TABLE `qlo_employee` DISABLE KEYS */;
 INSERT INTO `qlo_employee` VALUES
-(1,1,2,'Doe','John','admin@hotel.local','$2y$10$CGrFlVtHkn6MBCDtPdM7muFoQOpZBQdsyUKPigNgs5Zd5S8JFtXCy','2026-09-02 09:12:35','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','default','admin-theme.css',1,0,1,1,1,0,0,0,'2026-09-08'),
+(1,1,2,'Doe','John','admin@hotel.local','$2y$10$CGrFlVtHkn6MBCDtPdM7muFoQOpZBQdsyUKPigNgs5Zd5S8JFtXCy','2026-09-02 09:12:35','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','default','admin-theme.css',1,0,1,1,1,0,0,0,'2026-09-10'),
 (2,2,2,'Cơ sở Một','Lễ tân','reception1@hotel.local','$2y$10$u.5pD1JNPqLZm/rMdPBJR.Ee3iHJD.Ou76LM8780ZF3NxnStT21N2','2026-09-02 09:29:25','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','default','admin-theme.css',86,0,1,1,1,0,0,0,'2026-09-02'),
 (3,3,2,'Cơ sở Hai','Lễ tân','reception2@hotel.local','$2y$10$u.5pD1JNPqLZm/rMdPBJR.Ee3iHJD.Ou76LM8780ZF3NxnStT21N2','2026-09-02 09:29:30','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','','admin-theme.css',86,0,1,1,1,0,0,0,'0000-00-00'),
 (4,4,2,'Cơ sở Ba','Lễ tân','reception3@hotel.local','$2y$10$u.5pD1JNPqLZm/rMdPBJR.Ee3iHJD.Ou76LM8780ZF3NxnStT21N2','2026-09-02 09:29:35','2026-08-02','2026-09-02','0000-00-00','0000-00-00',1,'','','','admin-theme.css',86,0,1,1,1,0,0,0,'0000-00-00'),
@@ -5434,7 +5435,7 @@ CREATE TABLE `qlo_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5523,7 +5524,8 @@ INSERT INTO `qlo_guest` VALUES
 (77,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (78,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
 (79,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
-(80,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
+(80,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),
+(81,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0);
 /*!40000 ALTER TABLE `qlo_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8382,7 +8384,7 @@ CREATE TABLE `qlo_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -8398,7 +8400,8 @@ INSERT INTO `qlo_log` VALUES
 (4,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-08 14:47:43','2026-09-08 14:47:43'),
 (5,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-08 15:27:20','2026-09-08 15:27:20'),
 (6,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-08 15:28:33','2026-09-08 15:28:33'),
-(7,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-08 17:23:16','2026-09-08 17:23:16');
+(7,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-08 17:23:16','2026-09-08 17:23:16'),
+(8,1,0,'Back Office connection from 172.18.0.1','',0,1,'2026-09-10 11:13:47','2026-09-10 11:13:47');
 /*!40000 ALTER TABLE `qlo_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10109,7 +10112,7 @@ CREATE TABLE `qlo_order_payment_detail` (
   `receipt_number` int(10) NOT NULL,
   `date_add` datetime NOT NULL,
   PRIMARY KEY (`id_order_payment_detail`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10119,7 +10122,40 @@ CREATE TABLE `qlo_order_payment_detail` (
 LOCK TABLES `qlo_order_payment_detail` WRITE;
 /*!40000 ALTER TABLE `qlo_order_payment_detail` DISABLE KEYS */;
 INSERT INTO `qlo_order_payment_detail` VALUES
-(1,1,2,1600000.000000,1,'2026-09-02 16:44:21');
+(2,2,3,1760000.000000,0,'2026-08-11 14:05:00'),
+(3,3,4,2640000.000000,0,'2026-08-18 14:05:00'),
+(4,4,5,1100000.000000,0,'2026-08-21 14:05:00'),
+(5,5,6,550000.000000,0,'2026-08-25 14:05:00'),
+(6,6,7,2200000.000000,0,'2026-08-28 14:05:00'),
+(7,7,8,1760000.000000,0,'2026-09-01 14:05:00'),
+(8,8,9,1100000.000000,0,'2026-09-03 14:05:00'),
+(9,9,10,2640000.000000,0,'2026-09-07 14:05:00'),
+(10,10,11,1100000.000000,0,'2026-09-07 14:05:00'),
+(11,11,12,1650000.000000,0,'2026-09-06 14:05:00'),
+(12,12,13,3520000.000000,0,'2026-09-06 14:05:00'),
+(13,13,14,1100000.000000,0,'2026-09-10 14:05:00'),
+(14,14,15,2640000.000000,0,'2026-09-12 14:05:00'),
+(15,15,16,1100000.000000,0,'2026-09-14 14:05:00'),
+(16,16,17,1650000.000000,0,'2026-09-17 14:05:00'),
+(17,17,18,1760000.000000,0,'2026-09-21 14:05:00'),
+(18,18,21,2640000.000000,0,'2026-09-06 14:05:00'),
+(19,19,22,1760000.000000,0,'2026-09-07 14:05:00'),
+(20,20,23,6600000.000000,0,'2026-09-05 14:05:00'),
+(21,21,24,3300000.000000,0,'2026-09-07 14:05:00'),
+(22,22,25,4950000.000000,0,'2026-09-06 14:05:00'),
+(23,23,26,3300000.000000,0,'2026-09-08 14:05:00'),
+(24,24,27,1650000.000000,0,'2026-09-06 14:05:00'),
+(25,25,28,1100000.000000,0,'2026-09-07 14:05:00'),
+(26,26,29,3520000.000000,0,'2026-09-05 14:05:00'),
+(27,27,30,1760000.000000,0,'2026-09-08 14:05:00'),
+(28,28,31,2640000.000000,0,'2026-09-07 14:05:00'),
+(29,29,32,1100000.000000,0,'2026-09-06 14:05:00'),
+(30,30,33,1650000.000000,0,'2026-09-07 14:05:00'),
+(31,31,34,1100000.000000,0,'2026-09-05 14:05:00'),
+(32,32,35,6600000.000000,0,'2026-09-07 14:05:00'),
+(33,33,36,3300000.000000,0,'2026-09-08 14:05:00'),
+(34,34,37,1650000.000000,0,'2026-09-07 14:05:00'),
+(35,35,38,880000.000000,0,'2026-09-07 14:05:00');
 /*!40000 ALTER TABLE `qlo_order_payment_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -16192,4 +16228,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-08 11:16:26
+-- Dump completed on 2026-09-10  4:20:58

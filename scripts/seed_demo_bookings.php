@@ -184,6 +184,14 @@ foreach ($plan as $i => $p) {
         $db->execute('INSERT INTO '._DB_PREFIX_.'order_payment
             (order_reference,id_currency,amount,payment_method,conversion_rate,transaction_id,date_add)
             VALUES ("'.pSQL($reference).'",'.(int) $idCurrency.','.$total.',"Chuyển khoản VietQR",1,"DEMO'.$idOrder.'","'.pSQL($from).' 14:05:00")');
+
+        // order_payment_detail là bảng mà báo cáo Thống kê nối vào để dựng biểu
+        // "Phân bổ theo phương thức thanh toán" (statsforecast nối
+        // order_payment INNER JOIN order_payment_detail). Thiếu bảng này thì có
+        // đủ 36 đơn đã thanh toán mà báo cáo vẫn hiện "Không có dữ liệu".
+        $db->execute('INSERT INTO '._DB_PREFIX_.'order_payment_detail
+            (id_order_payment,id_order,amount,receipt_number,date_add)
+            VALUES ('.(int) $db->Insert_ID().','.(int) $idOrder.','.$total.',0,"'.pSQL($from).' 14:05:00")');
     }
 
     // Phòng - đêm: chính là thứ làm lịch phòng có dữ liệu
