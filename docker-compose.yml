@@ -11,6 +11,12 @@ services:
     volumes:
       - db_data:/var/lib/mysql
       - ./docker/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      # MariaDB chạy mọi tệp .sql trong thư mục này theo thứ tự bảng chữ cái,
+      # nên tiền tố "zz-" đảm bảo tệp này chạy SAU init.sql ("z" > "i").
+      # Nhờ vậy nội dung và cấu hình tự phục hồi kể cả khi init.sql bị ghi đè
+      # bằng một bản dump cũ - đã xảy ra hai lần. Sinh lại bằng
+      # scripts/export_content_fixes.php sau mỗi lần đổi nội dung.
+      - ./docker/db/zz-content-fixes.sql:/docker-entrypoint-initdb.d/zz-content-fixes.sql:ro
     healthcheck:
       test: ["CMD", "mariadb-admin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD}"]
       interval: 5s

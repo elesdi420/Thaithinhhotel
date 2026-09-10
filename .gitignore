@@ -286,3 +286,8 @@ robots.txt
 *.sql
 !dump.sql
 !docker/db/init.sql
+# Nội dung và cấu hình sản phẩm, chạy sau init.sql để tự phục hồi khi seed bị
+# ghi đè bằng bản dump cũ. Thiếu ngoại lệ này thì cơ chế đó không rời khỏi máy
+# local - đúng cái bẫy đã gặp ở /mails/vn/, themes/*/lang/vn.php,
+# /modules/*/translations/vn.php và /translations/vn/.
+!docker/db/zz-content-fixes.sql
