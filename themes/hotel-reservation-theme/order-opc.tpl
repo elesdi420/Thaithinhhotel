@@ -44,6 +44,23 @@
 					{else}
 						{if $productNumber}
 
+							<div class="exely-checkout-steps hidden-xs">
+								<div class="exely-step">
+									<div class="exely-step-number"><i class="icon-check"></i></div>
+									<span>1. Chọn phòng</span>
+								</div>
+								<div class="exely-step-divider"></div>
+								<div class="exely-step active">
+									<div class="exely-step-number">2</div>
+									<span>2. Thông tin khách & Dịch vụ</span>
+								</div>
+								<div class="exely-step-divider"></div>
+								<div class="exely-step">
+									<div class="exely-step-number">3</div>
+									<span>3. Quét mã VietQR</span>
+								</div>
+							</div>
+
 							{block name='order_opc_left_column'}
 								<div class="col-md-8">
             						{block name='errors'}
